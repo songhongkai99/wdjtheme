@@ -1,2 +1,2 @@
 # wdjtheme
-my first test git repo
+my first test git repository
