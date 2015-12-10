@@ -1,0 +1,133 @@
+/*common classes*/
+.text-center { text-align: center !important; }
+.text-left { text-align: left !important; }
+.text-right { text-align: right !important; }
+.text-justify { text-align: justify !important; }
+.nowrap { white-space: nowrap !important; }
+.vertical-top { vertical-align: top !important; }
+.vertical-middle { vertical-align: middle !important; }
+.vertical-baseline { vertical-align: baseline !important; }
+.vertical-bottom { vertical-align: bottom !important; }
+.float-left { float: left !important; }
+.float-right { float: right !important; }
+.indent-0 { text-indent: 0 !important; }
+.indent-em2 { text-indent: 2em !important; }
+.lineheight-1 { line-height: 1 !important }
+.lineheight-1d5 { line-height: 1.5 !important }
+.lineheight-1d8 { line-height: 1.8 !important }
+.lineheight-2 { line-height: 2 !important }
+/*font*/
+.font-size-rem05 { font-size: .5rem !important; }
+.font-size-rem06 { font-size: .6rem !important; }
+.font-size-rem07 { font-size: .7rem !important; }
+.font-size-rem08 { font-size: .8rem !important; }
+.font-size-rem1d2 { font-size: 1.2rem !important; }
+.font-size-rem1d5 { font-size: 1.5rem !important; }
+.font-size-rem1d8 { font-size: 1.8rem !important; }
+.font-size-rem2 { font-size: 2rem !important; }
+.font-size-9 { font-size: 9px !important }
+.font-size-12 { font-size: 12px !important }
+.font-size-14 { font-size: 14px !important }
+.font-size-16 { font-size: 16px !important; }
+.font-size-18 { font-size: 18px !important; }
+.font-size-20 { font-size: 20px !important; }
+.font-size-24 { font-size: 24px !important; }
+.font-bold { font-weight: bold !important; }
+.font-slim { font-weight: 300 !important; }
+.font-aaa { color: #aaa !important; }
+.font-bbb { color: #bbb !important; }
+.font-ccc { color: #ccc !important; }
+.font-ddd { color: #ddd !important; }
+.font-eee { color: #eee !important; }
+.font-red { color: #e64b3c !important; }
+.font-grey { color: #9595A9 !important; }
+/*display*/
+.underline { text-decoration: underline !important; }
+.linethrough { text-decoration: line-through !important; }
+.overline { text-decoration: overline !important; }
+.cursor-pointer { cursor: pointer !important; }
+.block { display: block !important; }
+.inline-block { display: inline-block !important; }
+.inline { display: inline !important; }
+/*position*/
+.position-relative { position: relative !important; }
+.position-absolute { position: absolute !important; }
+.position-fixed { position: fixed !important; }
+.absolute-center { position: absolute !important; left: 50%; top: 50%; }
+.block-center { display: block !important; margin-left: auto; margin-right: auto; }
+/*border*/
+.border { border: solid 1px #e0e0ec !important; }
+.border-top { border-top: solid 1px #e0e0ec !important; }
+.border-right { border-right: solid 1px #e0e0ec !important; }
+.border-bottom { border-bottom: solid 1px #e0e0ec !important; }
+.border-left { border-left: solid 1px #e0e0ec !important; }
+.border-ccc { border-color: #cccccc !important; }
+.border-ddd { border-color: #dddddd !important; }
+.border-eee { border-color: #e0e0ec !important; }
+.border-dashed { border-style: dashed !important; }
+.border-dotted { border-style: dotted !important; }
+.border-double { border-style: double !important; }
+.border-inset { border-style: inset !important; }
+.border-outset { border-style: outset !important; }
+/*radius*/
+.radius-none { border-radius: 0 !important; }
+.radius-2 { border-radius: 2px !important; }
+.radius-4 { border-radius: 4px !important; }
+.radius-6 { border-radius: 6px !important; }
+.radius-2em { border-radius: 2em !important; padding-left: 1em; padding-right: 1em; }
+.radius-circle { border-radius: 50% !important; }
+/*background*/
+.bg-white { background-color: #FFFFFF !important; }
+/*padding*/
+.padding-0 { padding: 0 !important; }
+.padding-2 { padding: 2px !important; }
+.padding-4 { padding: 4px !important; }
+.padding-6 { padding: 6px !important; }
+.padding-8 { padding: 8px !important; }
+.padding-10 { padding: 10px !important; }
+.padding-12 { padding: 12px !important; }
+.padding-14 { padding: 14px !important; }
+.padding-16 { padding: 16px !important }
+.padding-20 { padding: 20px !important }
+.padding-24 { padding: 24px !important }
+.padding-30 { padding: 30px !important }
+.padding-t-b-2 { padding: 2px 0 !important; }
+.padding-t-b-6 { padding: 6px 0 !important; }
+.padding-t-b-10 { padding: 10px 0 !important; }
+.padding-t-b-16 { padding: 16px 0 !important; }
+.padding-t-b-20 { padding: 20px 0 !important; }
+.padding-t-b-30 { padding: 30px 0 !important; }
+.padding-r-l-2 { padding: 0 2px !important; }
+.padding-r-l-6 { padding: 0 6px !important; }
+.padding-r-l-10 { padding: 0 10px !important; }
+.padding-r-l-16 { padding: 0 16px !important; }
+.padding-r-l-20 { padding: 0 20px !important; }
+.padding-r-l-30 { padding: 0 30px !important; }
+/*margin*/
+.margin-0 { margin: 0 !important; }
+.margin-2 { margin: 2px !important; }
+.margin-4 { margin: 4px !important; }
+.margin-6 { margin: 6px !important; }
+.margin-8 { margin: 8px !important; }
+.margin-10 { margin: 10px !important; }
+.margin-14 { margin: 14px !important; }
+.margin-18 { margin: 18px !important; }
+.margin-24 { margin: 24px !important; }
+.margin-30 { margin: 30px !important; }
+.margin-top-0 { margin-top: 0 !important; }
+.margin-top-2 { margin-top: 2px !important; }
+.margin-top-4 { margin-top: 4px !important; }
+.margin-top-6 { margin-top: 6px !important; }
+.margin-top-8 { margin-top: 8px !important; }
+.margin-top-10 { margin-top: 10px !important; }
+.margin-top-20 { margin-top: 20px !important; }
+.margin-right-0 { margin-right: 0 !important; }
+.margin-right-2 { margin-right: 2px !important; }
+.margin-right-4 { margin-right: 4px !important; }
+.margin-right-6 { margin-right: 6px !important; }
+.margin-right-8 { margin-right: 8px !important; }
+.margin-right-10 { margin-right: 10px !important; }
+.margin-right-20 { margin-right: 20px !important; }
+.hide { display: none !important }
+.overflow-hidden { overflow: hidden !important; }
+.clear-float:after { clear: both; content: ''; display: block; }
