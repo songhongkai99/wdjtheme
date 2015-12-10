@@ -12,6 +12,9 @@
 .float-right { float: right !important; }
 .indent-0 { text-indent: 0 !important; }
 .indent-em2 { text-indent: 2em !important; }
+.indent--em2{text-indent: -2em !important; padding-left: 2em !important;}
+.indent--em3{text-indent: -3em !important; padding-left: 3em !important;}
+.indent--em4{text-indent: -4em !important; padding-left: 4em !important;}
 .lineheight-1 { line-height: 1 !important }
 .lineheight-1d5 { line-height: 1.5 !important }
 .lineheight-1d8 { line-height: 1.8 !important }
@@ -21,11 +24,12 @@
 .font-size-rem06 { font-size: .6rem !important; }
 .font-size-rem07 { font-size: .7rem !important; }
 .font-size-rem08 { font-size: .8rem !important; }
+.font-size-rem1 { font-size: 1rem !important; }
 .font-size-rem1d2 { font-size: 1.2rem !important; }
 .font-size-rem1d5 { font-size: 1.5rem !important; }
 .font-size-rem1d8 { font-size: 1.8rem !important; }
 .font-size-rem2 { font-size: 2rem !important; }
-.font-size-9 { font-size: 9px !important }
+.font-size-10 { font-size: 10px !important }
 .font-size-12 { font-size: 12px !important }
 .font-size-14 { font-size: 14px !important }
 .font-size-16 { font-size: 16px !important; }
@@ -41,6 +45,7 @@
 .font-eee { color: #eee !important; }
 .font-red { color: #e64b3c !important; }
 .font-grey { color: #9595A9 !important; }
+.font-orange{ color: #ff9900 !important;}
 /*display*/
 .underline { text-decoration: underline !important; }
 .linethrough { text-decoration: line-through !important; }
@@ -49,6 +54,13 @@
 .block { display: block !important; }
 .inline-block { display: inline-block !important; }
 .inline { display: inline !important; }
+.width-p25{ width:25% !important;}
+.width-p33{ width:33.3% !important;}
+.width-p50{ width:50% !important;}
+.width-p80{ width:80% !important;}
+.width-p100{ width:100% !important;}
+.border-box{ -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+.content-box{ -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box;}
 /*position*/
 .position-relative { position: relative !important; }
 .position-absolute { position: absolute !important; }
@@ -69,6 +81,7 @@
 .border-double { border-style: double !important; }
 .border-inset { border-style: inset !important; }
 .border-outset { border-style: outset !important; }
+.border-none{border-style: none !important;}
 /*radius*/
 .radius-none { border-radius: 0 !important; }
 .radius-2 { border-radius: 2px !important; }
@@ -78,6 +91,7 @@
 .radius-circle { border-radius: 50% !important; }
 /*background*/
 .bg-white { background-color: #FFFFFF !important; }
+.bg-grey { background-color: #ececf3 !important; }
 /*padding*/
 .padding-0 { padding: 0 !important; }
 .padding-2 { padding: 2px !important; }
@@ -131,3 +145,5 @@
 .hide { display: none !important }
 .overflow-hidden { overflow: hidden !important; }
 .clear-float:after { clear: both; content: ''; display: block; }
+/*btn*/
+.btn-red-s{background-color: #f53e3e; color: #fff; font-size: 1.2rem; line-height: 12px; display: inline-block; text-align: center; padding: 3px 5px; }
