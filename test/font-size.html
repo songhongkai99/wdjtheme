@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>font size</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <style>
+        html{
+            font-size: 10px;
+            -webkit-text-size-adjust: none;
+            font-size-adjust: none;
+        }
+        /*body{
+            font-size: 1.2em; !*用em 在谷歌下无bug*!
+        }*/
+    </style>
+</head>
+<body>
+<p>
+    test 测试字体大小 10px (chrome 12px)
+</p>
+<p style="font-size: 140%">
+    test 测试字体大小 140% 相对于父级元素 * 1.4 10 * 1.4 == 14px
+</p>
+<p style="font-size: 1.4rem;">
+    <span style="font-size: 2em">span 28px 2em 父元素相对</span>
+    <span style="font-size: 2rem">span 20px 2rem root 相对 </span>
+</p>
+<p style="font-size: 16px;">
+    16px 固定 <span style="font-size: 2em">32px 2em</span>
+     <span style="font-size: 200%">32px 200%</span>
+</p>
+</body>
+</html>
