@@ -1,0 +1,54 @@
+/*common classes*/
+.text-overflow-ellipsis { white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
+.nowrap { white-space: nowrap; }
+.float-left { float: left; }
+.float-right { float: right; }
+.indent-em2 { text-indent: 2em; }
+.indent--em2 { text-indent: -2em; padding-left: 2em; }
+/*font*/
+.font-bold { font-weight: bold; }
+.font-slim { font-weight: 300; }
+.font-red { color: #e64b3c; }
+.font-grey { color: #9595A9; }
+.font-orange { color: #ff9900; }
+/*display*/
+.underline { text-decoration: underline; }
+.linethrough { text-decoration: line-through; }
+.overline { text-decoration: overline; }
+.block { display: block; }
+.inline-block { display: inline-block; }
+.inline { display: inline; }
+.border-box { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.content-box { -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; }
+.responsive { width: 100%; max-width: 100%; height: auto; display: block; }
+/*position*/
+.position-relative { position: relative; }
+.position-absolute { position: absolute; }
+.position-fixed { position: fixed; }
+.absolute-center { position: absolute; left: 50%; top: 50%; }
+.block-center { display: block; margin-left: auto; margin-right: auto; }
+/*border*/
+.border { border: solid 1px #e0e0ec; }
+.border-top { border-top: solid 1px #e0e0ec; }
+.border-right { border-right: solid 1px #e0e0ec; }
+.border-bottom { border-bottom: solid 1px #e0e0ec; }
+.border-left { border-left: solid 1px #e0e0ec; }
+/*radius*/
+.radius-none { border-radius: 0; }
+.radius-sm { border-radius: 2px; }
+.radius-md { border-radius: 4px; }
+.radius-lg { border-radius: 6px; }
+.radius-xlg { border-radius: 16px; }
+.radius-1em { border-radius: 1em; padding-left: .6em; padding-right: .6em; }
+.radius-2em { border-radius: 2em; padding-left: 1em; padding-right: 1em; }
+.radius-circle { border-radius: 50%; }
+/*background*/
+.bg-white { background-color: #FFFFFF; }
+.bg-grey { background-color: #ececf3; }
+.hide { display: none !important; }
+.vis-hide { visibility: hidden !important; }
+.overflow-hidden { overflow: hidden; }
+.clear-float:after { clear: both !important; content: ''; display: block; }
+/*btn*/
+.btn-red-s { background-color: #f53e3e; color: #fff; font-size: 1.2rem; line-height: 1.2rem; display: inline-block; text-align: center; padding: 3px 5px; }
+.btn-orange-alpha-s{ color: #FF9900; font-size: 1.2rem; line-height: 1.2rem; display: inline-block; text-align: center; border:1px solid #FF9900;}
