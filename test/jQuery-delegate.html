@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Delegate</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    
+</head>
+<body>
+<a href="javascript:;" id="a1">delegated target</a> <br>
+<a href="javascript:;" id="a2">not delegated target</a> <br>
+<a href="javascript:;" id="a3">event namespace</a> <br>
+<a href="javascript:;" id="test" data-s="error">test jquery proxy</a>
+<!--scripts-->
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+    $("body").on("click","#a1", function (e) {
+        console.log(e.isDefaultPrevented())
+        console.log(e)
+    })
+    $("#a2").on("click", function (e) {
+        e.preventDefault()
+        console.log(e.isDefaultPrevented())
+        console.log(e)
+    })
+    $("#a3").on("click.wdj.theme", function (e) {
+        console.log(e.namespace)
+        console.log(e)
+    }).trigger("click.wdj.theme")
+
+    var obj = {
+        name: "John",
+        test: function() {
+            alert( this.name );
+            $("#test").unbind("click", obj.test);
+        }
+    };
+
+    $("#test").click( jQuery.proxy( obj, "test" ) );
+    //$("#test").click( obj.test.call(obj) ); /*直接执行了 error 没有返回方法*/
+    //$("#test").click( obj.test.bind(obj) ); /*有效 但无法取消绑定*/
+
+    // 以下代码跟上面那句是等价的:
+    // $("#test").click( jQuery.proxy( obj.test, obj ) );
+
+    // 可以与单独执行下面这句做个比较。
+    // $("#test").click( obj.test );
+
+</script>
+</body>
+</html>

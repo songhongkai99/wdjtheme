@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Callbacks funcs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    
+</head>
+<body>
+
+<!--scripts-->
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+    // a sample logging function to be added to a callbacks list
+    var log = function( value1, value2 ){
+        console.log( 'Received:' + value1 + ',' + value2 );
+    }
+
+    var callbacks = $.Callbacks();
+
+    // add the log method to the callbacks list
+    callbacks.add( log );
+
+    // fire the callbacks on the list using the context 'window'
+    // and an arguments array
+
+    callbacks.fireWith( window, ['foo','bar']);
+
+    // outputs: Received: foo, bar
+</script>
+</body>
+</html>
