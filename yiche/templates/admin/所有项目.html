@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="zh-CN" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="zh-CN" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="zh-CN" class="no-js">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+	<meta charset="utf-8"/>
+	<title></title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta content="width=device-width, initial-scale=1" name="viewport"/>
+	<meta content="" name="description"/>
+	<meta content="" name="author"/>
+	<!-- BEGIN GLOBAL MANDATORY STYLES -->
+	<link href="../../assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+	<link href="../../assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
+	<link href="../../assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="../../assets/global/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+	<!-- END GLOBAL MANDATORY STYLES -->
+	<!-- BEGIN PAGE LEVEL PLUGIN STYLES -->
+	<link href="../../assets/global/plugins/bootstrap-datepicker/css/datepicker.css" rel="stylesheet" type="text/css"/>
+	<link rel="stylesheet" type="text/css" href="../../assets/global/plugins/select2/select2.css"/>
+	<link rel="stylesheet" type="text/css" href="../../assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css"/>
+	<!-- END PAGE LEVEL PLUGIN STYLES -->
+	<!-- BEGIN PAGE STYLES -->
+
+	<!-- END PAGE STYLES -->
+	<!-- BEGIN THEME STYLES -->
+	<link href="../../assets/global/css/components.css" id="style_components" rel="stylesheet" type="text/css"/>
+	<link href="../../assets/global/css/plugins.css" rel="stylesheet" type="text/css"/>
+	<link href="../../assets/admin/layout/css/layout.css" rel="stylesheet" type="text/css"/>
+	<link href="../../assets/admin/layout/css/themes/blue.css" rel="stylesheet" type="text/css" id="style_color"/>
+	<link href="../../assets/admin/layout/css/custom.css" rel="stylesheet" type="text/css"/>
+	<!-- END THEME STYLES -->
+	<link rel="shortcut icon" href="favicon.ico"/>
+</head>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+<body class="page-container-bg-solid page-iframe">
+<!-- BEGIN PAGE HEADER-->
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="page-bar">
+				<ul class="page-breadcrumb">
+					<li>
+						<i class="fa fa-home"></i>
+						<a href="index.html">首页</a>
+						<i class="fa fa-angle-right"></i>
+					</li>
+					<li>
+						<a href="#">易车</a>
+						<i class="fa fa-angle-right"></i>
+					</li>
+					<li>
+						<a href="#">所有项目</a>
+					</li>
+				</ul>
+				<div class="page-toolbar">
+				</div>
+			</div>
+			<h3 class="page-title">
+				所有项目
+			</h3>
+			<!-- END PAGE HEADER-->
+
+		</div>
+		<div class="col-md-12 padding-big-top">
+			<!-- BEGIN EXAMPLE TABLE PORTLET-->
+			<div class="portlet box blue-dark">
+				<div class="portlet-title" style="position: relative;">
+					<div class="caption">
+						<i class="fa fa-list"></i> 项目列表
+					</div>
+					<div class="tools">
+						<a href="javascript:;" class="collapse">
+						</a>
+					</div>
+				</div>
+				<div class="portlet-body">
+					<div class="table-toolbar">
+					</div>
+					<table class="table table-striped table-bordered table-hover" id="sample_1">
+						<thead>
+						<tr>
+							<th class="table-checkbox">
+								<input type="checkbox" class="group-checkable" data-set="#sample_1 .checkboxes"/>
+							</th>
+							<th>
+								ID
+							</th>
+							<th>
+								姓名
+							</th>
+							<th>
+								操作
+							</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr class="odd gradeX">
+							<td>
+								<input type="checkbox" class="checkboxes" value="1"/>
+							</td>
+							<td>
+								1
+							</td>
+							<td>
+								<a href="">张三</a>
+							</td>
+							<td class="text-center">
+								<a href="#shenPiModal" class="btn btn-xs blue-dark" data-toggle="modal">审批</a>
+							</td>
+						</tr>
+						<tr class="odd gradeX">
+							<td>
+								<input type="checkbox" class="checkboxes" value="1"/>
+							</td>
+							<td>
+								2
+							</td>
+							<td>
+								<a href="">李四</a>
+							</td>
+							<td class="text-center">
+								<a href="#shenPiModal" class="btn btn-xs blue-dark" data-toggle="modal">审批</a>
+							</td>
+						</tr>
+						<tr class="odd gradeX">
+							<td>
+								<input type="checkbox" class="checkboxes" value="1"/>
+							</td>
+							<td>
+								3
+							</td>
+							<td>
+								<a href="">王五</a>
+							</td>
+							<td class="text-center">
+								<a href="#shenPiModal" class="btn btn-xs blue-dark" data-toggle="modal">审批</a>
+							</td>
+						</tr>
+						<tr class="odd gradeX">
+							<td>
+								<input type="checkbox" class="checkboxes" value="1"/>
+							</td>
+							<td>
+								4
+							</td>
+							<td>
+								<a href="">孙六</a>
+							</td>
+							<td class="text-center">
+								<a href="#shenPiModal" class="btn btn-xs blue-dark" data-toggle="modal">审批</a>
+							</td>
+						</tr>
+						<tr class="odd gradeX">
+							<td>
+								<input type="checkbox" class="checkboxes" value="1"/>
+							</td>
+							<td>
+								5
+							</td>
+							<td>
+								<a href="">...</a>
+							</td>
+							<td class="text-center">
+								<a href="#shenPiModal" class="btn btn-xs blue-dark" data-toggle="modal">审批</a>
+							</td>
+						</tr>
+						<tr class="odd gradeX">
+							<td>
+								<input type="checkbox" class="checkboxes" value="1"/>
+							</td>
+							<td>
+								6
+							</td>
+							<td>
+								<a href="">...</a>
+							</td>
+							<td class="text-center">
+								<a href="#shenPiModal" class="btn btn-xs blue-dark" data-toggle="modal">审批</a>
+							</td>
+						</tr>
+
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- END EXAMPLE TABLE PORTLET-->
+		</div>
+	</div>
+</div>
+<!-- END CONTENT -->
+
+<!--模态框-->
+<div class="modal fade" id="shenPiModal" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog" style="width: 60%;">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+				<h4 class="modal-title">审批模态框</h4>
+			</div>
+			<div class="modal-body">
+				<!-- BEGIN FORM-->
+				<form class="form-horizontal form-group-nomargin" role="form">
+					<div class="form-body">
+						<div class="row">
+							<div class="col-xs-6">
+								<div class="form-group">
+									<label class="control-label col-xs-6">医生姓名:</label>
+									<div class="col-xs-6">
+										<p class="form-control-static">
+											张三
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-6">
+								<div class="form-group">
+									<label class="control-label col-xs-6">所属医院:</label>
+									<div class="col-xs-6">
+										<p class="form-control-static">
+											第一医院
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-6">
+								<div class="form-group">
+									<label class="control-label col-xs-6">科室:</label>
+									<div class="col-xs-6">
+										<p class="form-control-static">
+											内科
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-6">
+								<div class="form-group">
+									<label class="control-label col-xs-6">职称:</label>
+									<div class="col-xs-6">
+										<p class="form-control-static">
+											主任医师
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+				<!-- END FORM-->
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn blue">审批通过</button>
+				<button type="button" class="btn default" data-dismiss="modal">审批不通过</button>
+			</div>
+		</div>
+		<!-- /.modal-content -->
+	</div>
+	<!-- /.modal-dialog -->
+</div>
+
+<!-- BEGIN CORE PLUGINS -->
+<!--[if lt IE 9]>
+<script src="../../assets/global/plugins/respond.min.js"></script>
+<script src="../../assets/global/plugins/excanvas.min.js"></script>
+<![endif]-->
+<script src="../../assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+<script src="../../assets/global/plugins/jquery-migrate.min.js" type="text/javascript"></script>
+<!-- IMPORTANT! Load jquery-ui.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
+<script src="../../assets/global/plugins/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+<script src="../../assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="../../assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
+<script src="../../assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+<script src="../../assets/global/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+<script src="../../assets/global/plugins/jquery.cokie.min.js" type="text/javascript"></script>
+<script src="../../assets/global/plugins/uniform/jquery.uniform.min.js" type="text/javascript"></script>
+<script src="../../assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
+<!-- END CORE PLUGINS -->
+<!-- BEGIN PAGE LEVEL PLUGINS -->
+<script src="../../assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js" type="text/javascript"></script>
+<script src="../../assets/global/plugins/bootstrap-datepicker/js/locales/bootstrap-datepicker.zh-CN.js" type="text/javascript"></script>
+<script type="text/javascript" src="../../assets/global/plugins/select2/select2.min.js"></script>
+<script type="text/javascript" src="../../assets/global/plugins/datatables/media/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="../../assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js"></script>
+<!-- END PAGE LEVEL PLUGINS -->
+<!-- BEGIN PAGE LEVEL SCRIPTS -->
+<script src="../../assets/global/scripts/metronic.js" type="text/javascript"></script>
+<script src="../../assets/admin/layout/scripts/layout.js" type="text/javascript"></script>
+<script src="../../assets/admin/layout/scripts/custom.js" type="text/javascript"></script>
+<!-- END PAGE LEVEL SCRIPTS -->
+<script>
+	jQuery(document).ready(function() {
+		Metronic.init(); // init metronic core componets
+		Layout.init(); // init layout
+		hkcustom.init();
+
+		var initTable1 = function () {
+
+			var table = $('#sample_1');
+
+			// begin first table
+			table.dataTable({
+
+				/*searching:false,*/
+				"language": {
+					"aria": {
+						"sortAscending": ": activate to sort column ascending",
+						"sortDescending": ": activate to sort column descending"
+					},
+					"paginate": {
+						"previous":"上一页",
+						"next": "下一页",
+						"last": "尾页",
+						"first": "首页"
+					},
+					"emptyTable": "暂无数据",
+					"info": "显示 _START_ 至 _END_ 条, 共 _TOTAL_ 条记录",
+					"infoEmpty": "没有找到记录",
+					"infoFiltered": "(filtered1 from _MAX_ total entries)",
+					"lengthMenu": " _MENU_ 条/每页",
+					"search": "搜索: ",
+					"zeroRecords": "没有搜索结果"
+				},
+
+				"bStateSave": false, // save datatable state(pagination, sort, etc) in cookie.
+
+				"columns": [{
+					"orderable": false
+				}, {
+					"orderable": true
+				}, {
+					"orderable": true
+				},  {
+					"orderable": false
+				}],
+				"lengthMenu": [
+					[5, 15, 20, -1],
+					[5, 15, 20, "All"] // change per page values here
+				],
+				// set the initial value
+				"pageLength": 5,
+				"pagingType": "bootstrap_full_number",
+				"columnDefs": [{  // set default column settings
+					'orderable': false,
+					'targets': [0]
+				}, {
+					"searchable": false,
+					"targets": [0]
+				}],
+				"order": [
+					[1, "asc"]
+				] // set first column as a default sort by asc
+			});
+
+			var tableWrapper = jQuery('#sample_1_wrapper');
+
+			table.find('.group-checkable').change(function () {
+				var set = jQuery(this).attr("data-set");
+				var checked = jQuery(this).is(":checked");
+				jQuery(set).each(function () {
+					if (checked) {
+						$(this).attr("checked", true);
+						$(this).parents('tr').addClass("active");
+					} else {
+						$(this).attr("checked", false);
+						$(this).parents('tr').removeClass("active");
+					}
+				});
+				jQuery.uniform.update(set);
+			});
+
+			table.on('change', 'tbody tr .checkboxes', function () {
+				$(this).parents('tr').toggleClass("active");
+			});
+
+			tableWrapper.find('.dataTables_length select').addClass("form-control input-xsmall input-inline"); // modify table per page dropdown
+		}();
+	});
+</script>
+<!-- END JAVASCRIPTS -->
+</body>
+<!-- END BODY -->
+</html>
