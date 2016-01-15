@@ -1,0 +1,22 @@
+/*import1 css*/
+@import url(common.css);
+.import1 {
+  color: #000;
+}
+
+/*import2. css*/
+.import2 {
+  color: #000;
+}
+
+/*css import function*/
+body {
+  position: relative;
+  position: relative;
+  position: absolute;
+}
+body.abc .abcd {
+  color: #000;
+}
+
+/*# sourceMappingURL=style.css.map */

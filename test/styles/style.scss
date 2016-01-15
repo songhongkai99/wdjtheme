@@ -1,0 +1,12 @@
+@import "import1";
+@import "import2";
+@import "common.css"; /*css import function*/
+body{
+    position: relative;
+    position: $import1;
+    position: $import2;
+    &.abc .abcd{
+        color: #000;
+    }
+}
+//注释
