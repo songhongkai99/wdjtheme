@@ -1,0 +1,71 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video { margin: 0; padding: 0; border: 0; font: inherit; }
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; }
+html { font-size: 62.5%; }
+body { font-family: "STHeiti", Helvetica, Arial, sans-serif; background: #fff; line-height: 1.5; color: #333333; font-size: 1.4em; }
+table { border-collapse: collapse; border-spacing: 0; }
+fieldset, img { border: 0; }
+legend { display: none; }
+address, caption, cite, code, dfn, em, strong, th, var { font-style: normal; font-weight: normal; }
+ol, ul { list-style: none; }
+caption, th { text-align: left; }
+h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: normal; }
+q:before, q:after { content: ''; }
+abbr, acronym { border: 0; }
+ins { text-decoration: none; }
+a:link, a:visited { text-decoration: none; }
+html { -webkit-text-size-adjust: none; }
+a { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+input[type="text"], input[type="button"], input[type="submit"], input[type="search"] { -webkit-appearance: none; border-radius: 0; }
+input[type="checkbox"] { margin: 0 3px 3px 4px; }
+img { max-width: 100%; }
+video { margin-left: auto; margin-right: auto; max-width: 100%; }
+/*******common classes begin******/
+.text-overflow-ellipsis { white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
+.nowrap { white-space: nowrap; }
+.float-left { float: left; }
+.float-right { float: right; }
+.block { display: block; }
+.inline-block { display: inline-block; }
+.inline { display: inline; }
+.transition-2ms { -webkit-transition: all .2s; -moz-transition: all .2s; -ms-transition: all .2s; -o-transition: all .2s; transition: all .2s; }
+.transition-4ms { -webkit-transition: all .4s; -moz-transition: all .4s; -ms-transition: all .4s; -o-transition: all .4s; transition: all .4s; }
+.transition-6ms { -webkit-transition: all .6s; -moz-transition: all .6s; -ms-transition: all .6s; -o-transition: all .6s; transition: all .6s; }
+.transition-1s { -webkit-transition: all 1s; -moz-transition: all 1s; -ms-transition: all 1s; -o-transition: all 1s; transition: all 1s; }
+.border-box { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.border-box * { -webkit-box-sizing: inherit; -moz-box-sizing: inherit; box-sizing: inherit; }
+.content-box { -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; }
+.responsive { width: 100%; max-width: 100%; height: auto; display: block; }
+.position-relative { position: relative; }
+.position-absolute { position: absolute; }
+.position-fixed { position: fixed; }
+.absolute-center { position: absolute; left: 50%; top: 50%; }
+.absolute-center-y { position: absolute; top: 50%; left: 0; }
+.transform-center { -webkit-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -o-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+.transform-center-y { -webkit-transform: translateY(-50%); -moz-transform: translateY(-50%); -ms-transform: translateY(-50%); -o-transform: translateY(-50%); transform: translateY(-50%); }
+.block-center { display: block; margin-left: auto; margin-right: auto; }
+.border { border: solid 1px #e0e0ec; }
+.border-none { border: none; }
+.radius-none { border-radius: 0; }
+.radius-1em { border-radius: 1em; padding-left: .6em; padding-right: .6em; }
+.radius-2em { border-radius: 2em; padding-left: 1em; padding-right: 1em; }
+.radius-circle { border-radius: 50%; }
+.bg-white { background-color: #FFFFFF; }
+.bg-grey { background-color: #ececf3; }
+.hide { display: none !important; }
+.vis-hide { visibility: hidden !important; }
+.overflow-hidden { overflow: hidden; }
+.clear-float:after { clear: both !important; content: ''; display: block; }
+.btn { background-color: transparent; color: #fff; display: inline-block; text-align: center; padding: 3px 5px; border: 1px solid transparent; }
+/*******common classes end******/
