@@ -51,7 +51,9 @@
   transform: translateY(1px);
 }
 .weixin-7 > header nav ul li {
-  padding: 12px 0 10px;
+  padding: 13px 0 14px;
+  font-size: 1.6rem;
+  line-height: 1;
 }
 .weixin-7 > header ul li.current {
   color: #0e6bc1;
@@ -60,30 +62,107 @@
 .weixin-7 > section {
   padding: 15px;
 }
-.weixin-7 > section.wx7-yaowen > article {
+.weixin-7 > section footer {
+  font-size: 1.2rem;
+  color: #b7b7b7;
+  line-height: 1;
+}
+.weixin-7 > section footer .footer-time {
+  margin-right: 14px;
+}
+.weixin-7 > section footer .footer-message {
+  float: right;
+  padding-left: 19px;
+  background: url("../img/icon-message.png") left 0 no-repeat;
+  background-size: 13px 11px;
+}
+.weixin-7 > section footer .footer-type {
+  float: right;
+  margin-top: -2px;
+  margin-left: 10px;
+  background: url("../img/icon-tuiguang.png") no-repeat;
+  background-size: 32px 15px;
+  width: 32px;
+  height: 15px;
+}
+.weixin-7 > section footer .footer-type.icon-bendi {
+  background-image: url("../img/icon-bendi.png");
+}
+.weixin-7 > section footer .footer-type.icon-huodong {
+  background-image: url("../img/icon-huodong.png");
+}
+.weixin-7 > section footer .footer-type.icon-zhibo {
+  background-image: url("../img/icon-zhibo.png");
+}
+.weixin-7 > section.wx7-yaowen > article,
+.weixin-7 > section.wx7-xinche > article {
   padding-bottom: 15px;
   margin-bottom: 15px;
   border-bottom: 1px solid #ededed;
 }
-.weixin-7 > section.wx7-yaowen .col-2-lira {
+.weixin-7 > section.wx7-yaowen .col-2-lira,
+.weixin-7 > section.wx7-xinche .col-2-lira {
   position: relative;
   background-color: #fff;
+  font-size: 1.6rem;
 }
-.weixin-7 > section.wx7-yaowen .col-2-lira > :first-child {
+.weixin-7 > section.wx7-yaowen .col-2-lira > :first-child,
+.weixin-7 > section.wx7-xinche .col-2-lira > :first-child {
   float: left;
   width: 90px;
   height: 60px;
   margin-right: 10px;
 }
-.weixin-7 > section.wx7-yaowen .col-2-lira > :last-child {
+.weixin-7 > section.wx7-yaowen .col-2-lira > :last-child,
+.weixin-7 > section.wx7-xinche .col-2-lira > :last-child {
   position: relative;
   width: 100%;
   padding-left: 100px;
 }
-.weixin-7 > section.wx7-yaowen .col-1-2row > figure {
+.weixin-7 > section.wx7-yaowen .col-2-lira > div,
+.weixin-7 > section.wx7-xinche .col-2-lira > div {
+  height: 60px;
+  line-height: 1.3;
+}
+.weixin-7 > section.wx7-yaowen .col-2-lira > div > p,
+.weixin-7 > section.wx7-xinche .col-2-lira > div > p {
+  height: calc(2em * 1.3);
+  height: -webkit-calc(2em * 1.3);
+  overflow: hidden;
+}
+.weixin-7 > section.wx7-yaowen .col-2-lira > div > p.icon-play,
+.weixin-7 > section.wx7-xinche .col-2-lira > div > p.icon-play {
+  text-indent: 21px;
+  background: url("../img/icon-play.png") left 1px no-repeat;
+  background-size: 16px 16px;
+}
+.weixin-7 > section.wx7-yaowen .col-2-lira footer,
+.weixin-7 > section.wx7-xinche .col-2-lira footer {
+  position: absolute;
+  width: 100%;
+  padding-left: inherit;
+  bottom: 0;
+  left: 0;
+}
+.weixin-7 > section.wx7-yaowen .col-1-2row > h1,
+.weixin-7 > section.wx7-xinche .col-1-2row > h1 {
+  font-size: 1.6rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1;
+  margin-bottom: 14px;
+}
+.weixin-7 > section.wx7-yaowen .col-1-2row > figure,
+.weixin-7 > section.wx7-xinche .col-1-2row > figure {
   font-size: 0;
 }
-.weixin-7 > section.wx7-yaowen .col-1-2row > figure > div {
+.weixin-7 > section.wx7-yaowen .col-1-2row > figure.one-img,
+.weixin-7 > section.wx7-xinche .col-1-2row > figure.one-img {
+  margin-bottom: 15px;
+}
+.weixin-7 > section.wx7-yaowen .col-1-2row > figure > div,
+.weixin-7 > section.wx7-xinche .col-1-2row > figure > div {
   display: inline-block;
   width: calc((100% - 20px) / 3);
   width: -webkit-calc((100% - 20px) / 3);
@@ -91,13 +170,48 @@
   margin-right: 10px;
   margin-bottom: 10px;
 }
-.weixin-7 > section.wx7-yaowen .col-1-2row > figure > div:nth-child(3n) {
+.weixin-7 > section.wx7-yaowen .col-1-2row > figure > div:nth-child(3n),
+.weixin-7 > section.wx7-xinche .col-1-2row > figure > div:nth-child(3n) {
   margin-right: 0;
 }
-.weixin-7 > section.wx7-shipin .wx7-video-box {
+.weixin-7 > section.wx7-shuoche {
+  position: relative;
+  padding: 15px 0;
+}
+.weixin-7 > section.wx7-shuoche > * {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.weixin-7 > section.wx7-shuoche .wx7-sepa {
+  position: absolute;
+  width: 100%;
+  height: 12px;
+  top: 0;
+  left: 0;
+  background-color: #f2f2f2;
+}
+.weixin-7 > section.wx7-shuoche .wx7-sepa.wx7-sepa-c {
+  position: relative;
+}
+.weixin-7 > section.wx7-shipin > h1,
+.weixin-7 > section.wx7-shuoche > h1 {
+  font-size: 1.8rem;
+  line-height: 1;
+  margin: 14px 0;
+}
+.weixin-7 > section.wx7-shipin > h1 small,
+.weixin-7 > section.wx7-shuoche > h1 small {
+  position: relative;
+  bottom: -4px;
+  font-size: 1.2rem;
+  color: #b7b7b7;
+}
+.weixin-7 > section.wx7-shipin .wx7-video-box,
+.weixin-7 > section.wx7-shuoche .wx7-video-box {
   font-size: 0;
 }
-.weixin-7 > section.wx7-shipin .wx7-video-box > figure {
+.weixin-7 > section.wx7-shipin .wx7-video-box > figure,
+.weixin-7 > section.wx7-shuoche .wx7-video-box > figure {
   display: inline-block;
   width: calc((100% - 10px) / 2);
   width: -webkit-calc((100% - 10px) / 2);
@@ -105,10 +219,36 @@
   margin-bottom: 10px;
   font-size: 1.4rem;
 }
-.weixin-7 > section.wx7-shipin .wx7-video-box > figure .wx7-video-thumb {
+.weixin-7 > section.wx7-shipin .wx7-video-box > figure h2,
+.weixin-7 > section.wx7-shuoche .wx7-video-box > figure h2 {
+  font-size: 1.6rem;
+  line-height: 1.4;
+  margin: 8px 0 6px;
+}
+.weixin-7 > section.wx7-shipin .wx7-video-box > figure p,
+.weixin-7 > section.wx7-shuoche .wx7-video-box > figure p {
+  font-size: 1.2rem;
+  color: #b7b7b7;
+}
+.weixin-7 > section.wx7-shipin .wx7-video-box > figure p :first-child,
+.weixin-7 > section.wx7-shuoche .wx7-video-box > figure p :first-child {
+  padding-left: 10px;
+  background: url("../img/icon-play-times.png") left center no-repeat;
+  background-size: 8px auto;
+  margin-right: 15px;
+}
+.weixin-7 > section.wx7-shipin .wx7-video-box > figure p :last-child,
+.weixin-7 > section.wx7-shuoche .wx7-video-box > figure p :last-child {
+  padding-left: 15px;
+  background: url("../img/icon-play-time.png") left center no-repeat;
+  background-size: 12px auto;
+}
+.weixin-7 > section.wx7-shipin .wx7-video-box > figure .wx7-video-thumb,
+.weixin-7 > section.wx7-shuoche .wx7-video-box > figure .wx7-video-thumb {
   position: relative;
 }
-.weixin-7 > section.wx7-shipin .wx7-video-box > figure .wx7-video-thumb:after {
+.weixin-7 > section.wx7-shipin .wx7-video-box > figure .wx7-video-thumb:after,
+.weixin-7 > section.wx7-shuoche .wx7-video-box > figure .wx7-video-thumb:after {
   content: '';
   position: absolute;
   width: 20px;
@@ -118,7 +258,8 @@
   background: url("../img/icon-video-play.png") no-repeat;
   background-size: contain;
 }
-.weixin-7 > section.wx7-shipin .wx7-video-box > figure:nth-child(2n) {
+.weixin-7 > section.wx7-shipin .wx7-video-box > figure:nth-child(2n),
+.weixin-7 > section.wx7-shuoche .wx7-video-box > figure:nth-child(2n) {
   margin-right: 0;
 }
 .weixin-7 .wx7-xiaoliang {

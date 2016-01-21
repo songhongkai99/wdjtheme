@@ -54,7 +54,6 @@
     }
 }
 //end
-
 .weixin-7 {
     > header {
         text-align: center;
@@ -64,7 +63,9 @@
         nav {
             @include transform(translateY(1px));
             ul li {
-                padding: 12px 0 10px;
+                padding: 13px 0 14px;
+                font-size: 1.6rem;
+                line-height: 1;
             }
         }
         ul li.current {
@@ -74,11 +75,53 @@
     }
     //HEADER END
 
+    //公共样式
     > section {
         padding: 15px;
+
+        //脚注
+        footer {
+            font-size: 1.2rem;
+            color: #b7b7b7;
+            line-height: 1;
+
+            .footer-time {
+                margin-right: 14px;
+            }
+
+            .footer-message {
+                float: right;
+                padding-left: 19px;
+                background: url("../img/icon-message.png") left 0 no-repeat;
+                background-size: 13px 11px;
+            }
+
+            .footer-type {
+                float: right;
+                margin-top: -2px;
+                margin-left: 10px;
+                background: url("../img/icon-tuiguang.png") no-repeat;
+                background-size: 32px 15px;
+                width: 32px;
+                height: 15px;
+
+                &.icon-tuiguang {
+                }
+                &.icon-bendi {
+                    background-image: url("../img/icon-bendi.png");
+                }
+                &.icon-huodong {
+                    background-image: url("../img/icon-huodong.png");
+                }
+                &.icon-zhibo {
+                    background-image: url("../img/icon-zhibo.png");
+                }
+            }
+        }
     }
 
-    > section.wx7-yaowen {
+    > section.wx7-yaowen,
+    > section.wx7-xinche {
         > article {
             padding-bottom: 15px;
             margin-bottom: 15px;
@@ -86,10 +129,51 @@
         }
         .col-2-lira {
             @include col-2-lira(90px, 60px, 10px);
+            font-size: 1.6rem;
+
+            > div {
+                height: 60px;
+                line-height: 1.3;
+
+                > p {
+                    height: calc(2em * 1.3); //行高 乘以 行数
+                    height: -webkit-calc(2em * 1.3);
+                    overflow: hidden;
+
+                    &.icon-play {
+                        text-indent: 21px;
+                        background: url("../img/icon-play.png") left 1px no-repeat;
+                        background-size: 16px 16px;
+                    }
+                }
+            }
+            footer {
+                position: absolute;
+                width: 100%;
+                padding-left: inherit;
+                bottom: 0;
+                left: 0;
+            }
         }
-        .col-1-2row > figure {
-            font-size: 0;
+        .col-1-2row {
+
+            > h1 {
+                font-size: 1.6rem;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                line-height: 1;
+                margin-bottom: 14px;
+            }
+            > figure {
+                font-size: 0;
+
+                &.one-img {
+                    margin-bottom: 15px;
+                }
+            }
         }
+
         .col-1-2row > figure > div {
             display: inline-block;
             width: calc((100% - 20px) / 3);
@@ -106,11 +190,43 @@
     //要闻END
 
     > section.wx7-shuoche {
+        position: relative;
+        padding: 15px 0;
+
+        >*{
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        .wx7-sepa {
+            position: absolute;
+            width: 100%;
+            height: 12px;
+            top: 0;
+            left: 0;
+            background-color: #f2f2f2;
+
+            &.wx7-sepa-c{
+                position: relative;
+            }
+        }
     }
     //说车end
 
-    > section.wx7-shipin {
+    > section.wx7-shipin,
+    > section.wx7-shuoche {
 
+        > h1 {
+            font-size: 1.8rem;
+            line-height: 1;
+            margin: 14px 0;
+
+            small {
+                position: relative;
+                bottom: -4px;
+                font-size: 1.2rem;
+                color: #b7b7b7;
+            }
+        }
         .wx7-video-box {
             font-size: 0;
 
@@ -122,6 +238,27 @@
                 margin-bottom: 10px;
                 font-size: 1.4rem;
 
+                h2 {
+                    font-size: 1.6rem;
+                    line-height: 1.4;
+                    margin: 8px 0 6px;
+                }
+                p{
+                    font-size: 1.2rem;
+                    color: #b7b7b7;
+
+                    :first-child{
+                        padding-left: 10px;
+                        background: url("../img/icon-play-times.png") left center no-repeat;
+                        background-size: 8px auto;
+                        margin-right: 15px;
+                    }
+                    :last-child{
+                        padding-left: 15px;
+                        background: url("../img/icon-play-time.png") left center no-repeat;
+                        background-size: 12px auto;
+                    }
+                }
                 .wx7-video-thumb {
                     position: relative;
 
