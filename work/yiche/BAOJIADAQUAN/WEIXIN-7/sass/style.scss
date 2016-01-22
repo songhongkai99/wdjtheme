@@ -133,11 +133,11 @@
 
             > div {
                 height: 60px;
-                line-height: 1.3;
+                line-height: 1.4;
 
                 > p {
-                    height: calc(2em * 1.3); //行高 乘以 行数
-                    height: -webkit-calc(2em * 1.3);
+                    height: calc(2em * 1.4); //行高 乘以 行数
+                    height: -webkit-calc(2em * 1.4);
                     overflow: hidden;
 
                     &.icon-play {
@@ -402,7 +402,7 @@
             position: fixed;
             bottom: 143px;
             right: 20px;
-            width: 80%;
+            width: 275px;
             background-color: #ffffff;
             border-radius: 4px;
 
@@ -440,7 +440,7 @@
                 border-top: 1px solid #ededed;
                 > span {
                     display: inline-block;
-                    padding: 12px 0;
+                    padding: 8px 0;
                     width: 25%;
                     text-align: center;
                     font-size: 1.2rem;
@@ -474,8 +474,8 @@
                 }
             }
             > footer {
-                padding: 11px 22px;
-                font-size: 1.1rem;
+                padding: 11px 0;
+                font-size: 1rem;
                 text-align: center;
                 color: #8c8c8c;
             }
