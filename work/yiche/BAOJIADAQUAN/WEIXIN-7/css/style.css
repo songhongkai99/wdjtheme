@@ -262,21 +262,29 @@
 .weixin-7 > section.wx7-shuoche .wx7-video-box > figure:nth-child(2n) {
   margin-right: 0;
 }
+.weixin-7 .wx7-xl-header {
+  padding: 0 13px;
+}
+.weixin-7 .wx7-xl-header nav ul li {
+  font-size: 1.3rem;
+  padding: 16px 0;
+}
 .weixin-7 .wx7-xiaoliang {
   counter-reset: xiaoliang 0;
   padding: 0;
 }
 .weixin-7 .wx7-xiaoliang > article {
-  padding: 15px 15px 15px 50px;
+  padding: 12px 13px 15px 55px;
   border-bottom: 1px solid #ededed;
   counter-increment: xiaoliang;
 }
 .weixin-7 .wx7-xiaoliang > article:before {
   content: '';
   position: absolute;
-  top: 15px;
-  left: 15px;
+  top: 12px;
+  left: 13px;
   font-size: 1.1rem;
+  line-height: 1;
   color: #0e6bc1;
 }
 .weixin-7 .wx7-xiaoliang > article.xiaoliang-1:before {
@@ -315,6 +323,21 @@
 .weixin-7 .wx7-xiaoliang > article.xiaoliang-3 ~ :before {
   content: "No." counter(xiaoliang);
 }
+.weixin-7 .wx7-xiaoliang > article > div {
+  line-height: 1;
+}
+.weixin-7 .wx7-xiaoliang > article > div h6 {
+  font-size: 1.6rem;
+  margin-bottom: 9px;
+}
+.weixin-7 .wx7-xiaoliang > article > div p:first-of-type {
+  font-size: 1.4rem;
+  color: #f00000;
+  margin-bottom: 9px;
+}
+.weixin-7 .wx7-xiaoliang > article > div p:last-of-type {
+  font-size: 1.2rem;
+}
 .weixin-7 .wx7-xiaoliang > article > div:after {
   content: '';
   position: absolute;
@@ -334,12 +357,12 @@
   float: left;
   width: 80px;
   height: 60px;
-  margin-right: 10px;
+  margin-right: 15px;
 }
 .weixin-7 .wx7-xiaoliang .col-2-lira > :last-child {
   position: relative;
   width: 100%;
-  padding-left: 90px;
+  padding-left: 95px;
 }
 
 #wx7-rili {
@@ -348,7 +371,7 @@
 #wx7-rili .wx7-rili-thumb {
   position: fixed;
   padding: 6px 9px 7px 10px;
-  right: 30px;
+  right: 20px;
   bottom: 100px;
   color: #ffffff;
   font-size: 1.3rem;
@@ -378,15 +401,20 @@
 }
 #wx7-rili .rili-mask .wx7-rili-details {
   position: fixed;
-  bottom: 140px;
+  bottom: 143px;
   right: 20px;
   width: 80%;
   background-color: #ffffff;
   border-radius: 4px;
 }
 #wx7-rili .rili-mask .wx7-rili-details > header {
-  padding: 9px 10px 4px;
+  padding: 8px 11px 4px;
   text-align: center;
+}
+#wx7-rili .rili-mask .wx7-rili-details > header .rili-year {
+  font-size: 1.3rem;
+  color: #151515;
+  line-height: 26px;
 }
 #wx7-rili .rili-mask .wx7-rili-details > header .rili-prev,
 #wx7-rili .rili-mask .wx7-rili-details > header .rili-next {
@@ -413,7 +441,7 @@
 }
 #wx7-rili .rili-mask .wx7-rili-details > section > span {
   display: inline-block;
-  padding: 6px 0;
+  padding: 12px 0;
   width: 25%;
   text-align: center;
   font-size: 1.2rem;
@@ -443,8 +471,8 @@
   color: #aaaaaa;
 }
 #wx7-rili .rili-mask .wx7-rili-details > footer {
-  padding: 10px;
-  font-size: 1rem;
+  padding: 11px 22px;
+  font-size: 1.1rem;
   text-align: center;
   color: #8c8c8c;
 }

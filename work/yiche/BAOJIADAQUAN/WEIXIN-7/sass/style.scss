@@ -193,7 +193,7 @@
         position: relative;
         padding: 15px 0;
 
-        >*{
+        > * {
             padding-left: 15px;
             padding-right: 15px;
         }
@@ -205,7 +205,7 @@
             left: 0;
             background-color: #f2f2f2;
 
-            &.wx7-sepa-c{
+            &.wx7-sepa-c {
                 position: relative;
             }
         }
@@ -243,17 +243,17 @@
                     line-height: 1.4;
                     margin: 8px 0 6px;
                 }
-                p{
+                p {
                     font-size: 1.2rem;
                     color: #b7b7b7;
 
-                    :first-child{
+                    :first-child {
                         padding-left: 10px;
                         background: url("../img/icon-play-times.png") left center no-repeat;
                         background-size: 8px auto;
                         margin-right: 15px;
                     }
-                    :last-child{
+                    :last-child {
                         padding-left: 15px;
                         background: url("../img/icon-play-time.png") left center no-repeat;
                         background-size: 12px auto;
@@ -285,20 +285,30 @@
     }
     //新车END
 
+    .wx7-xl-header {
+        padding: 0 13px;
+
+        nav ul li {
+            font-size: 1.3rem;
+            padding: 16px 0;
+        }
+    }
     .wx7-xiaoliang {
         counter-reset: xiaoliang 0; //定义计数器
         padding: 0;
+
         > article {
-            padding: 15px 15px 15px 50px;
+            padding: 12px 13px 15px 55px;
             border-bottom: 1px solid #ededed;
             counter-increment: xiaoliang; //使用计数器xiaoliang
 
             &:before {
                 content: '';
                 position: absolute;
-                top: 15px;
-                left: 15px;
+                top: 12px;
+                left: 13px;
                 font-size: 1.1rem;
+                line-height: 1;
                 color: #0e6bc1;
             }
             &.xiaoliang-1:before {
@@ -321,6 +331,20 @@
             }
 
             > div {
+                line-height: 1;
+                h6{
+                    font-size: 1.6rem;
+                    margin-bottom: 9px;
+                }
+                p:first-of-type{
+                    font-size: 1.4rem;
+                    color: #f00000;
+                    margin-bottom: 9px;
+                }
+                p:last-of-type{
+                    font-size: 1.2rem;
+                }
+
                 &:after {
                     content: '';
                     position: absolute;
@@ -335,7 +359,7 @@
             }
         }
         .col-2-lira {
-            @include col-2-lira(80px, 60px, 10px);
+            @include col-2-lira(80px, 60px, 15px);
         }
     }
 }
@@ -344,7 +368,7 @@
     .wx7-rili-thumb {
         position: fixed;
         padding: 6px 9px 7px 10px;
-        right: 30px;
+        right: 20px;
         bottom: 100px;
         color: #ffffff;
         font-size: 1.3rem;
@@ -376,16 +400,21 @@
 
         .wx7-rili-details {
             position: fixed;
-            bottom: 140px;
+            bottom: 143px;
             right: 20px;
             width: 80%;
             background-color: #ffffff;
             border-radius: 4px;
 
             > header {
-                padding: 9px 10px 4px;
+                padding: 8px 11px 4px;
                 text-align: center;
 
+                .rili-year {
+                    font-size: 1.3rem;
+                    color: #151515;
+                    line-height: 26px;
+                }
                 .rili-prev,
                 .rili-next {
                     text-align: left;
@@ -411,7 +440,7 @@
                 border-top: 1px solid #ededed;
                 > span {
                     display: inline-block;
-                    padding: 6px 0;
+                    padding: 12px 0;
                     width: 25%;
                     text-align: center;
                     font-size: 1.2rem;
@@ -445,8 +474,8 @@
                 }
             }
             > footer {
-                padding: 10px;
-                font-size: 1rem;
+                padding: 11px 22px;
+                font-size: 1.1rem;
                 text-align: center;
                 color: #8c8c8c;
             }
