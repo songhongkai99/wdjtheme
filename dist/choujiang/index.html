@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>抽奖系统</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+
+    <!--禁止缓存 BEGIN-->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    <!--禁止缓存 END-->
+
+    <script type="text/javascript" src="./js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="./js/script.js"></script>
+
+    <style type="text/css">
+        body { background-color: #fff; text-align: center; padding-top: 50px; }
+        #Result { border: 3px solid #40AA53; text-align: center; width: 80%; padding: 50px 0; background: #efe; }
+        #ResultNum { font-size: 50pt; font-family: Verdana }
+        #Button { margin: 50px auto 0; width: 80%; display: block; }
+        #Button input { font-size: 40px; padding: 0 50px; }
+        #btn { background-color: #40AA53; border: 1px solid #40AA53; width: 100%; height: 50px; line-height: 40px; margin: 0em auto; font-size: 1em; border-radius: 2.5px; -moz-border-radius: 2.5px; -webkit-border-radius: 2.5px; color: #FFF; }
+    </style>
+</head>
+<body>
+<h1 style="color:#40AA53;display: none;">抽奖系统</h1>
+
+<div id="Result" style="color:#40AA53; position: absolute; top: 50%; left: 50%; margin-top: -120px; margin-left: -40%; ">
+    <span id="ResultNum">0</span>
+</div>
+
+<div id="Button" style="visibility: hidden;">
+    <input type='button' id="btn" value='开始' onclick='beginRndNum(this)'/>
+</div>
+
+</body>
+</html>
