@@ -55,7 +55,7 @@ function requestFullScreen() {
 $(document).on("click", function () {
     requestFullScreen();
 }).on("keydown", function (e) {
-    console.log(e)
+    //console.log(e)
     if(e.which == 32 || e.keyCode == 32){
         $("#btn").click();
     }
