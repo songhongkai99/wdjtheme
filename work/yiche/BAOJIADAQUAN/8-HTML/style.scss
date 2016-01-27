@@ -1,0 +1,61 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video { margin: 0; padding: 0; border: 0; font: inherit; }
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; }
+html { font-size: 62.5%; }
+body { font-family: "STHeiti", Helvetica, Arial, sans-serif; background: #fff; line-height: 1.5; color: #333333; font-size: 1.4em; }
+table { border-collapse: collapse; border-spacing: 0; }
+fieldset, img { border: 0; }
+legend { display: none; }
+address, caption, cite, code, dfn, em, strong, th, var { font-style: normal; font-weight: normal; }
+ol, ul { list-style: none; }
+caption, th { text-align: left; }
+h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: normal; }
+q:before, q:after { content: ''; }
+abbr, acronym { border: 0; }
+ins { text-decoration: none; }
+a:link, a:visited { text-decoration: none; }
+html { -webkit-text-size-adjust: none; }
+a { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+input[type="text"], input[type="button"], input[type="submit"], input[type="search"] { -webkit-appearance: none; border-radius: 0; }
+input[type="checkbox"] { margin: 0 3px 3px 4px; }
+img { max-width: 100%; }
+video { margin-left: auto; margin-right: auto; max-width: 100%; }
+/*reset end*/
+
+.wp_wrap {
+    padding: 12px 15px 15px;
+
+    .wp_head {
+        line-height: 1;
+        border-bottom: 1px solid #F1F1F1;
+        padding-bottom: 14px;
+        h1 {
+            font-size: 2.1rem;
+            line-height: 1.2;
+            margin-bottom: 7px;
+        }
+        span{
+            font-size: 1.2rem;
+            color: #999;
+        }
+    }
+
+    .wp_content {
+        padding-top: 9px;
+        line-height: 2;
+    }
+    .wp_bottom {
+        display: none;
+    }
+}
