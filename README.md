@@ -1,4 +1,4 @@
 # wdjtheme
 my first test git repository
 
-updated 20160127
+version - 1.0.0
