@@ -154,7 +154,8 @@
 
         var initTable1 = function () {
 
-            var table = $('#sample_1');
+            var table = $('#sample_1'),
+                urlPre = "http://192.168.2.204/";
 
             // begin first table
             table.dataTable({
@@ -181,6 +182,13 @@
                 "pageLength": 5,
                 "pagingType": "bootstrap_full_number",
                 "columnDefs": [
+                    {
+                        "render": function (data, type, row) {
+                            return "<a href='" + urlPre + row[7] + "' target='_blank'>" + data + "</a>";
+                        },
+                        "targets": 2
+                    },
+                    {"visible": true, "targets": [3]} //无意义 控制列是否显示
                 ],
                 "order": [
                     [0, "desc"]
