@@ -121,6 +121,7 @@
 </div>
 <!-- END CONTENT -->
 
+<datalist id="dtList"></datalist>
 
 <!-- BEGIN CORE PLUGINS -->
 <!--[if lt IE 9]>
@@ -159,7 +160,14 @@
                     urlPre = "http://192.168.2.204/";
             $.getJSON("./assets/category.json", function (data) {
                 category = data;
-                console.log(category);
+                //console.log(category);
+                (function (cate) {
+                    var iHtml='';
+                    for (var i = 0; i < cate.length; i++) {
+                        iHtml += "<option value='" + category[i][Object.keys(category[i])] + "'>";
+                    }
+                    $("#dtList").html(iHtml);
+                })(data);
             });
             function getJsonData(index) {
                 for (var i = 0; i < category.length; i++) {
@@ -170,8 +178,8 @@
                 return "未分类";
             }
 
-            // begin first table
-            table.dataTable({
+            // begin first table debugDt.fnFilter过滤("keywords").fnDraw重绘()
+            window.debugDt = table.dataTable({
 
                 ajax: {
                     url: "./assets/data.json"
@@ -216,6 +224,9 @@
 
             var tableWrapper = jQuery('#sample_1_wrapper');
 
+            debugDt.on("init.dt", function () {
+                $("#sample_1_filter input").attr("list","dtList");
+            })
             table.find('.group-checkable').change(function () {
                 var set = jQuery(this).attr("data-set");
                 var checked = jQuery(this).is(":checked");
