@@ -31,7 +31,7 @@
 </header>
 
 <!--要闻 BEGIN-->
-<section class="wx7-yaowen">
+<section class="wx7-yaowen" data-url="http://www.baidu.com">
     <article class="col-2-lira clear-float">
         <figure><img src="http://www.atool.org/placeholder.png?size=180x120&text=180x120&fs=16" width="90" height="60" alt=""></figure>
         <div>
@@ -94,6 +94,8 @@
             <span class="footer-message">334</span>
         </footer>
     </article>
+
+    <div class="wx7-loading-more">加载中...</div>
 </section>
 <!--要闻 END-->
 
@@ -398,6 +400,8 @@
             <span class="footer-time">2015-03-17</span>
         </footer>
     </article>
+
+    <div class="wx7-loading-more">加载中...</div>
 </section>
 <!--新车END-->
 
@@ -435,6 +439,70 @@
         $("li", "#wx7-header").on("click", function () {
             $(this).addClass("current").siblings().removeClass("current")
             $("body > section:nth-of-type(" + (parseInt($(this).index()) + 1) + ")").removeClass("hide").siblings("section").addClass("hide")
+        })
+        //跳转链接
+        $("[data-url]").on("click", function () {
+            location = $(this).data("url")
+        })
+
+        /*loading more start*/
+        var current_scroll = 0,
+                has_ajaxStart = false;
+        $(window).on("scroll", function (e) {
+            var wx7_ele = $(".wx7-loading-more", "body > section:not(.hide)"),
+                    wx7_lm_ot = wx7_ele.offset().top,
+                    win_height = $(this).height();
+            //scroll to bottom
+            if (current_scroll == 0) {
+                current_scroll = $(this).scrollTop();
+            } else if ($(this).scrollTop() < current_scroll) {
+                current_scroll = $(this).scrollTop();
+                return false;
+            } else {
+                current_scroll = $(this).scrollTop();
+            }
+            //ajax start
+            if ($(this).scrollTop() + win_height > wx7_lm_ot && !has_ajaxStart) {
+                has_ajaxStart = true;
+                $.ajax({
+                    url: "data.json",
+                    type: "get",
+                    dataType: "json",
+                    success: function (data) {
+
+                        if (data.length == 0) {
+                            wx7_ele.html("没有更多内容了");
+                        } else {
+                            var fragment = "";
+                            for (var i = 0; i < data.length; i++) {
+                                //判断type类型加载不同模板
+                                switch (data[i].type) {
+                                    case 1:
+                                        fragment += '<article class="col-1-2row clear-float">\
+                                                        <h1>' + data[i].title + '</h1>\
+                                                        <figure class="one-img">\
+                                                        <img class="responsive" src="' + data[i].imgsrc + '" alt="">\
+                                                        </figure>\
+                                                        <footer>\
+                                                        <span class="footer-time">' + data[i].time + '</span>\
+                                                        </footer>\
+                                                        </article>';
+                                        break;
+                                    case 2:
+                                        break;
+                                    default:
+                                        break;
+                                }
+                            }
+                            $(fragment).insertBefore(wx7_ele);
+                            wx7_ele.html("上滑加载更多内容")
+                        }
+
+                        wx7_ele.html("加载中...");
+                        has_ajaxStart = false;
+                    }
+                });
+            }
         })
     })
 </script>

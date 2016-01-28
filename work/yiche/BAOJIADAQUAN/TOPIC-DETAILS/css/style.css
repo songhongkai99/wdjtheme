@@ -157,4 +157,14 @@
   color: #b7b7b7;
 }
 
+.td-links {
+  width: 72px;
+  height: 19px;
+  display: inline-block;
+  background: url("../img/icon-link.png") no-repeat;
+  background-size: contain;
+  position: relative;
+  vertical-align: sub;
+}
+
 /*# sourceMappingURL=style.css.map */

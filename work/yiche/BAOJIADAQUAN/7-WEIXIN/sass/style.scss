@@ -482,9 +482,18 @@
         }
     }
 }
+.wx7-loading-more{
+    padding: 6px;
+    color: #b7b7b7;
+    text-align: center;
+    font-size: 1.1rem;
+}
 //iphone适配
 @media screen and (device-width: 320px) {
     .weixin-7 > section.wx7-yaowen .col-1-2row .flexbox > img {
         //width: 90px;
+    }
+    .weixin-7 > section footer .footer-time{
+        margin-right: 0;
     }
 }
