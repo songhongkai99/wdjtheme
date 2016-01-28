@@ -155,7 +155,20 @@
         var initTable1 = function () {
 
             var table = $('#sample_1'),
-                urlPre = "http://192.168.2.204/";
+                    category,
+                    urlPre = "http://192.168.2.204/";
+            $.getJSON("./assets/category.json", function (data) {
+                category = data;
+                console.log(category);
+            });
+            function getJsonData(index) {
+                for (var i = 0; i < category.length; i++) {
+                    if (!!category[i][index]) {
+                        return category[i][index];
+                    }
+                }
+                return "未分类";
+            }
 
             // begin first table
             table.dataTable({
@@ -182,6 +195,12 @@
                 "pageLength": 15,
                 "pagingType": "bootstrap_full_number",
                 "columnDefs": [
+                    {
+                        "render": function (data) {
+                            return getJsonData(data);
+                        },
+                        "targets": 1
+                    },
                     {
                         "render": function (data, type, row) {
                             return "<a href='" + urlPre + row[7] + "' target='_blank'>" + data + "</a>";
