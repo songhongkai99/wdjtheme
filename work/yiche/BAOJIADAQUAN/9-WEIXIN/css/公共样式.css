@@ -11,8 +11,9 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video { margin: 0; padding: 0; border: 0; font: inherit; }
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; }
 html { font-size: 62.5%; }
-body { font-family: "STHeiti", Helvetica, Arial, sans-serif; background: #fff; line-height: 150%; color: #333333; font-size: 1.4em; }
+body { font-family: "STHeiti", Helvetica, Arial, sans-serif; background: #fff; line-height: 1.5; color: #333333; font-size: 1.4em; }
 table { border-collapse: collapse; border-spacing: 0; }
 fieldset, img { border: 0; }
 legend { display: none; }
@@ -66,5 +67,5 @@ video { margin-left: auto; margin-right: auto; max-width: 100%; }
 .vis-hide { visibility: hidden !important; }
 .overflow-hidden { overflow: hidden; }
 .clear-float:after { clear: both !important; content: ''; display: block; }
-.btn { background-color: transparent; color: #fff; display: inline-block; text-align: center; padding: 3px 5px; border:1px solid transparent; }
+.btn { background-color: transparent; color: #fff; display: inline-block; text-align: center; padding: 3px 5px; border: 1px solid transparent; }
 /*******common classes end******/
