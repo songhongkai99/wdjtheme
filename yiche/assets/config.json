@@ -1,41 +1,103 @@
 {
   "domain": "http://192.168.2.204",
   "port": "80",
-  "nav": {
-    "易车": {
-      "项目管理": [
-        "所有项目"
-      ],
-      "办公常用": [
-        "常用网址",
-        "其它收藏"
+  "nav": [
+    {
+      "title": "易车",
+      "url": "javascript:;",
+      "active": true,
+      "subMenu": [
+        {
+          "title": "项目管理",
+          "submenu": [
+            {
+              "title": "所有项目",
+              "url": "yiche-all.html"
+            }
+          ]
+        },
+        {
+          "title": "常用资料",
+          "submenu": [
+            {
+              "title": "常用资料",
+              "url": "javascript:;"
+            }
+          ]
+        }
       ]
     },
-    "中科院": {
-      "项目管理": [
-        "所有项目"
+    {
+      "title": "中科院",
+      "url": "javascript:;",
+      "active": false,
+      "subMenu": [
+        {
+          "title": "项目管理",
+          "submenu": [
+            {
+              "title": "所有项目",
+              "url": "zhongkeyuan-all.html"
+            }
+          ]
+        }
       ]
     },
-    "小麻包": {
-      "项目管理": [
-        "所有项目"
+    {
+      "title": "小麻包",
+      "url": "javascript:;",
+      "active": false,
+      "subMenu": [
+        {
+          "title": "项目管理",
+          "submenu": [
+            {
+              "title": "所有项目",
+              "url": "xiaomabao-all.html"
+            }
+          ]
+        }
       ]
     },
-    "统计分析": {
-      "...": [
-        "..."
+    {
+      "title": "文章收藏",
+      "url": "javascript:;",
+      "active": false,
+      "subMenu": [
+        {
+          "title": "文章管理",
+          "submenu": [
+            {
+              "title": "所有文章",
+              "url": "article-all.html"
+            },
+            {
+              "title": "技术杂谈",
+              "url": "javascript:;"
+            }
+          ]
+        }
       ]
     },
-    "文章收藏": {
-      "...": [
-        "..."
-      ]
-    },
-    "常用站点": {
-      "常用网址": [
-        "gitHub",
-        "stackOverflow"
+    {
+      "title": "常用站点",
+      "url": "javascript:;",
+      "active": false,
+      "subMenu": [
+        {
+          "title": "站点管理",
+          "submenu": [
+            {
+              "title": "所有网站",
+              "url": "websites-all.html"
+            },
+            {
+              "title": "技术论坛",
+              "url": "javascript:;"
+            }
+          ]
+        }
       ]
     }
-  }
+  ]
 }
