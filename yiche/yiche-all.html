@@ -169,12 +169,12 @@
             }
 
             //配置文件
-            $.getJSON("./assets/config.json", function (data) {
+            $.getJSON("./assets/json/config.json", function (data) {
                 urlPre = data.domain + ":" + data.port + "/";
             });
 
             //分类文件
-            $.getJSON("./assets/category.json", function (data) {
+            $.getJSON("./assets/json/yiche/category.json", function (data) {
                 category = data;
                 (function (cate) {
                     var iHtml = '';
@@ -189,7 +189,7 @@
             window.debugDt = table.dataTable({
 
                 ajax: {
-                    url: "./assets/projects.json"
+                    url: "./assets/json/yiche/projects.json"
                 },
 
                 /*searching:false,*/
@@ -235,6 +235,10 @@
             debugDt.on("init.dt", function () {
                 $("#sample_1_filter input").attr("list", "dtList");
             })
+
+            $(document).on("click", "#sample_1_filter input", function (e) {
+                $(this).select();
+            });
 
             table.find('.group-checkable').change(function () {
                 var set = jQuery(this).attr("data-set");

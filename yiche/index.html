@@ -93,87 +93,6 @@
                     </form>
                     <!-- END RESPONSIVE QUICK SEARCH FORM -->
                 </li>
-                <!--<li class="leftMenubar active open">
-                    <a href="javascript:;">
-                        <i class="icon-list"></i>
-                        <span class="title">项目管理</span>
-                        <span class="selected"></span>
-                        <span class="arrow open"></span>
-                    </a>
-                    <ul class="sub-menu">
-                        <li class="active">
-                            <a href="yiche-all.html" target="page-iframe"><i class="icon-bar-chart"></i> 所有项目</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="leftMenubar hide">
-                    <a href="javascript:;">
-                        <i class="icon-list"></i>
-                        <span class="title">...</span>
-                        <span class="selected"></span>
-                        <span class="arrow"></span>
-                    </a>
-                    <ul class="sub-menu">
-                        <li>
-                            <a href="#" target="page-iframe"><i class="icon-bar-chart"></i> 所有项目</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="leftMenubar hide">
-                    <a href="javascript:;">
-                        <i class="icon-list"></i>
-                        <span class="title">...</span>
-                        <span class="selected"></span>
-                        <span class="arrow"></span>
-                    </a>
-                    <ul class="sub-menu">
-                        <li>
-                            <a href="#" target="page-iframe"><i class="icon-bar-chart"></i> 所有项目</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="leftMenubar hide">
-                    <a href="javascript:;">
-                        <i class="icon-list"></i>
-                        <span class="title">...</span>
-                        <span class="selected"></span>
-                        <span class="arrow"></span>
-                    </a>
-                    <ul class="sub-menu">
-                        <li>
-                            <a href="#"><i class="icon-bar-chart"></i> ...</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="leftMenubar hide">
-                    <a href="javascript:;">
-                        <i class="icon-list"></i>
-                        <span class="title">...</span>
-                        <span class="selected"></span>
-                        <span class="arrow"></span>
-                    </a>
-                    <ul class="sub-menu">
-                        <li>
-                            <a href="#"><i class="icon-bar-chart"></i> ...</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="leftMenubar hide">
-                    <a href="javascript:;">
-                        <i class="icon-list"></i>
-                        <span class="title">...</span>
-                        <span class="selected"></span>
-                        <span class="arrow"></span>
-                    </a>
-                    <ul class="sub-menu">
-                        <li>
-                            <a href="#"><i class="icon-bar-chart"></i> gitHub</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="icon-bar-chart"></i> stackOverflow</a>
-                        </li>
-                    </ul>
-                </li>-->
             </ul>
             <!-- END SIDEBAR MENU -->
         </div>
@@ -182,7 +101,7 @@
     <!-- BEGIN CONTENT -->
     <div class="page-content-wrapper">
         <div class="page-content">
-            <iframe id="page-iframe" name="page-iframe" src="yiche-all.html" scrolling="no" frameborder="0"></iframe>
+            <iframe id="page-iframe" name="page-iframe" src="" scrolling="no" frameborder="0"></iframe>
         </div>
     </div>
     <!-- END CONTENT -->
@@ -225,7 +144,7 @@
         hkcustom.init();
 
         //init menu
-        $.getJSON("./assets/config.json", function (data) {
+        $.getJSON("./assets/json/config.json", function (data) {
             var _top_html = "", _left_html = "", topmenu = data.nav, active, open;
 
             for (var i = 0, l = topmenu.length; i < l; i++) {
@@ -273,6 +192,7 @@
 
             $("#topMenubar").html(_top_html);
             $(_left_html).insertAfter("#leftsidemenu-init");
+            $("#page-iframe").attr("src", data.index);
 
         });
     });

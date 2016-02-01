@@ -1,6 +1,7 @@
 {
   "domain": "http://192.168.2.204",
   "port": "80",
+  "index": "yiche-all.html",
   "nav": [
     {
       "title": "易车",
