@@ -263,6 +263,9 @@
                 .wx7-video-thumb {
                     position: relative;
 
+                    img {
+                        min-height: 94px;
+                    }
                     &:after {
                         content: '';
                         position: absolute;
@@ -333,16 +336,16 @@
 
             > div {
                 line-height: 1;
-                h6{
+                h6 {
                     font-size: 1.6rem;
                     margin-bottom: 9px;
                 }
-                p:first-of-type{
+                p:first-of-type {
                     font-size: 1.4rem;
                     color: #f00000;
                     margin-bottom: 9px;
                 }
-                p:last-of-type{
+                p:last-of-type {
                     font-size: 1.2rem;
                 }
 
@@ -483,7 +486,7 @@
         }
     }
 }
-.wx7-loading-more{
+.wx7-loading-more {
     padding: 6px;
     color: #b7b7b7;
     text-align: center;
@@ -494,11 +497,15 @@
     .weixin-7 > section.wx7-yaowen .col-1-2row .flexbox > img {
         //width: 90px;
     }
-    .weixin-7 > section footer .footer-time{
+    .weixin-7 > section footer .footer-time {
         margin-right: 0;
     }
     .weixin-7 > section.wx7-shipin .wx7-video-box > figure h2,
     .weixin-7 > section.wx7-shuoche .wx7-video-box > figure h2 {
         font-size: 1.4rem;
+    }
+    .weixin-7 > section.wx7-shipin .wx7-video-box > figure .wx7-video-thumb img,
+    .weixin-7 > section.wx7-shuoche .wx7-video-box > figure .wx7-video-thumb img{
+        min-height: 79px;
     }
 }

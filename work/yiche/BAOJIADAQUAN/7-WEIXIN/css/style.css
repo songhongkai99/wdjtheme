@@ -248,6 +248,10 @@
 .weixin-7 > section.wx7-shuoche .wx7-video-box > figure .wx7-video-thumb {
   position: relative;
 }
+.weixin-7 > section.wx7-shipin .wx7-video-box > figure .wx7-video-thumb img,
+.weixin-7 > section.wx7-shuoche .wx7-video-box > figure .wx7-video-thumb img {
+  min-height: 94px;
+}
 .weixin-7 > section.wx7-shipin .wx7-video-box > figure .wx7-video-thumb:after,
 .weixin-7 > section.wx7-shuoche .wx7-video-box > figure .wx7-video-thumb:after {
   content: '';
@@ -493,5 +497,10 @@
   .weixin-7 > section.wx7-shipin .wx7-video-box > figure h2,
   .weixin-7 > section.wx7-shuoche .wx7-video-box > figure h2 {
     font-size: 1.4rem;
+  }
+
+  .weixin-7 > section.wx7-shipin .wx7-video-box > figure .wx7-video-thumb img,
+  .weixin-7 > section.wx7-shuoche .wx7-video-box > figure .wx7-video-thumb img {
+    min-height: 79px;
   }
 }
