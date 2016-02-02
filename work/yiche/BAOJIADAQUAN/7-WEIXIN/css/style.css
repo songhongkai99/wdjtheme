@@ -218,6 +218,7 @@
   margin-right: 10px;
   margin-bottom: 10px;
   font-size: 1.4rem;
+  vertical-align: top;
 }
 .weixin-7 > section.wx7-shipin .wx7-video-box > figure h2,
 .weixin-7 > section.wx7-shuoche .wx7-video-box > figure h2 {
@@ -484,8 +485,13 @@
   font-size: 1.1rem;
 }
 
-@media screen and (device-width: 320px) {
+@media screen and (max-device-width: 374px) {
   .weixin-7 > section footer .footer-time {
     margin-right: 0;
+  }
+
+  .weixin-7 > section.wx7-shipin .wx7-video-box > figure h2,
+  .weixin-7 > section.wx7-shuoche .wx7-video-box > figure h2 {
+    font-size: 1.4rem;
   }
 }

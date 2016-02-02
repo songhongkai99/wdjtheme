@@ -121,7 +121,73 @@
 </div>
 <!-- END CONTENT -->
 
+<!--搜索数据列表-->
 <datalist id="dtList"></datalist>
+
+<!--模态框-->
+<div class="modal fade" id="project-details-modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                <h4 class="modal-title">项目详情</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal form-group-nomargin" role="form">
+                    <div class="form-body">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label col-xs-3">项目介绍:</label>
+                                    <div class="col-xs-9">
+                                        <p class="form-control-static" id="modal-desc">
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label col-xs-3">发起人:</label>
+                                    <div class="col-xs-9">
+                                        <p class="form-control-static" id="modal-initiator">
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label col-xs-3">上线地址:</label>
+                                    <div class="col-xs-9">
+                                        <p class="form-control-static" id="modal-online">
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <label class="control-label col-xs-3">BUGS:</label>
+                                    <div class="col-xs-9" id="modal-bugs">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn default" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
 
 <!-- BEGIN CORE PLUGINS -->
 <!--[if lt IE 9]>
@@ -234,6 +300,26 @@
             //定义datalist
             debugDt.on("init.dt", function () {
                 $("#sample_1_filter input").attr("list", "dtList");
+            }).on("click", "tr", function (e) {
+                if ($(e.target).is("a[href]")) {
+                    return;
+                }
+                var project_id = $(this).find("td:first").html(), project_data, bugs_html = "";
+                $.getJSON("./assets/json/yiche/projects.json", function (data) {
+                    project_data = data.data[data.data.length - parseInt(project_id)];
+                    var $project = $("#project-details-modal");
+                    $project.find("#modal-desc").html(project_data[8].desc);
+                    $project.find("#modal-initiator").html(project_data[8].initiator);
+                    $project.find("#modal-online").html('<a href="' + project_data[8].online + '" target="_blank">' + project_data[8].online + '</a>');
+
+                    for (var i = 0, j = project_data[8].bugs.length; i < j; i++) {
+                        bugs_html += '<p class="form-control-static block">\
+                                      '+ (i+1) + ": " + project_data[8].bugs[i].title + "(" + project_data[8].bugs[i].solution + ")" + " 已解决 : " + project_data[8].bugs[i].resolve + '\
+                                      </p>';
+                    }
+                    $project.find("#modal-bugs").html(bugs_html);
+                    $project.modal("show");
+                });
             })
 
             $(document).on("click", "#sample_1_filter input", function (e) {
