@@ -9,7 +9,7 @@
 <!-- BEGIN HEAD -->
 <head>
     <meta charset="utf-8"/>
-    <title>我的开发文档(songhongkai99)</title>
+    <title>My workbook</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="width=device-width, initial-scale=1" name="viewport"/>
     <meta content="" name="description"/>
@@ -18,11 +18,7 @@
     <link href="assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" async/>
     <link href="assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
     <link href="assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-    <link href="assets/global/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
     <!-- END GLOBAL MANDATORY STYLES -->
-    <!-- BEGIN PAGE LEVEL PLUGIN STYLES -->
-
-    <!-- END PAGE LEVEL PLUGIN STYLES -->
 
     <!-- BEGIN THEME STYLES -->
     <link href="assets/global/css/components.css" id="style_components" rel="stylesheet" type="text/css"/>
@@ -31,7 +27,11 @@
     <link href="assets/admin/layout/css/themes/blue.css" rel="stylesheet" type="text/css" id="style_color"/>
     <link href="assets/admin/layout/css/custom.css" rel="stylesheet" type="text/css"/>
     <!-- END THEME STYLES -->
-    <link rel="shortcut icon" href="favicon.ico"/>
+    <link rel="shortcut icon" href="./assets/global/img/favicon.ico"/>
+
+    <script>
+        window.top !== window && (window.top.location = window.location)
+    </script>
 </head>
 <!-- END HEAD -->
 <!-- BEGIN BODY -->
@@ -57,9 +57,9 @@
         </a>
         <!-- END RESPONSIVE MENU TOGGLER -->
         <div class="top-menu" style="height: 46px; line-height: 46px;">
-            <span class="inline-block font-grey" style="padding-right: 60px;">Songhongkai99，欢迎登陆</span>
+            <span class="inline-block font-grey" style="padding-right: 60px;">Welcome, <em id="wdj-username"></em></span>
 			<span class="inline-block" style="padding-right: 16px;">
-				<a href="login.html" class="font-red"><i class="icon-logout"></i> 退出</a>
+				<a href="login.html?action=logout" class="font-red"><i class="icon-logout"></i> Logout</a>
 			</span>
         </div>
     </div>
@@ -80,14 +80,14 @@
                     <!-- END SIDEBAR TOGGLER BUTTON -->
                 </li>
                 <li class="sidebar-search-wrapper" id="leftsidemenu-init">
-                    <form class="sidebar-search " action="" method="POST">
+                    <form class="sidebar-search" action="https://www.baidu.com/s" method="get" target="_blank">
                         <a href="javascript:;" class="remove">
                             <i class="icon-close"></i>
                         </a>
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="搜索...">
+                            <input type="text" class="form-control" name="wd" placeholder="Search...">
 							<span class="input-group-btn">
-							<a href="javascript:;" class="btn submit"><i class="icon-magnifier"></i></a>
+							    <a href="javascript:;" class="btn submit"><i class="icon-magnifier"></i></a>
 							</span>
                         </div>
                     </form>
@@ -110,7 +110,7 @@
 <!-- BEGIN FOOTER -->
 <div class="page-footer">
     <div class="page-footer-inner">
-        2016 &copy; songhongkai99.
+        <span id="wdj-copyright"></span> <em id="wdj-slogon"></em>
     </div>
     <div class="scroll-to-top">
         <i class="icon-arrow-up"></i>
@@ -124,22 +124,19 @@
 <![endif]-->
 <script src="assets/global/plugins/jquery.min.js" type="text/javascript"></script>
 <script src="assets/global/plugins/jquery-migrate.min.js" type="text/javascript"></script>
-<!-- IMPORTANT! Load jquery-ui.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
 <script src="assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
-<script src="assets/global/plugins/uniform/jquery.uniform.min.js" type="text/javascript"></script>
 <!-- END CORE PLUGINS -->
 <!-- BEGIN PAGE LEVEL PLUGINS -->
 
 <!-- END PAGE LEVEL PLUGINS -->
 <!-- BEGIN PAGE LEVEL SCRIPTS -->
-<script src="assets/global/scripts/metronic.js" type="text/javascript"></script>
+<script src="assets/global/scripts/base.js" type="text/javascript"></script>
 <script src="assets/admin/layout/scripts/layout.js" type="text/javascript"></script>
 <script src="assets/admin/layout/scripts/custom.js" type="text/javascript"></script>
 <!-- END PAGE LEVEL SCRIPTS -->
 <script>
     jQuery(document).ready(function () {
-        Metronic.init(); // init metronic core componets
+        Base.init(); // init base core componets
         Layout.init(); // init layout
         hkcustom.init();
 
@@ -163,14 +160,14 @@
 
                     //inner leftsidemenu respect
                     for (var g = 0, u = topmenu[i].subMenu[j].submenu.length; g < u; g++) {
-                        var _active = '';
+                        var _sub_active = '';
                         if (j == 0 && open == "open" && g == 0) {
-                            _active = "active ";
+                            _sub_active = "active ";
                         } else {
-                            _active = "";
+                            _sub_active = "";
                         }
-                        _shtml += '<li class="' + _active + '">\
-                                        <a href="' + topmenu[i].subMenu[j].submenu[g].url + '" target="page-iframe"><i class="icon-bar-chart"></i>\
+                        _shtml += '<li class="' + _sub_active + '">\
+                                        <a href="' + topmenu[i].subMenu[j].submenu[g].url + '?menu='+encodeURIComponent(topmenu[i].title)+'&title='+encodeURIComponent(topmenu[i].subMenu[j].title)+'&detail='+encodeURIComponent(topmenu[i].subMenu[j].submenu[g].title)+'" target="page-iframe"><i class="icon-bar-chart"></i>\
                                          ' + topmenu[i].subMenu[j].submenu[g].title + '\
                                         </a>\
                                    </li>';
@@ -190,6 +187,9 @@
                 }
             }
 
+            $("#wdj-username").html(data.username);
+            $("#wdj-copyright").html(data.copyright);
+            $("#wdj-slogon").html(data.slogon);
             $("#topMenubar").html(_top_html);
             $(_left_html).insertAfter("#leftsidemenu-init");
             $("#page-iframe").attr("src", data.index);

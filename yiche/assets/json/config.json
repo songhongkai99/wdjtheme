@@ -1,7 +1,8 @@
 {
   "username": "songhongkai99",
   "password": "123456",
-  "slogon": "Think and do it",
+  "slogon": "Think and do it!",
+  "copyright": "2016 &copy; wdjtheme. ",
   "domain": "http://192.168.2.204",
   "port": "80",
   "index": "yiche-all.html",
@@ -17,6 +18,10 @@
             {
               "title": "所有项目",
               "url": "yiche-all.html"
+            },
+            {
+              "title": "移动端",
+              "url": "yiche-all.html"
             }
           ]
         },
@@ -25,7 +30,7 @@
           "submenu": [
             {
               "title": "常用资料",
-              "url": "javascript:;"
+              "url": ""
             }
           ]
         }

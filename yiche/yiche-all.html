@@ -18,16 +18,11 @@
     <link href="assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
     <link href="assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
     <link href="assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-    <link href="assets/global/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
     <!-- END GLOBAL MANDATORY STYLES -->
     <!-- BEGIN PAGE LEVEL PLUGIN STYLES -->
-    <link href="assets/global/plugins/bootstrap-datepicker/css/datepicker.css" rel="stylesheet" type="text/css"/>
-    <link rel="stylesheet" type="text/css" href="assets/global/plugins/select2/select2.css"/>
     <link rel="stylesheet" type="text/css" href="assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css"/>
     <!-- END PAGE LEVEL PLUGIN STYLES -->
-    <!-- BEGIN PAGE STYLES -->
 
-    <!-- END PAGE STYLES -->
     <!-- BEGIN THEME STYLES -->
     <link href="assets/global/css/components.css" id="style_components" rel="stylesheet" type="text/css"/>
     <link href="assets/global/css/plugins.css" rel="stylesheet" type="text/css"/>
@@ -35,7 +30,7 @@
     <link href="assets/admin/layout/css/themes/blue.css" rel="stylesheet" type="text/css" id="style_color"/>
     <link href="assets/admin/layout/css/custom.css" rel="stylesheet" type="text/css"/>
     <!-- END THEME STYLES -->
-    <link rel="shortcut icon" href="favicon.ico"/>
+    <link rel="shortcut icon" href="./assets/global/img/favicon.ico"/>
 </head>
 <!-- END HEAD -->
 <!-- BEGIN BODY -->
@@ -48,22 +43,26 @@
                 <ul class="page-breadcrumb">
                     <li>
                         <i class="fa fa-home"></i>
-                        <a href="index.html">首页</a>
+                        <a href="index.html">Home</a>
                         <i class="fa fa-angle-right"></i>
                     </li>
                     <li>
-                        <a href="#">易车</a>
+                        <a href="javascript:;" id="wdj-bread-menu"></a>
                         <i class="fa fa-angle-right"></i>
                     </li>
                     <li>
-                        <a href="#">所有项目</a>
+                        <a href="javascript:;" id="wdj-bread-title"></a>
+                        <i class="fa fa-angle-right"></i>
+                    </li>
+                    <li>
+                        <a href="javascript:;" id="wdj-bread-detail"></a>
                     </li>
                 </ul>
                 <div class="page-toolbar">
                 </div>
             </div>
-            <h3 class="page-title">
-                所有项目
+            <h3 class="page-title" id="wdj-page-detail">
+
             </h3>
             <!-- END PAGE HEADER-->
 
@@ -73,7 +72,7 @@
             <div class="portlet box blue-dark">
                 <div class="portlet-title" style="position: relative;">
                     <div class="caption">
-                        <i class="fa fa-list"></i> 项目列表
+                        <i class="fa fa-list"></i> Details Table
                     </div>
                     <div class="tools">
                         <a href="javascript:;" class="collapse">
@@ -130,7 +129,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-                <h4 class="modal-title">项目详情</h4>
+                <h4 class="modal-title">Item details</h4>
             </div>
             <div class="modal-body">
                 <form class="form-horizontal form-group-nomargin" role="form">
@@ -138,7 +137,7 @@
                         <div class="row">
                             <div class="col-xs-12">
                                 <div class="form-group">
-                                    <label class="control-label col-xs-3">项目介绍:</label>
+                                    <label class="control-label col-xs-3">Description:</label>
                                     <div class="col-xs-9">
                                         <p class="form-control-static" id="modal-desc">
 
@@ -148,7 +147,7 @@
                             </div>
                             <div class="col-xs-12">
                                 <div class="form-group">
-                                    <label class="control-label col-xs-3">发起人:</label>
+                                    <label class="control-label col-xs-3">Initiator:</label>
                                     <div class="col-xs-9">
                                         <p class="form-control-static" id="modal-initiator">
 
@@ -160,7 +159,7 @@
                         <div class="row">
                             <div class="col-xs-12">
                                 <div class="form-group">
-                                    <label class="control-label col-xs-3">上线地址:</label>
+                                    <label class="control-label col-xs-3">Online:</label>
                                     <div class="col-xs-9">
                                         <p class="form-control-static" id="modal-online">
 
@@ -170,7 +169,7 @@
                             </div>
                             <div class="col-xs-12">
                                 <div class="form-group">
-                                    <label class="control-label col-xs-3">BUGS:</label>
+                                    <label class="control-label col-xs-3">Bugs:</label>
                                     <div class="col-xs-9" id="modal-bugs">
 
                                     </div>
@@ -181,7 +180,7 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn default" data-dismiss="modal">Close</button>
             </div>
         </div>
         <!-- /.modal-content -->
@@ -197,27 +196,34 @@
 <script src="assets/global/plugins/jquery.min.js" type="text/javascript"></script>
 <script src="assets/global/plugins/jquery-migrate.min.js" type="text/javascript"></script>
 <script src="assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
-<script src="assets/global/plugins/jquery.cokie.min.js" type="text/javascript"></script>
-<script src="assets/global/plugins/uniform/jquery.uniform.min.js" type="text/javascript"></script>
 <!-- END CORE PLUGINS -->
 <!-- BEGIN PAGE LEVEL PLUGINS -->
-<script src="assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js" type="text/javascript"></script>
-<script src="assets/global/plugins/bootstrap-datepicker/js/locales/bootstrap-datepicker.zh-CN.js" type="text/javascript"></script>
-<script type="text/javascript" src="assets/global/plugins/select2/select2.min.js"></script>
 <script type="text/javascript" src="assets/global/plugins/datatables/media/js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js"></script>
 <!-- END PAGE LEVEL PLUGINS -->
 <!-- BEGIN PAGE LEVEL SCRIPTS -->
-<script src="assets/global/scripts/metronic.js" type="text/javascript"></script>
+<script src="assets/global/scripts/base.js" type="text/javascript"></script>
 <script src="assets/admin/layout/scripts/layout.js" type="text/javascript"></script>
 <script src="assets/admin/layout/scripts/custom.js" type="text/javascript"></script>
 <!-- END PAGE LEVEL SCRIPTS -->
 <script>
     jQuery(document).ready(function () {
-        Metronic.init(); // init metronic core componets
+        Base.init(); // init base core componets
         Layout.init(); // init layout
         hkcustom.init();
+
+        var _param = hkcustom.getURLParameter();
+
+        if (_param.length) {
+            $("#wdj-bread-menu").html(_param.menu);
+            $("#wdj-bread-title").html(_param.title);
+            $("#wdj-bread-detail, #wdj-page-detail").html(_param.detail);
+        } else {
+            var _top_doc = $(window.top.document);
+            $("#wdj-bread-menu").html(_top_doc.find("#topMenubar .active a").text());
+            $("#wdj-bread-title").html(_top_doc.find(".leftMenubar.active > a .title").text());
+            $("#wdj-bread-detail, #wdj-page-detail").html(_top_doc.find(".leftMenubar.active li.active a").text());
+        }
 
         var initTable1 = function () {
 
@@ -314,7 +320,7 @@
 
                     for (var i = 0, j = project_data[8].bugs.length; i < j; i++) {
                         bugs_html += '<p class="form-control-static block">\
-                                      '+ (i+1) + ": " + project_data[8].bugs[i].title + "(" + project_data[8].bugs[i].solution + ")" + " 已解决 : " + project_data[8].bugs[i].resolve + '\
+                                      ' + (i + 1) + ": " + project_data[8].bugs[i].title + "(" + project_data[8].bugs[i].solution + ")" + " 已解决 : " + project_data[8].bugs[i].resolve + '\
                                       </p>';
                     }
                     $project.find("#modal-bugs").html(bugs_html);

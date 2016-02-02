@@ -56,7 +56,7 @@ var hkcustom = {
             var $leftbar = $(".leftMenubar"),
                 $thisa = $leftbar.filter(".for-topmenubar-" + $(this).index()).first().find("ul:first li:first a");
             $leftbar.removeClass("active").addClass("hide").filter(".for-topmenubar-" + $(this).index()).removeClass("hide").first().find("ul:first li:first a").click();
-            ($thisa.attr("href") != "#" && $.trim($thisa.attr("href")) != "" && $($thisa.attr("href")) != "javascript:;") && $("#page-iframe").attr("src", $thisa.attr("href"));
+            ($thisa.attr("href") != "#" && $.trim($thisa.attr("href")) != "" && $thisa.attr("href") != "javascript:;") && $("#page-iframe").attr("src", $thisa.attr("href"));
         })
     },
 
@@ -140,18 +140,37 @@ var hkcustom = {
         })
     },
 
+    handleLoginStatus: function () {
+        if(!localStorage.getItem("wdj-logon-status") && !sessionStorage.getItem("wdj-logon-status")) {
+            location = "login.html"
+        }
+    },
+
+    getURLParameter: function () {
+        var result = {};
+        var params = (window.location.search.split('?')[1] || '').split('&');
+        for (var param in params) {
+            if (params.hasOwnProperty(param)) {
+                var paramParts = params[param].split('=');
+                result[paramParts[0]] = decodeURIComponent(paramParts[1] || "");
+            }
+        }
+        return result;
+    },
+
     init: function () {
         this.preventSelect2_custominput();
         this.initBootstrapModal();
         this.handleTopMenubar();
         this.handleSidebarMenu();
         this.handleIframeHeight();
-        Metronic.addResizeHandler(hkcustom.handleIframeHeight);
+        Base.addResizeHandler(hkcustom.handleIframeHeight);
         this.handleDatePicker();
         this.handleSelect2();
         this.handleModalPosition();
         this.handleValidateForm();
         this.hanldeDataTableInit();
+        this.handleLoginStatus();
     }
 
 };
