@@ -82,7 +82,7 @@
                 <div class="portlet-body">
                     <div class="table-toolbar">
                     </div>
-                    <table class="table table-striped table-bordered table-hover" id="sample_1">
+                    <table class="table table-striped table-bordered table-hover" id="wdj-datatable">
                         <thead>
                         <tr>
                             <th>
@@ -105,6 +105,9 @@
                             </th>
                             <th>
                                 上线
+                            </th>
+                            <th>
+                                操作
                             </th>
                         </tr>
                         </thead>
@@ -132,52 +135,37 @@
                 <h4 class="modal-title">Item details</h4>
             </div>
             <div class="modal-body">
-                <form class="form-horizontal form-group-nomargin" role="form">
-                    <div class="form-body">
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <div class="form-group">
-                                    <label class="control-label col-xs-3">Description:</label>
-                                    <div class="col-xs-9">
-                                        <p class="form-control-static" id="modal-desc">
-
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xs-12">
-                                <div class="form-group">
-                                    <label class="control-label col-xs-3">Initiator:</label>
-                                    <div class="col-xs-9">
-                                        <p class="form-control-static" id="modal-initiator">
-
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <div class="form-group">
-                                    <label class="control-label col-xs-3">Online:</label>
-                                    <div class="col-xs-9">
-                                        <p class="form-control-static" id="modal-online">
-
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xs-12">
-                                <div class="form-group">
-                                    <label class="control-label col-xs-3">Bugs:</label>
-                                    <div class="col-xs-9" id="modal-bugs">
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </form>
+                <table class="table table-hover table-striped">
+                    <thead>
+                    <tr>
+                        <th>Initiator</th>
+                        <th>Description</th>
+                        <th>Online</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td id="modal-initiator"></td>
+                        <td id="modal-desc"></td>
+                        <td id="modal-online"></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <h4 class="font-grey text-center">bugs</h4>
+                <table class="table table-hover table-striped">
+                    <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Description</th>
+                        <th>Solution</th>
+                        <th>Status</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr id="modal-bugs">
+                    </tr>
+                    </tbody>
+                </table>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn default" data-dismiss="modal">Close</button>
@@ -212,8 +200,8 @@
         Layout.init(); // init layout
         hkcustom.init();
 
+        //init bread
         var _param = hkcustom.getURLParameter();
-
         if (Object.keys(_param).length == 3) {
             $("#wdj-bread-menu").html(_param.menu);
             $("#wdj-bread-title").html(_param.title);
@@ -225,13 +213,13 @@
             $("#wdj-bread-detail, #wdj-page-detail").html(_top_doc.find(".leftMenubar.active li.active a").text());
         }
 
-        var initTable1 = function () {
+        //init datatable
+        (function () {
+            var table = $('#wdj-datatable'),
+                category,
+                urlPre = "http://localhost:80/";
 
-            var table = $('#sample_1'),
-                    category,
-                    urlPre = "http://localhost:80/";
-
-            function getJsonData(index) {
+            function getJsonCategory(index) {
                 for (var i = 0; i < category.length; i++) {
                     if (!!category[i][index]) {
                         return category[i][index];
@@ -260,53 +248,91 @@
             // begin first table debugDt.fnFilter过滤("keywords").fnDraw重绘()
             window.debugDt = table.dataTable({
 
-                ajax: {
-                    url: "../json/yiche/projects.json"
+                "processing": true, //显示处理进度
+                "deferRender": true, //延迟加载
+                "bStateSave": true, // save datatable state(pagination, sort, etc) in cookie.
+                "ajax": {
+                    "url": "../json/yiche/projects.json",
+                    "dataSrc": "data"
                 },
-
-                /*searching:false,*/
+                "columns": [
+                    { "data": "id" },
+                    { "data": "category" },
+                    { "data": "title" },
+                    { "data": "start_date" },
+                    { "data": "end_date" },
+                    { "data": "note" },
+                    { "data": "status" }, //0未上线 1已上线 2作废
+                    { "data": null }
+                ],
+                "columnDefs": [ //自定义列数据
+                    {
+                        "render": function (data) {
+                            return getJsonCategory(data);
+                        },
+                        "targets": 1
+                    },
+                    {
+                        "render": function (data, type, row) {
+                            return "<a href='" + urlPre + row.localhost + "' target='_blank'>" + data + "</a>";
+                        },
+                        "targets": 2
+                    },
+                    {
+                        "render": function (data) {
+                            var _class = '', _text = '';
+                            switch (data){
+                                case 0:
+                                    _text = "否";
+                                    break;
+                                case 1:
+                                    _class = "font-green";
+                                    _text = "是";
+                                    break;
+                                case 2:
+                                    _class = "font-red";
+                                    _text = "作废";
+                                    break;
+                                default: break;
+                            }
+                            return "<span class='" + _class + "'>" + _text + "</span>";
+                        },
+                        "targets": -2 //倒数第二列
+                    },
+                    {
+                        "visible": true,
+                        "targets": [3]
+                    },
+                    {
+                        "data": null,
+                        "defaultContent": "<button class='btn btn-default btn-xs'>详情</button>",
+                        "targets": -1
+                    }
+                ],
+                "order": [
+                    [0, "desc"]
+                ], // set first column as a default sort by desc
                 "language": {
                     "paginate": {
                         "previous": "prev",
                         "next": "next"
                     }
                 },
-
-                "bStateSave": true, // save datatable state(pagination, sort, etc) in cookie.
-
                 "lengthMenu": [
                     [5, 15, 20, -1],
                     [5, 15, 20, "All"] // change per page values here
                 ],
                 // set the initial value
                 "pageLength": 15,
-                "pagingType": "bootstrap_full_number",
-                "columnDefs": [
-                    {
-                        "render": function (data) {
-                            return getJsonData(data);
-                        },
-                        "targets": 1
-                    },
-                    {
-                        "render": function (data, type, row) {
-                            return "<a href='" + urlPre + row[7] + "' target='_blank'>" + data + "</a>";
-                        },
-                        "targets": 2
-                    },
-                    {"visible": true, "targets": [3]} //无意义 控制列是否显示
-                ],
-                "order": [
-                    [0, "desc"]
-                ] // set first column as a default sort by asc
+                "pagingType": "bootstrap_full_number"
             });
 
-            var tableWrapper = jQuery('#sample_1_wrapper');
+            var tableWrapper = jQuery('#wdj-datatable_wrapper');
 
             //定义datalist
             debugDt.on("init.dt", function () {
-                $("#sample_1_filter input").attr("list", "dtList");
-            }).on("click", "tr", function (e) {
+                $("#wdj-datatable_filter input").attr("list", "dtList");
+            }).on("click", "tbody > tr", function (e) {
                 if ($(e.target).is("a[href]")) {
                     return;
                 }
@@ -314,22 +340,24 @@
                 //获取详细信息
                 $.getJSON("../json/yiche/projects.json", function (data) {
                     project_data = data.data[data.data.length - parseInt(project_id)];
-                    var $project = $("#project-details-modal");
-                    $project.find("#modal-desc").html(project_data[8].desc);
-                    $project.find("#modal-initiator").html(project_data[8].initiator);
-                    $project.find("#modal-online").html('<a href="' + project_data[8].online + '" target="_blank">' + project_data[8].online + '</a>');
+                    var $project = $("#project-details-modal"), _online = project_data.details.online ? "查看" : "";
+                    $project.find("#modal-desc").html(project_data.details.desc);
+                    $project.find("#modal-initiator").html(project_data.details.initiator);
+                    $project.find("#modal-online").html('<a href="' + project_data.details.online + '" target="_blank">'+ _online +'</a>');
 
-                    for (var i = 0, j = project_data[8].bugs.length; i < j; i++) {
-                        bugs_html += '<p class="form-control-static block">'+
-                                          (i + 1) + ": " + project_data[8].bugs[i].title + "(" + project_data[8].bugs[i].solution + ")" + " 已解决 : " + project_data[8].bugs[i].resolve +
-                                     '</p>';
+                    for (var i = 0, j = project_data.details.bugs.length; i < j; i++) {
+                        var _status = project_data.details.bugs[i].resolve == 0 ? "未解决" : "<span class='font-green'>已解决</span>";
+                        bugs_html += '<td>' + (i + 1) + "</td>" +
+                                     '<td>' + project_data.details.bugs[i].title + "</td>" +
+                                     '<td>' + project_data.details.bugs[i].solution + "</td>" +
+                                     '<td>' + _status + '</td>';
                     }
                     $project.find("#modal-bugs").html(bugs_html);
                     $project.modal("show");
                 });
             })
 
-            $(document).on("click", "#sample_1_filter input", function (e) {
+            $(document).on("click", "#wdj-datatable_filter input", function (e) {
                 $(this).select();
             });
 
@@ -353,7 +381,7 @@
             });
 
             tableWrapper.find('.dataTables_length select').addClass("form-control input-xsmall input-inline"); // modify table per page dropdown
-        }();
+        })();
     });
 </script>
 <!-- END JAVASCRIPTS -->
