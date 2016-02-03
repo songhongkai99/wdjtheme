@@ -55,7 +55,7 @@ var hkcustom = {
             $(this).siblings("li").removeClass("active").end().addClass("active");
             var $leftbar = $(".leftMenubar"),
                 $thisa = $leftbar.filter(".for-topmenubar-" + $(this).index()).first().find("ul:first li:first a");
-            $leftbar.removeClass("active").addClass("hide").filter(".for-topmenubar-" + $(this).index()).removeClass("hide").first().find("ul:first li:first a").click();
+            $leftbar.removeClass("active open").addClass("hide").filter(".for-topmenubar-" + $(this).index()).removeClass("hide").first().addClass("active open").find("ul:first li:first a").click();
             ($thisa.attr("href") != "#" && $.trim($thisa.attr("href")) != "" && $thisa.attr("href") != "javascript:;") && $("#page-iframe").attr("src", $thisa.attr("href"));
         })
     },

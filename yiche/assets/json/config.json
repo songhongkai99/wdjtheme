@@ -69,20 +69,54 @@
       ]
     },
     {
-      "title": "文章收藏",
+      "title": "知识梳理",
       "url": "javascript:;",
       "active": false,
       "subMenu": [
         {
-          "title": "文章管理",
+          "title": "必备技能",
           "submenu": [
             {
-              "title": "所有文章",
-              "url": "./assets/pages/article-all.html"
+              "title": "CSS",
+              "url": "./assets/pages/zssl-css.html"
             },
             {
-              "title": "技术杂谈",
-              "url": "javascript:;"
+              "title": "JS",
+              "url": "./assets/pages/zssl-js.html"
+            },
+            {
+              "title": "HTML",
+              "url": "./assets/pages/zssl-html.html"
+            },
+            {
+              "title": "PLUGIN",
+              "url": "./assets/pages/zssl-plugin.html"
+            }
+          ]
+        },
+        {
+          "title": "移动开发",
+          "submenu": [
+            {
+              "title": "WebAPP",
+              "url": "./assets/pages/zssl-webapp.html"
+            },
+            {
+              "title": "WebPage",
+              "url": "./assets/pages/zssl-webpage.html"
+            }
+          ]
+        },
+        {
+          "title": "PC开发",
+          "submenu": [
+            {
+              "title": "WebAPP",
+              "url": "./assets/pages/zssl-webapp.html"
+            },
+            {
+              "title": "WebPage",
+              "url": "./assets/pages/zssl-webpage.html"
             }
           ]
         }
