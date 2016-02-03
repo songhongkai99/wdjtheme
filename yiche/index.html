@@ -147,11 +147,9 @@
             for (var i = 0, l = topmenu.length; i < l; i++) {
                 topmenu[i].active ? (active = "active ", open = "open") : (active = "", open = "");
                 //topmenubar
-                _top_html += '<li class="classic-menu-dropdown ' + active + '">\
-                                        <a href="' + topmenu[i].url + '">\
-                                        ' + topmenu[i].title + ' <span class="selected"></span>\
-                                        </a>\
-                                        </li>';
+                _top_html += '<li class="classic-menu-dropdown ' + active + '">'+
+                                  '<a href="' + topmenu[i].url + '">' + topmenu[i].title + '<span class="selected"></span></a>'+
+                             '</li>';
                 //leftsidemenu
                 for (var j = 0, q = topmenu[i].subMenu.length; j < q; j++) {
                     var _active, _open, _hide, _shtml = '';
@@ -166,24 +164,26 @@
                         } else {
                             _sub_active = "";
                         }
-                        _shtml += '<li class="' + _sub_active + '">\
-                                        <a href="' + topmenu[i].subMenu[j].submenu[g].url + '?menu='+encodeURIComponent(topmenu[i].title)+'&title='+encodeURIComponent(topmenu[i].subMenu[j].title)+'&detail='+encodeURIComponent(topmenu[i].subMenu[j].submenu[g].title)+'" target="page-iframe"><i class="icon-bar-chart"></i>\
-                                         ' + topmenu[i].subMenu[j].submenu[g].title + '\
-                                        </a>\
-                                   </li>';
+                        _shtml += '<li class="' + _sub_active + '">' +
+                                       '<a href="' + topmenu[i].subMenu[j].submenu[g].url + '?menu=' + encodeURIComponent(topmenu[i].title) +
+                                       '&title=' + encodeURIComponent(topmenu[i].subMenu[j].title) + '&detail=' +
+                                       encodeURIComponent(topmenu[i].subMenu[j].submenu[g].title) + '" target="page-iframe"><i class="icon-bar-chart"></i>' +
+                                       topmenu[i].subMenu[j].submenu[g].title +
+                                       '</a>' +
+                                  '</li>';
                     }
 
-                    _left_html += '<li class="leftMenubar ' + "for-topmenubar-" + i + " " + _active + _open + _hide + '">\
-                                        <a href="javascript:;">\
-                                            <i class="icon-list"></i>\
-                                            <span class="title">' + topmenu[i].subMenu[j].title + '</span>\
-                                            <span class="selected"></span>\
-                                            <span class="arrow ' + _open + '"></span>\
-                                        </a>\
-                                        <ul class="sub-menu">\
-                                            ' + _shtml + '\
-                                        </ul>\
-                                    </li>';
+                    _left_html += '<li class="leftMenubar for-topmenubar-' + i + " " + _active + _open + _hide + '">'+
+                                        '<a href="javascript:;">'+
+                                            '<i class="icon-list"></i>'+
+                                            '<span class="title">' + topmenu[i].subMenu[j].title + '</span>'+
+                                            '<span class="selected"></span>'+
+                                            '<span class="arrow ' + _open + '"></span>'+
+                                        '</a>'+
+                                        '<ul class="sub-menu">'+
+                                            _shtml +
+                                        '</ul>'+
+                                  '</li>';
                 }
             }
 

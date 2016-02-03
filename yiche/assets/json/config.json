@@ -5,7 +5,7 @@
   "copyright": "2016 &copy; wdjtheme. ",
   "domain": "http://192.168.2.204",
   "port": "80",
-  "index": "yiche-all.html",
+  "index": "./assets/pages/yiche-all.html",
   "nav": [
     {
       "title": "易车",
@@ -17,11 +17,11 @@
           "submenu": [
             {
               "title": "所有项目",
-              "url": "yiche-all.html"
+              "url": "./assets/pages/yiche-all.html"
             },
             {
               "title": "移动端",
-              "url": "yiche-all.html"
+              "url": "./assets/pages/yiche-all.html"
             }
           ]
         },
@@ -46,7 +46,7 @@
           "submenu": [
             {
               "title": "所有项目",
-              "url": "zhongkeyuan-all.html"
+              "url": "./assets/pages/zhongkeyuan-all.html"
             }
           ]
         }
@@ -62,7 +62,7 @@
           "submenu": [
             {
               "title": "所有项目",
-              "url": "xiaomabao-all.html"
+              "url": "./assets/pages/xiaomabao-all.html"
             }
           ]
         }
@@ -78,7 +78,7 @@
           "submenu": [
             {
               "title": "所有文章",
-              "url": "article-all.html"
+              "url": "./assets/pages/article-all.html"
             },
             {
               "title": "技术杂谈",
@@ -98,7 +98,7 @@
           "submenu": [
             {
               "title": "所有网站",
-              "url": "websites-all.html"
+              "url": "./assets/pages/websites-all.html"
             },
             {
               "title": "技术论坛",

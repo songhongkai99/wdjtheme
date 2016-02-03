@@ -15,22 +15,22 @@
     <meta content="" name="description"/>
     <meta content="" name="author"/>
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
-    <link href="assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
-    <link href="assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
-    <link href="assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     <!-- END GLOBAL MANDATORY STYLES -->
     <!-- BEGIN PAGE LEVEL PLUGIN STYLES -->
-    <link rel="stylesheet" type="text/css" href="assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="../global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css"/>
     <!-- END PAGE LEVEL PLUGIN STYLES -->
 
     <!-- BEGIN THEME STYLES -->
-    <link href="assets/global/css/components.css" id="style_components" rel="stylesheet" type="text/css"/>
-    <link href="assets/global/css/plugins.css" rel="stylesheet" type="text/css"/>
-    <link href="assets/admin/layout/css/layout.css" rel="stylesheet" type="text/css"/>
-    <link href="assets/admin/layout/css/themes/blue.css" rel="stylesheet" type="text/css" id="style_color"/>
-    <link href="assets/admin/layout/css/custom.css" rel="stylesheet" type="text/css"/>
+    <link href="../global/css/components.css" id="style_components" rel="stylesheet" type="text/css"/>
+    <link href="../global/css/plugins.css" rel="stylesheet" type="text/css"/>
+    <link href="../admin/layout/css/layout.css" rel="stylesheet" type="text/css"/>
+    <link href="../admin/layout/css/themes/blue.css" rel="stylesheet" type="text/css" id="style_color"/>
+    <link href="../admin/layout/css/custom.css" rel="stylesheet" type="text/css"/>
     <!-- END THEME STYLES -->
-    <link rel="shortcut icon" href="./assets/global/img/favicon.ico"/>
+    <link rel="shortcut icon" href="../global/img/favicon.ico"/>
 </head>
 <!-- END HEAD -->
 <!-- BEGIN BODY -->
@@ -43,7 +43,7 @@
                 <ul class="page-breadcrumb">
                     <li>
                         <i class="fa fa-home"></i>
-                        <a href="index.html">Home</a>
+                        <a href="../../index.html">Home</a>
                         <i class="fa fa-angle-right"></i>
                     </li>
                     <li>
@@ -190,21 +190,21 @@
 
 <!-- BEGIN CORE PLUGINS -->
 <!--[if lt IE 9]>
-<script src="assets/global/plugins/respond.min.js"></script>
-<script src="assets/global/plugins/excanvas.min.js"></script>
+<script src="../global/plugins/respond.min.js"></script>
+<script src="../global/plugins/excanvas.min.js"></script>
 <![endif]-->
-<script src="assets/global/plugins/jquery.min.js" type="text/javascript"></script>
-<script src="assets/global/plugins/jquery-migrate.min.js" type="text/javascript"></script>
-<script src="assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="../global/plugins/jquery.min.js" type="text/javascript"></script>
+<script src="../global/plugins/jquery-migrate.min.js" type="text/javascript"></script>
+<script src="../global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 <!-- END CORE PLUGINS -->
 <!-- BEGIN PAGE LEVEL PLUGINS -->
-<script type="text/javascript" src="assets/global/plugins/datatables/media/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js"></script>
+<script type="text/javascript" src="../global/plugins/datatables/media/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="../global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js"></script>
 <!-- END PAGE LEVEL PLUGINS -->
 <!-- BEGIN PAGE LEVEL SCRIPTS -->
-<script src="assets/global/scripts/base.js" type="text/javascript"></script>
-<script src="assets/admin/layout/scripts/layout.js" type="text/javascript"></script>
-<script src="assets/admin/layout/scripts/custom.js" type="text/javascript"></script>
+<script src="../global/scripts/base.js" type="text/javascript"></script>
+<script src="../admin/layout/scripts/layout.js" type="text/javascript"></script>
+<script src="../admin/layout/scripts/custom.js" type="text/javascript"></script>
 <!-- END PAGE LEVEL SCRIPTS -->
 <script>
     jQuery(document).ready(function () {
@@ -214,7 +214,7 @@
 
         var _param = hkcustom.getURLParameter();
 
-        if (_param.length) {
+        if (Object.keys(_param).length == 3) {
             $("#wdj-bread-menu").html(_param.menu);
             $("#wdj-bread-title").html(_param.title);
             $("#wdj-bread-detail, #wdj-page-detail").html(_param.detail);
@@ -241,12 +241,12 @@
             }
 
             //配置文件
-            $.getJSON("./assets/json/config.json", function (data) {
+            $.getJSON("../json/config.json", function (data) {
                 urlPre = data.domain + ":" + data.port + "/";
             });
 
             //分类文件
-            $.getJSON("./assets/json/yiche/category.json", function (data) {
+            $.getJSON("../json/yiche/category.json", function (data) {
                 category = data;
                 (function (cate) {
                     var iHtml = '';
@@ -261,7 +261,7 @@
             window.debugDt = table.dataTable({
 
                 ajax: {
-                    url: "./assets/json/yiche/projects.json"
+                    url: "../json/yiche/projects.json"
                 },
 
                 /*searching:false,*/
@@ -311,7 +311,8 @@
                     return;
                 }
                 var project_id = $(this).find("td:first").html(), project_data, bugs_html = "";
-                $.getJSON("./assets/json/yiche/projects.json", function (data) {
+                //获取详细信息
+                $.getJSON("../json/yiche/projects.json", function (data) {
                     project_data = data.data[data.data.length - parseInt(project_id)];
                     var $project = $("#project-details-modal");
                     $project.find("#modal-desc").html(project_data[8].desc);
@@ -319,9 +320,9 @@
                     $project.find("#modal-online").html('<a href="' + project_data[8].online + '" target="_blank">' + project_data[8].online + '</a>');
 
                     for (var i = 0, j = project_data[8].bugs.length; i < j; i++) {
-                        bugs_html += '<p class="form-control-static block">\
-                                      ' + (i + 1) + ": " + project_data[8].bugs[i].title + "(" + project_data[8].bugs[i].solution + ")" + " 已解决 : " + project_data[8].bugs[i].resolve + '\
-                                      </p>';
+                        bugs_html += '<p class="form-control-static block">'+
+                                          (i + 1) + ": " + project_data[8].bugs[i].title + "(" + project_data[8].bugs[i].solution + ")" + " 已解决 : " + project_data[8].bugs[i].resolve +
+                                     '</p>';
                     }
                     $project.find("#modal-bugs").html(bugs_html);
                     $project.modal("show");
