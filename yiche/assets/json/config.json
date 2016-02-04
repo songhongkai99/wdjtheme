@@ -69,6 +69,22 @@
       ]
     },
     {
+      "title": "我的项目",
+      "url": "javascript:;",
+      "active": false,
+      "subMenu": [
+        {
+          "title": "项目管理",
+          "submenu": [
+            {
+              "title": "所有项目",
+              "url": "./assets/pages/personal-all.html"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "title": "知识梳理",
       "url": "javascript:;",
       "active": false,

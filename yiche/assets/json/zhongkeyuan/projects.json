@@ -1,0 +1,150 @@
+{
+  "data": [
+    {
+      "id": 8,
+      "category": 99,
+      "title": "铭家网络",
+      "start_date": "2015-10-20",
+      "end_date": "2016-10-25",
+      "note": "",
+      "status": 0,
+      "localhost": "",
+      "details": {
+        "desc": "仓储后台系统",
+        "initiator": "",
+        "online": "",
+        "bugs": [
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "category": 99,
+      "title": "标掌柜",
+      "start_date": "2015-11-01",
+      "end_date": "2015-11-30",
+      "note": "",
+      "status": 0,
+      "localhost": "",
+      "details": {
+        "desc": "商标综合服务",
+        "initiator": "",
+        "online": "",
+        "bugs": [
+          {
+            "title": "bootstrap IE8闪屏",
+            "solution": "将respond.js放到head中",
+            "resolve": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "category": 0,
+      "title": "易瑞沙随访系统",
+      "start_date": "2015-10-07",
+      "end_date": "2016-10-15",
+      "note": "",
+      "status": 1,
+      "localhost": "",
+      "details": {
+        "desc": "易瑞沙随访系统 (后台部分)",
+        "initiator": "",
+        "online": "http://www.iressaccf.org.cn/",
+        "bugs": [
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "category": 0,
+      "title": "新科学(Mathmatica)",
+      "start_date": "2015-09-10",
+      "end_date": "2016-09-30",
+      "note": "",
+      "status": 1,
+      "localhost": "",
+      "details": {
+        "desc": "将mathmatica带入学堂",
+        "initiator": "陈鹏",
+        "online": "http://www.newsciencecore.com/home/index",
+        "bugs": [
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "category": 0,
+      "title": "中科院天文台",
+      "start_date": "2015-08-01",
+      "end_date": "2015-10-30",
+      "note": "",
+      "status": 0,
+      "localhost": "",
+      "details": {
+        "desc": "",
+        "initiator": "",
+        "online": "http://www.bao.ac.cn/",
+        "bugs": [
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "category": 10,
+      "title": "龙门书局",
+      "start_date": "2015-07-01",
+      "end_date": "2015-07-21",
+      "note": "",
+      "status": 1,
+      "localhost": "",
+      "details": {
+        "desc": "",
+        "initiator": "",
+        "online": "http://www.longmenshuju.com/",
+        "bugs": [
+          {
+            "title": "IE8下页面卡死 js崩溃",
+            "solution": "删除selectivizr插件 含css3模拟",
+            "resolve": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "category": 10,
+      "title": "中科医库SPMED",
+      "start_date": "2015-04-06",
+      "end_date": "2015-06-18",
+      "note": "",
+      "status": 1,
+      "localhost": "",
+      "details": {
+        "desc": "中科医学资源库",
+        "initiator": "科学出版社",
+        "online": "http://www.scipmed.com/",
+        "bugs": [
+        ]
+      }
+    },
+    {
+      "id": 1,
+      "category": 10,
+      "title": "OJS科技期刊网",
+      "start_date": "2015-03-07",
+      "end_date": "2015-04-05",
+      "note": "在科学出版社驻场开发",
+      "status": 1,
+      "localhost": "",
+      "details": {
+        "desc": "开源OJS开发科技期刊网",
+        "initiator": "科学出版社",
+        "online": "http://www.sciencemeta.com/",
+        "bugs": [
+        ]
+      }
+    }
+  ]
+}

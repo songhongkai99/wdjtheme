@@ -1,0 +1,72 @@
+{
+  "data": [
+    {
+      "id": 4,
+      "category": 10,
+      "title": "小麻包购物商城",
+      "start_date": "2014-01-01",
+      "end_date": "2015-03-01",
+      "note": "",
+      "status": 1,
+      "localhost": "",
+      "details": {
+        "desc": "母婴购物商城",
+        "initiator": "",
+        "online": "http://www.xiaomabao.com",
+        "bugs": [
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "category": 10,
+      "title": "MAXGOOD集团网站",
+      "start_date": "2013-05-01",
+      "end_date": "2013-05-10",
+      "note": "",
+      "status": 1,
+      "localhost": "",
+      "details": {
+        "desc": "包含妈宝母婴,529W,Kriti饰品,Winmetall冶金",
+        "initiator": "",
+        "online": "http://www.bjmaxgood.com/",
+        "bugs": [
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "category": 0,
+      "title": "北京伍行千阳外贸管理系统",
+      "start_date": "2012-04-06",
+      "end_date": "2012-09-30",
+      "note": "系统需维护",
+      "status": 1,
+      "localhost": "",
+      "details": {
+        "desc": "主要是和印度的冶金项目贸易管理",
+        "initiator": "宋红凯",
+        "online": "http://www.winmetall.com/ftmms_path/",
+        "bugs": [
+        ]
+      }
+    },
+    {
+      "id": 1,
+      "category": 0,
+      "title": "北京伍行千阳商贸有限公司",
+      "start_date": "2010-11-30",
+      "end_date": "2012-04-05",
+      "note": "",
+      "status": 1,
+      "localhost": "",
+      "details": {
+        "desc": "企业门户",
+        "initiator": "",
+        "online": "http://www.winmetall.com/",
+        "bugs": [
+        ]
+      }
+    }
+  ]
+}
