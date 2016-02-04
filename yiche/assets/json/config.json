@@ -69,7 +69,7 @@
       ]
     },
     {
-      "title": "我的项目",
+      "title": "我的",
       "url": "javascript:;",
       "active": false,
       "subMenu": [
@@ -85,74 +85,90 @@
       ]
     },
     {
-      "title": "知识梳理",
+      "title": "开发",
       "url": "javascript:;",
       "active": false,
       "subMenu": [
         {
-          "title": "必备技能",
+          "title": "WEB",
           "submenu": [
             {
               "title": "CSS",
-              "url": "./assets/pages/zssl-css.html"
+              "url": "./assets/pages/dev-css.html"
             },
             {
               "title": "JS",
-              "url": "./assets/pages/zssl-js.html"
+              "url": "./assets/pages/dev-js.html"
             },
             {
               "title": "HTML",
-              "url": "./assets/pages/zssl-html.html"
+              "url": "./assets/pages/dev-html.html"
+            },
+            {
+              "title": "Node.js",
+              "url": "./assets/pages/dev-nodejs.html"
+            },
+            {
+              "title": "SVN",
+              "url": "./assets/pages/dev-svn.html"
+            },
+            {
+              "title": "Git",
+              "url": "./assets/pages/dev-git.html"
             },
             {
               "title": "PLUGIN",
-              "url": "./assets/pages/zssl-plugin.html"
+              "url": "./assets/pages/dev-plugin.html"
             }
           ]
         },
         {
-          "title": "移动开发",
+          "title": "Mobile",
           "submenu": [
             {
               "title": "WebAPP",
-              "url": "./assets/pages/zssl-webapp.html"
+              "url": "./assets/pages/dev-webapp.html"
             },
             {
               "title": "WebPage",
-              "url": "./assets/pages/zssl-webpage.html"
-            }
-          ]
-        },
-        {
-          "title": "PC开发",
-          "submenu": [
-            {
-              "title": "WebAPP",
-              "url": "./assets/pages/zssl-webapp.html"
-            },
-            {
-              "title": "WebPage",
-              "url": "./assets/pages/zssl-webpage.html"
+              "url": "./assets/pages/dev-webpage.html"
             }
           ]
         }
       ]
     },
     {
-      "title": "常用站点",
+      "title": "站点",
       "url": "javascript:;",
       "active": false,
       "subMenu": [
         {
-          "title": "站点管理",
+          "title": "技术类",
           "submenu": [
             {
               "title": "所有网站",
               "url": "./assets/pages/websites-all.html"
             },
             {
-              "title": "技术论坛",
+              "title": "论坛",
               "url": "javascript:;"
+            }
+          ]
+        },
+        {
+          "title": "收藏夹",
+          "submenu": [
+            {
+              "title": "所有收藏",
+              "url": "./assets/pages/favorite-all.html"
+            },
+            {
+              "title": "工作",
+              "url": "./assets/pages/favorite-all.html?action=gongzuo"
+            },
+            {
+              "title": "技术",
+              "url": "./assets/pages/favorite-all.html?action=jishu"
             }
           ]
         }
