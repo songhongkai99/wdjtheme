@@ -117,8 +117,8 @@
               "url": "./assets/pages/dev-git.html"
             },
             {
-              "title": "PLUGIN",
-              "url": "./assets/pages/dev-plugin.html"
+              "title": "Plugins",
+              "url": "./assets/pages/dev-plugins.html"
             }
           ]
         },
