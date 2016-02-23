@@ -1,0 +1,699 @@
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    height: 100vh;
+    min-height: 100%;
+    background-color: #0097f0;
+}
+/*公共块样式*/
+.page-common {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 480px;
+    overflow-y: scroll;
+    text-align: center;
+    background: url("../img/猜车标/background-common.jpg") center top #488bc7 no-repeat;
+    background-size: 100% 100%;
+    z-index: 1;
+}
+.page-common > header {
+    position: relative;
+}
+.page-common > header > img {
+    width: auto;
+    height: auto;
+    max-height: 100%;
+}
+.shadow-effect {
+    -webkit-box-shadow: 0 0 30px #36ffdc;
+    -moz-box-shadow: 0 0 30px #36ffdc;
+    box-shadow: 0 0 30px #36ffdc;
+}
+/*游戏加载*/
+#page-loading {
+    color: #959595;
+    font-size: 1.5rem;
+    text-align: center;
+    /*background: url("../img/猜车标/background-common.jpg");
+    background-size:100% 100%;*/
+}
+#page-loading:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .4);
+}
+#page-loading.index-page {
+    background-color: #fff;
+    background-image: none;
+}
+#page-loading.index-page:after {
+    display: none;
+}
+#page-loading > h1 {
+    top: 45%;
+}
+#page-loading > footer {
+    position: fixed;
+    padding-bottom: 9px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+/*游戏初始页*/
+#page-start > header {
+    height: 66%;
+    padding-top: 6%;
+    background: url("../img/猜车标/guangdai-up.png") center top no-repeat;
+    background-size: 100% 72%;
+}
+#page-start nav {
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    top: 72%;
+    left: 0;
+    text-align: center;
+}
+#page-start #this-start {
+    display: block;
+    width: 186px;
+    height: 100%;
+    margin: 0 auto 16px;
+    background: url("../img/猜车标/start.png") center top no-repeat transparent;
+    background-size: 100% 100%;
+    border-radius: 17px;
+    overflow: hidden;
+}
+#page-start #this-start.js-click > span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, .4);
+}
+#page-start #this-note {
+    border: 2px solid #fff69e;
+    color: #fff69e;
+    font-size: 1.3rem;
+    padding: 3px 10px;
+    border-radius: 1em;
+}
+/*游戏开始*/
+#page-playing > header {
+    height: 28%;
+    background: url("../img/猜车标/guangdai-down.png") center top no-repeat;
+    background-size: 100% auto;
+}
+#page-playing > header > img {
+    display: inline-block;
+    width: 39%;
+}
+#page-playing > header > img:last-of-type {
+    margin-top: -7px;
+}
+#page-playing > header > span {
+    position: absolute;
+    top: 11%;
+    color: #ffe106;
+    font-size: 2.7rem;
+    font-weight: bold;
+    font-style: italic;
+    /*background: -webkit-linear-gradient(top, rgb(255, 247, 5), #FFFF00);*/
+    /*-webkit-background-clip: text;*/
+    /*-webkit-text-fill-color: transparent;*/
+    /*-webkit-text-stroke: 1px #fcbb4b;*/
+    text-shadow: 1px 0 0 #ffa549, 0 1px 0 #f9710e, 0 -1px 0 #ffbc5e, -1px 0 0 #F9860D, 1px 0 1px #f9710e, 0 1px 1px #f9710e, 0 -1px 1px #f9710e, -1px 0 1px #f9710e, 0 0 16px #30ebff;
+}
+#page-playing > header > span.red {
+    color: #e24a1a;
+}
+#page-playing > header > span > em {
+    font: inherit;
+}
+#page-playing > header > #this-seconds {
+    left: 3%;
+}
+#page-playing > header > #this-level {
+    right: 3%;
+}
+#page-playing > header > hgroup {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+}
+#page-playing > header > hgroup > h1 > small {
+    display: block;
+    float: left;
+    width: 36%;
+    font-size: 1.7rem;
+    color: #ffffff;
+    text-shadow: none;
+    text-align: right;
+}
+#page-playing > header > hgroup > h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #ffffff;
+    font-weight: bold;
+    white-space: nowrap;
+    /*text-shadow: 1px 0 0 #f1d82d, -1px 0 0 #f1d82d, 0 1px 0 #d66501, 0 -1px 0 #f1d82d;*/
+}
+#page-playing > header > hgroup > h1 > em {
+    display: block;
+    float: left;
+    width: 64%;
+    font-weight: bold;
+}
+#page-playing-play {
+    position: relative;
+    padding: 2px 0;
+    width: 94%;
+    max-width: 390px;
+    min-height: 300px;
+    margin: 0 auto;
+    background-color: #c5e8ff;
+    /*     background-color: rgba(255, 255, 255, .75); */
+    border-radius: 16px;
+    overflow: hidden;
+}
+#page-playing-play:before {
+    content: '';
+    position: relative;
+    display: block;
+    width: 100%;
+    padding-top: 100%;
+}
+#page-playing-play > section {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 50%;
+    left: 0;
+    font-size: 0;
+    text-align: center;
+    line-height: 0;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+#page-playing-play > section > span {
+    position: relative;
+    display: inline-block;
+    background: url("../img/猜车标/brand150.jpg") no-repeat;
+    background-size: auto 100%;
+}
+#page-playing-play > section > span.correct:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(61, 210, 129, .4);
+}
+#page-playing-play > section > span.error:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 0, 0, .35);
+}
+#page-playing-play > section.playing-2x2 > span {
+    height: 80px;
+    width: 80px;
+    margin: 20px;
+}
+#page-playing-play > section.playing-3x3 > span {
+    height: 60px;
+    width: 60px;
+    margin: 16px;
+}
+#page-playing-play > section.playing-4x4 > span {
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+}
+#page-playing-play > section.playing-5x5 > span {
+    height: 45px;
+    width: 45px;
+    margin: 6px;
+}
+#page-playing-play > section.playing-6x6 > span {
+    height: 40px;
+    width: 40px;
+    margin: calc((100% - 240px) / 12);
+    margin: -webkit-calc((100% - 240px) / 12);
+    margin: -moz-calc((100% - 240px) / 12);
+}
+#page-playing-play > section.playing-7x7 > span {
+    height: 40px;
+    width: 40px;
+    margin: calc((100% - 280px) / 14);
+    margin: -webkit-calc((100% - 280px) / 14);
+    margin: -moz-calc((100% - 280px) / 14);
+}
+#page-playing-play > section.playing-8x8 > span {
+    height: 37px;
+    width: 37px;
+    margin: calc((100% - 296px) / 16);
+    margin: -webkit-calc((100% - 296px) / 16);
+    margin: -moz-calc((100% - 296px) / 16);
+}
+#page-playing-play > section.playing-9x9 > span {
+    height: 33px;
+    width: 33px;
+    margin: calc((100% - 297px) / 18);
+    margin: -webkit-calc((100% - 297px) / 18);
+    margin: -moz-calc((100% - 297px) / 18);
+}
+#page-playing-play > section.playing-10x10 > span {
+    height: 30px;
+    width: 30px;
+    margin: calc((100% - 300px) / 20);
+    margin: -webkit-calc((100% - 300px) / 20);
+    margin: -moz-calc((100% - 300px) / 20);
+}
+/*奖品页*/
+#page-award > header {
+    height: 16%;
+}
+#page-award > section > h1 {
+    font-size: 2.1rem;
+    color: #e24a1a;
+    font-weight: bold;
+    margin-top: 20px;
+    line-height: 160%;
+}
+#page-award > section > h1.win {
+    position: relative;
+    color: #ffe214;
+    font-size: 3.1rem;
+    margin: 30px;
+    font-weight: bold;
+    z-index: 2;
+    text-shadow: 0 0 1px #ffe214;
+}
+#page-award > section > p {
+    color: #ffffff;
+    padding: 3px 0;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+#page-award > section > p > em {
+    color: #e24a1a;
+    font-weight: bold;
+}
+#page-award > section > p:last-of-type {
+    font-size: 2rem;
+}
+#page-award > section > figure {
+    position: relative;
+    z-index: 1;
+}
+#page-award > section > figure:before {
+    content: "";
+    background-image: url("../img/猜车标/guangdai-up.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    left: 0;
+    bottom: 36%;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+#page-award > section > figure:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/猜车标/huaxu.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    z-index: 100;
+}
+#page-award > section > figure > figcaption {
+    font-size: 3.3rem;
+    color: #fff;
+    text-shadow: 1px 0 0 #f1d82d, -1px 0 0 #f1d82d, 0 1px 0 #d66501, 0 -1px 0 #f1d82d;
+}
+#page-award > section > figure.win:before {
+    height: 166%;
+}
+#page-award > section > figure.win > figcaption {
+    font-size: 7.1rem;
+    text-shadow: none;
+    z-index: 999;
+}
+#page-award > section > figure > img {
+    width: 50%;
+    z-index: 99;
+    position: relative;
+}
+#page-award > section > figure.win > img {
+    width: 70%;
+}
+#page-award > nav {
+    padding: 0 10%;
+    font-size: 0;
+    margin-top: 9px;
+}
+#page-award > nav.win {
+    margin-top: 45px;
+}
+#page-award > nav > a {
+    display: inline-block;
+    margin-right: 5%;
+    width: 40%;
+    height: 50px;
+    border-radius: 16px;
+    background: url("../img/猜车标/btn-restart.png ") center center no-repeat;
+    background-size: 100% 100%;
+}
+#page-award > nav > a:last-child {
+    background-image: url("../img/猜车标/btn-fpk.png");
+    margin-right: 0;
+    width: 55%;
+}
+#page-award > nav.win > a {
+    width: 60%;
+    height: 55px;
+    background-image: url("../img/猜车标/btn-lingqujiangpin.png");
+}
+#page-award > footer {
+    margin-top: 10px;
+    text-align: center;
+}
+#page-award > footer > a {
+    color: #ffe214;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-bottom: 1px solid #ffe214;
+}
+/*中奖个人信息*/
+#page-info > img.bg-down {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+}
+#page-info > header {
+    height: 16%;
+}
+#page-info > form {
+    margin-top: 60px;
+    padding: 0 20px;
+}
+#page-info > form > h1 {
+    color: #ffff52;
+    font-size: 2.1rem;
+}
+.form-group {
+    position: relative;
+    font-size: 1.7rem;
+    margin: 21px 0;
+}
+.form-group > .check-ok {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 10px;
+    top: 10px;
+    background: url("../img/猜车标/r.png");
+    background-size: contain;
+}
+.form-group > .check-no {
+    display: block;
+    padding-left: 26px;
+    padding-top: 4px;
+    background: url("../img/猜车标/w.png") left center no-repeat;
+    background-size: 20px 20px;
+    text-align: left;
+    color: #db1921;
+}
+#page-info > form input {
+    display: block;
+    background: transparent;
+    color: #fff;
+    font-size: 1.7rem;
+    width: 100%;
+    height: 40px;
+    padding-left: 10px;
+    border: 1px solid #00ffff;
+    border-radius: 4px;
+}
+#page-info > form input:focus {
+    outline: none;
+}
+#page-info > form input::-webkit-input-placeholder {
+    color: #ddd !important;
+}
+#page-info > form > footer > a {
+    display: inline-block;
+    margin-top: 20px;
+    width: 60%;
+    height: 56px;
+    border-radius: 16px;
+    background: url("../img/猜车标/btn-submit.png") center center no-repeat;
+    background-size: 100% 100%;
+}
+/*提交成功页*/
+#page-award > section.sub > h1 {
+    color: #ffff52;
+    font-size: 32px;
+    text-shadow: 0 0 1px #ffe214;
+}
+#page-award > section > p:first-of-type {
+    margin-bottom: 19px;
+}
+#page-award > section.sub > p > em {
+    color: #ffe214;
+    text-shadow: 0 0 1px #ffe214;
+}
+#page-award > section.sub > figure > figcaption {
+    font-size: 2.7rem;
+    z-index: 100;
+}
+#page-award > section.sub > figure > img {
+    margin-top: -26px;
+}
+#page-award > nav.sub > a {
+    width: 56%;
+    background: url("../img/猜车标/btn-xuanyaoyixia.png") center center no-repeat;
+    background-size: 100% 100%;
+}
+#page-award > footer.sub {
+    margin-top: 0;
+}
+#popup-layer, #popup-layer2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    background: rgba(0, 0, 0, .8);
+}
+#popup-layer > img, #popup-layer2 > img {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    width: 76%;
+}
+#popup-layer > footer, #popup-layer2 > footer {
+    position: absolute;
+    bottom: 21px;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+#popup-layer > footer > a, #popup-layer2 > footer > a {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+}
+/*活动说明*/
+#page-info > article {
+    padding: 0 15px;
+    margin-top: 20px;
+}
+#page-info > article > h1 {
+    font-size: 2.1rem;
+    color: #ffff52;
+    font-weight: bold;
+    margin: 0 auto 16px;
+}
+#page-info > article > p {
+    text-align: justify;
+    color: #ffffff;
+    font-size: 1.3rem;
+}
+#page-info > article > p > em {
+    color: #ffff52;
+    font-weight: bold;
+}
+/*max 320px*/
+@media screen and (max-width: 320px) {
+    #page-start #this-start {
+        width: 160px;
+    }
+    #page-award > section > p {
+        font-size: 1.6rem;
+    }
+    #page-award > nav > a {
+        height: 40px;
+    }
+    #page-award > nav.win > a {
+        height: 50px;
+    }
+    #page-info > form > footer > a {
+        height: 50px;
+    }
+}
+/*榜单*/
+#page-bangdan > header {
+    height: 19%;
+    position: relative;
+    z-index: 9;
+}
+#page-bangdan > section > figure {
+    position: relative;
+    z-index: 1;
+}
+#page-bangdan > section > figure:before {
+    content: "";
+    background-image: url("../img/猜车标/guangdai-up.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    left: 0;
+    bottom: 40%;
+    width: 100%;
+    height: 140%;
+    z-index: -1;
+}
+#page-bangdan > section > figure > img {
+    width: 80%;
+    z-index: 99;
+    position: relative;
+    margin-left: 7%;
+}
+#page-bangdan > section .bangdan-wrap {
+    background: url("../img/猜车标/bangdan-bg.png") center top no-repeat;
+    background-size: 100% 100%;
+    margin-top: -26%;
+    position: relative;
+    z-index: 999;
+    width: calc(100% - 36px);
+    width: -webkit-calc(100% - 36px);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 19px 15px 5px;
+}
+.bangdan-cg > div {
+    border: 1px solid #f9633d;
+    margin-bottom: 4px;
+}
+.bd-t {
+    font-size: 1.3rem;
+    color: #f9633d;
+    text-align: left;
+    font-weight: bold;
+}
+.bd-t > small {
+    padding-right: 20px;
+    float: right;
+    color: #959595;
+}
+.bangdan-cg table {
+    width: 50%;
+    float: left;
+}
+.bangdan-cg table td{
+    padding: 2px 0;
+    font-size: 1.3rem;
+}
+.bd-red td:first-child span{
+    background-color: #f9633d;
+    display: inline-block;
+    border-radius: 50%;
+    width: 15px;
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+.bd-red td:last-child span{
+    background-color: #f9633d;
+    color: #ffffff;
+    padding: 0px 2px;
+    font-size: 1.2rem;
+}
+.bd-blue td:first-child span{
+    background-color: #36b5fd;
+    display: inline-block;
+    border-radius: 50%;
+    width: 15px;
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+.bd-blue td:last-child span{
+    background-color: #36b5fd;
+    color: #ffffff;
+    padding: 0px 2px;
+    font-size: 1.2rem;
+}
+.bangdan-hj{
+    max-height: 300px;
+    overflow-y: scroll;
+}
+.bangdan-hj table{
+    width: 100%;
+}
+.bangdan-hj table thead{
+    background-color: #e5e5e5;
+    font-weight: bold;
+}
+.bangdan-hj table td{
+    border: 1px solid #e5e5e5;
+    padding: 2px 0;
+}
+.bd-more{
+    display: inline-block;
+    margin: 6px auto 4px;
+    text-align: center;
+    padding-right: 10px;
+    color: #1898ee;
+    font-weight: bold;
+    background: url("../img/猜车标/icon-more.png") right center no-repeat;
+    background-size: 7px auto;
+    text-decoration: underline !important;
+}
+
+/*iphone6*/
+@media screen and (device-width: 375px) {
+
+}
+/*iphone6 plus and larger*/
+@media screen and (min-device-width: 414px) {
+
+}

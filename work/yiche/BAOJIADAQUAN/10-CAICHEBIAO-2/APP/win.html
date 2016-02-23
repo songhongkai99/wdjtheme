@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>疯狂猜车标H5小游戏 - 中奖页</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <!--styles-->
+    <link rel="stylesheet" type="text/css" href="./css/公共样式.css">
+    <link rel="stylesheet" type="text/css" href="./css/猜车标.css">
+</head>
+<body>
+
+<!--页面加载页BEGIN-->
+<div id="page-loading" class="page-common">
+    <h1 class="absolute-center transform-center">
+        <img src="http://image.bitautoimg.com/uimg/mbt2015/images/loading.gif" alt="" width="58" height="58">
+    </h1>
+</div>
+<!--页面加载页END-->
+
+<!--中奖BEGIN-->
+<div id="page-award" class="page-common vis-hide">
+    <header>
+        <img src="./img/猜车标/logo-chebiaodazuozhan.png" alt="车标大作战 闯关赢大奖">
+    </header>
+    <section>
+        <h1 class="win">恭喜您中奖啦</h1>
+        <figure class="win">
+            <!--车模cm.png 公仔gz.png-->
+            <figcaption class="transform-center absolute-center"></figcaption>
+            <img src="./img/猜车标/win/cm.png" alt="" class="responsive block-center">
+        </figure>
+    </section>
+    <nav class="border-box win">
+        <a href="info.html" class="shadow-effect"></a>
+    </nav>
+</div>
+<!--中奖END-->
+
+<!--scripts-->
+<script src="./js/plugins/zepto.min.js"></script>
+<script src="./js/plugins/zepto-touch.min.js"></script>
+<script src="./js/猜车标.js"></script>
+<script>
+    $(function () {
+        /*初始化猜车标控件*/
+        Bitauto_caichebiao.init({
+            windowOnloadShow: "#page-award" //页面初始化显示层
+        });
+    })
+</script>
+</body>
+</html>
