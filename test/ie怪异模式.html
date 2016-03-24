@@ -1,0 +1,42 @@
+<!--[if lte IE 7]>
+    <!--ddd-->
+<![endif]-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vertical align 只对inline inline-block table-cell起作用</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <style>
+        html{
+            font-size: 20px;
+            -webkit-text-size-adjust: none;
+            font-size-adjust: none;
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            line-height: 350%;
+            padding: 0;
+            margin: 0;
+            position: relative;
+            text-align: center;
+        }
+        div{
+            display: inline-block;
+            width: 1200px;
+            padding: 20px;
+            background-color: red;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+<div>
+    abc
+</div>
+</body>
+</html>
