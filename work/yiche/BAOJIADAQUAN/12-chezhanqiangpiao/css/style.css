@@ -138,7 +138,7 @@ form {
   margin-left: 24%;
 }
 
-form input {
+form input[type="text"] {
   margin-left: 24%;
   display: block;
   width: 76%;
@@ -150,14 +150,15 @@ form input {
   color: #000;
   font-size: 1.4rem;
 }
-form input:focus {
+form input[type="text"]:focus {
   outline: none;
 }
-form input::-webkit-input-placeholder {
+form input[type="text"]::-webkit-input-placeholder {
   color: #dcdcdc !important;
 }
 
 .form-userselect span {
+  position: relative;
   padding: 4px 8px;
   background: transparent;
   margin-right: 10px;
@@ -165,11 +166,25 @@ form input::-webkit-input-placeholder {
   color: #b5b5b5;
   border: 1px solid #b5b5b5;
   border-radius: 2px;
+  -webkit-tap-highlight-color: transparent;
 }
 .form-userselect span input {
   position: absolute;
-  z-index: -1;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  z-index: -999;
   visibility: hidden;
+  -webkit-appearance: none;
+  -webkit-user-select: none;
+  outline: none;
+}
+.form-userselect span input:focus {
+  outline: none;
+  outline-color: transparent;
+  outline-style: none;
+  box-shadow: none;
+  -webkit-tap-highlight-color: transparent;
 }
 .form-userselect span.active {
   background: #ff4e00;

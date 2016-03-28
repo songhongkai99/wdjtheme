@@ -63,9 +63,11 @@
 <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
 <script>
     /*RADIO自定义控件*/
-    $(".input-radio").on("click", function () {
-        $(":radio", this).prop("checked", true)
-        $(this).siblings().removeClass("active").end().addClass("active")
+    $(".input-radio").on("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        $(":radio", this).prop("checked", true);
+        $(this).siblings().removeClass("active").end().addClass("active");
     })
 </script>
 </body>

@@ -25,7 +25,7 @@
     }
 }
 
-.form-apply .content{
+.form-apply .content {
     margin-top: -60px;
 }
 
@@ -74,7 +74,7 @@ form {
 
 }
 
-.btn-audit{
+.btn-audit {
     display: block;
     margin: 26px auto 16px;
     background-image: url("../img/Button07.png");
@@ -147,7 +147,7 @@ form {
     }
 }
 
-form input {
+form input[type="text"] {
     margin-left: 24%;
     display: block;
     width: 76%;
@@ -168,6 +168,7 @@ form input {
 
 .form-userselect {
     span {
+        position: relative;
         padding: 4px 8px;
         background: transparent;
         margin-right: 10px;
@@ -175,17 +176,31 @@ form input {
         color: #b5b5b5;
         border: 1px solid #b5b5b5;
         border-radius: 2px;
-        input{
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        input {
             position: absolute;
-            z-index: -1;
+            width: 0;
+            height: 0;
+            overflow: hidden;
+            z-index: -999;
             visibility: hidden;
+            -webkit-appearance: none;
+            -webkit-user-select: none;
+            outline: none;
+            &:focus {
+                outline: none;
+                outline-color: transparent;
+                outline-style: none;
+                box-shadow: none;
+                -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            }
         }
         &.active {
             background: #ff4e00;
             border-color: #ff4e00;
             color: #fff;
         }
-        &.disabled{
+        &.disabled {
             background: #b5b5b5;
             border-color: #b5b5b5;
         }
@@ -193,10 +208,10 @@ form input {
 }
 
 //审核中
-.form-audit .form-group{
+.form-audit .form-group {
     margin: 19px 0;
 
-    > div{
+    > div {
         padding-left: 16px;
         color: #b5b5b5;
     }
