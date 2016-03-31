@@ -1,0 +1,97 @@
+
+/*车型选择表单*/
+.bdlstbox{background-color:#ffffff;margin-bottom:30px;}
+.cheytit{padding:7px 15px 6px;line-height:20px;font-size:1.2rem;background-color:#f5f5f5;color:#999999;}
+.cheytit a{text-decoration:underline;font-size:1.2rem;color:#ff9900;}
+.bdlst{margin:0 15px;border-bottom:1px solid #ececec;padding-left:85px;position:relative;font-size:1.6rem;}
+.bdlst strong{position:absolute;left:0;top:12px;line-height:25px;color:#666666;}
+.bdlst p.yxshanc{border-bottom:1px solid #ececec;color:#333333;min-height:50px;}
+.bdlst p.yxshanc a.shanc{float:right;color:#333333;padding-top:13px;padding-bottom:12px;display:table-caption;line-height:25px;}
+.bdlst p.yxshanc a.yxshleft{width:78%;overflow:hidden;float:left;padding-top:3px;line-height:45px;height:45px;}
+.bdlst_nobg{padding-left:70px;}
+a.bdlink{width:100%;display:block;height:25pxpx;line-height:25px;padding-top:12px;padding-bottom:12px;font-size:1.6rem;background:url(http://image.bitautoimg.com/taoche/tcyidong2014/m_ico_arrow_jump_small.png) no-repeat right center;background-size:9px 15px;color:#b7b7b7;}
+a.bdlink strong{flaot:left;color:#666666;width:85px;float:left;}
+.bdlst_nobg{margin:0 15px;border-bottom:1px solid #ececec;min-height:25px;line-height:25px;padding-top:12px;padding-bottom:12px;font-size:1.6rem;color:#b7b7b7;display:block;clear:both;}
+
+
+.bdlst_nobg strong{flaot:left;color:#666666;width:70px;top:13px;float:left;line-height:25px;}
+
+.w85{padding-left:76px;}
+.w85 a.bdlink strong{width:76px;}
+.bd_nobod{border-bottom:none;}
+.bdlstbox div.bdlst:last-child{border-bottom:none;}
+.bdlst_nobg .hqyzm,.bdlst_nobg .cxhqyz{float:right;margin-top:-3px;}
+
+.sxzhus{line-height:20px;font-size:1.3rem;color:#999999;margin:15px;}
+.sxzhus em{color:#ff6d02;}
+.tixtis{color:#dd2727;font-size:1.3rem;margin-left:2px;display:block;clear:both;}
+.bdinput{height:22px;line-height:22px;float:left;width:160px;background-color:#ffffff;border:1px solid #ffffff;color:#b7b7b7;font-size:1.6rem;padding:0;text-align:left;}
+.w60{width:88px;}
+.wuxtis{margin:0px 15px;line-height:22px;font-size:1.4rem;color:#333333;padding:20px 70px 20px 30px; background:url(http://image.bitautoimg.com/taoche/ercyidong2015/wxtis.png) no-repeat left 22px;background-size:23px 22px;position:relative;}
+.wuxtis em{position:absolute;right:0px;top:20px;color:#ff9900;}
+.wuxtis em a{text-decoration:underline;color:#ff9900;}
+
+
+/*12月30日 置换 输入框颜色*/
+.gongls{width:55px;font-size:1.6rem;color:#999999;border:none;padding-left:0;text-align:left;}
+
+/*文字提示颜色*/
+.colget{color:#333333;}
+.colred{color:#dd2727;}
+
+/*10月29日添加手机号已经注册*/
+a.dengl_col,a.dengl_col:link,a.dengl_col:visited,a.dengl_col:hover{text-decoration:none;border-bottom:1px dotted #ff9933;color:#ff9933;}
+
+
+/*12月30日 置换*/
+.xzyzhxc{height:70px;padding-top:15px;padding-bottom:15px;background-color:#ffffff;}
+.xzyzhxc .bdlst{height:70px;border-bottom:none;padding-left:0;}
+.xzyzhxc .bdlst a{height:70px;padding:0;}
+.xzyzhxc .bdlst a img{width:105px;height:70px;float:left;margin-right:15px;}
+.xzyzhxc .bdlst a h4{font-size:1.6rem;color:#333333;height:25px;line-height:25px;overflow:hidden;margin-bottom:5px;padding-top:6px;}
+.xzyzhxc .bdlst a p{font-size:1.2rem;padding-right:20px;text-overflow: ellipsis;height:20px;line-height:20px;overflow:hidden;white-space: nowrap;}
+.xzyzhxc .bdlst a p em{font-size:1.4rem;color:#cc3333;}
+.zhdxc{line-height:70px;}
+.zhihbox .cheytit{font-size:1.4rem;}
+.xiamgd{font-size:1.4rem;text-align:center;margin-top:15px;margin-bottom:15px;}
+
+.xjtlcbox { height: 50px; line-height: 50px; background: #fff;  text-align: center; display: block; font-size: 1.4rem; color: #666; width:100%;margin-bottom:20px;}
+.xjtlcbox a.xjtlc{margin:0px 15px 20px 15px;display:block;color:#666666;}
+.xjtlc i { background: url(http://image.bitautoimg.com/taoche/ercyidong2015/xjt_ico.png) no-repeat; background-position:right center;background-size:13px 8px; padding-right: 12px; padding-right:20px; }
+.shouqbg .xjtlc i{background: url(http://image.bitautoimg.com/taoche/ercyidong2015/up.png) no-repeat; background-position:right center;background-size:13px 8px;}
+.mbot0{margin-bottom:0;}
+.zhihbox div.bdlst:last-child{border-bottom:1px solid #eeeeee;}
+
+.w85 strong{width:76px;float:left;}
+.shengs{color:#666666;}
+.zhihbox .tixtis{margin-left:9px;}
+
+/*12月30日 表单文字太多蕴藏样式*/
+.heiync{overflow:hidden;padding-right:5px;height:25px;line-height:25px;display:block;}
+.yxxcbox .m_tit{margin-top:0;}
+.zhihbox .m_tit{margin-top:0;}
+/*12月30日 文字颜色补丁*/
+.bdlst strong{color:#333333;}
+.bdlst_nobg strong {color:#333333;}
+.colf6{color:#ff6d02;}
+.ycxhex{height:80px;padding:15px 10px 15px 15px;color:#333333;background-color:#ffffff;}
+.ycxhex img{width:120px;height:80px;float:left;margin-right:10px;}
+.ycxhex h4{font-size:1.8rem;line-height:27px;}
+.ycxhex p.chexin{font-size:1.4rem;line-height:20px;height:20px;overflow:hidden;white-space: nowrap;text-overflow: ellipsis;}
+.ycxhex p.zdoj{margin-top:10px;color:#666666;font-size:1.4rem;line-height:20px;}
+.tjtime{color:#999999;font-size:1.4rem;line-height:20px;padding:10px 15px;}
+
+.gjhsjc{font-size:1.2rem;color:#999999;line-height:17px;margin:-5px 15px 15px 15px;background:url(http://image.bitautoimg.com/taoche/ercyidong2015/goux_bg2.png) no-repeat left top;background-position:left top;background-size:15px 15px;padding-left:20px;}
+.gjhsjc_bg2{background:url(http://image.bitautoimg.com/taoche/ercyidong2015/goux_bg1.png) no-repeat left top;background-position:left top;background-size:15px 15px;}
+
+/*12月30日 订阅车源*/
+.soustis{font-size:1.4rem;color:#999999;margin:0px 15px 3px 15px;line-height:20px;}
+.dinytop{background-color:#ffffff;padding-top:12px;}
+.suojieg{padding:0 15px 10px; }
+.dycxh{height:29px; line-height:29px; width:auto; background:#fff; border:1px solid #FF9934; margin:10px 3px 0; font-size:1.4rem; position:relative; padding:0 25px 0 5px; display:inline-block; overflow:hidden; border-radius:4px;}
+.dycxh em{color:#676767; padding:0 0 0 5px; }
+.dycxh strong{color:#FF9932;}
+.dycxh .btn-close{width:8px; height:8px; background:url(http://image.bitautoimg.com/taoche/ercyidong2015/fcdb_gb.png) no-repeat; background-size:8px 8px; position:absolute; top:11px; right:9px;}
+.dyzcbut{margin-top:20px;}
+
+.w85 a.bdlink strong{margin-left:10px;}

@@ -1,0 +1,44 @@
+﻿
+/*经销商报价*/
+.bjcbox{height:70px;margin-top:15px;margin-bottom:15px;}
+.bjcbox .bdlst{height:70px;border-bottom:none;padding-left:0;}
+.bjcbox .bdlst a{height:70px;padding:0;}
+.bjcbox .bdlst a img{width:105px;height:70px;float:left;margin-right:15px;}
+.bjcbox .bdlst a h4{font-size:1.6rem;color:#333333;height:25px;line-height:25px;overflow:hidden;margin-bottom:5px;padding-top:6px;}
+.bjcbox .bdlst a p{font-size:1.2rem;}
+.bjcbox .bdlst a p em{font-size:1.4rem;color:#cc3333;}
+
+/*保障帮买*/
+.bzbm_box{border-top:1px solid #ececec;width:100%;}
+.bzbm_box  ul{width:100%;display:table;}
+.bzbm_box li{display:table-cell;border-left:1px solid #ececec;height:84px;}
+.bzbm_box li a{padding-left:75px;height:69px;padding-top:15px;background:url(http://image.bitautoimg.com/taoche/ercyidong2015/cjy_bm.gif) no-repeat;background-size:51px 57px;background-position:15px 9px;display:block;}
+
+.bzbm_box li h4{font-size:1.6rem;color:#fe8230;line-height:26px;}
+.bzbm_box li  p{line-height:20px;font-size:1.2rem;color:#999999;}
+.bzbm_box li:first-child{border-left:none;}
+.bzbm_box li:first-child a{border-left:none;background:url(http://image.bitautoimg.com/taoche/ercyidong2015/cjy_bz.gif) no-repeat;background-size:51px 57px;background-position:15px 10px;}
+.bzbm_box li:first-child h4{color:#00ba97;}
+
+/*热卖车款*/
+.tmckbox .m_tit{margin:0;}
+.rmchk .bdlst{padding-left:0;}
+.rmchk .bdlst a{min-height:25px;}
+.rmchk .bdlst i{float:left;color:#333333;font-size:1.6rem;}
+.rmchk .bdlst span{float:right;margin-right:15px;color:#999999;font-size:1.4rem;}
+.rmchk .bdlst:last-child{border-bottom:none;}
+
+/*今日推荐*/
+.jirtjbox .m_tit{margin:0;border-bottom:none;box-shadow:0 0;}
+.jirtjbox .pic-txt li{margin:0 0 10px 0;}
+.jirtjbox .pic-txt{padding-bottom:0;}
+
+
+/*底部浮动*/
+.cydbfix{position:fixed;bottom:0;}
+.cyxqfoot_d{height:44px;background-color:#ff9900;width:100%;display:table;color:#ffffff;overflow:hidden;}
+.cyxqfoot_d ul{width:100%;display:table;height:44px;line-height:44px;}
+.cyxqfoot_d ul li{display:table-cell;border-left:1px solid #ffb84d;text-align:center;}
+.cyxqfoot_d ul li:first-child{width:50.05%}
+.cyxqfoot_d ul li a{color:#ffffff;font-size:1.6rem;}
+.cyxqfoot_d ul li.gumc a em{background:url(http://image.bitautoimg.com/taoche/ercyidong2015/dbfc_zcgw.png) no-repeat;background-position:0 0px;background-size:17px 18px;width:17px;height:18px;display:inline-block;margin-right:7px;vertical-align:-3px;}

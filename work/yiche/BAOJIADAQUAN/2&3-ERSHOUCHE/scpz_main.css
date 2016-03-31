@@ -1,0 +1,66 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*------------------上传凭证-main----------------------------------*/
+.scpz_box{ width:100%;}
+.scpz_hh{ height:49px; border-bottom:#D6D6D6 solid 1px; line-height:49px; font-size:1.4rem; padding:0 10px;}
+.scpz_hh span{ font-size:1.2rem; color:#b7b7b7; padding-left:10px;}
+
+/*--------------------------------------------------------*/
+.scpz_list{ padding:0 10px; padding-top:5px;}
+.scpz_list li{width:47%; float:left; margin-right:6%; padding-bottom:5px;}
+
+
+.scpz_list li.lost{ margin-right:0px;}
+.scpz_list li h2{ font-size:1.4rem; height:43px; line-height:43px;}
+.scpz_list li h2 a{ float:right; font-size:1.4rem; color:#FF7612; text-decoration:underline;}
+
+.scpz_list li h3{ height:112px; position:relative; width:100%; }
+.scpz_list li h3 a.tjtp{ width:100%; height:110px; display:block; position: absolute; top:0px; left:0px;border: 1px dashed #E5E5E5;text-align:center;}
+.scpz_list li h3  span{ width:30px; height:32px; background:url(http://image.bitautoimg.com/taoche/ercyidong2015/scpzbg.png) no-repeat; display:block; background-size:100%; margin: 39px auto; }
+
+.scpz_list li h3 a.tjtpa{ width:100%; height:112px; display:block; position: absolute; top:0px; left:0px;text-align:center; background:#F0EDED;filter:alpha(opacity=50);  -moz-opacity:0.5;  -khtml-opacity: 0.5;  opacity: 0.5;}
+
+.scpz_list li h3 .loging{ background:#F1EEEE; position: absolute; top:0px; left:0px; width:100%; height:100%; z-index:100;filter:alpha(opacity=70);  -moz-opacity:0.7;  -khtml-opacity: 0.7;  opacity: 0.7;}
+.scpz_list li h3 .loging b{width:32px; height:32px; display:block; margin: 30px auto; font-size:1.8rem;}
+.scpz_list li h3 .loging b img{ width:24px; height:24px; margin-top:3px;}
+
+
+
+
+
+.scpz_list li h3 img{ width:100%; height:100%;}
+
+.scpz_list li h3 a em{font-size:1.2rem; padding-top:40px; display:block; color:#E35050;}
+
+.scpz_list li h3 i{ height:16px; background:#DD2727; width:53px; position:absolute; top:0px; left:0px; display:block; font-size:1.2rem; color:#fff; line-height:16px; text-align:center; z-index:110;}
+
+.scpz_list li h4{ width:100%; height:20px; line-height:20px; text-align:right; font-size:1.4rem; padding-top:5px;}
+
+/*----shangchuan*/
+.sctup{height:110px;width: 100%;position: absolute;z-index: 3;left: 1px;top: -1px;border: 0;cursor: pointer;background-color: transparent;opacity: 0;border: 0;}
+
+
+
+
+
+/*-------看图弹窗----*/
+.kk_box{ position:fixed; top:0px; height:100%; z-index:120;width:100%;}
+.cover_kk{background-color:#000;filter:alpha(opacity=80);  -moz-opacity:0.8;  -khtml-opacity: 0.8;  opacity: 0.8; width:100%; height:100%;}
+
+
+#look_pic{ width:100%; height:100%;  position: absolute; left:0px; top:0px; }
+.bl-return{width:100%; height:39px; line-height:39px; color:#FFF; position:relative; z-index:19;}
+.bl-return span{font-size:1.6rem; padding-left:40px;}
+
+.bl-return .btn-return{width:39px; height:39px; background:url(http://image.bitautoimg.com/uimg/mbt2014/images/m_header_nav_search.png) no-repeat -78px -76px; background-size:100px auto; position:absolute; top:0; left:6px; text-indent:-999em;}
+.bl-return-txt .btn-return{width:auto; text-indent:0; color:#fff; font-size:1.6rem; padding:0 0 0 30px;}
+#look_pic p{ width:100%;padding-top:50px; }
+#look_pic img{ width:100%; height:100%;}
+
+
+
+
+
+
+

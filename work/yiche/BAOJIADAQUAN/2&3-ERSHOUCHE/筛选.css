@@ -1,0 +1,23 @@
+/*分类筛选*/
+.sort{padding:0 10px 0 10px; overflow:hidden; font-size:1.4rem; margin:0px 0 0;}
+.sort li{float:left; text-align:center; margin:10px 0 0;width:25%;}
+.sort li a{display:block; height:36px; line-height:36px; border:1px solid #c9c9c9; background:#ffffff; margin:0 5px;position:relative;border-radius:4px;}
+.sort li i{width:0; height:0; border-width:4px 4px; border-style:solid; border-color:transparent #dddddd #dddddd transparent; position:absolute; bottom:4px; right:4px; z-index:2;}
+.sort li.current i{width:0; height:0; border-width:4px 4px; border-style:solid; position:absolute; bottom:4px; right:4px; z-index:2; border-color: transparent #ff6d02 #ff6d02 transparent;}
+.sort li.arrow{margin-right:17px;}
+.sort li.current a{color:#ff6d02; border:1px solid #ff6d02;}
+
+
+/*订阅清除*/
+ .sort-clear{color:#666; font-size:1.4rem; overflow:hidden; line-height:20px; margin:12px 15px 10px 15px;}
+.sort-clear a{color:#666;}
+.sort-clear .bwmc{background:url(http://image.bitautoimg.com/taoche/ercyidong2015/bwmc_ico1.jpg) no-repeat; background-size:19px 19px; float:right; padding:0 0 0 20px;}
+.sort-clear .btn-clear{background:url(http://image.bitautoimg.com/uimg/mbt2014/images/m_sort_ico_clear.png) no-repeat; background-size:15px 18px; float:left; padding:0 0 0 20px;}
+.sort-clear .dycy{float:left; background:url(http://image.bitautoimg.com/taoche/tcyidong2014/jyh_bg.jpg) no-repeat left 1px; background-size:18px 18px;padding-left:23px;margin-left:10px;}
+
+
+/*选择订阅*/
+.fc_tjdiny{width:130px;position:relative;}
+.bjbg{background-color:#000000;opacity:0.70;width:130px;height:80px;position:absolute;left:0;top:0;border:1px solid #000000;border-radius:6px;z-index:2;}
+.tjdy_text{width:100px;padding:15px;color:#ffffff;font-size:1.4rem;color:#ffffff;line-height:22px;position:absolute;left:0;top:0;z-index:3;text-align:center;}
+.tjdy_text .dycg{padding-top:13px;}

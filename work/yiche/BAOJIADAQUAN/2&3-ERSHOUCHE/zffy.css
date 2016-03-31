@@ -1,0 +1,84 @@
+@charset "utf-8";
+/* CSS Document */
+.mt20{ width:100%; height:20px; clear: both;}
+.mt30{ width:100%; height:30px; clear: both;}
+.mt10{ width:100%; height:10px; clear: both;}
+.hide{ display:none;}
+.red{ color:#dd2727 !important;}
+.mar0{ margin:0px !important;}
+.bort0{ border-top:0px  !important;}
+
+.pj_gh{ padding:0 10px; height:20px; line-height:20px; padding-top:14px; clear:both;}
+.pj_gh a{ text-decoration:underline; color:#B7B7B7; font-size:1.4rem;}
+
+.bm_zf_number{padding:15px 10px; }
+.bm_zf_number p{ height:42px;}
+.bm_zf_number  span{ line-height:30px; clear:both; display:block; font-size:1.2rem;  color:#dd2727; padding-left:10px;}
+
+.sr_input{ width:50%; height:32px;border:#ECECEC solid 1px; background:#fff; font-size:1.6rem; color:#B7B7B7; vertical-align:middle; padding-left:10px; float:left;}
+.bm_zf_number a{ width:19%; height:34px;  display:block; text-align:center; float:right; line-height:34px; margin-left:6px; font-size:1.4rem;}
+.bm_zf_button1{border:#FFAB4C solid 1px; border-radius:5px; color:#FFAB4C ;}
+.bm_zf_button2{border:#DEDEDE solid 1px; border-radius:5px;color:#333; }
+
+/*------支付服务费------*/
+.zf_fwf{ padding:10px;font-size:1.4rem;}
+.zf_fwf_title{ font-size:1.4rem; padding-bottom:5px; position:relative; height:25px;}
+.zf_fwf_title a{ float:right; text-decoration:underline; font-size:1.2rem; color:#333;}
+
+.zf_fwf_jg{ font-size:1.4rem; border-bottom:#ECECEC solid 1px; padding-bottom:10px; clear:both;}
+.zf_fwf_jg  span{ color:#dd2727; font-size:1.8rem; padding-left:10px; padding-right:10px;}
+.zf_fwf_jg  i{ font-size:1.2rem; color:#B7B7B7;}
+.zf_fwf_jg s{padding-left:10px; font-size:1.8rem; color:#666;}
+
+/*---优惠券*/
+.zf_sy{ line-height:21px; padding-top:14px; padding-bottom:14px;cursor:pointer;}
+.zf_sy em{width:21px; height:21px; background:url(http://image.bitautoimg.com/taoche/ercyidong2015/yhj.png) 0 0px no-repeat; display:block; background-size:100%; float:left; margin-right:10px; }
+
+.zf_sy em.yhj_hover{background:url(http://image.bitautoimg.com/taoche/ercyidong2015/yhj_hover.jpg) 0 0px no-repeat; background-size:100%;}
+.zf_sy p{ line-height:20px; font-size:1.2rem; padding-left:31px; color:#B7B7B7;}
+
+
+
+
+
+/*---网上支付*/
+.zf_wy{height:21px; border-bottom:#ECECEC solid 1px;border-top:#ECECEC solid 1px;  line-height:21px; padding-top:14px; padding-bottom:14px; clear:both;}
+.zf_wy img{width:21px; height:21px;margin-right:10px; vertical-align: bottom;}
+
+
+
+
+
+.zf_place{ line-height:20px;font-size:1.2rem;color:#B7B7B7;}
+.zf_place span{color:#dd2727;}
+
+.fz_qx a{ font-size:1.2rem;color:#dd2727; text-decoration:underline;}
+
+/*----预付----*/
+.zf_yf{height:22px; padding:14px 10px;}
+.zf_yf span{ height:22px; font-size:1.4rem; padding-right:25px;}
+.zf_yf span img{ width:22px; height:22px; vertical-align:text-bottom; margin-right:8px;}
+
+/*--------状态----*/
+.zf_why{border:#DCDCDC solid 1px; border-radius:5px; position: absolute; clear:both; bottom:30px; background:#fff; font-size:1.2rem; right:0px;}
+
+.zf_why p{ padding:8px; line-height:18px;}
+
+.bubble-arrow { border-color: #DCDCDC transparent transparent transparent ;border-width: 6px;border-style: solid;width: 0; height: 0;position: absolute; bottom:-13px;right:10px;}
+.bubble-arrow-inner { border-color: #fff  transparent transparent transparent;border-width: 6px;border-style: solid;width: 0;height: 0;position: absolute; bottom: -11px;right: 10px;}
+
+/*使用优惠卷状态*/
+.sy_yhj{ padding:0 10px; margin-bottom:10px;}
+.sy_yhj p span{ width:78%; height:48px; border:#DCDCDC solid 1px; float:left;}
+.yhm{ width:80%; height:40px; border:0px;  font-size:1.4rem;color:#B7B7B7; vertical-align:middle;padding-left:10px; }
+.sy_yhj p img{ width:14px; height:14px; float:right; padding-right:10px; padding-top:16px; cursor:pointer;}
+.sy_yhj p a{ width:18%; height:36px; text-align:center; line-height:36px; font-size:1.6rem;border:#FFAB4C solid 1px; border-radius:5px; color:#FFAB4C; display:block; float:left; margin-left:5px; margin-top:5px;}
+.sy_yhj h2{ clear:both; height:20px; line-height:20px;font-size:1.4rem;color:#dd2727; line-height:25px;}
+
+
+/*--------------2015-10-27开始----*/
+.zf_wy1{height:22px; border-bottom:#ECECEC solid 1px;border-top:#ECECEC solid 1px;  line-height:23px; padding-top:14px; padding-bottom:14px; clear:both;}
+.zf_wy1 img{width:22px; height:22px;margin-right:10px; vertical-align: bottom;}
+.zf_wy1 i{ width:22px; height:22px;background:url(http://image.bitautoimg.com/taoche/ercyidong2015/bm_q01.png) center 0px no-repeat; background-size:100%; display:block; float:right;}
+.zf_wy1 i.zffs{ background:url(http://image.bitautoimg.com/taoche/ercyidong2015/bm_q02.png) center 0px no-repeat; background-size:100%;}
+/*-------------------2015-10-27结束--------------*/

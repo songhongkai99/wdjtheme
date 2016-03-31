@@ -1,0 +1,67 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta content="telephone=no" name="format-detection" />
+<title></title>
+<link rel="stylesheet" type="text/css" href="../头尾.css" />
+<link rel="stylesheet" type="text/css" href="../2015选车工具.css" />
+</head>
+
+<body>
+
+
+
+
+<a href="javascript:;" id="btn" style="font-size:3.0rem; line-height:2.0" data-action="price">点我</a>
+
+
+<br><br><br><br><br><br><br><br>111<br><br><br><br><br><br><br><br><br><br><br><br><br><br>222<br><br><br><br><br><br><br><br><br><br><br><br><br><br>333<br><br><br><br><br><br><br><br><br><br><br><br><br><br>444<br><br><br><br><br><br><br><br>555<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>6666<br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+<!-- black popup start -->
+<div class="leftmask leftmask2" style="display: none;"></div>
+<div class="leftPopup price" data-back="leftmask2"  style="display: none;">
+	<div class="swipeLeft">
+		<ul class="first-list">
+           <li class=""><a href="#">看车时间 9月30日 9点</a></li>
+			<li class=""><a href="#">00分</a></li>
+            <li class=""><a href="#"><i>11点</i></a>
+            </li>
+		</ul>
+<br>
+
+  </div>	
+</div>
+<!-- black popup end -->
+
+
+<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../js/iscroll.js"></script>
+<script type="text/javascript" src="../js/model.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('[data-action=price]').rightSwipe({
+            clickEnd: function (b) {
+                var $leftPopup = this;
+                if (b) {
+                    var $back = $('.' + $leftPopup.attr('data-back'))
+                    $back.touches({ touchstart: function (ev) { ev.preventDefault(); }, touchmove: function (ev) { ev.preventDefault(); } });
+                    var $swipeLeft = $leftPopup.find('.swipeLeft');
+                    $swipeLeft.touches({ touchstart: function (ev) { ev.preventDefault(); } });
+                    var myScroll = new iScroll($swipeLeft[0], {
+                        snap: 'li',
+                        momentum: true,
+                        click: true,
+                        bounce: false
+                    });
+                }
+            }
+        })
+    })
+</script>
+</body>
+</html>

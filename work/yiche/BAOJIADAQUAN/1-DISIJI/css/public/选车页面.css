@@ -1,0 +1,27 @@
+/*选车页面*/
+	/*选车工具的title*/
+.choose-car-tool-tt{width:100%; height:9px; text-align:center; border-bottom:1px solid #E2E2E2; font-size:1.4rem; color:#999; margin:24px 0 7px;}
+.choose-car-tool-tt span{background:#fff; padding:0 20px;}
+
+	/*厂商logo和名称*/
+.choose-car-name-close{width:100%; height:70px; line-height:70px; font-size:1.8rem; position:relative; background:#fff;}
+.choose-car-name-close .brand-name{height:70px; height:70px; float:left;}
+.brand-logo-none-border{display:block; width:55px; height:55px; background:url(http://img3.bitautoimg.com/car/logo/01.png) no-repeat; float:left; margin:7px 10px 0 10px;}
+.choose-car-btn-close{width:22px; height:22px; display:block; background:url(http://image.bitautoimg.com/uimg/mbt2014/images/m_choose_btn_close.png) no-repeat; background-size:22px 22px; position:absolute; top:25px; right:10px; text-indent:-999em;}
+
+	/*清除选车条件*/
+.sort-clear{color:#666; font-size:1.4rem; overflow:hidden; line-height:20px; margin:12px 0 0 0;}
+.sort-clear a{color:#666;}
+.sort-clear .btn-clear{background:url(http://image.bitautoimg.com/uimg/mbt2014/images/m_sort_ico_clear.png) no-repeat; background-size:15px 18px; float:left; padding:0 0 0 20px;}
+.sort-clear .btn-jump{float:right;}
+
+
+/*错误提示*/
+.m-result-page-box{padding:10px 0 0 10px;}
+
+/*选车款*/
+.choose-car-style-close{width:100%; height:80px; line-height:80px; font-size:1.8rem; position:relative;}
+.choose-car-style-close .car-style-img{width:90px; height:60px; float:left; margin:10px 10px 0 10px;}
+.choose-car-style-close .car-style-name{height:80px; float:left;}
+
+

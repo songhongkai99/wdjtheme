@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta content="telephone=no" name="format-detection" />
+<title>E1_02预约看车</title>
+<link rel="stylesheet" type="text/css" href="../头尾.css" />
+<link rel="stylesheet" type="text/css" href="../pfxs.css" />
+<link rel="stylesheet" type="text/css" href="../yykc.css" />
+<link rel="stylesheet" type="text/css" href="../yycllb.css" />
+</head>
+
+<body>
+<!--头部导航 star -->
+<div class="header">
+	<h1><a class="logo" title="易车二手车" href="http://m.taoche.com/">易车二手车</a></h1> 
+    <a onClick="showNav();" id="btnNav" class="btn-nav btn-nav-show" href="javascript:;">导航<i></i></a>
+	<a id="btnSearch" class="btn-search" href="http://m.taoche.com/buycar/search.aspx">搜索</a>
+    <a id="divLoginStatus" href="http://m.taoche.com/i/usercenter.aspx">
+        <div class="zhangh">
+            账号</div>
+    </a>
+    
+    <a style="display: none" id="userInfoContainer" href="http://m.qichetong.com/authenservice/login.aspx"></a>
+    <div style="display: none;" id="popNav" class="pop-nav">
+        <i></i>
+        
+        
+        <ul>
+            <li><a href="http://m.taoche.com/">首页</a></li>
+            <li><a href="/all/">买车</a></li>
+            <li><a href="http://m.taoche.com/sellcar/">卖车</a></li>
+            <li><a href="http://m.taoche.com/pinggu/">估车</a></li>
+            <li style="" id="liZhihuan"><a href="http://zhihuan.m.taoche.com/">云置换</a></li>
+            <li><a href="http://m.taoche.com/guide/indexguide.aspx">攻略</a></li>
+            <li><a href="http://m.taoche.com/tools/index.aspx">工具</a></li>
+            <li><a onClick="downloadApp();" href="javascript:">APP</a></li>
+            <li style="display: none;" id="lilast"><a href="javascript:"></a></li>
+        </ul>
+    </div>
+</div>
+<!--头部导航 end -->
+<!-- 头部返回star -->
+<div class="b-return">
+	<a class="btn-return" href="#">返回</a>
+	<span>预约看车</span>
+	<a class="opt " >帮买信息</a>
+</div>
+<!-- 头部返回end -->
+<!--conter-->
+<!--评分显示开始-->
+<div class="car_ping">
+<div class="car-title">您的买车顾问<a href="">取消帮买服务</a></div>
+<dl class="pj_dl">
+<dt> <img src="../img/people.jpg" /> <i><img src="../img/pep.png" /></i> </dt>
+    <dd>
+      <p class="pat0"><span>郑歌</span><em>帮<i>100</i>人买到车</em></p>
+      <p>评分：<img src="../img/start2.png" /><img src="../img/start2.png" /><img src="../img/start2.png" /><img src="../img/start2.png" /><img src="../img/start2.png" /></p>
+       <p>联系方式：13510977766<i class="xian"></i><a href=""><img src="../img/bm_x01.png" /></a></p>
+    </dd>
+</dl>
+
+</div>
+<!--评分显示结束-->
+<div class="mt10"></div>
+<div class="bm_fond_heard"> 已为您找到<span > 5 </span>辆车源</div>
+ <!--预约成功列表开始-->
+ <div class="bm_cartop">
+      <p> <span class="w20 col02">预约成功</span> <span class="w55 col02">看车时间：06-11 14:00</span> <span class="w25">看车地点<a href=""><img src="../img/biao.png" /></a></span> </p>
+    </div>
+<!--我要买车-->
+<div class="car-yy_list">
+<div class="pad10">
+<div class="yycar_img">	<a href="#"><img src="../img/pic_210x140.jpg" /></a></div>
+		<div class="yy_txt-box">
+			<h4><a href="#">雅特2010款 1.8A+标准豪华版降8.7万</a></h4>
+			<p class="yy_price">9999.99万 <em class="yy_ico_ding">顶</em> <em class="yy_ico-jing">精</em></p>
+			<p class="yy_time">2011年/3.2万公里</p>    
+		</div>
+	<div class="yy_tcdiq">北京  朝阳区</div>
+       <div class="yy_buy"><a href="#">我要买车</a></div>
+</div>
+</div>
+<!--约顾问买车-->
+<div class="car-yy_list">
+<div class="pad10">
+<div class="yycar_img">	<a href="#"><img src="../img/pic_210x140.jpg" /></a></div>
+		<div class="yy_txt-box">
+			<h4><a href="#">雅特2010款 1.8A+标准豪华版降8.7万</a></h4>
+			<p class="yy_price">9999.99万 <em class="yy_ico_baoz">保</em> </p>
+			<p class="yy_time">2011年/3.2万公里</p>    
+		</div>
+	<div class="yy_tcdiq">北京  朝阳区</div>
+     <div class="yy_buy"><a href="#">约顾问买车</a></div>
+</div>
+</div>
+<!--预约中-->
+<div class="car-yy_list">
+<div class="pad10">
+<div class="yycar_img">	<a href="#"><img src="../img/pic_210x140.jpg" /></a></div>
+		<div class="yy_txt-box">
+			<h4><a href="#">雅特2010款 1.8A+标准豪华版降8.7万</a></h4>
+			<p class="yy_price">9999.99万 <em class="yy_ico_rengz">认</em> </p>
+			<p class="yy_time">2011年/3.2万公里</p>    
+		</div>
+	<div class="yy_tcdiq">北京  朝阳区</div>
+     <div class="yy_buy col02">预约中...</div>
+</div>
+</div>
+<!--预约失败-->
+<div class="car-yy_list">
+<div class="pad10">
+<div class="yycar_img"><img src="../img/pic_210x140.jpg" /><i></i> </div>
+		<div class="yy_txt-box">
+			<h4 class="colad">雅特2010款 1.8A+标准豪华版降8.7万</h4>
+			<p class="yy_price colf3">9999.99万 <em class="yy_ico_rengz">认</em> </p>
+			<p class="yy_time cole7">2011年/3.2万公里</p>   
+            
+		</div>
+	<div class="yy_tcdiqa cole7">北京  朝阳区</div>
+     <div class="yy_buya col27">预约失败</div> 
+    <div class="bm_carfalse"> 失败原因：此车已出售，此车已出售，此车此车已出售，此此车已出售，此已出售，此车已出售。 </div>
+</div>
+ 
+</div>
+
+<div class="mt10"></div>
+<div class="bm_zhu">
+    <p>注：请在<span class="col02">29天23小时</span>内完成交易，过期帮买服务关闭。</p>
+  </div>
+  <div class="mt20"></div>
+  <div class="yellowbut">催顾问找车</div>
+   <!--点击按钮改变文字-->
+  <div class="button_text">已通知买车顾问加速帮您找车<br>
+请稍等哦~</div>
+  <div class="mt20"></div>
+
+
+
+</body>
+</html>

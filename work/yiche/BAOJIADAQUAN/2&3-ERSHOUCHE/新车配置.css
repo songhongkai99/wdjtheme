@@ -1,0 +1,46 @@
+
+/*新车配置*/
+.pzitab_tit{text-align:center;float:right;}
+.pzitab_tit a{margin-left:0px;margin-right:15px;color:#666666;font-size:1.4rem;display:inline-block;}
+.pzitab_tit a.noren em{width:10px;height:10px;background-color:#ffffff;border:1px solid #999999;border-radius:10px;float:left;margin-right:5px;margin-top:9px;}
+.pzitab_tit a.current em{width:10px;height:10px;background-color:#999999;border:1px solid #999999;border-radius:10px;float:left;margin-right:5px;margin-top:9px;}
+.pzitab_tit a.no em{width:10px;height:2px;background-color:#999999;float:left;margin-right:5px;margin-top:13px;}
+
+.jbxl_tit{height:28px;line-height:28px;background-color:#eeeeee;color:#333333;padding-left:15px;font-size:1.4rem;}
+.peizcx{margin:0 15px;position:relative;}
+/*.peizcx li{line-height:23px;padding:7px 0 7px 0;border-bottom:1px solid #e2e2e2;font-size:1.4rem;padding-left:60%;position:relative;}
+.peizcx li strong{color:#999999;width:60%;float:left;position:absolute;left:0;top:7px;}*/
+
+.peizcx li{line-height:23px;border-bottom:1px solid #e2e2e2;font-size:1.4rem;position:relative;clear:both;margin-top:-1px;display:block;width:100%;float:left;}
+.peizcx li strong{color:#999999;width:45%;float:left;display:inline-block;line-height:23px;padding-top:7px;padding-bottom:7px;}
+.peizcx li span{width:45%;float:right;display:inline-block;padding-top:7px;padding-bottom:7px;}
+.last_noline li:last-child{border-bottom:none;}
+
+
+.pzyil{margin:0 10px;}
+.pzyil li{line-height:23px;padding:7px 0 7px 0;border-bottom:1px solid #e2e2e2;font-size:1.4rem;position:relative;}
+
+/*亮点配置*/
+.ldpeiz{padding-bottom:15px;}
+.ldpeiz li{width:50%;float:left;height:31px;font-size:1.4rem;line-height:31px;margin-top:15px;}
+.ldpeiz li em{float:left;width:31px;height:31px;display:block;margin-left:15px;margin-right:10px;}
+.ldpeiz li em img{width:31px;height:31px;}
+.ldpeiz li.bg1 em{background:url(http://image.bitautoimg.com/taoche/ercyidong2015/ldpz_bg1.jpg) no-repeat;background-size:31px 31px;background-position:left top;}
+.ldpeiz li.bg2 em{background:url(http://image.bitautoimg.com/taoche/ercyidong2015/ldpz_bg2.jpg) no-repeat;background-size:31px 31px;background-position:left top;}
+.ldpeiz li.bg3 em{background:url(http://image.bitautoimg.com/taoche/ercyidong2015/ldpz_bg3.jpg) no-repeat;background-size:31px 31px;background-position:left top;}
+.ldpeiz li.bg4 em{background:url(http://image.bitautoimg.com/taoche/ercyidong2015/ldpz_bg4.jpg) no-repeat;background-size:31px 31px;background-position:left top;}
+.ldpeiz li.bg5 em{background:url(http://image.bitautoimg.com/taoche/ercyidong2015/ldpz_bg5.jpg) no-repeat;background-size:31px 31px;background-position:left top;}
+.ldpeiz li.bg6 em{background:url(http://image.bitautoimg.com/taoche/ercyidong2015/ldpz_bg6.jpg) no-repeat;background-size:31px 31px;background-position:left top;}
+.ldpeiz li.bg7 em{background:url(http://image.bitautoimg.com/taoche/ercyidong2015/ldpz_bg7.jpg) no-repeat;background-size:31px 31px;background-position:left top;}
+.ldpeiz li.bg8 em{background:url(http://image.bitautoimg.com/taoche/ercyidong2015/ldpz_bg8.jpg) no-repeat;background-size:31px 31px;background-position:left top;}
+
+
+
+/*点击浮层*/
+.btn-more-peizhi{width:35px; height:35px; background:url(http://image.bitautoimg.com/uimg/mbt2014/images/m_btn_more_peizhi.png) no-repeat 0 0; background-size:35px 70px; position:fixed; bottom:97px; left:10px; cursor:pointer; z-index:999;}
+.btn-more-peizhi-on{background-position:0 -35px;}
+.more-peizhi-list{width:185px; height:auto; background:rgba(0, 0, 0, 0.6); position:fixed; left:10px; bottom:141px; font-size:1.4rem; border-radius:15px; z-index:999;}
+.more-peizhi-list ul{padding:10px 0; overflow:hidden;}
+.more-peizhi-list ul li{width:50%; height:40px; line-height:40px; float:left; text-align:center;}
+.more-peizhi-list ul li a{display:block; width:100%; height:100%; color:#fff;}
+.m-statement{font-size:1.2rem; color:#999; border-bottom:1px solid #e2e2e2; padding:10px;}

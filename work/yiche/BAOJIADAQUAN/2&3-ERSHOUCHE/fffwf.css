@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* CSS Document */
+
+.bm_sorry{ width:100%; padding-top:20px; text-align:center; font-size:14px;}
+.bm_sorry span{width:48px; height:63px; margin: 0 auto; display:block; padding-bottom:10px;}
+.bm_sorry span img{ width:100%; height:100%; }
+.bm_sor_yy{ padding:10px; font-size:14px;}
+.bm_sor_yy p{ line-height:28px; color:#666;}
+.bm_sor_yy p a{ color:#ff6d02; text-decoration:underline; }
+
+
+/*-----支付成功---*/
+.car_zfcg{ padding:20px 10px; }
+.car_zfcg span{ width:32px; height:22px; float:left;}
+.car_zfcg span img{width:22px; height:22px;}
+.car_zfcg  p{ float:left; font-size:1.4rem; line-height:20px; width:88%;}
+.car_zfcg a{ color:#ff6d02; text-decoration:underline;}
+
+/*-----20151027开始---*/
+.car_zfcg em{ color:#999;}
+.car_zfcg i{ color:#ff9900;}
+/*-----20151027结束---*/

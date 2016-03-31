@@ -1,0 +1,24 @@
+/*分类筛选*/
+.sosb_pic{width:120px;height:95px;margin:30px auto 15px;background:url(http://image.bitautoimg.com/taoche/ercyidong2015/sib_ico.jpg) no-repeat left top;background-size:120px 95px;}
+.sosb{padding-bottom:15px;}
+.sosb p{text-align:center;color:#999999;line-height:22px;font-size:1.2rem;padding:0 15px 0 15px;}
+.sosb em{color:#ff6d02;}
+.sosb p.hstis{margin-top:30px;}
+.sosb p a{color:#ff6d02;text-decoration:underline;}
+
+/*没有信息*/
+.xxwk { padding: 40px 0 0; }
+ .xxwk img { width: 125px; height: 105px; display: block; margin: 0 auto; }
+ .tjcgbg img{width:170px;height:150px;}
+ .xxwk h2 { font-size: 2rem; color: #5a5a78; font-weight: bold; text-align: center; line-height: 25px; margin-top: 15px; }
+ .xxwk p { text-align: center; font-size: 1.5rem; color: #999999; line-height: 20px; margin-top: 10px; }
+.xxwkgbut{margin:15px 23% 0;}
+.xxwk_button{ border: 1px #d2d2d2 solid; background: #ffffff; color: #5a5a78;border-radius: 5px; display:block;height:34px;line-height:34px;text-align:center;font-size:1.4rem;color:#666666;}
+.qtmc{font-size:1.4rem;color:#ff6d02;line-height:22px;margin-top:15px;text-align:center;}
+
+
+/*选择订阅*/
+.fc_tjdiny{width:130px;position:relative;}
+.bjbg{background-color:#000000;opacity:0.70;width:130px;height:80px;position:absolute;left:0;top:0;border:1px solid #000000;border-radius:6px;z-index:2;}
+.tjdy_text{width:100px;padding:15px;color:#ffffff;font-size:1.4rem;color:#ffffff;line-height:22px;position:absolute;left:0;top:0;z-index:3;text-align:center;}
+.tjdy_text .dycg{padding-top:13px;}

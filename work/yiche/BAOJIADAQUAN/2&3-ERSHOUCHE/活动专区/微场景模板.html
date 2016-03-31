@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../头尾.css" />
+    <link rel="stylesheet" type="text/css" href="活动专区.css" />
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="js/queryloader2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
+    <script type="text/javascript" src="js/model.js"></script>
+
+    <script type="text/javascript">
+        window.addEventListener('DOMContentLoaded', function () {
+            new QueryLoader2(document.querySelector("body"), {
+                barColor: "#efefef",
+                backgroundColor: "#67C0FD",
+                percentage: true,
+                barHeight: 1,
+                minimumTime: 200,
+                fadeOutTime: 1000
+            });
+        });
+    </script>
+    <style type="text/css">
+        .fengmian { position: absolute; top: -400px; left: -400px; z-index: 0; }
+    </style>
+</head>
+
+
+<body>
+
+    <div class="mbpicbox clearfix" id="fullpage">
+        <div class="scroll_box section" data-anchor="page1">
+            <div class="content_box" style="background-image: url('images/hdmb_bg1.jpg')"></div>
+            <div class="huad"><a href="#">滑动</a></div>
+            <a href="###" class="note">音乐开</a>
+        </div>
+        <div class="scroll_box section" data-anchor="page2">
+        <div class="content_box" style="background-image: url('images/1.jpg')"></div>
+            <div class="huad"><a href="#">滑动</a></div>
+            <a href="###" class="note">音乐开</a>
+        </div>
+        <div class="scroll_box section" data-anchor="page3">
+        <div class="content_box" style="background-image: url('images/2.jpg')"></div>
+            <div class="huad"><a href="#">滑动</a></div>
+            <a href="###" class="note">音乐开</a>
+        </div>
+        <div class="scroll_box section" data-anchor="page4">
+        <div class="content_box" style="background-image: url('images/3.jpg')"></div>
+            <div class="huad"><a href="#">滑动</a></div>
+            <a href="###" class="note">音乐开</a>
+        </div>
+        <div class="scroll_box section" data-anchor="page5">
+        <div class="content_box" style="background-image: url('images/4.jpg')"></div>
+            <div class="huad"><a href="#">滑动</a></div>
+            <a href="###" class="note">音乐开</a>
+        </div>
+        <div class="scroll_box section" data-anchor="page6" >
+        <div class="content_box" style="background-image: url('images/5.jpg')"></div>
+            <div class="huad"><a href="#">滑动</a></div>
+            <a href="###" class="note">音乐开</a>
+        </div>
+        <div class="scroll_box section" data-anchor="page7">
+          <div class="content_box" style="background-image: url('images/6.jpg')"></div>
+          <a href="###" class="note">音乐开</a>
+        </div>
+      <div class="clearfix"></div>
+    </div>
+
+    <audio id="audio" autoplay="autoplay" loop="loop">
+        <source src="./audio/memory.mp3" />
+    </audio>
+
+
+
+</body>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var iniCss = {
+            height: document.documentElement.clientHeight,
+            width: document.documentElement.clientWidth
+        }
+        var $mbpicbox = $('.mbpicbox');
+        $('.scroll_box').css(iniCss);
+        $('.content_box').css(iniCss);
+        $('#canvas').css(iniCss);
+        $('#fullpage').fullpage({
+            'css3': true,
+            //sectionsColor: ['#fff', '#fff', '#f8f8fa', '#f8f8fa', '#f8f8fa', '#f8f8fa', '#f8f8fa', '#f8f8fa', '#f8f8fa', '#f8f8fa', '#f8f8fa', '#f8f8fa'],
+            anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7'],
+            menu: '#menu',
+            css3: true,
+            scrollingSpeed: 700,
+            controlArrows: false,
+            verticalCentered: false,
+            //paddingTop: '1px',
+            slidesNavigation: false,
+
+            onLeave: function (index, nextIndex, direction) {
+
+            },
+            afterLoad: function (anchorLink, index) {
+
+            }
+        });
+        $mbpicbox.audio();
+    })
+</script>
+</html>
+

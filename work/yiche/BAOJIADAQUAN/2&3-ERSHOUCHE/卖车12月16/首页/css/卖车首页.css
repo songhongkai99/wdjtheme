@@ -1,0 +1,28 @@
+body { color: #666666; min-height:100%;line-height: 1.5; padding-bottom: 64px;}
+body.yidongzhan { padding-bottom: 50px;}
+/*content*/
+.s_content { padding: 18px 30px; }
+.s_content.s_type1 { margin-top: 20px; }
+.s_content > div { float: left; width: 50%; position: relative; white-space:nowrap; }
+.s_content > div .btn-orange-alpha-s{ padding:2px .6rem;vertical-align: 2px;}
+.s_content > div h1{ font-size: 1.6rem; font-weight:bold; }
+.s_content.s_type1 > div h1{margin-left: -16px;}
+.s_content > div ul{list-style: none;}
+.s_content > div ul > li{padding-left: 20px;background: url("http://image.bitautoimg.com/taoche/ercyidong2015/s_list_style.png") left 1px no-repeat;font-size: 1.4rem;background-size: 14px 14px;margin-left: 40px;}
+.s_content.s_type2 > div:first-child{z-index: 1;}
+.s_content.s_type2 > div ul > li{margin-left: 58px;}
+.s_content > div ul > li:first-child{margin-top: 6px;}
+/*footer*/
+footer{ padding:10px 15px; position: fixed; bottom:0; left: 0; width: 100%; background-color: #fff; white-space: nowrap;z-index: 999;}
+footer > a { display: inline-block;width: 49%; line-height:44px; font-size: 1.6rem; color: #ffffff; text-align: center; border-radius: 6px;}
+footer > a:first-child { background-color: #fd9511; float: left; }
+footer > a:last-child { background-color: #266de2; float: right;}
+/*footer移动站*/
+footer.yidongzhan{ padding:0;}
+footer.yidongzhan > a{width: 50%; line-height:50px; border-radius: 0; }
+footer.yidongzhan > a:first-child{ border-right: 1px solid #FFB84E; }
+footer.yidongzhan > a:last-child,
+footer.yidongzhan > a:first-child { background-color: #FF9A02; }
+
+.font-orange { color: #ff9900; }
+.radius-1em { border-radius: 1em; padding-left: .6em; padding-right: .6em; }

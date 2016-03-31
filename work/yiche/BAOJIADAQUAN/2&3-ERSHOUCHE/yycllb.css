@@ -1,0 +1,39 @@
+@charset "utf-8";
+/* CSS Document */
+
+.car-yy_list{border-bottom:1px solid #E9E9E9;  overflow:hidden; display:table; position:relative; width:100%;}
+.pad10{ padding:10px;}
+.yycar_img{width:105px; height:70px; margin-right:8px; display:table-cell;; position:relative}
+
+.yycar_img i{width:105px; height:70px;background-color:#999;filter:alpha(opacity=80);-moz-opacity:0.3;  -khtml-opacity: 0.3;  opacity: 0.3; display:block; position:absolute; top:0; left:0;}
+.yycar_img img{width:105px; display:block;}
+.yy_txt-box{display:table-cell; padding:0 10px; vertical-align:top; line-height:17px; position:relative;}
+.yy_txt-box h4{font-size:1.4rem; height:36px; overflow:hidden; text-overflow:ellipsis; text-overflow:-o-ellipsis-lastline; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical;}
+
+.yy_price{font-size:1.6rem; color:#FE6601;}
+.yy_txt-box .yy_time{color:#999; font-size:1.2rem;}
+.yy_txt-box .yy_time span{ float:right;}
+.yy_txt-box em{font-size:1.0rem; color:#fff; background:#23B79F; padding:1px 2px; vertical-align:1px}
+
+.yy_tcdiq{position:absolute;right:10px;bottom:6px;color:#999999; font-size:1.2rem;}
+.yy_tcdiqa{position:absolute;right:10px;top:58px;color:#999999; font-size:1.2rem;}
+
+.yy_buy{position:absolute;right:10px;bottom:24px;font-size:1.2rem;}
+.yy_buya{position:absolute;right:10px;top:41px;font-size:1.2rem;}
+.yy_buy a{ text-decoration:underline; color:#FF6D02;}
+
+/*顶 精 保  认*/
+.yy_txt-box em.yy_ico-jing{width:18px;height:18px;font-size:1.2rem;overflow:hidden;border-radius:4px;background-color:#ff1515;}
+.yy_txt-box em.yy_ico_ding{width:18px;height:18px;font-size:1.2rem;overflow:hidden;border-radius:4px;background-color:#499ad8;color:#fff}
+.yy_txt-box em.yy_ico_baoz{width:0px;padding-left:14px;height:16px;overflow:hidden;font-size:0;overflow:hidden;background:url(http://image.bitautoimg.com/taoche/tcyidong2014/bzrz_ico.png) no-repeat left top;background-size:32px 15px;display:inline-block;vertical-align:middle;}
+.yy_txt-box em.yy_ico_rengz{width:0px;padding-left:13px;height:15px;overflow:hidden;font-size:0;overflow:hidden;background:url(http://image.bitautoimg.com/taoche/tcyidong2014/bzrz_ico.png) no-repeat -17px top;background-size:32px 16px;display:inline-block;vertical-align:middle;}
+
+.colad{ color:#ADADAD;}
+.colf3{ color:#FFBFA3;}
+.col27{ color:#DD2727 !important;}
+.cole7{ color:#D0D0D0 !important;}
+
+.bm_carfalse{line-height:16px; font-size:1.2rem; color:#dd2727;width:100%; clear:both; padding-top:5px;}
+
+
+

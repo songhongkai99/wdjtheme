@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Document */
+.car_jjwc{ width:100%; padding-top:25px; padding-bottom:25px;}
+.car_jjwc span{ width:66px; height:65px; margin: 0 auto; display:block; margin-bottom:10px;}
+.car_jjwc span img{ width:66px; height:65px; }
+.car_jjwc p em{ color:#dd2727;}
+.car_jjwc p i{ color:#b7b7b7;}
+.car_jjwc p{ text-align:center; font-size:14px; line-height:25px;}
+.car_jjwc h2{ text-align:center; font-size:12px; color:#FF9900}
+.car_jjwc h2 img{ width:12px; height:12px; vertical-align:middle; margin-right:5px;}
+
+.bmxx_title{ padding:0 10px; height:49px;border-bottom:#ECECEC solid 1px; line-height:49px; font-size:1.7rem;}
+.bmxx_title span{ font-size:1.4rem; float:right;}
+.hl40{ height:40px;}
+
+.jjgb{ background:#F5F5F5; padding-top:25px;}

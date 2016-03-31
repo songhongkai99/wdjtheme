@@ -1,0 +1,68 @@
+body{color: #5a5a78; background: #f8f8fa !important;}
+a{color: #5a5a78;}
+.article-more-btn {
+    color: #5a5a78;
+}
+/*.m-detail-top h1 {
+    font-size: 2.8rem;
+    line-height: 40px;
+    padding: 34px 0 0;
+    font-weight: bold;
+}*/
+
+/*头部标题*/
+.tt-first {
+    height: 75px;
+    line-height: 75px;
+    font-size: 2.5rem;
+}
+.tt-first h3 {
+    color: #b8b8c8;
+    padding: 0 0 0 15px;
+}
+
+/*介绍*/
+.info_logo { width: 140px; /*height: 111px;*/ padding: 108px 0 38px; margin: 0 auto; }
+    .info_logo img { width: 140px; }
+.info { color: #5a5a78; position: relative; width: 282px; /*padding:25px; */ padding: 32px 0 27px; margin: 43px auto 165px; text-align: center; border: 1px #e2e2ed solid; }
+    .info img { width: 213px; /*margin: 0 auto 15px;*/ }
+    .info h5 { position: absolute; top: -14px; left: 50%; padding: 0 10px; margin-left: -98px; height: 20px; background: #f8f8fa; font-size: 15px; line-height: 30px; text-align: center; }
+.info_t { text-align: center; color: #5a5a78; }
+    .info_t h2 { font-size: 30px; font-weight: bold; line-height: 30px; margin-bottom: 8px; }
+    .info_t h3 { font-size: 20px; line-height: 30px; }
+    
+
+
+/*弹出层*/
+.standard_wx_pop {/* display: none;*/ z-index: 999; position: fixed; top: 25px; right: 0; margin: 0 15px; background: #fff; padding: 15px; font-size: 16px; line-height: 26px; }
+    .standard_wx_pop em { /*display: none;*/ width: 21px; height: 21px; position: absolute; top: -21px; right: 0; background: url(http://img1.bitauto.com/uimg/4th/img2/pop_arrow.png) 0 0 no-repeat; background-size: 21px; }
+.standard_wx_pop_start { pointer-events: none; display: block; animation: pop_display 1s; -webkit-animation: pop_display 1s; }
+    .standard_wx_pop_start em { display: block; }
+
+.standard_wx_bg {/* display: none;*/ background: #000; opacity: 0.5; position: fixed; left: 0; top: 0; z-index: 998; width: 100%; height: 100%; }
+
+@keyframes pop_display {
+    0% { opacity: 0; }
+    50% { opacity: 1; top: 10px; }
+    100% { top: 25px; }
+}
+
+@-moz-keyframes pop_display {
+    0% { opacity: 0; }
+    50% { opacity: 1; top: 10px; }
+    100% { top: 25px; }
+}
+
+/*浮动球*/
+.float-r-box{width:55px; position:fixed; bottom:119px; right:15px; z-index:999;}
+.float-r-ball{width:55px; height:55px; background:rgba(90, 90, 120, 0.3); border-radius:50%; display:block; margin-top:10px; overflow:hidden; border:none;}
+.float-r-ball .ico-mulu{width:23px; height:17px; background:url(../img/ico_right_float.png) no-repeat 0 -14px; background-size:25px auto; margin:19px auto 0;}
+.float-r-ball .ico-top{width:25px; height:14px; background:url(../img/ico_right_float.png) no-repeat 0 0; background-size:25px auto; margin:20px auto 0;}
+
+.m-catalog-mask .catalog-tip{right:9px; bottom:111px; background:url(../img/popup_catalog_bg.png) no-repeat; height:174px; background-size:325px auto;}
+
+/*糖豆*/
+.opt-zan li{width:33.33333%;}
+
+
+

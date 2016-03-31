@@ -1,0 +1,793 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <title>第四极惠买车顾问</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <link rel="stylesheet" type="text/css" href="../css/jquery.fullPage.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/huimaiche.css">
+    <script src="../js/jquery-2.1.4.min.js"></script>
+    <script src="../js/jquery.fullPage.min.js"></script>
+    <!--<script src="js/jquery.queryloader2.min.js"></script>-->
+    <!-- <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script> -->
+    <script type="text/javascript" src="../js/main.js"></script>
+</head>
+<body>
+	<div id="sharefloat" class="sharefloat"></div>
+	<div class="screen-landscape">竖屏浏览体验效果更佳</div>
+	<div class="screen-bg"></div>
+	
+    
+
+
+
+    <!--菜单开始-->
+    <div class="menu">
+        <div class="button" id="menubutton"></div>
+    </div>
+    <div class="menu share">
+        <div class="button" id="sharebutton"></div>
+    </div>
+
+
+    <div class="menu_box_bg" id="menu_box_bg"></div>
+    <div class="menu_box" id="menu_box">
+        <ul class="menu_box_ul2 menu_box_ul2top">
+            <li><a href="#page1">封面</a></li>
+            <li><a href="#page3">图片</a></li>
+            <li><a href="#page4">评测</a></li>
+            <li><a href="#page5">配置</a></li>
+
+        </ul>
+        <ul class="menu_box_ul2 menu_box_v2">
+            <li><a href="#page6">点评</a></li>
+            <li><a href="#page7">报价</a></li>
+            <li><a href="#page8">优惠</a></li>
+            <li><a href="#page9">买车</a></li>
+        </ul>
+    </div>
+    <!--新菜单-->
+		<!--<ul class="menu_box-all_ul" >
+           
+            <li><a href="#page1">封面</a></li>
+            <li><a href="#page3">图片</a></li>
+            <li><a href="#page4">评测</a></li>
+            <li><a href="#page5">配置</a></li>
+            <li><a href="#page6">点评</a></li>
+            <li><a href="#page7">报价</a></li>
+            <li><a href="#page8">优惠</a></li>
+            <li><a href="#page9">买车</a></li>
+               
+        </ul>-->
+    <!--菜单结束-->
+
+    <div id="fullpage">
+
+
+         <!--第一屏开始-->
+        <div class="section page1" data-anchor="page1">
+            <!--****************************首页***************************-->
+            <div class="section-box">
+                <div class="person-box">
+                		<a href="#">
+	                    <i></i>
+	                    <div class="imgbox">
+                            <img src="http://img1.bitauto.com/uimg/4th/img2/person-default.png" />
+	                    </div>
+	                    <ul>
+	                        <li><span>购车顾问：</span>黑山怪兽</li>
+	                        <li><span>找我买平均可省</span><em>13.5万元</em></li>
+	                    </ul>
+                		</a>
+                </div>
+                <div class="img">
+                    <img src="../img/logo100100.png" />
+                </div>
+                <div class="context">
+                    <h1>上海大众斯柯达野帝</h1>
+                    <p class="cs-price">厂商指导价：12.88万-14.98万</p>
+                    <div class="standard_car_pic">
+                        <img src="../img/pic600400.jpg" />
+                    </div>
+                </div>
+                <!--下箭头 固定-->
+                <div class="arrow_down"></div>
+            </div>
+        </div>
+        <!--第一屏结束-->
+
+        <!--第二屏开始-->
+        <div class="section page2" data-anchor="page2">
+
+            <!--<div style="height: 64px; background: #000;"></div>-->
+			<div class="section-box">
+                <div class="img">
+                    <img src="../img/logo100100.png" />
+                </div>
+                <div class="context">
+                    <h1>上海大众斯柯达野帝</h1>
+                    <p class="cs-price">厂商指导价：12.88万-14.98万</p>
+                </div>
+            </div>
+            <!--换色车型图-->
+            <!--换色车型图-->
+            <div class="standard_car_pic" id="standard_car_pic_1">
+                <img src="../img/piccolor.jpg" style="display: block;" />
+                <img src="../img/piccolor1.jpg" style="display: none;" />
+                <img src="../img/piccolor2.jpg" style="display: none;" />
+                <img src="../img/piccolor3.jpg" style="display: none;" />
+                <img src="../img/piccolor.jpg" style="display: block;" />
+                <img src="../img/piccolor1.jpg" style="display: none;" />
+                <img src="../img/piccolor2.jpg" style="display: none;" />
+            </div>
+
+            <!--颜色名称-->
+            <div class="car_color_text" id="car_color_text">
+                <span style="display: block;">幻影黑</span>
+            </div>
+
+
+            <!--颜色切换-->
+            <ul class="changecolor" id="changecolor">
+                <li class="current"><span style="background: #f98101;" data-value="炫酷橙"></span></li>
+                <li><span style="background: #ffffff;" data-value="珍珠白"></span></li>
+                <li><span style="background: #195595;" data-value="运动蓝"></span></li>
+                <li><span style="background: #000000;" data-value="深空黑"></span></li>
+                <li><span style="background: #092147;" data-value="紫罗兰"></span></li>
+                <li><span style="background: #f98101;" data-value="镭射灰"></span></li>
+                <li><span style="background: #092147;" data-value="浅灰"></span></li>
+            </ul>
+
+            <!--下箭头 固定-->
+            <div class="arrow_down"></div>
+
+        </div>
+        <!--第二屏结束-->
+
+        <!--第三屏开始-->
+        <div class="section page3" data-anchor="page3">
+
+            <!--	<div style="height: 64px; background: #000;"></div>-->
+
+
+            
+
+            <!--左右翻页开始-->
+            <!--左右1-->
+            <div class="slide" data-anchor="slide3-1">
+            		<header>
+                		<h2>外观图片</h2>
+            		</header>
+                <div class="slide_box">
+                    <a href="#">
+                        <img src="../img/pic750500-1.jpg" />
+                        <!--<div class="slide_bg">-->
+                        <!--<div class="slide_con">
+
+                            <h3>力量成就美学</h3>
+                            <p>斯柯达野帝凌厉的车身线条和优美车身比例，彰显深藏野帝血脉之中的高性能跑车灵魂程度上宛如由风打造，自然天成。</p>
+
+                        </div>-->
+                        <!--</div>-->
+                    </a>
+                    <div class="pic-wall">
+                    		<div><a href="#"><img src="../img/pic750500-1.jpg" /></a></div>
+                        <div><a href="#"><img src="../img/pic750500-1.jpg" /></a></div>
+                    </div>
+                   
+                </div>
+
+            </div>
+
+            <!--左右2-->
+            <div class="slide" data-anchor="slide3-2">
+                
+                <header>
+                		<h2>内饰图片</h2>
+            		</header>
+            		
+            		<div class="slide_box">
+                    <a href="#">
+                        <img src="../img/pic750500-2.jpg" />
+                    </a>
+                    <div class="pic-wall">
+                    		<div><a href="#"><img src="../img/pic750500-2.jpg" /></a></div>
+                        <div><a href="#"><img src="../img/pic750500-2.jpg" /></a></div>
+                    </div>
+                   
+                </div>
+            		
+            		
+
+            </div>
+
+            <!--左右3-->
+		
+			<div class="slide" data-anchor="slide3-3">
+                                
+                <header>
+                		<h2>空间图片</h2>
+            		</header>
+            		
+            		<div class="slide_box">
+                    <a href="#">
+                        <img src="../img/pic750500-3.jpg" />
+                    </a>
+                    <div class="pic-wall">
+                    		<div><a href="#"><img src="../img/pic750500-3.jpg" /></a></div>
+                        <div><a href="#"><img src="../img/pic750500-3.jpg" /></a></div>
+                    </div>
+                   
+                </div>
+            		
+            		
+
+            </div>
+
+            <!--左右翻页结束-->
+
+
+            <!--下箭头 固定-->
+            <div class="arrow_down"></div>
+
+        </div>
+        <!--第三屏结束-->
+
+        <!--第四屏开始-->
+        <div class="section page4" data-anchor="page4">
+
+            <header>
+                <h2>评测导购</h2>
+            </header>
+            <!--左右1-->
+            <div class="slide" data-anchor="slide4-1">
+            	  	<div class="con_top_bg"></div>
+                
+                <!--内容容器开始-->
+                <div class="contain">
+                    <ul class="con_list_ul">
+                        <li class="nopic">
+                            <a href="#">
+                                <div class="con_list">
+                                    <h4>途观的小伙伴途观的小伙伴途观的小伙伴 </h4>
+                                    <p>2014-04-08 / 玛雅盒子</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="con_list_img">
+                                    <img src="../img/pic210140.jpg" />
+                                </div>
+                                <div class="con_list">
+                                    <h4>途观的小伙伴 简单试驾斯柯达Yeti野帝</h4>
+                                    <p><!--2014-04-08 / 玛雅盒子 --><strong>推广</strong></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="con_list_img">
+                                    <img src="../img/pic210140.jpg" />
+                                </div>
+                                <div class="con_list">
+                                    <h4>途观的小伙伴 简单试驾斯柯达Yeti野帝</h4>
+                                    <p>2014-04-08 / 玛雅盒子 </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="con_list_img">
+                                    <img src="../img/pic210140.jpg" />
+                                </div>
+                                <div class="con_list">
+                                    <h4>途观的小伙伴 简单试驾斯柯达Yeti野帝</h4>
+                                    <p>2014-04-08 / 玛雅盒子 </p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+                <!--内容容器结束-->
+
+            </div>
+
+            <!--左右2-->
+            <div class="slide" data-anchor="slide4-2">
+               <div class="con_top_bg"></div>
+                <!--内容容器开始-->
+                <div class="contain">
+                    <ul class="con_list_ul">
+                        <li class="nopic">
+                            <a href="#">
+                                <!--<div class="con_list_img">
+                                    <img src="../img/pic210140.jpg" />
+                                </div>-->
+                                <div class="con_list">
+                                    <h4>途观的小伙伴途观的小伙伴途观的小伙伴 </h4>
+                                    <p>2014-04-08 / 玛雅盒子</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="con_list_img">
+                                    <img src="../img/pic210140.jpg" />
+                                </div>
+                                <div class="con_list">
+                                    <h4>途观的小伙伴 简单试驾斯柯达Yeti野帝</h4>
+                                    <p><!--2014-04-08 / 玛雅盒子 --><strong>推广</strong></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="con_list_img">
+                                    <img src="../img/pic210140.jpg" />
+                                </div>
+                                <div class="con_list">
+                                    <h4>途观的小伙伴 简单试驾斯柯达Yeti野帝</h4>
+                                    <p><!--2014-04-08 / 玛雅盒子 --><strong>购车手册</strong></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="con_list_ul_ad">
+                            <a href="#">
+                                
+                                <img src="../img/pic630140.jpg"  />
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+                <!--内容容器结束-->
+               
+
+            </div>
+
+
+            <!--下箭头 固定-->
+            <div class="arrow_down"></div>
+
+        </div>
+        <!--第四屏结束-->
+
+        <!--第五屏开始-->
+        <div class="section page5" data-anchor="page5">
+           
+			 <header>
+                <h2>亮点配置</h2>
+            </header>
+            <div class="con_top_bg"></div>
+            <!--内容容器开始-->
+            <div class="contain contain_config">
+                <ul class="highlight">
+                    <li>
+                        <span>
+                            <img src="../img/pic120120.png" />蓝牙蓝牙蓝牙蓝牙蓝牙</span>
+                        <span>
+                            <img src="../img/pic120120.png" />蓝牙蓝牙蓝牙蓝牙蓝牙</span>
+                        <span>
+                            <img src="../img/pic120120.png" />蓝牙蓝牙蓝牙蓝牙蓝牙</span>
+                        <span>
+                            <img src="../img/pic120120.png" />蓝牙蓝牙蓝牙蓝牙蓝牙</span>
+                    </li>
+                    <li>
+                        <span>
+                            <img src="../img/pic120120.png" />蓝牙蓝牙蓝牙蓝牙蓝牙</span>
+                        <span>
+                            <img src="../img/pic120120.png" />蓝牙蓝牙蓝牙蓝牙蓝牙</span>
+                        <span>
+                            <img src="../img/pic120120.png" />蓝牙蓝牙蓝牙蓝牙蓝牙</span>
+                        <span>
+                            <img src="../img/pic120120.png" />蓝牙蓝牙蓝牙蓝牙蓝牙</span>
+                    </li>
+                    <li>
+                        <span>
+                            <img src="../img/pic120120.png" />蓝牙</span>
+                        <span>
+                            <img src="../img/pic120120.png" />蓝牙蓝牙蓝牙蓝牙蓝牙</span>
+                        <span>
+                            <img src="../img/pic120120.png" />蓝牙蓝牙蓝牙蓝牙蓝牙</span>
+                        <span>
+                            <img src="../img/pic120120-2.png" />全部配置</span>
+                    </li>
+
+                </ul>
+            </div>
+
+
+            <!--下箭头 固定-->
+            <div class="arrow_down"></div>
+
+        </div>
+        <!--第五屏结束-->
+
+
+        <!--第六层开始-->
+        <div class="section page6" data-anchor="page6">
+
+            
+            <header>
+                <h2>购车点评</h2>
+            </header>
+            <div class="con_top_bg"></div>
+           
+
+            <!--左右1-->
+            <div class="slide" data-anchor="slide6-1">
+                 <!--大背景容器开始-->
+                <div class="big_bg">
+                    <!--<h4 class="con_box">网友点评</h4>-->
+                    <!--内容容器开始-->
+					
+					<div class="contain">
+                        <a href="#">
+                            <div class="koubei">
+
+                                <div class="koubei_img">
+                                    <img src="http://img1.bitauto.com/uimg/4th/img2/person-default.png" />
+                                </div>
+                                <ul>
+                                    <li><span>网友：</span>键盘车神</li>
+                                    <li><span>车款：</span>神车斯柯达野地谁能挡我</li>
+                                </ul>
+
+                            </div>
+                            <div class="koubei_txt koubei_txt_netfriend">
+                            		<span>2015-04-22&nbsp;&nbsp;已行驶90000公里&nbsp;&nbsp;实测油耗：14.5L</span>
+                                <h4>开着挺舒心的，对得起这个价钱</h4>
+                                <p>我无敌神车斯柯达野地谁能挡我我无敌神车斯柯达野地谁柯... <em>查看全文</em></p>
+                            </div>
+                            
+                        </a>
+                    </div>
+                  
+
+                    <!--内容容器结束-->
+                </div>
+                <!--大背景容器结束-->
+            </div>
+            
+			<!--左右2-->
+            <div class="slide" data-anchor="slide6-2">
+                <!--大背景容器开始-->
+                <div class="big_bg">
+                    <!--<h4 class="con_box">网友点评</h4>-->
+                    <!--内容容器开始-->
+					
+					<div class="contain">
+                        <a href="#">
+                            <div class="koubei">
+
+                                <div class="koubei_img">
+                                    <img src="http://img1.bitauto.com/uimg/4th/img2/person-default.png" />
+                                </div>
+                                <ul>
+                                    <li><span>网友：</span>键盘车神</li>
+                                    <li><span>车款：</span>神车斯柯达野地谁能挡我</li>
+                                </ul>
+
+                            </div>
+                            <div class="koubei_txt koubei_txt_netfriend">
+                            	 
+                            		<span>2015-04-22&nbsp;&nbsp;已行驶90000公里&nbsp;&nbsp;实测油耗：14.5L</span>
+                              	 <h4>开着挺舒心的，对得起这个价钱</h4>
+                                <p>我无敌神车斯柯达野地谁能挡我我无敌神车斯柯达野地谁柯我无敌神车斯柯达野地谁能挡我我无敌神车斯柯达野地谁柯我无敌神车斯柯达野地谁能挡我我无敌神车斯柯达野地谁柯我无敌神车斯柯达野地谁能挡我我无敌神车斯柯达野地谁柯... <em>查看全文</em></p>
+                            </div>
+                            <button class="button_gray"><a href="#">查看全部购车分享</a></button>
+                        </a>
+                    </div>
+                  
+
+                    <!--内容容器结束-->
+                </div>
+                <!--大背景容器结束-->
+            </div>
+
+            <!--下箭头 固定-->
+            <div class="arrow_down"></div>
+
+        </div>
+        <!--第六层结束-->
+
+
+        <!--第七层开始-->
+        <div class="section page7" data-anchor="page7">
+			<header>
+                <h2>车款报价</h2>
+            </header>
+            <div class="con_top_bg"></div>
+            <!--左右1-->
+            <div class="slide" data-anchor="slide7-1">
+                <!--大背景容器开始-->
+                <div class="big_bg">
+                   <ul class="car_price car_dijia">
+			            <li>
+			            		<div class="name car-info">			
+				            		<a href="#">
+	                                <h6>3.6 V6 崇高豪华尊贵经典舒适乞丐版本</h6>
+	                            		 <div class="price">
+	                                    <p>指导价:995.5万 平均节省<em>22.3万</em></p>
+	                                </div>
+								</a>
+							</div>
+							<div class="car-appointment"><a href="#">预约看车</a></div>
+							
+						</li>
+                        <li>
+			            		<div class="name car-info">			
+				            		<a href="#">
+	                                <h6>3.6 V6 崇高豪华尊贵经典舒适乞丐版本</h6>
+	                            		 <div class="price">
+	                                    <p>指导价:995.5万 平均节省<em>22.3万</em></p>
+	                                </div>
+								</a>
+							</div>
+							<div class="car-appointment"><a href="#">预约看车</a></div>
+							
+						</li>
+                        <li>
+			            		<div class="name car-info">			
+				            		<a href="#">
+	                                <h6>3.6 V6 崇高豪华尊贵经典舒适乞丐版本</h6>
+	                            		 <div class="price">
+	                                    <p>指导价:995.5万 平均节省<em>22.3万</em></p>
+	                                </div>
+								</a>
+							</div>
+							<div class="car-appointment"><a href="#">预约看车</a></div>
+							
+						</li>
+                        <li>
+			            		<div class="name car-info">			
+				            		<a href="#">
+	                                <h6>3.6 V6 崇高豪华尊贵经典舒适乞丐版本</h6>
+	                            		 <div class="price">
+	                                    <p>指导价:995.5万 平均节省<em>22.3万</em></p>
+	                                </div>
+								</a>
+							</div>
+							<div class="car-appointment"><a href="#">预约看车</a></div>
+							
+						</li>
+                        
+
+                    </ul>
+
+                </div>
+                <!--大背景容器结束-->
+            </div>
+            <!--左右2-->
+            <div class="slide" data-anchor="slide7-2">
+                <!--大背景容器开始-->
+                <div class="big_bg">
+                   <ul class="car_price car_dijia">
+			            <li>
+			            		<div class="name car-info">			
+				            		<a href="#">
+	                                <h6>3.6 V6 崇高豪华尊贵经典舒适乞丐版本</h6>
+	                            		 <div class="price">
+	                                    <p>指导价:995.5万 平均节省<em>22.3万</em></p>
+	                                </div>
+								</a>
+							</div>
+							<div class="car-appointment"><a href="#">预约看车</a></div>
+							
+						</li>
+                        <li>
+			            		<div class="name car-info">			
+				            		<a href="#">
+	                                <h6>3.6 V6 崇高豪华尊贵经典舒适乞丐版本</h6>
+	                            		 <div class="price">
+	                                    <p>指导价:995.5万 平均节省<em>22.3万</em></p>
+	                                </div>
+								</a>
+							</div>
+							<div class="car-appointment"><a href="#">预约看车</a></div>
+							
+						</li>
+                        <li>
+			            		<div class="name car-info">			
+				            		<a href="#">
+	                                <h6>3.6 V6 崇高豪华尊贵经典舒适乞丐版本</h6>
+	                            		 <div class="price">
+	                                    <p>指导价:995.5万 平均节省<em>22.3万</em></p>
+	                                </div>
+								</a>
+							</div>
+							<div class="car-appointment"><a href="#">预约看车</a></div>
+							
+						</li>
+                        <li>
+			            		<div class="name car-info">			
+				            		<a href="#">
+	                                <h6>3.6 V6 崇高豪华尊贵经典舒适乞丐版本</h6>
+	                            		 <div class="price">
+	                                    <p>指导价:995.5万 平均节省<em>22.3万</em></p>
+	                                </div>
+								</a>
+							</div>
+							<div class="car-appointment"><a href="#">预约看车</a></div>
+							
+						</li>
+                        <li>
+                            <button class="button_gray"><a href="#">更多车款报价</a></button>
+                        </li>
+
+                    </ul>
+
+                </div>
+                <!--大背景容器结束-->
+            </div>
+            
+            
+
+            <!--下箭头 固定-->
+            <div class="arrow_down"></div>
+        </div>
+        <!--第七层结束-->
+
+        <!--第八层开始-->
+        <div class="section page8" data-anchor="page8">
+        		<header>
+                <h2>购车优惠</h2>
+            </header>
+            <div class="con_top_bg"></div>
+            
+            <div class="slide" data-anchor="slide9-1">
+            		<div class="big_bg ">
+            			<div class="contain contain_koubei">
+		            		<img src="../img/pic630420.jpg" />
+		            </div>
+		            <button class="button_gray"><a href="#">查看详情</a></button>
+	            </div>
+            </div>
+            <div class="slide" data-anchor="slide9-2">
+            		<div class="big_bg">
+                    
+                    <!--内容容器开始-->
+                    <div class="contain contain_dianping">
+                        <img src="../img/pic630300.png">
+                    </div>
+                    <button class="button_gray"><a href="#">查看详情</a></button>
+                    <!--内容容器结束-->
+                </div>
+                    
+            </div>
+            
+            <!--下箭头 固定-->
+            <div class="arrow_down"></div>
+            
+            
+            
+        </div>
+        <!--第八层结束-->
+
+
+        <!--第九层开始-->
+        <div class="section page9" data-anchor="page9">
+            <header>
+                <h2>免费预约</h2>
+            </header>
+            <div class="con_top_bg"></div>
+	        <div class="big_bg">
+	            <div class="preson-title">
+	                    <div class="img-box">
+                            <img src="http://img1.bitauto.com/uimg/4th/img2/person-default.png">
+	                    </div>
+	                    <div>
+	                    		<h2>黑山怪兽</h2><h3 class="location">乌鲁木齐</h3>
+	                    </div>
+	                    <a href="###" class="lnk">买车顾问</a>
+	                    <div class="txt-box">已帮 <em>175人</em> 买到车，平均节省 <em>1.3万</em></div>
+	            </div>
+	            <div class="title-center-box">
+	                <h2>我能为您</h2>
+	            </div>
+	           	<ul class="appointment">
+	           		<li><a href="#"><span class="icon1"></span>找全程底价</a></li>
+	           		<li><a href="#"><span class="icon2"></span>提供买车建议</a></li>
+	           		<li><a href="#"><span class="icon3"></span>陪同到店买车</a></li>
+	           	</ul>
+	    			<button class="button2">免费预约</button>
+           	</div>    	
+            <!--下箭头 固定-->
+            <div class="arrow_down"></div>
+        </div>
+        <!--第九层结束-->
+
+
+        <!--第十层开始-->
+        <div class="section page10" data-anchor="page10">
+            <!--<div style="height: 64px; background: #000;"></div>-->
+            <header>
+                <h2>看了还看</h2>
+            </header>
+            <div class="con_top_bg"></div>
+
+            <!--大背景容器开始-->
+            <div class="big_bg big_bg_car_list">
+                <ul class="car_list">
+                    <li>
+                        <a href="#">
+                            <img src="../img/pic300200.jpg">
+                            <span>本田CR-V</span>
+                            <p>平均节省26.28万</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../img/pic300200.jpg">
+                            <span>本田CR-V</span>
+                            <p>平均节省26.28万</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../img/pic300200.jpg">
+                            <span>本田CR-V</span>
+                            <p>平均节省26.28万</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../img/pic300200.jpg">
+                            <span>本田CR-V</span>
+                            <p>平均节省26.28万</p>
+                        </a>
+                    </li>
+                </ul>
+                <!--<button class="button_gray"><a href="#">查看全部车型</a></button>-->
+            </div>
+            <!--大背景容器结束-->
+
+
+
+            <!--下箭头 固定-->
+            <div class="arrow_down"></div>
+        </div>
+        <!--第十层结束-->
+
+
+        <!--第十一层开始-->
+        <div class="section page13" data-anchor="page11">
+        	
+        		
+        			<div class="info_logo2bg">
+        				
+		            <div class="info_logo info_logo2">
+		                <img src="../img/logo_mcgw.png" />
+		            </div>
+		            
+		            <div class="con_top_bg"></div>
+	            </div>
+	            
+	            		<div class="info_logo2_txt">
+	            			<h3>还在为询价奔波？还在位车价不透明而头疼？</h3>
+		            		<h2>全城底价任你选</h2>
+		            		<a href="#">下载APP</a>
+	            		</div>
+	            <!--<div class="info">
+	                <h5>关注公众号，开启你的汽车生活！</h5>
+	                <img src="../img/erweima_yiche.png" />
+	            </div>-->
+        		
+            
+
+        </div>
+        <!--第十一层结束-->
+        
+        
+       
+
+
+    </div>
+</body>
+</html>

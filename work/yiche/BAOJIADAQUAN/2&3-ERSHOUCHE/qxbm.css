@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* CSS Document */
+.font28{ font-size:1.4rem}
+.corl7{ color:#dd2727;}
+
+.bm_action{text-align:center; padding:20px 0px;line-height:25px;font-size:1.4rem; }
+.bm_be_title{ height:49px;border-bottom:#ECECEC solid 1px; }
+.bm_be_title p{ line-height:49px; font-size:1.6rem;padding:0 10px;}
+.bm_be_title p em{ padding-right:4px;}
+.bm_be_title p span{ padding-left:16px;}
+
+.bm_click{padding-left:10px; margin-right:10px;}
+.bm_click li{ height:49px; line-height:49px; border-bottom:#ECECEC solid 1px; font-size:1.4rem; }
+.bm_click li i{ width:22px; height:36px;background:url(http://image.bitautoimg.com/taoche/ercyidong2015/bm_q01.png) center 14px no-repeat; background-size:100%; display:block; float:left; margin-right:14px;}
+.bm_click li i.cur{ background:url(http://image.bitautoimg.com/taoche/ercyidong2015/bm_q02.png) center 14px no-repeat; background-size:100%;}
+.so_a{ font-size:1.4rem; padding-left:10px; }
+.input_box{margin:0 10px;height:113px;}
+.bm_input{ width:93%;border:#ECECEC solid 1px; background:#fff; padding:10px; font-size:1.4rem; height:60px;}
+.input_box p{ height:20px; line-height:20px; font-size:12px; color:#999;}
+.bortn{ border-bottom:0px !important;}

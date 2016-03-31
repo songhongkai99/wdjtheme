@@ -1,0 +1,12 @@
+
+/*举报原因*/
+.jbxl_tit{height:28px;line-height:28px;background-color:#eeeeee;color:#333333;padding-left:15px;font-size:1.4rem;}
+.jibao { font-size: 1.4rem; background: #fff; padding: 6px 10px 15px; }
+.jibao li { float: left; text-align: center; width: 33.3333%;}
+.jibao li a { display: block; height: 33px; line-height: 33px; color: #666; background: #ffffff; border:1px solid #d2d2d2;border-radius: 4px; margin: 10px 5px 0; overflow: hidden; }
+.jibao li.current a{color:#ff6d02;border:1px solid #ff6d02;}
+
+
+.xinxms{display:block;background-color:#ffffff;padding:10px 15px;margin-bottom:20px;}
+.xinxms  textarea{height:70px;color:#999999;line-height:20px;font-size:14px;width:100%;border：none；overflow:auto;
+background-attachment:fixed;background-repeat:no-repeat;border-style:solid; border-color:#FFFFFF }

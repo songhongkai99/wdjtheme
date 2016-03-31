@@ -1,0 +1,22 @@
+﻿
+/*顶部车辆信息*/
+.topclxx{padding:15px 0;height:80px;width:100%;}
+.topclxx_pic{display:table-cell;width:120px;height:80px;overflow:hidden;padding-left:15px;}
+.topclxx img{width:120px;height:80px;}
+.topclxx_text{display:table-cell;padding-left:10px;vertical-align:middle;padding-right:15px;}
+.topclxx_text h5{font-size:1.8rem;line-height:25px;margin-bottom:5px;max-height:50px;overflow:hidden;}
+.topclxx_text  p{font-size:1.4rem;color:#999999;}
+.topclxx_text  p em{color:#dd2727;}
+.cjbgmain .m_tit{margin:3px 0 0;}
+.sgpc_text{line-height:25px;margin:10px 15px;font-size:1.4rem;color:#666666;}
+.bgtable{padding:0px 15px 15px 15px;overflow:hidden;}
+.bgtable table{border:1px solid #ececec;}
+.bgtable table tr td{border:1px solid #ececec;line-height:34px;padding:0 0px 0 10px;font-size:1.4rem;color:#666666;height:34px;overflow:hidden;width: 50%;}
+.bgtable table tr td .tabtext{line-height:34px;height:34px;overflow:hidden; position: relative;  }
+.bgtable table tr td .tabtext span { position: absolute; width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; padding-right: 30px; box-sizing: border-box}
+.bgtable table tr td.tabtit{background-color:#f5f5f5;font-size:1.2rem;}
+.bgtable table tr td.tabtit strong{font-size:1.4rem;color:#333333;}
+.bgtable table tr td.tabtit  em{color:#dd2727;}
+.bgtable table tr td.tab_pic{padding-top:10px;height:auto;}
+.bgtable table tr td i{width:15px;height:15px;background:url(http://image.bitautoimg.com/taoche/ercyidong2015/green_tanh.png) no-repeat;background-position:0 0;background-size:15px 15px;display:inline-block;float:left;margin:10px 7px 0;}
+.bgtable table tr td i.redico{width:15px;height:15px;background:url(http://image.bitautoimg.com/taoche/ercyidong2015/red_tanh.png) no-repeat;background-position:0 0;background-size:15px 15px;display:inline-block;float:left;margin:10px 7px 0;}

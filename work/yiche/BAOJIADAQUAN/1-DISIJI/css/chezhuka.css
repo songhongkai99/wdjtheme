@@ -1,0 +1,29 @@
+﻿/**********************车主卡定制版************************/
+/*公共属性*/
+
+/*公共块*/
+.house .button { background: url(../img/float_b.png) 0 -164px no-repeat; background-size: 55px; }
+
+
+/**********************评测导购 04 start**********************/
+.page4 .con_top_bg { margin-bottom: 0; }
+.page4 .car_article_list { margin-top: 3px !important; }
+.page4 .car_article_list { border-top: none; margin-top: 15px; }
+    .page4 .car_article_list li.notimg { padding-left: 0; }
+    .page4 .car_article_list li.con_list_ul_ad { padding-left: 0; }
+        .page4 .car_article_list li.con_list_ul_ad img { width: 100%; margin-right: 0px; margin-left: 0px; }
+/**********************评测导购 04 end**********************/
+
+/* 判断iphone4 */
+@media screen and (device-width: 320px) and (device-height: 480px) {
+    /**********************评测导购 04 start**********************/
+    .page4 .car_article_list { position: relative; top: -10px; }
+    /**********************评测导购 04 end**********************/
+}
+
+/* 判断iphone5 */
+@media screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) {
+    /**********************评测导购 04 start**********************/
+    .page4 .car_article_list { position: relative; top: -10px; }
+    /**********************评测导购 04 end**********************/
+}

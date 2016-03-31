@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta content="telephone=no" name="format-detection" />
+<title>D1_01支付服务费</title>
+<link rel="stylesheet" type="text/css" href="../头尾.css" />
+<link rel="stylesheet" type="text/css" href="../zffy.css" />
+<link rel="stylesheet" type="text/css" href="../pfxs.css" />
+</head>
+
+<body>
+<!--头部导航 star -->
+<div class="header">
+	<h1><a class="logo" title="易车二手车" href="http://m.taoche.com/">易车二手车</a></h1> 
+    <a onClick="showNav();" id="btnNav" class="btn-nav btn-nav-show" href="javascript:;">导航<i></i></a>
+	<a id="btnSearch" class="btn-search" href="http://m.taoche.com/buycar/search.aspx">搜索</a>
+    <a id="divLoginStatus" href="http://m.taoche.com/i/usercenter.aspx">
+        <div class="zhangh">
+            账号</div>
+    </a>
+    
+    <a style="display: none" id="userInfoContainer" href="http://m.qichetong.com/authenservice/login.aspx"></a>
+    <div style="display: none;" id="popNav" class="pop-nav">
+        <i></i>
+        
+        
+        <ul>
+            <li><a href="http://m.taoche.com/">首页</a></li>
+            <li><a href="/all/">买车</a></li>
+            <li><a href="http://m.taoche.com/sellcar/">卖车</a></li>
+            <li><a href="http://m.taoche.com/pinggu/">估车</a></li>
+            <li style="" id="liZhihuan"><a href="http://zhihuan.m.taoche.com/">云置换</a></li>
+            <li><a href="http://m.taoche.com/guide/indexguide.aspx">攻略</a></li>
+            <li><a href="http://m.taoche.com/tools/index.aspx">工具</a></li>
+            <li><a onClick="downloadApp();" href="javascript:">APP</a></li>
+            <li style="display: none;" id="lilast"><a href="javascript:"></a></li>
+        </ul>
+    </div>
+</div>
+<!--头部导航 end -->
+<!-- 头部返回star -->
+<div class="b-return">
+	<a class="btn-return" href="#">返回</a>
+	<span>支付服务费</span>
+	<a class="opt " >帮买信息</a>
+</div>
+<!-- 头部返回end -->
+<!--conter-->
+<!--评分显示开始-->
+<div class="car_ping">
+<div class="car-title">您的买车顾问</div>
+<dl class="pj_dl">
+<dt> <img src="../img/people.jpg" /> <i><img src="../img/pep.png" /></i> </dt>
+    <dd>
+      <p class="pat0"><span>郑歌</span><em>帮<i>100</i>人买到车</em></p>
+      <p><span class="fl f14">评分：</span><span class="xing"><i></i></span></p>
+      <p>服务理念：为了帮您买到更靠谱车源，我会全程为您服务。为了帮您买到更靠谱车源我会全程为您服务。为了帮您买到更靠谱车源，我会全程为您服务。</p>
+    </dd>
+</dl>
+
+</div>
+<!--评分显示结束-->
+<p class="pj_gh"><a href="">更换顾问</a></p>
+<div class="bm_zf_number">
+  <p> <input type="text" value="请输入6位数字" class="sr_input" />
+   <!--<input type="text" value="请输入6位数字" class="sr_input red" />--><!--红色字体提示-->
+   <a href="" class="bm_zf_button1">确认</a>
+    <a href="" class="bm_zf_button2">取消</a></p>
+    <span>请输入正确6位ID数字</span><!--红色状态-->
+   </div>
+<div class="hslie"></div> 
+<!--支付服务费-->
+<div class="zf_fwf">
+<div class="zf_fwf_title">支付服务费<a href="">为什么支付服务费？</a>
+<!--why-->
+<div class="zf_why">
+    <p> 支付后，专业的买车顾问会为您提供满意车源，线下陪您看车、帮您办理过户手续等帮买服务，让您轻松、无忧买车。</p>
+    <div class="bubble-arrow"></div>
+    <div class="bubble-arrow-inner"></div>
+  </div>
+</div>
+<div class="zf_fwf_jg">服务费:<span>¥99</span><i>(不买车随时可退)</i></div>
+<div class="zf_fwf_jg">服务费:<s>¥99</s><span>¥0.01</span><i>已使用优惠券(不买车随时可退)</i></div>
+<div class="zf_sy">
+ <em ></em>使用优惠券<p>关注微信号：易车二手车精选，回复99领取</p><!--class="yhj_hover"-->
+</div>
+<!--使用优惠卷状态-->
+<div class="sy_yhj">
+<p><span><input type="text" value="请输入优惠码" class="yhm"/><img src="../img/delete.jpg" /></span><a href="">使用</a></p>
+<h2>请输入有效的优惠码 </h2>
+</div>
+<div class="sy_yhj">
+<p><span><input type="text" value="请输入优惠码" class="yhm"/><img src="../img/delete.jpg" /></span><a href="">使用</a></p>
+<h2>请输入有效的优惠码</h2>
+</div>
+<!--20151027开始-->
+<div class="zf_wy1">
+ <em><img src="../img/zfb.png" /></em>支付宝网页支付 <i></i>
+</div>
+<!--微信支付-->
+<div class="zf_wy1 bort0">
+ <em><img src="../img/wxin.png" /></em>微信网页支付 <i class="zffs"></i>
+</div>
+<!--20151027结束-->
+
+<div class="mt20"></div>
+<div class="yellowbut mar0">支付服务费 帮我挑车</div>
+<div class="mt10"></div>
+<p class="zf_place">请在<span>72小时</span>内付款，过期帮买服务将自动关闭</p>
+<p class="fz_qx"><a href="">取消帮买服务</a></p>
+</div>
+<div class="hslie"></div> 
+<!--预付-->
+<div class="zf_yf">
+<span><img src="../img/yuf.png" />预付到易车二手车</span>
+     <span><img src="../img/yuf.png" />支持随时退</span>
+</div>
+<div class="hslie"></div> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

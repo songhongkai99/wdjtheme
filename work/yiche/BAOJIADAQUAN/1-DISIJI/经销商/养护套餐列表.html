@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>养护 - 养护套餐列表</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <!--styles-->
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/jingxiaoshang_yanghu.css">
+  <!--   <link rel="stylesheet" type="text/css" href="http://image.bitautoimg.com/uimg/css/00040/4th_2015-2_jingxiaoshang_style-20160108102646-1036.css" media="all" />-->
+    <!-- #include file="/ushtml/0000/4th_2015-2_jingxiaoshang_style-1011.shtml" -->
+</head>
+<body id="yanghu_list">
+<header id="top-header">
+    <a href="javascript:;" data-action="selectCar">
+        <div class="server-title">
+            <div class="border-box">
+                <div class="float-left">
+                    <img src="../img/yanghu-test1.jpg" class="float-left" alt="" height="60" width="90">
+                </div>
+                <div class="float-left">
+                    <hgroup>
+                        <h2 class="text-overflow-ellipsis" id="carTitle">英朗 GT 1.8T 手动 智慧型</h2>
+                        <h5 class="font-grey text-overflow-ellipsis" id="carType">2012-2015款</h5>
+                    </hgroup>
+                </div>
+            </div>
+            <i></i>
+        </div>
+    </a>
+
+    <section class="clear-float font-grey" id="topSection1">
+        <span class="float-left">间隔: 5000公里或6个月</span>
+        <span class="float-right">小保养参考价格: 555元</span>
+    </section>
+
+    <section class="clear-float" id="topSection2">
+        <span class="float-left inline-block emulate-select" data-action="selectService">
+            按服务选
+        </span>
+        <span class="float-right inline-block emulate-select" data-action="selectDistance">
+            按里程选
+        </span>
+    </section>
+</header>
+<div class="con_top_bg"></div>
+<!--content-->
+<section id="content">
+    <ul class="tags-sub border-bottom clear-float">
+        <li class="current arrow arrow-d-t"><a href="#">按价格<i></i><s></s></a></li> <!--arrow-t-d降序-->
+        <li class=""><a href="#">按项目数量</a><i></i><s></s></li>
+        <li class=""><a href="#">按人气</a></li>
+    </ul>
+
+    <div id="content-list" class="loading">
+        <!--加载20151223-->
+        <div class="loading">
+            <img src="http://image.bitautoimg.com/uimg/mbt2015/images/loading.gif" width="64" height="64"/>
+            <p>正在加载...</p>
+        </div>
+
+        <article>
+            <a href="养护套餐详情.html">
+                <h1>新速腾小保养套餐</h1>
+
+                <p>
+                    项目：更换机油、更换机油机滤、更换刹车片、更换火花塞、更换空调滤清器、更换冷却液
+                </p>
+                <footer>
+                    <span class="s_price">560元</span>
+                    <span class="linethrough font-grey">原价700元</span>
+                </footer>
+            </a>
+        </article>
+        <!--冗余重复 BEGIN-->
+        <article>
+            <a href="养护套餐详情.html">
+                <h1>新速腾小保养套餐</h1>
+
+                <p>
+                    项目：更换机油、更换机油机滤、更换刹车片、更换火花塞、更换空调滤清器、更换冷却液
+                </p>
+                <footer>
+                    <span class="s_price">560元</span>
+                    <span class="linethrough font-grey">原价700元</span>
+                </footer>
+            </a>
+        </article>
+        <article>
+            <a href="养护套餐详情.html">
+                <h1>新速腾小保养套餐</h1>
+
+                <p>
+                    项目：更换机油、更换机油机滤、更换刹车片、更换火花塞、更换空调滤清器、更换冷却液
+                </p>
+                <footer>
+                    <span class="s_price">560元</span>
+                    <span class="linethrough font-grey">原价700元</span>
+                </footer>
+            </a>
+        </article>
+        <!--冗余重复 END-->
+
+        <!--空列表提示20151223-->
+        <div class="empty-list">
+            <img src="../img/yanghu-test4.png" alt="" height="113" width="152">
+            <hgroup>
+                <h1>很遗憾！</h1>
+                <h6>抱歉，未找到相关保养套餐！</h6>
+            </hgroup>
+        </div>
+    </div>
+
+</section>
+
+
+<!--弹出层 start-->
+<div class="leftmask leftmask3" style="display: none;"></div>
+<div class="leftPopup selectCar selectService selectDistance" data-back="leftmask3" style="display: none;">
+    <div class="swipeLeft">
+        <div class="loading">
+            <img src="http://image.bitautoimg.com/uimg/mbt2015/images/loading.gif"/>
+
+            <p>正在加载...</p>
+        </div>
+    </div>
+</div>
+<!--弹出层 end-->
+<!--loading模板 start -->
+<div class="template-loading" style="display: none;">
+    <div class="loading">
+        <img src="http://image.bitautoimg.com/uimg/mbt2015/images/loading.gif"/>
+
+        <p>正在加载...</p>
+    </div>
+</div>
+<!--loading模板 end -->
+<!--公共模板 start-->
+<script type="text/template" id="selectCarTemplate">
+    <div class="ap">
+        <ul class="first-list rp">
+            { for(var i = 0; i< carlist.length ; i++ ){ }
+            <li { if(i== _templateCurrent.car){ } class="current" {}}><a href="#">{=carlist[i].value}</a></li>
+            {}}
+        </ul>
+    </div>
+</script>
+<script type="text/template" id="selectServiceTemplate">
+    <div class="ap">
+        <ul class="first-list rp">
+            { for(var i = 0; i< servicelist.length ; i++ ){ }
+            <li { if(i== _templateCurrent.service){ } class="current" {}}><a href="#">{=servicelist[i].value}</a></li>
+            {}}
+        </ul>
+    </div>
+</script>
+<script type="text/template" id="selectDistanceTemplate">
+    <div class="ap">
+        <ul class="first-list rp">
+            { for(var i = 0; i< distancelist.length ; i++ ){ }
+            <li { if(i== _templateCurrent.distance){ } class="current" {}}><a href="#">{=distancelist[i].value}</a></li>
+            {}}
+        </ul>
+    </div>
+</script>
+<!-- 结果列表层 end -->
+<!--公共模板 end-->
+
+<!--scripts-->
+<script src="../js/jquery-2.1.4.min.js"></script>
+<script src="../js/iscroll.js"></script>
+<script src="../js/underscore-min.js"></script>
+<script src="../js/model-yanghu.js"></script>
+<script type="text/javascript" src="../js/rightswipe3.js"></script>
+
+<script type="text/javascript">
+    /*初始当前选中的弹出模板索引*/
+    var _templateCurrent = {
+        car: 0,
+        service: 0,
+        distance: 0
+    }
+    $(function () {
+        var $body = $('body');
+        var dataCar = {
+                    carlist: [{id: 1, value: '英朗 1.5T'},
+                        {id: 2, value: '英朗 1.6T'},
+                        {id: 3, value: '英朗 1.8T'}
+                    ]
+            },
+            dataService = {
+                    servicelist: [{id: 1, value: '不限'},
+                        {id: 2, value: '小保养'},
+                        {id: 3, value: '大保养'}
+                    ]
+            },
+            dataDistance = {
+                    distancelist: [{id: 1, value: '不限'},
+                        {id: 2, value: '5000公里'},
+                        {id: 3, value: '10000公里'},
+                        {id: 4, value: '15000公里'}
+                    ]
+            };
+        $body.trigger('publicswipe1', {
+            actionName: '[data-action=selectCar]',
+            ds: dataCar,
+            templateid: '#selectCarTemplate',
+            fnEnd: function () {
+                var $swipeLeft = this, $back = $('.' + $swipeLeft.parent().attr('data-back'));
+
+                $swipeLeft.find('a').click(function (ev) {
+                    ev.preventDefault();
+                    var $click = $(this);
+                    _templateCurrent.car = $click.parent().index();
+                    $("#carTitle").html($click.html());
+                    $back.trigger('close');
+                })
+            }
+        });
+        $body.trigger('publicswipe1', {
+            actionName: '[data-action=selectService]',
+            ds: dataService,
+            templateid: '#selectServiceTemplate',
+            fnEnd: function () {
+                var $swipeLeft = this, $back = $('.' + $swipeLeft.parent().attr('data-back'));
+
+                $swipeLeft.find('a').click(function (ev) {
+                    ev.preventDefault();
+                    var $click = $(this);
+                    _templateCurrent.service = $click.parent().index();
+                    $("[data-action=selectService]").html($click.html());
+                    $back.trigger('close');
+                })
+            }
+        });
+        $body.trigger('publicswipe1', {
+            actionName: '[data-action=selectDistance]',
+            ds: dataDistance,
+            templateid: '#selectDistanceTemplate',
+            fnEnd: function () {
+                var $swipeLeft = this, $back = $('.' + $swipeLeft.parent().attr('data-back'));
+
+                $swipeLeft.find('a').click(function (ev) {
+                    ev.preventDefault();
+                    var $click = $(this);
+                    _templateCurrent.distance = $click.parent().index();
+                    $("[data-action=selectDistance]").html($click.html());
+                    $back.trigger('close');
+                })
+            }
+        });
+
+        /*控制加载等待显示 1.ajax  2. doc onload*/
+        $(".loading", $("#content-list")).ajaxStart(function () {
+            $(this).removeClass("hide")
+        }).ajaxComplete(function () {
+            $(this).addClass("hide")
+        })
+
+        $(window).on("load", function () {
+            setTimeout(function () {
+                $(".loading", $("#content-list")).addClass("hide")
+            },300)
+        })
+
+    })
+</script>
+</body>
+</html>

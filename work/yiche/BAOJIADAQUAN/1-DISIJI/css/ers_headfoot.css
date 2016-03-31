@@ -1,0 +1,108 @@
+
+
+
+/*头部*/
+.header{width:100%; height:44px; background:#F8F8F8; position:relative; z-index:20; color:#565656;}
+.header .logo{width:0px; padding-left:115px;overflow:hidden;font-size:0;line-height:0;height:30px; background:url(http://image.bitautoimg.com/taoche/tcyidong2014/m_tc_logo.png) no-repeat; background-size:115px 30px; float:left; text-align:-999em; margin:7px 0 0 15px;}
+.header .download{width:26px; height:24px; background:url(http://image.bitautoimg.com/uimg/mbt2014/images/m_header_nav_search.png) no-repeat -76px -35px; background-size:100px auto; font-size:1.2rem; padding:0 0 0 28px; float:right; line-height:24px;margin:10px 10px 0 0;}
+.header .user-out, .header .user-in{width:24px; height:24px; background:url(http://image.bitautoimg.com/uimg/mbt2014/images/m_header_nav_search.png) no-repeat; background-size:100px auto; float:right; margin:10px 20px 0 0; position:relative;}
+.header .user-out{background-position:0 -35px;}
+.header .user-in{background-position:-29px -35px;}
+.header .user-in i{width:9px; height:9px; background:#C00; border-radius:9px; position:absolute; top:-1px; right:-2px;}
+.header .btn-search{width:50px; height:28px; border:1px solid #BFBFBF; border-radius:20px; float:right; margin:7px 10px 0 0; background:#FFF url(http://image.bitautoimg.com/uimg/mbt2014/images/m_header_nav_search.png) no-repeat 6px -118px; background-size:100px auto; text-indent:-999em;}
+.header .btn-nav{font-size:1.6rem; height:44px; line-height:44px; float:right; margin:0 15px;}
+.header .btn-nav i{display:inline-block; width:0; height:6px; border:6px solid #666; border-color:#666 transparent; border-width:6px 6px 0 6px; margin:0 0 0 3px; vertical-align:-4px;}
+.header .btn-nav-show{color:#FF9932;}
+.header .btn-nav-show i{border-width:0 6px 6px 6px; vertical-align:3px; border-color:#FF9932 transparent;}
+.header .pop-nav i{border-color:#FDA84D transparent;}
+.header .pop-nav ul{border-bottom-color:#E8811C; box-shadow:1px 1px 3px #333;}
+.header .pop-nav ul li a{background:#FDA84D; border-right-color:#E8811C; border-bottom-color:#E8811C;}
+.nav ul li a{background:#FF9934; border-top-color:#FFA141; border-left-color:#E97D11;}
+
+/*导航弹出层*/
+.header .pop-nav{position:absolute; top:44px; right:10px; font-size:1.6rem;}
+.header .pop-nav i{display:block; width:0; height:8px; border:8px solid #105796; border-width:0 8px 8px 8px; border-color:#1663A6 transparent; position:absolute; top:-16px; right:24px;}
+.header .pop-nav ul{width:256px; overflow:hidden; border-bottom:2px solid #083E6E; box-shadow:1px 1px 3px #333;}
+.header .pop-nav ul li{float:left; text-align:center;}
+.header .pop-nav ul li a{display:block; width:63px; height:44px; line-height:44px; background:#1663A6; color:#FFF; border-right:1px solid #0A4E8A; border-bottom:1px solid #0A4E8A;}
+
+
+/*返回*/
+.b-return{width:100%; height:39px; line-height:39px; color:#FFF; background:#FF9934; border-top:1px solid #FFA141; position:relative; z-index:19; text-align:center;}
+.b-return span{font-size:1.8rem;}
+.b-return .opt{font-size:1.6rem; position:absolute; right:10px; color:#FFF;}
+.b-return .btn-return{width:39px; height:39px; background:url(http://image.bitautoimg.com/uimg/mbt2014/images/m_header_nav_search.png) no-repeat -78px -76px; background-size:100px auto; position:absolute; top:0; left:5px; text-indent:-999em;}
+.b-return .opt-city{background:url(http://image.bitautoimg.com/uimg/mtc2014/images/m_ico_city.png) no-repeat left center; background-size:13px 18px; padding:0 0 0 20px;}
+.b-return-txt .btn-return{width:auto; text-indent:0; color:#fff; font-size:1.6rem; padding:0 0 0 30px;}
+
+
+
+/*导航*/
+.nav{width:100%; position:relative; z-index:19; margin:-1px 0 0 -1px;}
+.nav ul li{width:20%; float:left; text-align:center;}
+.nav ul li a{display:block; width:100%; height:40px; line-height:40px; background:#0A4E8A; font-size:1.6rem; color:#FFF; border-top:1px solid #083E6E; border-left:1px solid #083E6E;}
+
+/*三角 bottom right*/
+.ico-triangle-br{width:0; height:0; border-width:4px 4px; border-style:solid; border-color:transparent #ffffff #ffffff transparent; position:absolute; bottom:4px; right:4px; z-index:16;}
+
+.b-news-edit{width:40px; height:40px; position:absolute; top:0; right:0; background:url(http://image.bitautoimg.com/uimg/mbt2014/images/m_header_news_share.png) no-repeat 9px -207px; background-size:50px auto; text-indent:-999em;}
+
+
+/*搜索*/
+.p-search{width:100%; height:100%; background:#FFF; position:absolute; top:0; left:0; z-index:99;}
+.p-search-h{width:100%; height:45px; background:#F8F8F8; border-bottom:1px solid #CCC; display:table;}
+.p-search .btn-close{display:table-cell; font-size:1.8rem; width:40px; text-align:center; padding:0 18px; vertical-align:middle;}
+.p-search-list{width:100%; font-size:1.7rem;}
+.p-search-list ul{}
+.p-search-list ul li{border-bottom:1px solid #E9E9E9;}
+.p-search-list ul li a{display:block; height:44px; line-height:44px; padding:0 0 0 30px;}
+.p-search-list ul li a em{font-size:1.4rem; color:#666; float:right; margin:0 15px 0 0;}
+
+/*search fix*/
+.p-search-sort-box{display:table-cell; width:88px; vertical-align:middle;}
+.p-search-sort-relative{position:relative;}
+.p-search-sort{width:77px; height:29px; line-height:29px; border:1px solid #BFBFBF; border-top-left-radius:20px; border-bottom-left-radius:20px; border-right:none; background:#FFF; margin:0 0 0 10px; text-align:center; font-size:1.4rem; cursor:pointer;}
+.p-search-sort i{display:inline-block; width:0; height:0; border-top:4px solid; border-right:4px solid transparent; border-left:4px solid transparent; vertical-align:3px;}
+.p-search-sort-list{position:absolute; top:30px; left:25px; width:62px; border-left:1px solid #CCC; border-right:1px solid #CCC; border-bottom:2px solid #CCC; background:#FFF; text-align:center; font-size:1.6rem;}
+.p-search-sort-list li{border-top:1px solid #CCC;}
+.p-search-sort-list a{display:block; height:43px; line-height:43px;}
+
+.p-search-input-box{display:table-cell; vertical-align:middle;}
+.p-search-input-relative{position:relative;}
+.p-search-input{width:100%; height:31px; line-height:31px; border:1px solid #BFBFBF; border-top-right-radius:20px !important; border-bottom-right-radius:20px !important; font-size:1.4rem; padding:0 0 0 10px; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box; background-image:none;}
+.p-search-input-cancel{width:20px; height:20px; background:url(http://image.bitautoimg.com/uimg/mbt2014/images/m_header_nav_search.png) no-repeat 2px -72px; background-size:100px auto; text-indent:-999em; position:absolute; top:5px; right:6px;}
+input[type="search"]::-webkit-search-cancel-button{
+	display: none;
+}
+input[type="search"]::-ms-clear{
+  display: none;
+}
+
+
+/*搜索*/
+.p-search-input-relative{margin-left:10px;}
+.p-search-input{border-radius:20px !important; background:url(http://img2.bitautoimg.com/uimg/mbt2014/images/m_header_nav_search.png) no-repeat 6px -118px; background-size:100px auto; padding:0 0 0 30px;}
+.p-search-input-focus{background:none; padding:0 0 0 10px;}
+
+/*添加账号*/
+.zhangh{float:right;width:0px;height:24px;padding-left:24px;font-size:0;line-height:0;overflow:hidden;display:block;background:url(http://image.bitautoimg.com/taoche/tcyidong2014/m_tc_headico.png) no-repeat; background-size:24px 24px;margin:10px 10px 0 10px; }
+		
+/*底部*/		
+.footer{width:100%; height:45px; line-height:45px; background:#333; font-size:1.2rem; margin:15px 0 0;}
+.footer em{color:#444;}
+.footer a{color:#999; padding:0 10px;display: inline-block;}
+.footer a.current{color:#FC9933;}
+.footer .left-part{float:left;}
+.footer .right-part{float:right;}
+.footer .survey{position:relative;}
+.footer .survey b{width:6px; height:6px; border-radius:6px; background:#ff9933; position:absolute; top:-2px; right:6px;}
+
+/*底部下载app*/
+.download-app{width:100%; height:77px; background:#F6F6F6; text-align:center; margin:15px 0 -10px; border-top:1px solid #DEDEDE; overflow:hidden;}
+.download-app a{display:block; height:35px; line-height:35px; background:#F9F9F9; color:333; font-size:1.6rem; border:1px solid #ddd; margin:10px 0 0;}
+.download-app p{font-size:12px; color:#999; padding:5px 0 0;}		
+
+
+
+
+

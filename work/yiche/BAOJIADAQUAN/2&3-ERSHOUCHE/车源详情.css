@@ -1,0 +1,208 @@
+
+/*车源图片*/
+.m-focus{width:100%;background:#fff;}
+.m-focus-box{margin:0 auto;position:relative;z-index:20;}
+.swiper-container{overflow:hidden;}
+.m-focus-box li{float:left}
+.m-focus-box li img{width:100%;display:block}
+.m-focus-box .nob{position:absolute;left:20px;bottom:10px;color:#ffffff;font-size:1.4rem;}
+.m-focus-box .nob em{color:#ff9933;}
+.m-focus .chylogo{width:60px;height:60px;position:absolute;right:15px;bottom:-30px;}
+.m-focus .chylogo img{border-radius:10px;}
+.boxmain{border-bottom:15px solid #f5f5f5;}
+.chytext{padding:10px 15px;}
+.chytext h3{font-size:1.6rem;line-height:21px;padding-right:60px;margin-bottom:5px;}
+.chytext em{display:block;font-size:1.4rem;color:#ff9933;line-height:20px;margin-bottom:5px;}
+.chytext p{color:#c6c6c6;font-size:1.2rem;}
+.jiagmain{margin:0 15px 15px 15px;position:relative;}
+.jiagmain p{color:#666666;line-height:24px;font-size:1.4rem;}
+.jiagmain span{color:#999999;}
+.jiagmain em{color:#ff6000;font-size:2.0rem;}
+.gaunz a{position:absolute;width:45px;right:0px;top:5px;background:url(http://image.bitautoimg.com/taoche/ercyidong2015/cyico.png) no-repeat left top;background-size:150px 200px; background-position:4px top;padding-top:33px;text-align:center;font-size:1.4rem;color:#ff9933;}
+.yigaunz a{position:absolute;width:45px;right:0px;top:5px;background:url(http://image.bitautoimg.com/taoche/ercyidong2015/cyico.png) no-repeat left top;background-size:150px 200px; background-position:-111px -119px;padding-top:33px;text-align:center;font-size:1.4rem;color:#ff9933;}
+.jiarbz{margin:0 15px 0px 15px;padding:10px 0 10px 45px;border-top:1px solid #ececec;background:url(http://image.bitautoimg.com/taoche/ercyidong2015/ritjt_ico.png) no-repeat right 23px; background-size:9px 15px;position:relative;font-size:1.4rem;cursor:pointer;}
+.jiarbz em{width:44px;height:44px;position:absolute;left:-3px;top:12px;background:url(http://image.bitautoimg.com/taoche/ercyidong2015/cyico.png) no-repeat ;background-size:165px 215px; background-position:-69px -125px;display:block;}
+.jiarbz p{line-height:20px;margin-bottom:3px;}
+.jiarbz p span{float:left;padding-left:15px;background:url(http://image.bitautoimg.com/taoche/ercyidong2015/nvs_dg.png) no-repeat left 3px;background-size:13px 13px; margin-right:10px;font-size:1.2rem;color:#26bf9f;}
+.rzncz em{background:url(http://image.bitautoimg.com/taoche/ercyidong2015/cyico.png) no-repeat left top;background-size:150px 200px;left:-2px;background-position:left -158px;}
+.rzncz p span{background:url(http://image.bitautoimg.com/taoche/ercyidong2015/cyico.png) no-repeat;background-position:-51px -65px;background-size:150px 200px;color:#ff9933;}
+
+/*基本信息*/
+
+/*11月27日修改 基本信息 star*/
+.tt_first{width:100%; height:33px; border-bottom:1px solid #eee; position:relative; margin:15px 0 0;}
+/*11月27日修改 基本信息 end*/
+
+
+.tt_first h3{font-size:20px; font-weight:bold; padding:4px 15px 0 15px;}
+.tt_first sub{width:4px; height:20px; background:#0A4E8A; border-top:5px solid #c00; position:absolute; top:0; left:0;}
+.jibenxinx {padding-top:5px;padding-left:15px;}
+.jibenxinx li{width:46%;float:left;font-size:1.4rem;line-height:30px;}
+.jibenxinx li strong{width:72px;text-align:left;color:#666666;display:inline-block;}
+.jibenxinx li.end{float:right;}
+
+/*特色亮点*/
+.tesld{margin:0px 15px 10px 15px;}
+.tesld h5{font-size:1.4rem;color:#666666;margin-bottom:4px;margin-top:3px;}
+.tesld p{line-height:24px;font-size:1.4rem;}
+
+/*卖家描述*/
+.mjmstext{font-size:1.4rem;line-height:23px;margin:10px 15px 10px 15px;word-break:break-all;overflow:hidden;}
+.xiamgd{font-size:1.4rem;text-align:center;margin-top:15px;margin-bottom:15px;}
+.xiamgd a{color:#999999;}
+.xtishi{background-color:#eeeeee;margin:0 15px 0px;padding:10px;line-height:22px;border-radius:4px;font-size:1.2rem;}
+.xtishi span{color:#666666;}
+.xtishi em{color:#ff9933;background:url(http://image.bitautoimg.com/taoche/ercyidong2015/cyico.png) no-repeat left top;background-size:150px 200px; background-position:-3px -98px;padding-left:18px;}
+
+/*车源详情底部*/
+.cyxundj{position:fixed;bottom:0;}
+.gwdhdx{height:44px;background-color:#fe8230;width:100%;display:table;color:#ffffff;overflow:hidden;}
+.cyxqshj{width:90%;text-align:center;float:left;font-size:1.6rem;line-height:44px;color:#ffffff;display:block;}
+.gwdhdx ul{width:133px;display:table-cell;height:44px; }
+.gwdhdx ul li{width:65px;border-left:1px solid #fea86f;float:left;color:#ffffff;text-align:center;font-size:1.2rem;padding-top:24px;height:20px;}
+.gwdhdx ul li a{width:60px;padding-top:24px;height:20px;color:#ffffff;text-decoration:none;}
+.gwdhdx ul li a:hover{color:#ffffff;text-decoration:none;}
+.gwdhdx ul li.fdx{background:url(http://image.bitautoimg.com/taoche/ercyidong2015/xingf_ico.png) no-repeat center 7px;background-size:19px 15px;}
+.gwdhdx ul li.xundj{background:url(http://image.bitautoimg.com/taoche/ercyidong2015/dianh_ico.png) no-repeat center 7px;background-size:17px 17px;}
+
+
+/*11月17日修改 底部电话部分*/
+.cydbfix{position:fixed;bottom:0;}
+.cyxqfoot_c{height:44px;background-color:#ff9900;width:100%;display:table;color:#ffffff;overflow:hidden;}
+.xqdinh{background:url(http://image.bitautoimg.com/taoche/ercyidong2015/dianh_ico.png) no-repeat 10px 6px;background-size:33px 33px;padding-left:37px;margin-left:5px;display:table-cell;padding-left:50px;float:left;font-size:1.4rem;padding-top:6px;height:38px;}
+.xqdinh p{font-size:1.2rem;}
+.xqdinh p.shjtit{font-size:1.6rem;margin-bottom:2px;}
+.cyxqfoot_c ul li{border-left:1px solid #fea86f;float:left;width:24%;}
+.cyxqfoot_c ul li:first-child{width:51%;}
+.cyxqfoot_c ul li a{width:60px;padding-top:24px;height:20px;color:#ffffff;text-decoration:none;}
+.cyxqfoot_c ul li a:hover{color:#ffffff;text-decoration:none;}
+.cyxqfoot_c ul li.bwmc{background:url(http://image.bitautoimg.com/taoche/ercyidong2015/dianh_mam.png) no-repeat center 4px;background-size:22px 20px;color:#ffffff;text-align:center;font-size:1.2rem;padding-top:24px;height:20px;}
+.cyxqfoot_c ul li.zxdj{background:url(http://image.bitautoimg.com/taoche/ercyidong2015/dianh_xj.png) no-repeat center 4px;background-size:22px 20px;color:#ffffff;text-align:center;font-size:1.2rem;padding-top:24px;height:20px;}
+.cyxqfoot_c ul li.fdx{background:url(http://image.bitautoimg.com/taoche/ercyidong2015/xingf_ico.png) no-repeat center 6px;background-size:20px 16px;color:#ffffff;text-align:center;font-size:1.2rem;padding-top:24px;height:20px;}
+
+
+/*11月27日增加帮忙服务*/
+.banmico em{background:url(http://image.bitautoimg.com/taoche/ercyidong2015/banm_cio1.png) no-repeat left top;background-size:44px 44px;left:-2px;background-position:0 -3px;}
+.zckbpz{padding-top:5px;}
+.zckbpz .bdlst{border-bottom:none;border-top:1px solid #ececec;}
+.zckbpz .bdlst a{min-height:25px;}
+.zckbpz .bdlst i{float:right;color:#dd2727;font-size:1.2rem;margin-right:20px;margin-top:0px;}
+.zckbpz .bdlst div{background:url(http://image.bitautoimg.com/taoche/ercyidong2015/red_xinx_hover.png) no-repeat left top;background-size:82px 14px; width:82px;height:14px;display:block;float:right;margin-top:4px;margin-right:7px;}
+.zckbpz .bdlst div em{height:14px;display:block;background:url(http://image.bitautoimg.com/taoche/ercyidong2015/red_xinx.png) no-repeat left top;background-size:82px 14px;}
+.bmfw_toptit{padding:15px 0 20px;margin:0 15px;text-align:center;}
+.bmfw_toptit h3{font-size:1.6rem;font-weight:bold;color:#ff9900;line-height:25px;}
+.bmfw_toptit p{font-size:1.2rem;color:#666666;line-height:20px;}
+.bmfwgm_list{margin:0 15px;}
+.bmfwgm_list li{padding:15px 0 15px 140px;border-top:1px solid #f5f5f5;}
+.bmfwgm_list li h4{line-height:25px;font-size:1.4rem;color:#ff9900;margin-bottom:6px;}
+.bmfwgm_list li p{color:#666666;line-height:20px;font-size:1.2rem;}
+.bmfwgm_list li.bg1{background:url(http://image.bitautoimg.com/taoche/ercyidong2015/bmfw_bg1.gif) no-repeat;background-position:0 20px;background-size:128px 90px;}
+.bmfwgm_list li.bg2{background:url(http://image.bitautoimg.com/taoche/ercyidong2015/bmfw_bg2.gif) no-repeat;background-position:0 22px;background-size:128px 90px;}
+.bmfwgm_list li.bg3{background:url(http://image.bitautoimg.com/taoche/ercyidong2015/bmfw_bg3.gif) no-repeat;background-position:0 20px;background-size:128px 90px;}
+.cyxqfoot_c ul li.lskfb{border-left:none;width:45%;}
+.cyxqfoot_c ul li.lskfb a{text-align:center;background-color:#ffffff;width:100%;display:block;color:#ff9900;font-size:1.6rem;padding-top:0;height:44px;line-height:44px;}
+.cyxqfoot_c ul li.lskfb a em{background:url(http://image.bitautoimg.com/taoche/ercyidong2015/dianh_wuans.png) no-repeat;background-position:0 0px;background-size:18px 17px;width:18px;height:17px;display:inline-block;margin-right:7px;}
+.cyxqfoot_c ul li.bmfsmc{border-left:none;width:55%;vertical-align:-1px;}
+.cyxqfoot_c ul li.bmfsmc a{text-align:center;width:100%;display:block;font-size:1.6rem;padding-top:0;height:44px;line-height:44px;}
+.cyxqfoot_c ul li.bmfsmc a em{background:url(http://image.bitautoimg.com/taoche/ercyidong2015/dianh_mam.png) no-repeat;background-position:0 0px;background-size:22px 20px;width:22px;height:20px;display:inline-block;margin-right:7px;vertical-align:-3px;}
+
+
+
+
+/*12月23号 置换详情页添加*/
+.jiagmain p a{color:#ff6d02;margin-left:5px;}
+.chytext em{color:#999999;} 
+.chytext{padding:10px 15px 5px;}
+.jibenxinx li{width:49%;}
+.liangd{border-top:1px solid #ececec;padding-top:15px;overflow:hidden;margin:0 15px 15px;height:31px;position:relative;}
+.ldmain{overflow:hidden;height:41px;overflow-x:scroll;-webkit-overflow-scrolling:touch;-ms-overflow-style:none;white-space:nowrap;display:block;}
+.ldmain li{padding:0 5px;height:29px;line-height:30px;color:#ff6d02;font-size:1.4rem;border:1px solid #ff6d02;border-radius:5px;margin-left:5px;text-align:center;white-space:nowrap;display:inline-block;}
+
+
+/*12月23号 详情页车检报告*/
+.tt_first .sjbz{position:absolute;right:15px;top:0px;color:#666666;font-size:1.6rem;background:url(http://image.bitautoimg.com/taoche/ercyidong2015/sjbz_ico1.png) no-repeat;background-size:14px 16px;background-position:left 4px;padding-left:18px;height:25px;line-height:25px;}
+.cjbb_list{margin:0 15px;border-top:1px solid #ececec;padding:15px 0 15px 75px;min-height:65px;}
+.cjbg_tit{line-height:20px;color:#999999;font-size:1.2rem;margin-bottom:5px;}
+.cjbg_tit strong{font-size:1.4rem;color:#333333;margin-right:5px;}
+.cjbg_tit em{color:#dd2727;}
+.cjbg_pcts li{line-height:25px;width:40%;padding:0 0px 0 22px;background:url(http://image.bitautoimg.com/taoche/ercyidong2015/green_tanh.png) no-repeat;background-size:15px 15px;background-position:left center;font-size:1.4rem;color:#666666;float:left;}
+.cjbb_bg1{background:url(http://image.bitautoimg.com/taoche/ercyidong2015/xqsb_bg1.png) no-repeat;background-size:63px 64px;background-position:left 15px;border-top:none;}
+.cjbb_bg2{background:url(http://image.bitautoimg.com/taoche/ercyidong2015/xqsb_bg2.png) no-repeat;background-size:63px 64px;background-position:left 15px;}
+.cjbb_bg3{background:url(http://image.bitautoimg.com/taoche/ercyidong2015/xqsb_bg3.png) no-repeat;background-size:63px 64px;background-position:left 15px;}
+.cjbb_bg4{background:url(http://image.bitautoimg.com/taoche/ercyidong2015/xqsb_bg4.png) no-repeat;background-size:63px 64px;background-position:left 15px;}
+.cjbg_pcts li.redbg{background:url(http://image.bitautoimg.com/taoche/ercyidong2015/red_tanh.png) no-repeat;background-size:15px 15px;background-position:left center;}
+.cjbg_wgjc{line-height:25px;color:#666666;font-size:1.4rem;}
+
+/*12月23号*/
+.maijms{padding-bottom:15px;}
+.xiamgd a{background:url(http://image.bitautoimg.com/taoche/ercyidong2015/down.png) no-repeat;background-position:right center;background-size:13px 8px;padding-right:20px;color:#666666;}
+.xiansup a{background:url(http://image.bitautoimg.com/taoche/ercyidong2015/up.png) no-repeat;background-position:right center;background-size:13px 8px;}
+/*12月10日看车地点修改*/
+.xqmore{margin:0px 15px 20px 15px;}
+.xqmore ul li a{width:100%;display:block;height:40px;line-height:40px;border-bottom:1px solid #e9e9e9;font-size:1.6rem;background:url(http://image.bitautoimg.com/uimg/mtc2014/images/more.jpg) no-repeat right center;background-size:9px 15px;color:#333333;}
+.xqmore ul li a span{float:right;color:#ff9933;margin-right:15px;color:#666666;font-size:1.4rem;}
+
+.topline{margin-bottom:5px;}
+.topline ul li a{border-bottom:none;border-top:1px solid #ececec;color:#333333;position:relative;}
+.xqmore ul li i{float:right;color:#dd2727;font-size:1.2rem;margin-right:20px;margin-top:0px;}
+.xqmore ul li strong{background:url(http://image.bitautoimg.com/taoche/ercyidong2015/red_xinx_hover.png) no-repeat left top;background-size:82px 14px; width:82px;height:14px;display:block;float:right;margin-top:12px;margin-right:7px;}
+.xqmore ul li strong em{height:14px;display:block;background:url(images/red_xinx.png) no-repeat left top;background-size:82px 14px;}
+
+.kcdtbox{margin:-5px 10px 20px 10px;border-bottom:1px solid #ececec;padding-bottom:8px;}
+.kcdtbox li{display:table;width:100%;}
+.kcdtbox div.kcjb{display:table-cell;width:80px;top:50%;margin-top:-20px;position:absolute;}
+.kcdtbox p{display:table-cell;padding:10px 15px 0 80px;line-height:20px;color:#666666;font-size:1.4rem;}
+.kcdtbox  ul li a {height:auto;min-height:40px;}
+
+
+
+/*车源详情页补丁*/
+.cydbfix{z-index:2;}
+.gaunz a{right:-3px;}
+.chjbg{overflow:hidden;}
+.xtishi span{color:#999999;}
+.xtishi{background-color:#f5f5f5;font-size:1.4rem;color:#666666;}
+.xtishi em{padding-left:0;background:none;}
+.dkgc{padding-bottom:0;}
+.dkgc .xqmore{margin-bottom:0;}
+.dkgc .xqmore ul li a{border-bottom:none;}
+.dkgc  .xqmore ul li a span.graycole{color:#666666;}
+.xqmore ul li a span.graycole{color:#666666;}
+.xqmore ul li a span.graycole em{background:url(http://image.bitautoimg.com/taoche/ercyidong2015/cyico.png) no-repeat;background-size:150px 200px;background-position:-4px -66px;width:17px;height:19px;vertical-align:middle;display:inline-block;}
+.tt_first .tags-sub{left:auto;right:10px;}
+.tuijcybox .tc-car-list-h{border-bottom:none;}
+.tuijcybox .tc-car-list-h a{padding-left:0;padding-right:0;margin-left:15px;margin-right:15px;border-bottom:1px solid #e9e9e9;}
+.tuijcybox .btn-more{border-top:none;}
+
+.fdxg_12_28{height:50px;background-color:#ffffff;}
+.fdxg_12_28 ul li:first-child{height:50px;background-color:#ff9900;}
+.grcyph  ul li:first-child{width:70%;}
+.fdxg_12_28 ul li .xqdinh{padding-top:9px;background:url(http://image.bitautoimg.com/taoche/ercyidong2015/dianh_1_20.png) no-repeat;background-size:27px 27px;background-position:10px 13px;padding-left:45px;}
+.fdxg_12_28  ul li a,.fdxg_12_28  ul li a:hover{color:#ff8800;font-size:1.4rem;}
+.fdxg_12_28 ul li{border-left:none;}
+.fdxg_12_28 ul li.fdx{height:21px;padding-top:28px;border-top:1px solid #dedede;background:url(http://image.bitautoimg.com/taoche/ercyidong2015/dbfc_bg1.png) no-repeat center 8px;background-size:20px 16px;width:24.6%;}
+.grcyph ul li.fdx{width:30%;}
+.fdxg_12_28 ul li.zxdj{height:21px;padding-top:28px;border-top:1px solid #dedede;border-left:1px solid #dedede;background:url(http://image.bitautoimg.com/taoche/ercyidong2015/dbfc_bg2.png) no-repeat center 8px;background-size:18px 17px;}
+
+.fdxg_12_28 ul li.bwmc{height:21px;padding-top:28px;border-top:1px solid #dedede;border-right:none;background:url(http://image.bitautoimg.com/taoche/ercyidong2015/dianh_mam2.png) no-repeat center 6px;background-size:22px 20px;color:#ffffff;text-align:center;font-size:1.2rem;}
+.fdxg_12_28 ul li a.xqlink, .fdxg_12_28 ul li a.xqlink:hover{color:#ffffff;width:100%;display:block;height:50px;padding:0;margin:0;}
+
+.cyxqfoot{height:50px;line-height:50px;text-align:center;background-color:#ff9900;color:#ffffff;width:100%;display:block;font-size:1.6rem;}
+
+
+
+/*1月22车轮页添加 车源编号*/
+.chybianh{background:rgba(0,0,0,0.5);height:28px;line-height:28px;text-align:center;color:#ffffff;padding:0 10px;position:absolute;left:0;top:0;z-index:10;font-size:1.5rem;}
+
+
+
+
+/*----------------------------------------客户端适配-------------------------------------------*/
+/* 判断iphone4 */
+@media screen and (device-width: 320px) and (device-height: 480px) {
+.jiagmain p{font-size:1.2rem;margin-top:-1px;}
+}
+
+/* 判断iphone5 */
+@media screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) {
+.jiagmain p{font-size:1.2rem;margin-top:-1px;}

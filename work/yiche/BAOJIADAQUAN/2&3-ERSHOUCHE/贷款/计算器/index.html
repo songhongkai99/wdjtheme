@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>二手车 - 贷款 - 计算器首页</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <!--styles-->
+    <link rel="stylesheet" type="text/css" href="../../头尾.css">
+    <link rel="stylesheet" type="text/css" href="../../2015选车工具.css">
+    <link rel="stylesheet" type="text/css" href="../../选车页面.css">
+    <link rel="stylesheet" type="text/css" href="../../车型大全.css">
+    <link rel="stylesheet" type="text/css" href="./css/贷款计算器.css">
+</head>
+<body>
+
+<!--banner-->
+<header>
+    <section class="section1 vis-hide" id="info-shoufu">
+        <h1>首付</h1>
+
+        <p>145,000</p>
+    </section>
+    <section class="section2 border-box vis-hide">
+        <ul>
+            <li id="info-yuegong">
+                <h6>月供36期</h6>
+
+                <p>4,100</p>
+            </li>
+            <li id="info-lixi">
+                <h6>利息</h6>
+
+                <p>9,100</p>
+            </li>
+            <li id="info-zongji">
+                <h6>总计</h6>
+
+                <p>245,980</p>
+            </li>
+        </ul>
+    </section>
+    <a href="贷款提交页.html" class="button vis-hide">申请贷款</a>
+
+    <div class="this-loading">
+        <img src="img/loading.png" alt="" height="35" width="35">
+
+        <p>贷款方案正在计算中，请稍后</p>
+    </div>
+    <div class="this-error vis-hide">
+        <img src="img/error.png" alt="" height="70" width="70">
+
+        <p>请输入有效的车源价格</p>
+    </div>
+</header>
+<!--content-->
+<section class="border-box" id="content">
+    <form id="main-form" action="">
+        <div class="inline-block-group">
+            <label for="cyjj">车源价格</label>
+
+            <div class="input-span">
+                <input type="number" name="cyjj" id="cyjj" placeholder="">
+                <span>元</span>
+            </div>
+        </div>
+        <div class="inline-block-group">
+            <label>首付比例</label>
+
+            <div class="sfbl">
+                <label class="input-radio">
+                    <input type="radio" value="20%" class="vis-hide" name="sfbl">
+                    <span>20%</span>
+                </label>
+                <label class="input-radio checked">
+                    <input type="radio" value="30%" checked class="vis-hide" name="sfbl">
+                    <span>30%</span>
+                </label>
+                <label class="input-radio">
+                    <input type="radio" value="40%" class="vis-hide" name="sfbl">
+                    <span>40%</span>
+                </label>
+                <label class="input-radio">
+                    <input type="radio" value="50%" class="vis-hide" name="sfbl">
+                    <span>50%</span>
+                </label>
+                <label class="input-radio">
+                    <input type="radio" value="60%" class="vis-hide" name="sfbl">
+                    <span>60%</span>
+                </label>
+            </div>
+        </div>
+        <div class="inline-block-group">
+            <label>还款年限</label>
+
+            <div class="hknx">
+                <label class="input-radio">
+                    <input type="radio" value="1" class="vis-hide" name="hknx">
+                    <span>1年</span>
+                </label>
+                <label class="input-radio">
+                    <input type="radio" value="2" class="vis-hide" name="hknx">
+                    <span>2年</span>
+                </label>
+                <label class="input-radio checked">
+                    <input type="radio" value="3" checked class="vis-hide" name="hknx">
+                    <span>3年</span>
+                </label>
+            </div>
+        </div>
+    </form>
+</section>
+<div class="mark hide">
+    <div class="this-alert absolute-center transform-center">
+        <h6 class="this-title">提交成功</h6>
+        <p>客服会尽快联系您，为您办理代理</p>
+        <h6 class="this-ok">知道啦</h6>
+    </div>
+</div>
+<!--测试代码-->
+<a id="refresh" style="display: block; text-align: center; color: green; position: fixed; bottom: 0; z-index: 9999999;"
+   href="javascript:location=(location.protocol+'//'+location.host+location.pathname+'?nocache='+(new Date().getTime()));">刷新</a>
+<script src="../../js/jquery-2.1.4.min.js"></script>
+<script>
+    $(function () {
+        //添加css3样式
+        var classNames = ['Webkit', 'ms', 'Moz', 'O', ''];
+        $.fn.addClass3 = function (name, value) {
+            var o = this[0];
+            var cName = name.charAt(0).toUpperCase() + name.substring(1);
+            for (var i = 0; i < classNames.length; i++) {
+                o.style[classNames[i] + cName] = value;
+            }
+            return $(o);
+        }
+        /*TODO: 如何触发自动弹出软键盘?是否为系统级事件*/
+        var $header = $("header"), $headerHeight = $header.outerHeight() + 12 + "px"
+        var $content = $("#content")
+        var $loading = $(".this-loading")
+        var $error = $(".this-error")
+        $("#cyjj").on({
+            "blur": function () {
+                var $this = $(this)
+                $header.addClass("show")
+                $content.addClass3("transform", "translate3d(0," + $headerHeight + ",0)")
+                setTimeout(function () {
+                    $loading.addClass("vis-hide")
+                    if (parseInt($this.val()) <10000 || isNaN(parseInt($this.val()))) { //设置有效车源价
+                        $error.removeClass("vis-hide")
+                    } else {
+                        $header.children().not($loading).not($error).removeClass("vis-hide")
+                    }
+                }, 300)
+
+                //低版本浏览器placeholder Bug
+                if(!$(this).val()){
+                    $(this).parent().removeClass("t-focus")
+                }
+            },
+            "click": function () {
+                $header.removeClass("show")
+                $content.addClass3("transform", "translate3d(0,0,0)")
+                setTimeout(function () {
+                    $loading.removeClass("vis-hide")
+                    $header.children().not($loading).addClass("vis-hide")
+                }, 300)
+
+                //低版本浏览器placeholder Bug
+                $(this).parent().addClass("t-focus")
+            }
+        })
+        /*RADIO自定义控件*/
+        $(".input-radio").on("click", function () {
+            $(":radio", this).prop("checked", true)
+            $(this).siblings().removeClass("checked").end().addClass("checked")
+        })
+        /*提交成功 通过锚点#success触发*/
+        if(location.hash.slice(1)=="success"){
+            $(".mark").on("click", function (e) {
+                e.stopPropagation()
+                if(e.target.classList[0]=="this-ok"){
+                    $(this).addClass("hide")
+                }
+            }).removeClass("hide")
+        }
+        //ios失去焦点键盘收回
+        $(document).on('touchstart', function (e) {
+            if (!$(e.target).is('#cyjj') && $('#cyjj').is(':focus')) {
+                document.activeElement.blur();
+            }
+        });
+    });
+</script>
+</body>
+</html>

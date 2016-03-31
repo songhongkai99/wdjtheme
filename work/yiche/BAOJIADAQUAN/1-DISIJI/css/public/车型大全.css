@@ -1,0 +1,29 @@
+/*车型大全*/
+/*品牌列表*/
+.brand-list { width: 100%; overflow: hidden; background: #fff; }
+    .brand-list li { padding: 10px 0; overflow: hidden; border-bottom: 1px solid #E2E2E2; }
+        .brand-list li:last-child { border: none; }
+        .brand-list li a { display: block; overflow: hidden; }
+
+.brand-logo { display: block; width: 55px; height: 55px; background: url(http://img3.bitautoimg.com/car/logo/01.png) no-repeat; float: left; margin-right: 15px; }
+.brand-list li .brand-name { font-size: 1.8rem; float: left; height: 57px; line-height: 57px; }
+
+/*推荐*/
+.brand-hot { overflow: hidden; font-size: 1.4rem; }
+    .brand-hot ul { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; }
+    .brand-hot li { display: block; -webkit-box-flex: 1; -webkit-flex: 1; -ms-flex: 1; flex: 1; text-align: center; margin: 20px 0 10px; padding: 0; border: 0; }
+        .brand-hot li a { display: block; }
+        .brand-hot li img { width: 40px; height: 40px; }
+
+/*字母*/
+.fixed-nav { width: 35px; font-size: 1.2rem; line-height: 16px; position: fixed; top: 0; right: 0; z-index: 99; opacity: 0; top: 0; }
+    .fixed-nav a { display: block; height: 15px; line-height: 15px; color: #266DE2; width: 25px; text-align: center; padding-left: 10px; }
+
+/*字母提示*/
+.brandfilter .alert { width: 70px; height: 70px; border-radius: 10px; background-color: #fafafa; position: fixed; left: 50%; top: 50%; margin-left: -35px; margin-top: -35px; display: block; border: 1px solid #d3d3d3; box-sizing: border-box; text-align: center; }
+    .brandfilter .alert span { font-size: 5rem; color: #888; line-height: 70px; }
+
+/*iPhone4 and 4s*/
+@media only screen and (-webkit-min-device-pixel-ratio : 2) and (device-aspect-ratio: 2/3) and (orientation : portrait) {
+    .fixed-nav { display: none; }
+}

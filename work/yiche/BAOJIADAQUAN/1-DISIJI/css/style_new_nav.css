@@ -1,0 +1,35 @@
+.section{ padding-top: 80px;}
+header{ height: auto; background: inherit; z-index: auto; transform: translate3d(0px, 10px, 10px);
+     }
+header h2 {
+    color: #000;
+    font-size: 30px;
+    text-indent: 30px;
+    line-height: 80px;position: fixed; left: 0; top: -50px; z-index: 99999;
+    background: #f90;
+}
+
+
+.navigation {
+	background: #fff;
+	height: 80px;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: auto;
+}
+.navigation li {
+    margin-left: 0;
+    margin-top: 25px;
+    float: right;
+    margin-right: 27px;
+}
+.fp-slide {
+    z-index: auto;
+}
+#fullpage{z-index: auto;}
+.fp-slidesContainer {z-index: auto;}
+.fp-slides{z-index: auto;}
+.page1, .page2, .page3, .page4, .page5, .page6, .page7, .page8, .page9, .page10, .page11, .page12, .page13, .page14 {
+   z-index: auto;
+}

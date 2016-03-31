@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <title>询价-二级</title>
+<!--    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/jingxiaoshang-jlr.css" />-->
+
+    <!--本地测试-->
+    <link rel="stylesheet" type="text/css" href="http://image.bitautoimg.com/uimg/css/00039/4th_2015-2_jingliren_style-20151214161943-1108.css" media="all" /> 
+    <!--线上样式-->
+    <!-- #include file="/ushtml/0000/4th_2015-2_jingliren_style-1084.shtml" -->
+</head>
+<body>
+     <div class="ask-box">
+        <header>
+            <h2>询价</h2>
+        </header>
+        <div class="con_top_bg"></div>
+        <div class="ask-price">
+            <strong>提交个人信息，享受一对一的服务</strong>
+            <div class="person-box">
+                <i></i>
+                <ul>
+                    <li><em>4S-</em>北京运通兴宝</li>
+                    <li>电话：400-000-1235</li>
+                </ul>
+            </div>
+            <ul class="register">
+                <li class="frist-select">
+                    <a href="###" data-action="first-models" data-id="2593" data-template="#fristModelsTemplate">
+                        <label>当前车型：</label>
+                        <strong>2013款 40 TFSI quattro 自动 个性运动型</strong>
+                    </a>
+                </li>
+                <li>
+                    <label>姓<em class="w28"></em>名：</label>
+                    <input type="text" value="请输入您的姓名" />
+                </li>
+                <li>
+                    <label>手<em class="w6"></em>机<em class="w6"></em>号：</label>
+                    <input type="text" value="请输入您的手机号" />
+                    <!--输入加 input 加  class="current" 样式-->
+                </li>
+            </ul>
+            <button class="submit"><a href="#">咨询底价</a></button>
+        </div>
+    </div>
+
+    <!--车款层 start-->
+    <div class="leftmask mark leftmask3" style="display: none;"></div>
+    <div class="leftPopup car-model first-models models original" data-back="leftmask3" style="display: none" data-key="model">
+        <div class="swipeLeft swipeLeft-sub">
+            <div class="loading">
+                <img src="http://image.bitautoimg.com/uimg/mbt2015/images/loading.gif" />
+                <p>正在加载...</p>
+            </div>
+        </div>
+    </div>
+    <!--车款层 end-->
+
+    <!--**************************************************************模板 start *********************************************************-->
+    <!--loading模板 start -->
+    <div class="template-loading" style="display: none;">
+        <div class="loading">
+            <img src="http://image.bitautoimg.com/uimg/mbt2015/images/loading.gif" />
+            <p>正在加载...</p>
+        </div>
+    </div>
+    <!--loading模板 end -->
+
+    <!--车款模板 start-->
+    <script type="text/template" id="fristModelsTemplate">
+        { for(var n in CarList){ }
+            {var iszx = arrMark[n.replace('s', '')]}
+            <div class="tt-small" {= !iszx ? 'data-slider="pic-txt-h"':''} >
+                <span>{= n.replace('s','') }
+                    {if(!iszx){}
+                    <em>[停售]</em>
+                    {}}
+                </span>
+                {if(!iszx){}
+                <i></i>
+                {}}
+            </div>
+
+        <!-- 图文混排横向 start -->
+        <div class="pic-txt-h pic-txt-9060 tone {=iszx?'open':''}">
+            <ul>
+                {for(var i=0;i < CarList[n].length;i++){}
+                <li {= CarList[n][i].CarId.toString() == (api.model.currentid.toString()) ? 'class="current"':''}">
+                    <a href="#" data-id="{= CarList[n][i].CarId}" >
+                        <h4>{= CarList[n][i].CarName}</h4>
+                        <p><strong>{= CarList[n][i].Price}</strong></p>
+                    </a>
+                </li>
+                {}}
+            </ul>
+        </div>
+        {}}
+    </script>
+<!--车款模板 end-->
+     
+    <!--弹出层模板 start-->
+    <script type="text/template" id="tipTempate">
+       <div class="jump-pop">
+            <span>{msg}</span>
+       </div>
+    </script>
+    <!--弹出层模板 end-->
+    <!--**************************************************************模板 end *********************************************************-->
+</body>
+</html>
+<script type="text/javascript" src="http:\\192.168.0.10:8888\m\20150514移动站改版\js\jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="http:\\192.168.0.10:8888\m\20150514移动站改版\js\iscroll.js"></script>
+<script type="text/javascript" src="http:\\192.168.0.10:8888\m\20150514移动站改版\js\underscore.js"></script>
+<script type="text/javascript" src="http:\\192.168.0.10:8888\m\20150514移动站改版\js\model.js"></script>
+<script type="text/javascript" src="http:\\192.168.0.10:8888\m\20150514移动站改版\js\rightswipe3.js"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var $body = $('body');
+
+        /*******************************一级车款 start **************************************/
+        $body.trigger('rightswipe1',
+        {
+            actionName: '[data-action=first-models]',
+            onBeforeScrollStart: function (ev) { },
+            fliterTemplate: function (templateid, paras) {
+                return paras.$current.attr('data-template');
+            },
+            fnEnd: function () {
+                console.log('打开弹出层')
+            }
+        });
+        //默认选中车款ID
+        api.model.currentid = '116517';
+        //车款点击回调事件
+        api.model.clickEnd = function (paras) {
+            console.log(paras)
+            //车款ID
+            console.log('车款ID：' + paras.modelid)
+            api.model.currentid = paras.modelid;
+            var $back = $('.' + $leftPopupModels.attr('data-back'));
+            //关闭浮层
+            $back.trigger('close');
+        }
+        /*******************************一级车款 end **************************************/
+
+        /*弹出层*/
+        $(document.body).tip({ msg: '请输入姓名！' }, {
+            site: function () { //设置位置
+                var $model = this;
+                $model.css('position', 'fixed')
+            }
+        });
+    })
+</script>

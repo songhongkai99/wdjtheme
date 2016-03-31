@@ -1,0 +1,24 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*------评分显示----*/
+.car_ping{ width:100%;}
+.car-title{ padding:0 10px; height:49px; border-bottom:#ECECEC solid 1px; line-height:49px;  font-size:1.7rem;}
+.car-title a{ float:right; display:block; font-size:1.4rem; text-decoration:underline;}
+
+.pj_dl{ padding:14px 10px 0px;}
+.pj_dl dt{ width:60px; height:60px; float:left; position:relative;}
+.pj_dl dt i{ width:60px; height:60px; position:absolute; top:0; left:0; display:block;}
+
+.pj_dl dd{ width:76%; float:left; padding-left:10px;}
+.pj_dl dd p{ font-size:1.4rem; line-height:23px; clear: both;}
+.pj_dl dd p span{ font-size:1.6rem; color:#333; padding-right:10px;}
+.pj_dl dd p img{ width:15px; height:15px; vertical-align:middle; margin-right:4px;}
+.pj_dl dd p em{ color:#b7b7b7;}
+.pj_dl dd p i{ color:#e55858;}
+
+.pj_dl dd span.xing{ width:68px !important; height:16px; background:url(http://image.bitautoimg.com/taoche/ercyidong2015/start1.png) 1px 5px no-repeat; position:relative; display:block; float:left;}
+.pj_dl dd span.xing i{ width:52px; height:16px; background:url(http://image.bitautoimg.com/taoche/ercyidong2015/start4.png) 0 5px  no-repeat; position:absolute; left:0px; top:0px;}
+
+.fl{ float:left;}
+.f14{ font-size:14px !important;}

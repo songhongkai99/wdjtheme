@@ -1,0 +1,47 @@
+/*选车页面*/
+	/*选车工具的title*/
+.choose-car-tool-tt{width:100%; height:9px; text-align:center; border-bottom:1px solid #E2E2E2; font-size:1.4rem; color:#999; margin:24px 0 7px;}
+.choose-car-tool-tt span{background:#fff; padding:0 20px;}
+
+	/*厂商logo和名称*/
+.choose-car-name-close{width:100%; height:70px; line-height:70px; font-size:1.8rem; position:relative;}
+.choose-car-name-close .brand-name{height:70px; height:70px; float:left;}
+.brand-logo-none-border{display:block; width:55px; height:55px; background:url(http://img3.bitautoimg.com/car/logo/01.png) no-repeat; float:left; margin:7px 10px 0 10px;}
+.choose-car-btn-close{width:22px; height:22px; display:block; background:url(http://image.bitautoimg.com/uimg/mbt2014/images/m_choose_btn_close.png) no-repeat; background-size:22px 22px; position:absolute; top:25px; right:10px; text-indent:-999em;}
+
+	/*清除选车条件*/
+.sort-clear{color:#666; font-size:1.4rem; overflow:hidden; line-height:20px; margin:12px 0 0 0;}
+.sort-clear a{color:#666;}
+.sort-clear .btn-clear{background:url(http://image.bitautoimg.com/uimg/mbt2014/images/m_sort_ico_clear.png) no-repeat; background-size:15px 18px; float:left; padding:0 0 0 20px;}
+.sort-clear .btn-jump{float:right;}
+
+
+/*错误提示*/
+.m-result-page-box{padding:10px 0 0 10px;}
+
+/*淘车补丁*/
+.choose-car-name-close .brand-name{margin-left:10px;}
+.brand-logo-none-border{margin:7px 0 0 15px;}
+.choose-car-name-close{border-bottom:1px solid #E2E2E2;}
+	/*车型列表*/
+.choose-car-list{width:100%; font-size:1.6rem;}
+.choose-car-list ul{}
+.choose-car-list li{border-bottom:1px solid #E2E2E2;}
+.choose-car-list li:last-child{/*border-bottom:none;*/}
+.choose-car-list li a{display:block; height:65px; line-height:65px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+
+/*车款弹出层*/
+.choose-car-popup-box{position:relative;}
+.choose-car-popup{/*position:absolute; top:0; left:0;*/ background:#fff; width:100%; height:100%;}
+.search-result-txt{height:29px; line-height:29px; width:auto; background:#fff; border:1px solid #FF9934; margin:10px 0 0; font-size:1.4rem; position:relative; padding:0 25px 0 0; display:inline-block; overflow:hidden; /*overflow:hidden; text-overflow:ellipsis; white-space:nowrap;*/}
+.search-result-txt em{color:#676767; padding:0 0 0 5px; }
+.search-result-txt strong{color:#FF9932;}
+.search-result-txt .btn-close{width:23px; height:29px; background:url(http://image.bitautoimg.com/uimg/mtc2014/images/m_ico_search_result_close.gif) no-repeat; background-size:23px 29px; position:absolute; top:0; right:0;}
+
+
+
+/*搜索*/
+.search-result-txt{height:32px; line-height:32px; width:auto; background:#fff; border:1px solid #ff6d02; margin:10px 0 0; font-size:1.4rem; position:relative; padding:0 25px 0 0; display:inline-block; overflow:hidden;border-radius:4px; /*overflow:hidden; text-overflow:ellipsis; white-space:nowrap;*/}
+.search-result-txt em{color:#676767; padding:0 0 0 5px; }
+.search-result-txt strong{color:#FF9932;}
+.search-result-txt .btn-close{width:23px; height:29px; background:url(http://image.bitautoimg.com/uimg/mtc2014/images/m_ico_search_result_close.gif) no-repeat; background-size:23px 29px; position:absolute; top:0; right:0;}

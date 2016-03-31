@@ -1,0 +1,165 @@
+﻿.page1, .page2 { padding: 0; }
+.page8 { background-color: #f8f8fa; }
+    .page8 .con_top_bg { background: -webkit-gradient(linear, left top, left bottom, from(#ebebf1), to(#f8f8fa)); }
+.page10 .con_top_bg { margin-bottom: 5px; }
+
+/*浮层*/
+.menu_box li { width: 60px; height: 60px; line-height: 60px; }
+/*------------------经销商 01 start-------------------*/
+.section-box { padding: 20px 30px 0 30px; box-sizing: border-box; }
+    .section-box .title { padding: 20px 0 15px; border: 1px solid #e0e0ec; box-shadow: #e5e5e5 0 1px 0px 0px; text-align: center; position: relative; }
+        .section-box .title i { position: absolute; background-image: url(../img/arrow_right.png); background-repeat: no-repeat; background-size: 13px 22px; width: 13px; height: 22px; top: 50%; margin-top: -11px; right: 7px; background-position: -3px 0; }
+        .section-box .title h2 { font-size: 1.8rem; color: #5b5b79; }
+            .section-box .title h2 em { font-size: 1.8rem; color: #e64b3c; }
+        .section-box .title p { margin-top: 7px; font-size: 1.5rem; color: #a8a8bb; }
+.img img { width: 50px; height: 50px; display: block; margin: 28px auto 0; }
+.context h1 { font-size: 3rem; color: #5a5a78; font-weight: bold; text-align: center; margin-top: 18px; line-height: 35px; }
+.context .cs-price { text-align: center; font-size: 1.2rem; color: #5a5a78; margin-top: 10px; line-height: 16px; }
+.through { text-decoration: line-through; }
+.context .jx-price { text-align: center; font-size: 1.5rem; color: #5a5a78; line-height: 16px; margin-top: 7px; }
+.section-box .context .jx-price em { color: #e64b3c; }
+
+/*------------------经销商 01 end---------------------*/
+/*------------------经销商 02 start-------------------*/
+.page2 .context .cs-price { text-decoration: none; }
+.car_color_text { margin-top: 10px; }
+    .car_color_text span { font-size: 1.8rem; color: #5a5a78; }
+/*------------------经销商 02 end-------------------*/
+/*------------------经销商 08 start-------------------*/
+.map-dealer-details { padding: 16px 30px; }
+    .map-dealer-details h2 { font-size: 1.8rem; color: #5a5a78; line-height: 22px; }
+        .map-dealer-details h2 em { color: #e64b3c; }
+    .map-dealer-details p { display: table; width: 100%; margin-top: 10px; }
+        .map-dealer-details p.address { margin-top: 2px; }
+        .map-dealer-details p label, .map-dealer-details p strong { display: table-cell; font-size: 1.5rem; color: #aeaec0; line-height: 24px; }
+        .map-dealer-details p label { width: 77px; }
+        .map-dealer-details p em.w4-2 { width: 30px; display: inline-block; }
+.button { height: 44px; color: #fff; font-size: 1.8rem; line-height: 44px; text-align: center; border-radius: 5px; width: 100%; }
+    .button.green { background-color: #39b54d; }
+    .button.orange { background-color: #ff9900; }
+.btu-2 { width: 100%; padding: 3px 30px 0 25px; box-sizing: border-box; }
+    .btu-2 ul li { padding-left: 5px; }
+.button.tel::before { content: ''; background-image: url(../img/icon-tel.png); background-repeat: no-repeat; background-size: 19px 19px; display: inline-block; width: 19px; height: 19px; padding-right: 5px; vertical-align: -3px; }
+/*------------------经销商 08 end-------------------*/
+/*------------------经销商 08-details start-------------------*/
+.dealer-map-popbox .btus-05 { margin-top: 18px; padding: 10px 0 10px; }
+    .dealer-map-popbox .btus-05 li a { color: #f48e00; font-size: 1.4rem; font-weight: bold; }
+        .dealer-map-popbox .btus-05 li a.tel { color: #39b54d; }
+            .dealer-map-popbox .btus-05 li a.tel:before { background-image: url(../img/icon-tel-green.png); background-size: 19px 19px; background-repeat: no-repeat; width: 19px; height: 19px; content: ''; display: inline-block; vertical-align: -5px; padding-right: 5px; }
+/*------------------经销商 08-details end-------------------*/
+/*------------------经销商 09 start-------------------*/
+.car_article_list { border-top: none; margin-top: 15px; }
+    .car_article_list li.notimg { padding-left: 0; }
+/*------------------经销商 09 end-------------------*/
+/*------------------经销商 10 start-------------------*/
+/*选车块*/
+.f-sort { padding: 0 30px; display: block; overflow: hidden; position: relative; }
+    .f-sort ul { list-style: none; overflow: hidden; overflow-x: scroll; -ms-overflow-style: none; white-space: nowrap; -webkit-overflow-scrolling: touch; }
+        .f-sort ul li { background-color: #f8f8fa; height: 31px; line-height: 31px; padding: 0 15px; margin: 15px 5px 0 0px; border: 1px solid #d6d6e2; border-radius: 5px; }
+            .f-sort ul li:first-child { margin-left: 0; }
+            .f-sort ul li:last-child { margin-bottom: 15px; }
+            .f-sort ul li, .f-sort ul li a { display: inline-block; color: #5a5a78; font-size: 1.4rem; }
+.car_list { margin-bottom: 16px; }
+    .car_list span { margin-top: 10px; font-size: 1.5rem; color: #5a5a78; }
+    .car_list p { font-size: 1.5rem; color: #cc0000; margin-top: 3px; }
+/*------------------经销商 10 end-------------------*/
+/*----------------------------------------客户端适配-------------------------------------------*/
+.menu_box ul.menu_box_ul2 { width: 280px; }
+    .menu_box ul.menu_box_ul2.menu_box_v2 { width: 207px; }
+
+/*经销商改版*/
+/***********************首页改版********************/
+/***********************车辆养护 star********************/
+.yanghu { background-color: #f8f8fa; }
+
+.preson-title .img-box { width: 78px; height: 78px; border-radius: 50%; overflow: hidden; border: 4px solid #fff;  background-color: #f4f5f6; display: block; margin: 0 auto; }
+    .preson-title .img-box img { width: 78px; height: 78px; }
+
+.preson-title h1 { font-size: 2.4rem; color: #5b5b79; text-align: center; font-weight: bold; margin-top: 18px; }
+.preson-title h2 { font-size: 1.8rem; color: #5b5b79; text-align: center; margin-top: 10px; }
+.preson-title p { font-size: 2rem; color: #5a5a78; text-align: center; margin-top: 15px; }
+.preson-title .lnk { border: 1px solid #e0e0ec; padding: 0px 7px; text-align: center; color: #9494a9; margin: 10px auto; display: inline-block; border-radius: 2px; font-size: 1.2rem; color: #9494a9; }
+
+.yanghu .list { padding: 19px 30px 0; width: 100%; box-sizing: border-box; }
+    .yanghu .list ul { list-style: none; border-top: 1px solid #e0e0ec; width: 100%; display: block; }
+        .yanghu .list ul li { margin-top: 37px; }
+            .yanghu .list ul li:first-child { margin-top: 27px; }
+            .yanghu .list ul li p { width: 100%; display: block; overflow: hidden; font-size: 1.4rem; color: #9494a9; line-height: 22px; margin-top: 10px; }
+                .yanghu .list ul li p em { font-size: 1.8rem; line-height: 18px; }
+                    .yanghu .list ul li p em.title { color: #5a5a78; float: left; }
+                    .yanghu .list ul li p em.price { float: right; color: #cc0000; }
+                        .yanghu .list ul li p em.price.empty { color: #5a5a78; }
+/***********************车辆养护 end********************/
+/***********************二维码页底 start********************/
+
+.erweima .preson-title { padding-top: 60px; }
+    .erweima .preson-title h1 { margin-top: 28px; }
+    .erweima .preson-title p { margin-top: 18px; }
+.erweima .info { width: 300px; margin: 80px auto 0; padding: 40px 0 19px; }
+    .erweima .info h5 { margin-left: -105px; line-height: 20px; }
+.erweima .share-ewm { list-style: none; display: table; padding: 0 30px 0 0; }
+    .erweima .share-ewm li { display: table-cell; width: 50%; box-sizing: border-box; padding-left: 30px; }
+.erweima .con_top_bg { margin-bottom: 12px; position: absolute; bottom: -23px; width: 100%; z-index: 6; }
+.standard_car_pic { margin-top: 0; }
+/***********************二维码页底 end********************/
+/* 判断iphone4 */
+@media screen and (device-width: 320px) and (device-height: 480px) {
+    /*------------------经销商 01 start-------------------*/
+    .page1 .list { padding: 0 10px; }
+        .page1 .list ul li { margin-top: 15px; }
+    .page1 .section-box .img { display: none; }
+    /*------------------经销商 01 start-------------------*/
+    /*------------------经销商 02 start-------------------*/
+    .page2 .img { display: none; }
+    .page2 .section-box { padding: 2px 30px 0 30px; }
+        .page2 .section-box .context h1 { margin-top: 5px; }
+        .page2 .section-box .context .cs-price { margin-top: 5px; }
+    .page2 .car_color_text { margin-top: 0px; }
+    /*------------------经销商 02 end-------------------*/
+    /*------------------经销商 06 start-------------------*/
+    .page6 .map-dealer-details { padding: 5px 30px 0px; }
+        .page6 .map-dealer-details p { margin-top: 3px; }
+    .page6 .btu-2 .button { height: 30px; color: #fff; font-size: 1.2rem; line-height: 30px; text-align: center; border-radius: 5px; width: 100%; }
+        .page6 .btu-2 .button.tel::before { vertical-align: -6px; }
+    /*------------------经销商 06 end-------------------*/
+    /*------------------经销商 08 start-------------------*/
+    .button { font-size: 1.6rem; }
+    /*------------------经销商 08 end-------------------*/
+
+    /*养护*/
+    .yanghu .preson-title { margin-top: 5px; }
+    .yanghu .list { padding-top: 13px; }
+        .yanghu .list ul li { margin-top: 20px; }
+    /*二维码*/
+    .erweima .preson-title { padding-top: 30px; }
+        .erweima .preson-title h1 { margin-top: 20px; }
+    .erweima .info { margin-top: 40px; }
+}
+/* 判断iphone5 */
+@media screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) {
+    /*------------------经销商 01 start-------------------*/
+    .page1 .list ul li { margin-top: 25px; }
+    .page1 .list { padding: 0 10px; }
+    .preson-title .preson-bottom { height: 77px; }
+    .page1 .preson-title .preson-top { height: 60px; }
+    /*------------------经销商 01 start-------------------*/
+    /*------------------经销商 06 start-------------------*/
+    .page6 .map-dealer-details { padding: 15px 30px 0px; }
+    /*------------------经销商 06 end-------------------*/
+    /*------------------经销商 08 start-------------------*/
+    .button { font-size: 1.6rem; }
+    /*------------------经销商 08 end-------------------*/
+
+    /*------------------经销商 车辆养护头 start-------------------*/
+    .preson-title .preson-top { height: 59px; }
+    /*------------------经销商 车辆养护头 end-------------------*/
+
+    /*养护*/
+    .yanghu .con_top_bg { margin-bottom: 2px; }
+    .yanghu .list { padding-top: 10px; }
+        .yanghu .list ul li { margin-top: 15px; }
+    /*二维码*/
+    .erweima .preson-title { padding-top: 40px; }
+        .erweima .preson-title h1 { margin-top: 30px; }
+    .erweima .info { margin-top: 50px; }
+}

@@ -1,0 +1,142 @@
+﻿/*公共样式*/
+body { background: #fff!important; }
+.bg-gray { background: #f8f8fa; }
+.block { border-top: 5px solid #f8f8fa; box-sizing: border-box; padding: 20px; }
+.col-2 { width: 100%; display: table; margin-top: 5px; }
+    .col-2 .col { display: table-cell; width: 50%; }
+        .col-2 .col .more { font-size: 1.2rem; color: #b2b2c7; text-align: center; display: block; margin-top: 10px; }
+        .col-2 .col .canvas-box { width: 120px; height: 120px; display: block; margin: 0 auto; position: relative; }
+
+            .col-2 .col .canvas-box .canvas-title { position: absolute; width: 100px; height: 21px; left: 50%; top: 50%; margin-left: -50px; margin-top: -10px; font-weight: bold; }
+                .col-2 .col .canvas-box .canvas-title span { font-size: 1.2rem; color: #5a5a78; text-align: center; width: 100%; display: block; }
+                .col-2 .col .canvas-box .canvas-title.win span { color: #e64b3c; }
+                .col-2 .col .canvas-box .canvas-title span em { font-size: 2.1rem; font-weight: bold; }
+                .col-2 .col .canvas-box .canvas-title.rows-2 { height: 50px; margin-top: -20px; }
+                    .col-2 .col .canvas-box .canvas-title.rows-2 span { font-size: 2.1rem; }
+                    .col-2 .col .canvas-box .canvas-title.rows-2 p { font-size: 1.1rem; color: #b2b2c7; text-align: center; display: block; width: 100%; margin-top: 5px; }
+                    .col-2 .col .canvas-box .canvas-title.rows-2.win p { color: #f0a29d; }
+.mt5 { margin-top: 5px !important; }
+.mt20 { margin-top: 20px !important; }
+.mt30 { margin-top: 30px !important; }
+.wrap20 { padding: 0 20px; }
+.button { width: 100%; height: 44px; background: #f90; color: #fff; border: none; font-size: 18px; line-height: 42px; border-radius: 5px; text-align: center; }
+    .button.gray { background-color: #c8c8d3; }
+/*圆纯底色*/
+.circle { border-radius: 50%; width: 110px; height: 110px; background-color: #85a4e9; display: block; margin: 0 auto; position: relative; }
+    .circle.orange { background-color: #f0938a; }
+    .circle .content { position: absolute; width: 100px; height: 100px; left: 50%; top: 50%; margin-left: -50px; margin-top: -50px; }
+        .circle .content span { text-align: center; width: 100%; font-size: 1.2rem; color: #fff; display: block; margin-top: 28px; }
+            .circle .content span em { font-size: 2.1rem; }
+        .circle .content p { font-size: 1.1rem; color: #fff; text-align: center; width: 100%; margin-top: 5px; }
+
+.bar { width: 100%; height: 25px; margin-top: 15px; position: relative; overflow: hidden; }
+    .bar .bl { position: absolute; width: 50%; height: 25px; left: 0; top: 0; background-color: #c7c7d8; border-top-left-radius: 25px; border-bottom-left-radius: 25px; transition: 2s all ease-in-out; }
+    .bar .br { position: absolute; width: 50%; height: 25px; right: 0; top: 0; background-color: #85a4e9; border-top-right-radius: 25px; border-bottom-right-radius: 25px; transition: 2s all ease-in-out; }
+        .bar .br:before { position: absolute; width: 4px; height: 25px; background-color: #fff; content: ''; left: -2px; }
+    .bar .bl span { font-size: 1.4rem; color: #fff; float: left; line-height: 25px; margin-left: 10px; }
+    .bar .br span { font-size: 1.4rem; color: #fff; float: right; line-height: 25px; margin-right: 10px; }
+    .bar .win { background-color: #f0938a; }
+
+/*bar1 正向*/
+.bar1 { width: 100%; height: 25px; border-top-left-radius: 25px; border-bottom-left-radius: 25px; border-top-right-radius: 25px; border-bottom-right-radius: 25px; background-color: #f0938a; margin-top: 15px; position: relative; overflow: hidden; }
+    .bar1 span { font-size: 1.4rem; color: #fff; float: right; line-height: 25px; margin-right: 10px; }
+    .bar1 .current { position: absolute; width: 50%; height: 25px; left: 0; top: 0; background-color: #c7c7d8; border-top-left-radius: 25px; border-bottom-left-radius: 25px; border-right: 4px solid #fff; }
+        .bar1 .current span { float: left; margin-right: 0px; margin-left: 10px; }
+
+/*bar2 反向*/
+.bar2 { width: 100%; height: 25px; border-top-left-radius: 25px; border-bottom-left-radius: 25px; border-top-right-radius: 25px; border-bottom-right-radius: 25px; background-color: #f0938a; margin-top: 15px; position: relative; overflow: hidden; }
+    .bar2 span { font-size: 1.4rem; color: #fff; float: left; line-height: 25px; margin-left: 10px; }
+    .bar2 .current { position: absolute; width: 50%; height: 25px; right: 0; top: 0; background-color: #c7c7d8; border-top-right-radius: 25px; border-bottom-right-radius: 25px; border-left: 4px solid #fff; }
+        .bar2 .current span { float: right; margin-right: 10px; margin-left: 10px; }
+
+/*页面样式*/
+/*浮动头*/
+.flex-header-duibi { padding: 10px 20px 22px; box-sizing: border-box; width: 100%; position: relative; top: 0; left: 0; z-index: 10; background-color: #fff; box-sizing: border-box; }
+    .flex-header-duibi.min { padding: 10px 20px 0px; background-color: #fff; border-bottom: 4px solid #f8f8fa; position: fixed; height: 65px; }
+    .flex-header-duibi img { width: 100%; display: block; }
+    .flex-header-duibi.min img { display: none; }
+    .flex-header-duibi .vs-box { overflow: hidden; }
+    .flex-header-duibi .left, .flex-header-duibi .center, .flex-header-duibi .right { float: left; position: relative; width: 40%; }
+    .flex-header-duibi .center { width: 20%; height: 165px; }
+    .flex-header-duibi.min .center { height: 40px; }
+    .flex-header-duibi .center i { position: absolute; background-image: url(http://img1.bitautoimg.com/uimg/4th/img2/vs.png); background-repeat: no-repeat; background-size: 37px 25px; width: 37px; height: 25px; left: 50%; margin-left: -14px; top: 50%; margin-top: -53px; }
+    .flex-header-duibi.min .center i { margin-top: 0; top: 3px; }
+    .flex-header-duibi .content { position: relative; height: 55px; padding: 5px 0; }
+        .flex-header-duibi .content h6 { font-size: 1.5rem; color: #5a5a78; text-align: center; margin-bottom: 5px; }
+        .flex-header-duibi .content p { font-size: 1.2rem; color: #5a5a78; text-align: center; line-height: 15px; }
+    .flex-header-duibi.min .content p { position: relative; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+    .flex-header-duibi .more { font-size: 1.2rem; color: #b2b2c7; text-align: center; display: block; }
+    .flex-header-duibi.min .more { display: none; }
+    .flex-header-duibi .content .stamp { left: 50%; margin-left: 6px; top: 0; position: absolute; background-size: 51px 51px; background-repeat: no-repeat; width: 51px; height: 51px; background-image: url(http://img1.bitautoimg.com/uimg/4th/img2/stamp.png); }
+        .flex-header-duibi .content .stamp.red { background-image: url(http://img1.bitautoimg.com/uimg/4th/img2/red-stamp.png); }
+    .flex-header-duibi.min .content .stamp { transform: scale(0.8); }
+    .flex-header-duibi.rz { position: inherit !important; }
+.flex-block { width: 100%; display: none; transition: 400ms all linear; }
+.btu { width: 100%; height: 44px; text-align: center; line-height: 44px; text-align: center; font-size: 1.8rem; color: #fff; background-color: #ff9900; display: block; border-radius: 3px; }
+    .btu:visited { color: #fff; }
+.block h3 { font-size: 2.4rem; color: #5a5a78; text-align: center; display: block; width: 100%; margin-top: 5px; font-weight: bold; }
+.block h4 { font-size: 1.5rem; color: #5a5a78; text-align: center; display: block; width: 100%; margin-top: 20px; }
+.block h5 { font-size: 1.2rem; color: #e64b3c; text-align: center; display: block; width: 100%; margin-top: 5px; }
+.bar-more { font-size: 1.2rem; color: #b2b2c7; text-align: center; width: 100%; display: block; margin-top: 15px; }
+/*参数列表*/
+.paras-list { width: 100%; }
+    .paras-list tr td { width: 30%; text-align: center; padding-top: 30px; font-size: 1.5rem; color: #9494a9; position: relative; }
+        .paras-list tr td.center { width: 40%; }
+        .paras-list tr td span { font-size: 1.5rem; color: #5a5a78; }
+        .paras-list tr td i { background-image: url(http://img1.bitautoimg.com/uimg/4th/img2/config.png); background-repeat: no-repeat; background-size: 16px auto; background-position: 0 -32px; width: 16px; height: 16px; position: absolute; left: 50%; top: 50%; margin-left: -8px; margin-top: 7px; display: block; }
+            .paras-list tr td i.icon-circle { background-position: 0 -16px; }
+            .paras-list tr td i.icon-disc { background-position: 0 0; }
+/*口碑差异*/
+.label-list { width: 100%; margin-top: 15px; }
+    .label-list tr td { width: 40%; }
+        .label-list tr td.center { width: 10%; }
+        .label-list tr td span { border: 1px solid #b2b2c7; text-align: center; height: 30px; line-height: 30px; box-sizing: border-box; font-size: 1.4rem; color: #5a5a78; border-bottom-left-radius: 30px; border-top-left-radius: 30px; border-bottom-right-radius: 30px; border-top-right-radius: 30px; display: block; width: 100%; margin-top: 10px; }
+            .label-list tr td span.red { border: 1px solid #ed9088; color: #e64b3c; }
+/*二维码*/
+.erweima { width: 100%; display: block; background-color: #f8f8fa; padding: 45px 0 100px; }
+
+/*详细浮层*/
+.mark { background: rgba(0,0,0,0.7); z-index: 100; }
+.mark-details { position: fixed; left: 0; top: 0; z-index: 200; padding: 20px 30px; width: 100%; height: 100%; box-sizing: border-box; }
+    .mark-details h3 { font-size: 2.4rem; color: #fff; margin-top: 20px; }
+    .mark-details .mark-list { border-top: 1px solid #e0e0ec; width: 100%; margin-top: 15px; }
+        .mark-details .mark-list ul { list-style: none; }
+            .mark-details .mark-list ul li { display: table; margin-top: 19px; }
+                .mark-details .mark-list ul li label { font-size: 1.5rem; color: #fff; display: table-cell; width: 125px; }
+                .mark-details .mark-list ul li span { font-size: 1.5rem; color: #fff; display: table-cell; }
+/*车型PK*/
+.car-pk { padding: 0 20px; }
+    .car-pk a { width: 100%; height: 102px; border: 1px solid #e0e0ec; font-size: 1.8rem; color: #b2b2c7; line-height: 100px; text-align: center; position: relative; box-sizing: border-box; padding-left: 33px; background-color: #fff; }
+        .car-pk a:before { background-image: url(http://img1.bitautoimg.com/uimg/4th/img2/public.png); background-repeat: no-repeat; background-size: 250px auto; background-position: 0px -1px; width: 24px; height: 24px; position: absolute; content: ''; top: 50%; margin-top: -12px; left: 50%; margin-left: -53px; }
+    .car-pk i.icon_pk { width: 100%; height: 53px; position: relative; display: block; }
+        .car-pk i.icon_pk:before { background-image: url(http://img1.bitautoimg.com/uimg/4th/img2/public.png); background-repeat: no-repeat; background-size: 250px auto; background-position: -29px -1px; width: 37px; height: 24px; content: ''; position: absolute; left: 50%; top: 50%; margin-left: -19px; margin-top: -13px; }
+    .car-pk i.refresh { position: absolute; top: -17px; right: -17px; z-index: 10; width: 33px; height: 33px; background-image: url(http://img1.bitautoimg.com/uimg/4th/img2/public.png); background-repeat: no-repeat; background-size: 250px auto; background-position: 0 -27px; }
+    .car-pk a.after { padding-left: 0; line-height: normal; }
+        .car-pk a.after:before { background-image: none; }
+        .car-pk a.after img { width: 150px; height: 100px; position: absolute; top: 0; left: 0; }
+        .car-pk a.after .right { padding: 15px 10px 15px 150px; text-align: left; }
+            .car-pk a.after .right h6 { font-size: 1.4rem; color: #5a5a78; line-height: 20px; display: block; height: 40px; overflow: hidden; }
+            .car-pk a.after .right em { font-size: 1.2rem; color: #e64b3c; margin-top: 10px; display: block; }
+
+/*列表头*/
+.tt-small { background: #f8f8fa; color: #9494a9; }
+/*默认车型列表*/
+.pic-txt-9060 h4 { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pic-txt-9060 .right-box h4 { padding: 10px 44px 8px 0; }
+.pic-txt-9060 li { padding-left: 0; padding-right: 0; position: relative; }
+.pic-txt-9060 p { color: #b2b2c7; }
+.pic-txt-9060 li .remove { width: 44px; height: 69px; position: absolute; z-index: 10; right: 0; top: 50%; margin-top: -43px; background-color: #fff; }
+    .pic-txt-9060 li .remove:before { position: absolute; background-image: url(http://img1.bitautoimg.com/uimg/4th/img2/public.png); background-repeat: no-repeat; background-position: -69px -2px; background-size: 250px auto; width: 14px; height: 14px; content: ''; left: 50%; top: 50%; margin-left: -7px; margin-top: -7px; }
+/*快速查找列表*/
+.market-p-block li.none dt, .market-p-block li.none dd { color: #bbb; }
+.pic-txt-h .market-p ul li dd em { background: none; color: #b7b7b7; }
+/* 判断iphone4 */
+@media screen and (device-width: 320px) and (device-height: 480px) {
+    header { display: block; }
+    .con_top_bg { margin-bottom: 12px; }
+}
+
+
+/* 判断iphone5 */
+@media screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) {
+}

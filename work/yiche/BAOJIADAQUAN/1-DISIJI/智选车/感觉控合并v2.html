@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>智选车</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/zhixuanche.css">
+	</head>
+	<body class="zhixuanche ganjue-box">
+		<header>
+			<ul class="xuanche_class">
+				<li>车标党</li>
+				<li class="current">感觉控</li>
+				<li>发烧友</li>
+			</ul>
+		</header>
+		
+		
+		
+		<div class="fashao ">
+			
+			<!--<h2><span>个性标签</span></h2>-->
+			
+			
+			
+			<div class="keyword">
+				<div class="box-center box-center1">
+					<div class="current"><a href="#"><span class="kw1">急性子<em></em></span></a></div>
+					<div><span class="kw3">夜店小王子<em></em></span></div>
+					<div><span class="kw2">混动电动<em></em></span></div>
+				</div>
+				
+				<div class="box-center box-center2">
+					<div><span class="kw2">车里宽敞<em></em></span></div>
+					<div><span class="kw1">人车合一<em></em></span></div>
+					<div class="current"><span class="kw3">颜控<em></em></span></div>
+				</div>
+				
+				<div class="box-center box-center3">
+					<div><span class="kw1">驴友<em></em></span></div>
+					<div><span class="kw1">坐着舒服<em></em></span></div>
+					<div class="current"><span class="kw2">出门零碎多<em></em></span></div>
+				</div>
+				
+				<div class="box-center box-center4">
+					<div><span class="kw3">苦逼上班族<em></em></span></div>
+					<div><span class="kw1">我家人口多<em></em></span></div>
+				</div>
+				
+				<div class="box-center box-center5">
+					<div><span class="kw3">国货当自强<em></em></span></div>
+					<div><span class="kw2">肌肉车<em></em></span></div>
+					<div><span class="kw3">惜命三郎<em></em></span></div>
+				</div>
+				
+				<!--<div class="box-center box-center4">
+					<div><span class="kw2">出门零碎多<em></em></span></div>
+					<div><span class="kw1">我家人口多<em></em></span></div>
+				</div>-->
+				
+				
+				
+			</div>
+			
+				
+			
+			<h2><span>购车预算</span></h2>
+			
+			<!--条 开始-->
+			
+	        <div class="ruler">
+	            <ul class="line" data-width="1">
+	                <li></li>
+	                <li><span>10</span></li>
+	                <li><span>20</span></li>
+	                <li><span>30</span></li>
+	                <li><span>40</span></li>
+	                <li><span>50</span></li>
+	                <li><span>60</span></li>
+	                <li><span>70</span></li>
+	                <li><span>80</span></li>
+	                <li><span>90</span></li>
+	            </ul>
+	            <div class="sliderbar" data-min="0" data-max="100">
+	                <div class="line-float max-line current" data-index="100" data-bar="2">
+	                    <div id="max-dot" class="dot max-dot"><span>99+</span></div>
+	                </div>
+	                <div class="line-float min-line current" data-index="0" data-bar="1">
+	                    <div id="min-dot" class="dot min-dot"><span>0</span></div>
+	                </div>
+	                <div class="dot touch-dot" style="display: none;">0</div>
+	            </div>
+	        </div>
+
+			<!--条 结束-->
+			
+			
+			
+		
+		
+		</div>
+	
+		<div class="button_fixed">
+			<div class="button_del_box">
+				<div class="button_w">
+					<!--<button class="button_del">删除</button>-->
+					<button class="button_del button_del_none">删除</button>
+					
+				</div>
+				<div class="button_f">
+					
+					<!--<button class="button_del_other ">有1999款车型符合要求</button>-->
+					<button class="button_del_other button_none">有0款车型符合要求</button>
+					
+				</div>
+			</div>
+		</div>
+		
+		
+	<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="../js/scrollbarX.js"></script>	
+	<script type="text/javascript" src="../js/price.js"></script>	
+	<script type="text/javascript">
+		$(function () {
+                $('.button_del').click(function (ev) {
+                    var $ruler = $('.ruler');
+                    $ruler.trigger('setvalue', { min: 10, max: 50 });
+                })
+            })
+
+	</script>
+	</body>
+</html>

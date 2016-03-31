@@ -1,0 +1,12 @@
+﻿/*推荐车型（第四集）*/
+.carlist-3c { padding: 15px 20px; }
+    .carlist-3c ul { list-style: none; display: table; width: 100%; }
+        .carlist-3c ul li { display: table-cell; width: 33.33%; padding: 0 5px; border-bottom: 0; }
+            .carlist-3c ul li img { width: 100%; display: block; margin: 0 auto; }
+            .carlist-3c ul li span { font-size: 1.4rem; color: #5a5a78; text-align: center; display: block; }
+
+/*页底浮层广告*/
+.ad-flex-footer { position: fixed; bottom: 0px; left: 0; width: 100%; z-index: 88; }
+    .ad-flex-footer img { width: 100%; display: block; }
+    .ad-flex-footer a.close { background-image: url(http://img1.bitauto.com/uimg/4th/img2/ad-close.png); background-size: 22px 22px; background-repeat: no-repeat; width: 22px; height: 22px; position: absolute; right: 10px; top: 50%; margin-top: -11px; }
+
