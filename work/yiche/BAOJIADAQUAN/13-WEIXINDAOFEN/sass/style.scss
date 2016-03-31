@@ -17,12 +17,22 @@
     overflow-y: scroll;
 
     .header {
-
-        .note {
-            padding: 0 15px;
-            font-size: 15px;
-            color: #ad301e;
+        position: relative;
+        .header-title{
+            position: absolute;
+            top: 39%;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 1.5rem;
+            color: #3b1b10;
         }
+    }
+
+    .note {
+        padding: 0 15px;
+        font-size: 15px;
+        color: #ad301e;
     }
 
     .section-1 {

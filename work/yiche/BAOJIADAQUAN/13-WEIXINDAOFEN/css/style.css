@@ -12,7 +12,19 @@
   overflow: hidden;
   overflow-y: scroll;
 }
-.weixindaofen-13 .header .note {
+.weixindaofen-13 .header {
+  position: relative;
+}
+.weixindaofen-13 .header .header-title {
+  position: absolute;
+  top: 39%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #3b1b10;
+}
+.weixindaofen-13 .note {
   padding: 0 15px;
   font-size: 15px;
   color: #ad301e;
