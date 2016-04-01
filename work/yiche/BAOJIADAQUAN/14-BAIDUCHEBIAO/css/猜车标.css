@@ -1,12 +1,14 @@
 html {
     height: 100%;
 }
+
 body {
     height: 100%;
     height: 100vh;
     min-height: 100%;
     background-color: #0097f0;
 }
+
 /*公共块样式*/
 .page-common {
     position: absolute;
@@ -15,25 +17,26 @@ body {
     width: 100%;
     height: 100%;
     min-height: 480px;
-    overflow-y: scroll;
     text-align: center;
     background: url("../img/猜车标/background-common.jpg") center top #488bc7 no-repeat;
     background-size: 100% 100%;
     z-index: 1;
 }
+
 .page-common > header {
     position: relative;
 }
+
 .page-common > header > img {
-    width: auto;
-    height: auto;
     max-height: 100%;
 }
+
 .shadow-effect {
     -webkit-box-shadow: 0 0 30px #36ffdc;
     -moz-box-shadow: 0 0 30px #36ffdc;
     box-shadow: 0 0 30px #36ffdc;
 }
+
 /*游戏加载*/
 #page-loading {
     color: #959595;
@@ -42,6 +45,7 @@ body {
     /*background: url("../img/猜车标/background-common.jpg");
     background-size:100% 100%;*/
 }
+
 #page-loading:after {
     content: '';
     position: absolute;
@@ -51,16 +55,20 @@ body {
     left: 0;
     background-color: rgba(0, 0, 0, .4);
 }
+
 #page-loading.index-page {
     background-color: #fff;
     background-image: none;
 }
+
 #page-loading.index-page:after {
     display: none;
 }
+
 #page-loading > h1 {
     top: 45%;
 }
+
 #page-loading > footer {
     position: fixed;
     padding-bottom: 9px;
@@ -69,20 +77,21 @@ body {
     width: 100%;
     text-align: center;
 }
+
 /*游戏初始页*/
 #page-start > header {
-    height: 66%;
-    padding-top: 6%;
+    padding-top: 10%;
     background: url("../img/猜车标/guangdai-up.png") center top no-repeat;
     background-size: 100% 72%;
 }
+
 #page-start nav {
-    position: absolute;
-    width: 100%;
-    height: 10%;
-    top: 72%;
-    left: 0;
+    margin-top: 40px;
     text-align: center;
+}
+
+#page-start nav a {
+    display: block;
 }
 #page-start #this-start {
     display: block;
@@ -302,7 +311,7 @@ body {
     position: relative;
     color: #ffe214;
     font-size: 3.1rem;
-    margin: 30px;
+    margin: 30px 0 60px 0;
     font-weight: bold;
     z-index: 2;
     text-shadow: 0 0 1px #ffe214;
@@ -319,10 +328,11 @@ body {
     font-weight: bold;
 }
 #page-award > section > p:last-of-type {
-    font-size: 2.4rem;
+    font-size: 2rem;
 }
 #page-award > section > figure {
     position: relative;
+    min-height: 216px;
     z-index: 1;
 }
 #page-award > section > figure:before {
@@ -332,7 +342,7 @@ body {
     background-size: 100% 100%;
     position: absolute;
     left: 0;
-    bottom: 28%;
+    bottom: 24%;
     width: 100%;
     height: 100%;
     z-index: -1;
@@ -350,7 +360,7 @@ body {
     z-index: 100;
 }
 #page-award > section > figure > figcaption {
-    font-size: 3.3rem;
+    font-size: 3.2rem;
     color: #fff;
     text-shadow: 1px 0 0 #f1d82d, -1px 0 0 #f1d82d, 0 1px 0 #d66501, 0 -1px 0 #f1d82d;
 }
@@ -373,10 +383,10 @@ body {
 #page-award > nav {
     padding: 0 10%;
     font-size: 0;
-    margin-top: 9px;
+    margin-top: 40px;
 }
 #page-award > nav.win {
-    margin-top: 45px;
+    margin-top: 36px;
 }
 #page-award > nav > a {
     display: inline-block;
@@ -482,7 +492,7 @@ body {
     text-shadow: 0 0 1px #ffe214;
 }
 #page-award > section > p:first-of-type {
-    margin-bottom: 3px;
+    margin-bottom: 19px;
 }
 #page-award > section.sub > p > em {
     color: #ffe214;
