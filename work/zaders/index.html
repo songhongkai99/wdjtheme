@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>WAP详情页</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+
+    <!--禁止微信缓存 BEGIN-->
+    <!--<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>-->
+    <!--<meta http-equiv="Pragma" content="no-cache"/>-->
+    <!--<meta http-equiv="Expires" content="0"/>-->
+    <!--禁止微信缓存 END-->
+
+    <!--styles-->
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/col.css">
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body>
+
+<!-- Swiper -->
+<div class="swiper-container gallery-top">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background-image:url(http://temp.im/800x400)"></div>
+        <div class="swiper-slide" style="background-image:url(http://temp.im/800x400)"></div>
+        <div class="swiper-slide" style="background-image:url(http://temp.im/800x400)"></div>
+        <div class="swiper-slide" style="background-image:url(http://temp.im/800x400)"></div>
+        <div class="swiper-slide" style="background-image:url(http://temp.im/800x400)"></div>
+    </div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next swiper-button-white"></div>
+    <div class="swiper-button-prev swiper-button-white"></div>
+</div>
+<div class="swiper-container gallery-thumbs">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background-image:url(http://temp.im/100x100)"></div>
+        <div class="swiper-slide" style="background-image:url(http://temp.im/100x100)"></div>
+        <div class="swiper-slide" style="background-image:url(http://temp.im/100x100)"></div>
+        <div class="swiper-slide" style="background-image:url(http://temp.im/100x100)"></div>
+        <div class="swiper-slide" style="background-image:url(http://temp.im/100x100)"></div>
+    </div>
+</div>
+
+
+
+
+<!--测试代码-->
+<!--<a id="refresh" style="display: block; text-align: center; color: green; position: fixed; bottom: 0; z-index: 9999999;"
+   href="javascript:location=(location.protocol+'//'+location.host+location.pathname+'?nocache='+(new Date().getTime()));">刷新</a>-->
+
+<script src="./js/jquery.min.js" type="text/javascript"></script>
+<script src="./js/jQuery-Touch-Events.js" type="text/javascript"></script>
+<script src="./js/swiper.jquery.min.js" type="text/javascript"></script>
+<script src="./js/functions.js" type="text/javascript"></script>
+<script>
+    $(function () {
+        var galleryTop = new Swiper('.gallery-top', {
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+            spaceBetween: 10,
+        });
+        var galleryThumbs = new Swiper('.gallery-thumbs', {
+            spaceBetween: 10,
+            centeredSlides: false,
+            slidesPerView: 5,
+            touchRatio: 0.8,
+            slideToClickedSlide: true
+        });
+        galleryTop.params.control = galleryThumbs;
+        galleryThumbs.params.control = galleryTop;
+    })
+</script>
+</body>
+</html>

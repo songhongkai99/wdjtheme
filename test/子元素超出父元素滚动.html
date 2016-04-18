@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .container{
+            position: relative;
+            width: 500px;
+        }
+        .content{
+            position: absolute;
+            width: 100%;
+            height: 400px;
+            background-color: blue;
+        }
+        .inner{
+            height: 100%;
+            overflow-y: auto;
+        }
+        .popup{
+            position: absolute;
+            top: 100px;
+            left: 0;
+            width: 300px;
+            height: 600px;
+            background-color: red;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="content">
+        <div class="inner">
+            <p style="height: 1000px;">内容</p>
+        </div>
+        <div class="popup">
+            <p style="height: 10000px;">超出父容器</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
