@@ -4,4 +4,51 @@
 @import "compass/typography";
 @import "compass/utilities";
 
+html, body {
+    position: relative;
+    height: 100%;
+}
 
+.swiper-container {
+    height: 300px;
+}
+
+.swiper-slide {
+    background-size: cover;
+    background-position: center;
+}
+
+#swiper-nav {
+    height: 100px;
+}
+
+#swiper-nav .active-nav {
+    border: 1px solid red;
+}
+
+.page-wap-details{
+    .content{
+        padding: 15px;
+    }
+    .footer{
+        padding: 6px 15px;
+        background-color: #CCCCCC;
+    }
+}
+
+.zaders-taoxi{
+    position: relative;
+    display: table;
+    width: 100%;
+    padding: 10px 5px;
+    margin-bottom: 10px;
+    border: 2px solid #000000;
+
+    .title{
+        display: table-cell;
+    }
+    .price{
+        display: table-cell;
+        text-align: right;
+    }
+}

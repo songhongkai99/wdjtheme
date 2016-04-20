@@ -2,35 +2,44 @@ html, body {
   position: relative;
   height: 100%;
 }
+
 .swiper-container {
-    width: 100%;
-    height: 300px;
-    margin-left: auto;
-    margin-right: auto;
+  height: 300px;
 }
 
 .swiper-slide {
-    background-size: cover;
-    background-position: center;
+  background-size: cover;
+  background-position: center;
 }
 
-.gallery-top {
-    height: 80%;
-    width: 100%;
+#swiper-nav {
+  height: 100px;
 }
 
-.gallery-thumbs {
-    height: 20%;
-    box-sizing: border-box;
-    padding: 10px 0;
+#swiper-nav .active-nav {
+  border: 1px solid red;
 }
 
-.gallery-thumbs .swiper-slide {
-    height: 100%;
-    opacity: 0.4;
+.page-wap-details .content {
+  padding: 15px;
+}
+.page-wap-details .footer {
+  padding: 6px 15px;
+  background-color: #CCCCCC;
 }
 
-.gallery-thumbs .swiper-slide-active {
-    opacity: 1;
+.zaders-taoxi {
+  position: relative;
+  display: table;
+  width: 100%;
+  padding: 10px 5px;
+  margin-bottom: 10px;
+  border: 2px solid #000000;
 }
-
+.zaders-taoxi .title {
+  display: table-cell;
+}
+.zaders-taoxi .price {
+  display: table-cell;
+  text-align: right;
+}
