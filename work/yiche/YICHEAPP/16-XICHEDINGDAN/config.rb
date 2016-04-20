@@ -26,4 +26,4 @@ line_comments = false
 # sass-convert -R --from scss --to sass sass scss && rm -rf sass && mv scss sass
 
 #enable sourcemap
-sourcemap = true
+#sourcemap = true
