@@ -20,6 +20,12 @@
     <link rel="stylesheet" type="text/css" href="plugins/pickadate/classic.css">
     <link rel="stylesheet" type="text/css" href="plugins/pickadate/classic.date.css">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
+
+    <style>
+        .picker, .picker__holder{
+            position: relative;
+        }
+    </style>
 </head>
 <body class="page-wap-yuyue">
 
@@ -81,7 +87,10 @@
 
         var initPickaDate = $("#dateSelectInput").pickadate({
             min: nowDate,
-            max: nextYear
+            max: nextYear,
+            disable: [1, 7 , [2016,6,4]] , //数组内数字指的周几
+            closeOnSelect: false,
+            closeOnClear: false
         });
         var api = initPickaDate.pickadate("picker");
         api.open();
