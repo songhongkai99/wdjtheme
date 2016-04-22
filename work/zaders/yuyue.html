@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <title>WAP详情页</title>
+    <title>WAP预约</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
     <meta content="yes" name="apple-mobile-web-app-capable"/>
@@ -76,25 +76,26 @@
     $(function () {
 
         var nowDate = new Date(),
-            _y = nowDate.getFullYear(),
-            _m = nowDate.getMonth(),
-            _d = nowDate.getDate();
+                _y = nowDate.getFullYear(),
+                _m = nowDate.getMonth(),
+                _d = nowDate.getDate();
         var nextYear = new Date(_y + 1, _m, _d),
-            new_y = nextYear.getFullYear(),
-            new_m = nextYear.getMonth() + 1,
-            new_d = nextYear.getDate();
+                new_y = nextYear.getFullYear(),
+                new_m = nextYear.getMonth() + 1,
+                new_d = nextYear.getDate();
         //console.log(new_y + '-' + new_m + '-' + new_d)
 
         var initPickaDate = $("#dateSelectInput").pickadate({
             min: nowDate,
             max: nextYear,
-            disable: [1, 7 , [2016,6,4]] , //数组内数字指的周几
+            disable: [1, 7, [2016, 6, 4]], //数组内数字指的周几
             closeOnSelect: false,
             closeOnClear: false
         });
-        var api = initPickaDate.pickadate("picker");
-        api.open();
-
+        /*export to window obj*/
+        window.pickaDateApi = initPickaDate.pickadate("picker");
+        pickaDateApi.open();
+        $(document).off("click", initPickaDate.close);
     })
 </script>
 </body>
