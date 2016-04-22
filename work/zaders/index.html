@@ -175,6 +175,11 @@
         })
 
         var swiperMain = new Swiper('#swiper-main', {
+            slidesPerView: 1, //default params is 1
+            spaceBetween: 0, //槽宽度
+            effect: 'slide', //slide fade cube coverflow
+            longSwipesRatio: 0.1, // 拖动比例触发切换 默认0.5
+            resistance : true, //回弹 开始和结束
             onSlideChangeStart: function () {
                 updateNavPosition()
             }
@@ -193,6 +198,8 @@
                 }
             }
         }
+
+        window.swiperMainApi = swiperMain; //export to window object
     })
 </script>
 </body>
