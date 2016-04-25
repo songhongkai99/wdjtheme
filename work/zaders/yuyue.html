@@ -25,6 +25,17 @@
         .picker, .picker__holder{
             position: relative;
         }
+        .dateSelectInput, .picker__footer, .picker__nav--next, .picker__nav--prev{
+            display: none;
+        }
+        .picker__holder{
+            border:none;
+        }
+
+        .swiper-container{
+            height: 40px;
+        }
+
     </style>
 </head>
 <body class="page-wap-yuyue">
@@ -37,14 +48,51 @@
     </div>
 </header>
 
-<!-- DATESELECT -->
-<div class="" id="dateSelectMain">
-    <input type="text" id="dateSelectInput">
+<!--pickadate-->
+<div id="pickaDate">
+    <input type="date" class="dateSelectInput">
+</div>
+
+<!-- Swiper -->
+<div class="swiper-container" id="swiper-main">
+    <div class="swiper-wrapper" id="dateSelectSwiper">
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide"></div>
+    </div>
+    <div class="swiper-pagination"></div>
 </div>
 
 <section class="container-fluid content">
     <div class="row">
-
+        <div class="col-xs-12 form-section">
+            <form action="">
+                <div>
+                    <span>上午 9:30</span>
+                    <span>下午 14:30</span>
+                    <input type="radio" name="order-time" value="1" checked hidden>
+                    <input type="radio" name="order-time" value="2" hidden>
+                </div>
+                <div>
+                    <input type="text" placeholder="请输入您的手机">
+                </div>
+                <div>
+                    <input type="text" placeholder="验证码">
+                    <button>重新发送</button>
+                    <button>验证</button>
+                </div>
+            </form>
+        </div>
         <div class="col-xs-12">
             <h1>摘要</h1>
             <h2>选择套系</h2>
@@ -76,26 +124,51 @@
     $(function () {
 
         var nowDate = new Date(),
-                _y = nowDate.getFullYear(),
-                _m = nowDate.getMonth(),
-                _d = nowDate.getDate();
+            _y = nowDate.getFullYear(),
+            _m = nowDate.getMonth(),
+            _d = nowDate.getDate();
         var nextYear = new Date(_y + 1, _m, _d),
-                new_y = nextYear.getFullYear(),
-                new_m = nextYear.getMonth() + 1,
-                new_d = nextYear.getDate();
+            new_y = nextYear.getFullYear(),
+            new_m = nextYear.getMonth() + 1,
+            new_d = nextYear.getDate();
+        var $dateS = $(".dateSelectInput");
         //console.log(new_y + '-' + new_m + '-' + new_d)
 
-        var initPickaDate = $("#dateSelectInput").pickadate({
+        var initPickaDate = $dateS.pickadate({
             min: nowDate,
             max: nextYear,
             disable: [1, 7, [2016, 6, 4]], //数组内数字指的周几
             closeOnSelect: false,
             closeOnClear: false
         });
-        /*export to window obj*/
-        window.pickaDateApi = initPickaDate.pickadate("picker");
-        pickaDateApi.open();
-        $(document).off("click", initPickaDate.close);
+        var pickadateApi = initPickaDate.pickadate("picker");
+        //api.set("view", new Date(_y, _m + i, _d));
+        pickadateApi.open();
+        $(document).off("click");
+        $(window).off("click");
+        $("input").on("click input focus", function (e) {
+            e.preventDefault();
+            e.stopImmediatePropagation();
+            e.stopPropagation();
+            console.log(e)
+        });
+        window.pickaDateApi = pickadateApi;
+
+        window.swiperApi = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            //paginationClickable: false,
+            onlyExternal: true
+        });
+
+        $("#pickaDate").on("swipeleft", function (e) {
+            //console.log(pickadateApi.get("view").month);
+            $(".picker__nav--next").click();
+            //pickadateApi.set("view", pickadateApi.get("view").month)
+            swiperApi.slideNext();
+        }).on("swiperight", function (e) {
+            $(".picker__nav--prev").click();
+            swiperApi.slidePrev();
+        });
     })
 </script>
 </body>

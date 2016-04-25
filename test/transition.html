@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .container {
+            position: relative;
+            width: 500px;
+            margin: 0 auto;
+        }
+
+        ul li {
+            position: relative;
+        }
+
+        ul li a {
+            position: relative;
+            display: block;
+            background-color: green;
+            z-index: 2;
+        }
+
+        ul li span {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: red;
+            z-index: 1;
+            transition: left .2s;
+        }
+
+        ul li:hover span {
+            left: -100%;
+            z-index: 3;
+        }
+        ul li:hover a{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="content">
+        <ul>
+            <li>
+                <a href="">1</a>
+                <span>弹出span</span>
+            </li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>

@@ -20,12 +20,17 @@ html, body {
   border: 1px solid red;
 }
 
-.page-wap-details .content {
+.content {
   padding: 15px;
 }
-.page-wap-details .footer {
+
+.footer {
   padding: 6px 15px;
   background-color: #CCCCCC;
+}
+
+.page-wap-details .content {
+  padding: 15px;
 }
 
 .zaders-taoxi {
