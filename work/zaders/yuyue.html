@@ -145,13 +145,6 @@
         //api.set("view", new Date(_y, _m + i, _d));
         pickadateApi.open();
         $(document).off("click");
-        $(window).off("click");
-        $("input").on("click input focus", function (e) {
-            e.preventDefault();
-            e.stopImmediatePropagation();
-            e.stopPropagation();
-            console.log(e)
-        });
         window.pickaDateApi = pickadateApi;
 
         window.swiperApi = new Swiper('.swiper-container', {
