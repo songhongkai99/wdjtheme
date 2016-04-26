@@ -43,7 +43,7 @@
 <header>
     <div class="row">
         <div class="col-xs-3 text-left">ICON</div>
-        <div class="col-xs-6 text-center">ZAMISTUDIO</div>
+        <div class="col-xs-6 text-center"><a href="index.html">ZAMISTUDIO</a></div>
         <div class="col-xs-3 text-right">ICON</div>
     </div>
 </header>
@@ -93,10 +93,15 @@
                 </div>
             </form>
         </div>
-        <div class="col-xs-12">
+        <div class="col-xs-12 taoxi-zhaiyao">
             <h1>摘要</h1>
             <h2>选择套系</h2>
-            <p>xxx...</p>
+            <p class="zhaiyao-taoxi">套系1套系1套系1套系</p>
+            <p class="zhaiyao-taoxishengji">Plus+</p>
+            <p class="zhaiyao-type">三组棚拍: 当月主题+特色大头+亲子创作</p>
+            <p class="zhaiyao-ruceshuliang">精修24张并入册</p>
+            <p class="zhaiyao-dipian">+约300张底片</p>
+            <p class="zhaiyao-xiangce">+8x12寸相册(20页每本)</p>
         </div>
 
     </div>
@@ -119,50 +124,6 @@
 <script src="plugins/swiper/swiper.jquery.min.js" type="text/javascript"></script>
 <script src="plugins/pickadate/picker.js" type="text/javascript"></script>
 <script src="plugins/pickadate/picker.date.js" type="text/javascript"></script>
-<script src="./js/functions.js" type="text/javascript"></script>
-<script>
-    $(function () {
-
-        var nowDate = new Date(),
-            _y = nowDate.getFullYear(),
-            _m = nowDate.getMonth(),
-            _d = nowDate.getDate();
-        var nextYear = new Date(_y + 1, _m, _d),
-            new_y = nextYear.getFullYear(),
-            new_m = nextYear.getMonth() + 1,
-            new_d = nextYear.getDate();
-        var $dateS = $(".dateSelectInput");
-        //console.log(new_y + '-' + new_m + '-' + new_d)
-
-        var initPickaDate = $dateS.pickadate({
-            min: nowDate,
-            max: nextYear,
-            disable: [1, 7, [2016, 6, 4]], //数组内数字指的周几
-            closeOnSelect: false,
-            closeOnClear: false
-        });
-        var pickadateApi = initPickaDate.pickadate("picker");
-        //api.set("view", new Date(_y, _m + i, _d));
-        pickadateApi.open();
-        $(document).off("click");
-        window.pickaDateApi = pickadateApi;
-
-        window.swiperApi = new Swiper('.swiper-container', {
-            pagination: '.swiper-pagination',
-            //paginationClickable: false,
-            onlyExternal: true
-        });
-
-        $("#pickaDate").on("swipeleft", function (e) {
-            //console.log(pickadateApi.get("view").month);
-            $(".picker__nav--next").click();
-            //pickadateApi.set("view", pickadateApi.get("view").month)
-            swiperApi.slideNext();
-        }).on("swiperight", function (e) {
-            $(".picker__nav--prev").click();
-            swiperApi.slidePrev();
-        });
-    })
-</script>
+<script src="./js/wap-order.js" type="text/javascript"></script>
 </body>
 </html>
