@@ -71,7 +71,7 @@
             <a href="" class="block text-center">查看当月更多</a>
         </div>
 
-        <div class="col-xs-12 taoxi-paishe">
+        <div class="col-xs-12 section-list taoxi-paishe" data-identity="paishe">
             <h1>拍摄套系</h1>
             <a href="">关于全部套系说明</a>
             <div class="zaders-taoxi taoxi-1 active default" data-price="2500">
@@ -96,44 +96,44 @@
             </div>
         </div>
 
-        <div class="col-xs-12 taoxi-shengji">
+        <div class="col-xs-12 section-list taoxi-shengji" data-identity="shengji">
             <h1>套系版本</h1>
             <a href="">关于套系升级说明</a>
-            <div class="zaders-taoxi active default" data-price="0">
+            <div class="zaders-taoxi active default" data-addPrice="0">
                 <span class="title">基础套系</span>
                 <span class="price"></span>
             </div>
-            <div class="zaders-taoxi" data-price="700">
+            <div class="zaders-taoxi" data-addPrice="700">
                 <span class="title">套系升级至Plus版</span>
                 <span class="price">+RMB 700</span>
             </div>
         </div>
 
-        <div class="col-xs-12 fuzhuangdapei">
+        <div class="col-xs-12 section-list fuzhuangdapei" data-identity="fuzhuangdapei">
             <h1>服装服饰搭配服务</h1>
             <a href="">关于服装服饰搭配服务说明</a>
-            <div class="zaders-taoxi active default" data-price="0">
+            <div class="zaders-taoxi active default" data-addPrice="0">
                 <span class="title">自备服装服饰</span>
                 <span class="price"></span>
             </div>
-            <div class="zaders-taoxi" data-price="500">
+            <div class="zaders-taoxi" data-addPrice="500">
                 <span class="title">新款服装服饰搭配服务</span>
                 <span class="price">+RMB 500</span>
             </div>
         </div>
 
-        <div class="col-xs-12 baobaoshuliang">
+        <div class="col-xs-12 section-list baobaoshuliang" data-identity="baobaoshuliang">
             <h1>一位或两位宝宝拍摄</h1>
             <a href="">关于两位宝宝共同拍摄说明</a>
-            <div class="zaders-taoxi active default" data-price="0">
+            <div class="zaders-taoxi active default" data-addPer="0">
                 <span class="title">一位宝宝拍摄</span>
                 <span class="price"></span>
             </div>
-            <div class="zaders-taoxi" data-price="30%">
+            <div class="zaders-taoxi" data-addPer="0.3">
                 <span class="title">同一家庭宝宝+1</span>
                 <span class="price">+30%</span>
             </div>
-            <div class="zaders-taoxi" data-price="60%">
+            <div class="zaders-taoxi" data-addPer="0.6">
                 <span class="title">不同一家庭宝宝+1</span>
                 <span class="price">+60%</span>
             </div>
@@ -155,7 +155,9 @@
 
 <footer class="container-fluid footer">
     <div class="row">
-        <div class="col-xs-8">合计: RMB <span id="totalPrice">2,500</span></div>
+        <div class="col-xs-8">合计: RMB
+            <span class="totalPrice"></span>
+        </div>
         <div class="col-xs-4">确定</div>
     </div>
 </footer>
@@ -188,7 +190,7 @@
             spaceBetween: 0, //槽宽度
             effect: 'slide', //slide fade cube coverflow
             longSwipesRatio: 0.1, // 拖动比例触发切换 默认0.5
-            resistance : true, //回弹 开始和结束
+            resistance: true, //回弹 开始和结束
             onSlideChangeStart: function () {
                 updateNavPosition()
             }
@@ -211,12 +213,110 @@
 
         window.swiperMainApi = swiperMain; //export to window object
 
-        //价格计算
-        var $taoxiPaishe = $(".taoxi-paishe"), //套系拍摄选择
+        //价格计算逻辑
+        var $body = $("body"), //文档
+            $taoxiPaishe = $(".taoxi-paishe"), //套系拍摄选择
+            taoxiPaishe_Price = $taoxiPaishe.find(".active").data("price"),
             $taoxiShengji = $(".taoxi-shengji"), //套系升级选择
+            taoxiShengji_Price = $taoxiShengji.find(".active").data("addprice"),
             $fuzhuangDapei = $(".fuzhuangdapei"), //服装搭配
+            fuzhuangDapei_Price = $fuzhuangDapei.find(".active").data("addprice"),
             $baobaoShuliang = $(".baobaoshuliang"), //宝宝数量
-            $taoxiZhaiyao = $(".taoxi-zhaiyao"); //套系摘要
+            baobaoShuliang_Per = $baobaoShuliang.find(".active").data("addper"),
+            $taoxiZhaiyao = $(".taoxi-zhaiyao"), //套系摘要
+            $totalPrice = $(".totalPrice"); //总价
+
+        //摘要变量
+        var $zhaiyaoTaoxi = $taoxiZhaiyao.find(".zhaiyao-taoxi"), //套系摘要
+            $zhaiyaoTaoxiShengji = $taoxiZhaiyao.find(".zhaiyao-taoxishengji"), //升级摘要
+            $zhaiyaoType = $taoxiZhaiyao.find(".zhaiyao-type"), //类型
+            $zhaiyaoRuceshuliang = $taoxiZhaiyao.find(".zhaiyao-ruceshuliang"), //入册数量
+            $zhaiyaoDipian = $taoxiZhaiyao.find(".zhaiyao-dipian"), //底片
+            $zhaiyaoXiangce = $taoxiZhaiyao.find(".zhaiyao-xiangce"); //相册摘要
+
+        function updateTotalmoney() {
+            var totalPrice = ( taoxiPaishe_Price + taoxiShengji_Price + fuzhuangDapei_Price ) * ( 1 + baobaoShuliang_Per );
+            $totalPrice.html(formatMoney(totalPrice, 0));
+            return totalPrice;
+        }
+        function updateSummary(){
+
+        }
+        function updatePriceDiff($this, identity) {
+            if (identity != "paishe") {
+                $this.siblings(".zaders-taoxi").find(".price").removeClass("hide").end().end().find(".price").addClass("hide");
+                var _base = $this.data("addprice") == 0 ? 0 : $this.data("addprice") || $this.data("addper");
+                $.each($this.siblings(".zaders-taoxi"), function (i, ele) {
+                    var this_c = $(ele).data("addprice") == 0 ? 0 : $(ele).data("addprice") || $(ele).data("addper");
+                    var this_m = formatMoney(Math.abs(this_c - _base), 0);
+                    if(identity == "baobaoshuliang"){
+                        this_m = this_m * 100 + "%";
+                    }
+                    if(this_c - _base > 0){
+                        $(ele).find(".price").html("+RMB " + this_m);
+                    }else{
+                        $(ele).find(".price").html("-RMB " + this_m);
+                    }
+                })
+            }
+        }
+
+        //价格初始化
+        updateTotalmoney();
+
+        $body.on("tap", ".zaders-taoxi", function (e) {
+            var $this = $(this);
+            var identity = $this.closest(".section-list").data("identity");
+            $this.siblings(".active").removeClass("active").end().addClass("active");
+            updatePriceDiff($this, identity); //更新价格差异
+            switch (identity) {
+                case "paishe":
+                    taoxiPaishe_Price = $this.data("price");
+                    $zhaiyaoTaoxi.html($this.find(".title").html());
+                    break;
+                case "shengji":
+                    taoxiShengji_Price = $this.data("addprice");
+                    $zhaiyaoTaoxiShengji.html($this.find(".title").html());
+                    break;
+                case "fuzhuangdapei":
+                    fuzhuangDapei_Price = $this.data("addprice");
+                    break;
+                case "baobaoshuliang":
+                    baobaoShuliang_Per = $this.data("addper");
+                    break;
+                default: break;
+            }
+            updateTotalmoney();
+            updateSummary();
+        })
+
+        /*
+         * formatMoney(s,type)
+         * 功能：金额按千位逗号分割
+         * 参数：s，需要格式化的金额数值.
+         * 参数：type,判断格式化后的金额是否需要小数位.
+         * 返回：返回格式化后的数值字符串.
+         */
+        function formatMoney(s, type) {
+            if (/[^0-9\.]/.test(s))
+                return "0";
+            if (s == null || s == "")
+                return "0";
+            s = s.toString().replace(/^(\d*)$/, "$1.");
+            s = (s + "00").replace(/(\d*\.\d\d)\d*/, "$1");
+            s = s.replace(".", ",");
+            var re = /(\d)(\d{3},)/;
+            while (re.test(s))
+                s = s.replace(re, "$1,$2");
+            s = s.replace(/,(\d\d)$/, ".$1");
+            if (type == 0) {// 不带小数位(默认是有小数位)
+                var a = s.split(".");
+                if (a[1] == "00") {
+                    s = a[0];
+                }
+            }
+            return s;
+        }
     })
 </script>
 </body>
