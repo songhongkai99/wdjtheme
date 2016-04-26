@@ -48,3 +48,6 @@ html, body {
   display: table-cell;
   text-align: right;
 }
+.zaders-taoxi.active {
+  border-color: red;
+}

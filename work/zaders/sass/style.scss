@@ -56,4 +56,7 @@ html, body {
         display: table-cell;
         text-align: right;
     }
+    &.active{
+        border-color: red;
+    }
 }
