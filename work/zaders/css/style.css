@@ -3,6 +3,35 @@ html, body {
   height: 100%;
 }
 
+.top-header {
+  padding: 15px;
+}
+.top-header .slogon {
+  font-size: 1.8rem;
+  line-height: 1.2;
+  font-weight: bolder;
+}
+
+h1 {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+p {
+  margin-top: 2px;
+  margin-bottom: 6px;
+}
+
+.section-list {
+  margin-top: 20px;
+  border-top: 1px solid #cccccc;
+}
+
 .swiper-container {
   height: 300px;
 }
@@ -28,6 +57,17 @@ html, body {
   padding: 6px 15px;
   background-color: #CCCCCC;
 }
+.footer .totalPrice {
+  font-size: 2rem;
+  font-weight: bolder;
+}
+.footer .btn-ok {
+  display: inline-block;
+  padding: 4px 15px;
+  background-color: red;
+  color: #ffffff;
+  font-weight: bold;
+}
 
 .page-wap-details .content {
   padding: 15px;
@@ -50,4 +90,21 @@ html, body {
 }
 .zaders-taoxi.active {
   border-color: red;
+}
+
+.zaders-radio {
+  text-align: center;
+}
+.zaders-radio span {
+  display: inline-block;
+  width: 40%;
+  padding: 5px;
+  border: 1px solid #000000;
+}
+.zaders-radio span.active {
+  border-color: red;
+}
+
+.form-group {
+  margin: 10px 0;
 }

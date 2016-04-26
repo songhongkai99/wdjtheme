@@ -40,11 +40,11 @@
 </head>
 <body class="page-wap-yuyue">
 
-<header>
+<header class="top-header">
     <div class="row">
-        <div class="col-xs-3 text-left">ICON</div>
-        <div class="col-xs-6 text-center"><a href="index.html">ZAMISTUDIO</a></div>
-        <div class="col-xs-3 text-right">ICON</div>
+        <div class="col-xs-3 text-left"><a href="index.html">ICON</a></div>
+        <div class="col-xs-6 text-center slogon"><a href="index.html">ZAMISTUDIO</a></div>
+        <div class="col-xs-3 text-right"><a href="">ICON</a></div>
     </div>
 </header>
 
@@ -77,16 +77,16 @@
     <div class="row">
         <div class="col-xs-12 form-section">
             <form action="">
-                <div>
-                    <span>上午 9:30</span>
+                <div class="zaders-radio form-group">
+                    <span class="active">上午 9:30</span>
                     <span>下午 14:30</span>
                     <input type="radio" name="order-time" value="1" checked hidden>
                     <input type="radio" name="order-time" value="2" hidden>
                 </div>
-                <div>
+                <div class="form-group">
                     <input type="text" placeholder="请输入您的手机">
                 </div>
-                <div>
+                <div class="form-group">
                     <input type="text" placeholder="验证码">
                     <button>重新发送</button>
                     <button>验证</button>
@@ -109,8 +109,10 @@
 
 <footer class="container-fluid footer">
     <div class="row">
-        <div class="col-xs-8">合计: RMB 4000</div>
-        <div class="col-xs-4">确定</div>
+        <div class="col-xs-8">合计: RMB
+            <span class="totalPrice">4000</span>
+        </div>
+        <div class="col-xs-4"><a href="yuyue.html" class="btn-ok">确定</a></div>
     </div>
 </footer>
 

@@ -38,4 +38,9 @@ $(function () {
         $(".picker__nav--prev").click();
         swiperApi.slidePrev();
     });
+
+    $(".zaders-radio").on("tap", "span", function () {
+        $(this).siblings("span").removeClass("active").end().addClass("active");
+    });
+
 })
