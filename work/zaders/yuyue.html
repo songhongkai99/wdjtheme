@@ -22,17 +22,19 @@
     <link rel="stylesheet" type="text/css" href="./css/style.css">
 
     <style>
-        .picker, .picker__holder{
+        .picker, .picker__holder {
             position: relative;
         }
-        .dateSelectInput, .picker__footer, .picker__nav--next, .picker__nav--prev{
+
+        .dateSelectInput, .picker__footer, .picker__nav--next, .picker__nav--prev {
             display: none;
         }
-        .picker__holder{
-            border:none;
+
+        .picker__holder {
+            border: none;
         }
 
-        .swiper-container{
+        .swiper-container {
             height: 40px;
         }
 
@@ -48,73 +50,83 @@
     </div>
 </header>
 
-<!--pickadate-->
-<div id="pickaDate">
-    <input type="date" class="dateSelectInput">
-</div>
-
-<!-- Swiper -->
-<div class="swiper-container" id="swiper-main">
-    <div class="swiper-wrapper" id="dateSelectSwiper">
-        <div class="swiper-slide"></div>
-        <div class="swiper-slide"></div>
-        <div class="swiper-slide"></div>
-        <div class="swiper-slide"></div>
-        <div class="swiper-slide"></div>
-        <div class="swiper-slide"></div>
-        <div class="swiper-slide"></div>
-        <div class="swiper-slide"></div>
-        <div class="swiper-slide"></div>
-        <div class="swiper-slide"></div>
-        <div class="swiper-slide"></div>
-        <div class="swiper-slide"></div>
-        <div class="swiper-slide"></div>
+<form action="login.html">
+    <!--pickadate-->
+    <div id="pickaDate">
+        <a href="index.html" class="text-red edit-taoxi">修改套系</a>
+        <input type="date" class="dateSelectInput" name="datepick">
     </div>
-    <div class="swiper-pagination"></div>
-</div>
 
-<section class="container-fluid content">
-    <div class="row">
-        <div class="col-xs-12 form-section">
-            <form action="">
+    <!-- Swiper -->
+    <div class="swiper-container" id="swiper-main">
+        <div class="swiper-wrapper" id="dateSelectSwiper">
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <section class="container-fluid content">
+        <div class="row">
+            <div class="col-xs-12 form-section">
                 <div class="zaders-radio form-group">
-                    <span class="active">上午 9:30</span>
-                    <span>下午 14:30</span>
+                    <span class="active" data-for="1">上午 9:30</span>
+                    <span data-for="2">下午 14:30</span>
                     <input type="radio" name="order-time" value="1" checked hidden>
                     <input type="radio" name="order-time" value="2" hidden>
                 </div>
-                <div class="form-group">
-                    <input type="text" placeholder="请输入您的手机">
+                <div class="form-group input-icon">
+                    <input type="text" class="zaders-input" placeholder="请输入您的手机">
+                    <span class="verify-ok"></span>
                 </div>
-                <div class="form-group">
-                    <input type="text" placeholder="验证码">
-                    <button>重新发送</button>
-                    <button>验证</button>
+                <div class="form-group clear-float">
+                    <input type="text" class="zaders-input verify" placeholder="验证码">
+                    <button class="btn verify">验证</button>
+                    <button class="btn re-send">重新发送</button>
                 </div>
-            </form>
-        </div>
-        <div class="col-xs-12 taoxi-zhaiyao">
-            <h1>摘要</h1>
-            <h2>选择套系</h2>
-            <p class="zhaiyao-taoxi">套系1套系1套系1套系</p>
-            <p class="zhaiyao-taoxishengji">Plus+</p>
-            <p class="zhaiyao-type">三组棚拍: 当月主题+特色大头+亲子创作</p>
-            <p class="zhaiyao-ruceshuliang">精修24张并入册</p>
-            <p class="zhaiyao-dipian">+约300张底片</p>
-            <p class="zhaiyao-xiangce">+8x12寸相册(20页每本)</p>
-        </div>
+            </div>
+            <div class="col-xs-12 taoxi-zhaiyao">
+                <h1>摘要</h1>
 
-    </div>
-</section>
+                <h3>选择套系</h3>
 
-<footer class="container-fluid footer">
-    <div class="row">
-        <div class="col-xs-8">合计: RMB
-            <span class="totalPrice">4000</span>
+                <p class="zhaiyao-taoxi">套系1套系1套系1套系</p>
+
+                <p class="zhaiyao-taoxishengji">Plus+</p>
+
+                <p class="zhaiyao-type">组棚拍：当月主题+特色大头+亲子创作</p>
+
+                <p class="zhaiyao-ruceshuliang">精修24张并入册</p>
+
+                <p class="zhaiyao-dipian">+约300张底片</p>
+
+                <p class="zhaiyao-xiangce">+8x12寸荷兰进口奢华仿皮环保相册(20页/本)</p>
+            </div>
+
         </div>
-        <div class="col-xs-4"><a href="yuyue.html" class="btn-ok">确定</a></div>
-    </div>
-</footer>
+    </section>
+
+    <footer class="container-fluid footer">
+        <div class="row">
+            <div class="col-xs-8 total-money"><span class="text-heji">合计:</span> RMB
+                <span class="totalPrice">4,000</span>
+            </div>
+            <div class="col-xs-4"><button class="btn-ok">确定</button></div>
+        </div>
+    </footer>
+
+</form>
 
 
 <!--测试代码-->

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>WAP登录注册</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+
+    <!--禁止微信缓存 BEGIN-->
+    <!--<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>-->
+    <!--<meta http-equiv="Pragma" content="no-cache"/>-->
+    <!--<meta http-equiv="Expires" content="0"/>-->
+    <!--禁止微信缓存 END-->
+
+    <!--styles-->
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="plugins/bootstrap-colums/col.css">
+    <link rel="stylesheet" type="text/css" href="plugins/swiper/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="plugins/pickadate/classic.css">
+    <link rel="stylesheet" type="text/css" href="plugins/pickadate/classic.date.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body class="page-wap-login">
+
+<header class="top-header">
+    <div class="row">
+        <div class="col-xs-3 text-left"><a href="index.html">ICON</a></div>
+        <div class="col-xs-6 text-center slogon"><a href="index.html">ZAMISTUDIO</a></div>
+        <div class="col-xs-3 text-right"><a href="">ICON</a></div>
+    </div>
+</header>
+
+<section class="container-fluid">
+    <div class="row">
+
+        <div class="col-xs-12 banner">
+            <img src="./img/login.jpg" alt="" class="responsive">
+        </div>
+
+    </div>
+
+</section>
+
+<section class="container-fluid content">
+    <div class="row">
+        <div class="col-xs-12 form-section">
+            <form action="myorder.html">
+                <div class="form-group input-icon">
+                    <input type="text" class="zaders-input" placeholder="请输入您的手机">
+                    <span class="verify-ok"></span>
+                </div>
+                <div class="form-group clear-float">
+                    <input type="text" class="zaders-input verify" placeholder="验证码">
+                    <button class="btn verify">验证</button>
+                    <button class="btn re-send">重新发送</button>
+                </div>
+                <div class="form-group">
+                    <button class="btn login">登陆</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+<!--测试代码-->
+<!--<a id="refresh" style="display: block; text-align: center; color: green; position: fixed; bottom: 0; z-index: 9999999;"
+   href="javascript:location=(location.protocol+'//'+location.host+location.pathname+'?nocache='+(new Date().getTime()));">刷新</a>-->
+
+<script src="plugins/jquery/jquery-2.1.4.min.js" type="text/javascript"></script>
+<script src="plugins/jquery/jQuery-Touch-Events.js" type="text/javascript"></script>
+<script src="plugins/swiper/swiper.jquery.min.js" type="text/javascript"></script>
+<script src="plugins/pickadate/picker.js" type="text/javascript" async></script>
+<script src="plugins/pickadate/picker.date.js" type="text/javascript" async></script>
+</body>
+</html>

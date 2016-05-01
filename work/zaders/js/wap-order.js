@@ -41,6 +41,9 @@ $(function () {
 
     $(".zaders-radio").on("tap", "span", function () {
         $(this).siblings("span").removeClass("active").end().addClass("active");
+        $(":radio[name='order-time']").filter(function (index) {
+            return $(this).val() == $(".zaders-radio span.active").data("for");
+        }).prop("checked", true);
     });
 
 })

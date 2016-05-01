@@ -44,6 +44,8 @@ template {
 
 a {
     background-color: transparent;
+    text-decoration: none;
+    color: #333;
 }
 
 a:active,
@@ -221,10 +223,11 @@ body {
     background: #fff;
     line-height: 1.5;
     color: #333333;
-    font-size: 1.4em;
+    font-size: 1.2em;
 }
 
 h1, h2, h3, h4, h5, h6 {
+    margin: 0;
     font-size: 100%;
     font-weight: normal;
 }
@@ -262,6 +265,10 @@ a {
 
 .float-right {
     float: right;
+}
+
+.text-underline{
+    text-decoration: underline;
 }
 
 .block {

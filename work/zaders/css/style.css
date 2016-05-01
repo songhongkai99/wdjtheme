@@ -1,110 +1,388 @@
 html, body {
-  position: relative;
-  height: 100%;
+    position: relative;
+    height: 100%;
+    min-width: 320px;
+    overflow-x: hidden;
 }
 
 .top-header {
-  padding: 15px;
+    padding: 10px 15px;
 }
+
+.top-header .text-left a {
+    display: block;
+    width: 20px;
+    height: 26px;
+    background: url("../img/top-left-icon.png") center center no-repeat;
+    background-size: 15px 20px;
+    text-indent: -9999px;
+}
+
 .top-header .slogon {
-  font-size: 1.8rem;
-  line-height: 1.2;
-  font-weight: bolder;
+    font-size: 2.5rem;
+    line-height: 1;
+    font-weight: bolder;
+}
+
+.top-header .slogon a {
+    color: #000;
+}
+
+.top-header .text-right a {
+    float: right;
+    display: block;
+    width: 32px;
+    height: 26px;
+    background: url("../img/top-right-icon.png") center center no-repeat;
+    background-size: 26px 20px;
+    text-indent: 9999px;
+}
+
+#swiper-nav .swiper-slide {
+    padding: 10px;
+    color: #fff;
+    font-size: 1rem;
 }
 
 h1 {
-  font-size: 1.6rem;
-  font-weight: bold;
+    font-size: 2.5rem;
+    font-weight: bold;
 }
 
 h2 {
-  font-size: 1.4rem;
-  font-weight: bold;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 p {
-  margin-top: 2px;
-  margin-bottom: 6px;
+    margin-top: 2px;
+    margin-bottom: 6px;
+}
+
+.link-red{
+    color: #f62424;
 }
 
 .section-list {
-  margin-top: 20px;
-  border-top: 1px solid #cccccc;
+    margin-top: 20px;
+    padding: 15px 4px 0;
+    border-top: 1px solid #cccccc;
 }
 
 .swiper-container {
-  height: 300px;
 }
 
 .swiper-slide {
-  background-size: cover;
-  background-position: center;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+#swiper-main .swiper-slide{
+    padding-top: 100%;
+    height: auto;
+}
+#swiper-nav {
+    background: #000;
 }
 
-#swiper-nav {
-  height: 100px;
+#swiper-nav .swiper-slide > div {
+    margin-bottom: 5px;
+    background-size: cover;
+    width: 100%;
+    padding-top: 100%;
 }
 
 #swiper-nav .active-nav {
-  border: 1px solid red;
+    color: #f62424;
+}
+
+#swiper-nav .active-nav > div {
+    outline: 1px solid #f62424;
+    color: #f62424;
 }
 
 .content {
-  padding: 15px;
+    padding: 15px;
 }
 
 .footer {
-  padding: 6px 15px;
-  background-color: #CCCCCC;
+    padding: 6px 15px;
+    background-color: #CCCCCC;
 }
+
 .footer .totalPrice {
-  font-size: 2rem;
-  font-weight: bolder;
+    font-weight: bolder;
 }
+
 .footer .btn-ok {
-  display: inline-block;
-  padding: 4px 15px;
-  background-color: red;
-  color: #ffffff;
-  font-weight: bold;
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #f62424;
+    color: #ffffff;
+    float: right;
+    font-size: 1.5rem;
+    border: none;
 }
 
 .page-wap-details .content {
-  padding: 15px;
+    padding: 15px;
 }
 
 .zaders-taoxi {
-  position: relative;
-  display: table;
-  width: 100%;
-  padding: 10px 5px;
-  margin-bottom: 10px;
-  border: 2px solid #000000;
+    position: relative;
+    display: table;
+    width: 100%;
+    padding: 10px 5px;
+    margin-bottom: 10px;
+    border: 2px solid #000000;
+    font-size: 1.5rem;
+    color: #000;
 }
+
 .zaders-taoxi .title {
-  display: table-cell;
+    display: table-cell;
 }
+
 .zaders-taoxi .price {
-  display: table-cell;
-  text-align: right;
+    display: table-cell;
+    text-align: right;
 }
+
 .zaders-taoxi.active {
-  border-color: red;
+    border-color: red;
+}
+.zaders-taoxi:first-of-type{
+    margin-top: 10px;
+    font-size: 1.5rem;
 }
 
 .zaders-radio {
-  text-align: center;
+    text-align: center;
+    font-size: 0;
 }
+
 .zaders-radio span {
-  display: inline-block;
-  width: 40%;
-  padding: 5px;
-  border: 1px solid #000000;
+    display: inline-block;
+    width: 46%;
+    padding: 7px;
+    border: 2px solid #999;
+    font-size: 1.5rem;
 }
+
+.zaders-radio span:first-child{
+    margin-right: 8%;
+}
+
 .zaders-radio span.active {
-  border-color: red;
+    border-color: #f62424;
+    color: #000;
 }
 
 .form-group {
-  margin: 10px 0;
+    margin: 0 0 10px;
+    position: relative;
+}
+
+
+.dangyue-more {
+    margin-top: 15px;
+}
+
+.dangyue-more a {
+    margin-top: 15px;
+}
+
+.row.section-list-row {
+    margin: 0 -4px;
+}
+
+.taoxi-zhaiyao p{
+    font-size: 1.5rem;
+}
+
+.taoxi-zhaiyao {
+    margin-top: 20px;
+    padding: 15px 4px 0;
+    border-top: 1px solid #ccc;
+}
+
+.total-money{
+    font-size: 2.5rem;
+}
+.total-money .text-heji{
+    font-size: 1.5rem;
+}
+
+.section-list h3 {
+    margin-bottom: 4px;
+}
+.footer-fixed-bottom{
+    padding-bottom: 60px;
+}
+.footer-fixed-bottom .footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+/*ԤԼ*/
+.page-wap-yuyue .top-header,
+.page-wap-myorder .top-header{
+    border-bottom: 1px solid #CCCCCC;
+}
+.picker__table thead {
+    color: #000;
+    border-bottom: 1px solid #000000;
+}
+.zaders-input {
+    display: block;
+    width: 100%;
+    border: 2px solid #999999;
+    padding: 8px;
+    font-size: 1.5rem;
+}
+.zaders-input.verify{
+    width: 46%;
+    float: left;
+}
+.form-group .verify-ok{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 25px;
+    height: 20px;
+    background: url("../img/verify-ok.png") center center no-repeat;
+    background-size: contain;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 5px 5px;
+    background-color: #f62424;
+    color: #ffffff;
+    font-size: 1.5rem;
+    border: 1px solid transparent;
+    white-space: nowrap;
+}
+
+button.btn.re-send {
+    margin: 3px 4% 0 0;
+    width: 26%;
+    float: right;
+    background: #000;
+}
+
+button.btn.verify {
+    float: right;
+    margin-top: 3px;
+    width: 16%;
+}
+
+.btn.login {
+    background: #000;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.order-header {
+    border-bottom: 2px solid #000;
+    padding: 0 4px 10px;
+    color: #000;
+}
+
+.order-header .text-left {
+    padding-top: 10px;
+}
+
+.order-header .text-right {
+    padding-top: 10px;
+}
+
+.order-header a {
+    color: #000;
+}
+
+.order-note{
+    padding: 15px 0 0;
+    margin-bottom: 0;
+}
+
+.order-note {
+    padding-left: 4px;
+}
+
+.btn.yuyuechenggong {
+    background: #33cc00;
+}
+.btn.gaiqi{
+    background-color: #ffcc33;
+}
+.btn.quxiao{
+    background-color: #999999;
+}
+.btn.xiazai.wancheng{
+    background-color: #000000;
+}
+.btn.xiazai.ing{
+    background-color: #ffffff;
+    color: #999999;
+    border: 2px solid #999999;
+}
+
+.page-wap-myorder .btn{
+    padding: 12px 0;
+    margin-top: 10px;
+}
+
+.text-red{
+    color: #f62424;
+}
+
+.page-wap-myorder .zaders-input{
+    margin-top: 25px;
+}
+.page-wap-myorder .zaders-input.error{
+    border-color: #f62424;
+}
+
+.btn.baocun {
+    background: #ccc;
+    margin-top: 20px;
+}
+
+.check-target{
+    display: inline-block;
+    width: 18px;
+    margin-right: 5px;
+    height: 16px;
+    background: url("../img/checkok.png") center center no-repeat;
+    background-size: 18px 16px;
+    vertical-align: -2px;
+}
+.check-target.checkno{
+    background-image: url(../img/checkno.png);
+    background-size: 14px;
+}
+
+#pickaDate{
+    position: relative;
+}
+.edit-taoxi{
+    z-index: 999999;
+    position: absolute;
+    height: 12px;
+    left: 19px;
+    line-height: 1;
+    top: 16px;
+    padding-left: 16px;
+    background: url("../img/edit-taoxi.png") left center no-repeat;
+    background-size: contain;
 }

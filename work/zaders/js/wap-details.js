@@ -6,6 +6,9 @@ $(function () {
         slidesPerView: 5,
         onTap: function () {
             swiperMain.slideTo(swiperNav.clickedIndex)
+        },
+        onInit: function(){
+            $("#swiper-nav").removeClass("vis-hide");
         }
     })
 
@@ -144,4 +147,31 @@ $(function () {
         }
         return s;
     }
+
+    ;(function () {
+        var timer; //节流阀 几个功能就需要几个节流阀 互不干扰
+
+        $("body").on("scroll", animateForDii);
+        $("body").triggerHandler("scroll"); //控制在当前位置刷新触发
+
+        /*core function*/
+        function doScroll($target, offset, callback, offEv) {
+            var docScroll = $(document).scrollTop(),
+                winHeight = $(window).height();
+            if (docScroll + winHeight - $target.offset().top - $target.height() > offset) {
+                callback && callback();
+            }else{
+                $("body").removeClass("footer-fixed-bottom");
+            }
+        }
+
+        function animateForDii() {
+            clearTimeout(timer);
+            timer = setTimeout(function () {
+                doScroll($(".taoxi-paishe"), 0, function () {
+                    $("body").addClass("footer-fixed-bottom");
+                }, animateForDii);
+            }, 10);
+        }
+    })();
 })
