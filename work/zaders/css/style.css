@@ -15,7 +15,6 @@ html, body {
     height: 26px;
     background: url("../img/top-left-icon.png") center center no-repeat;
     background-size: 15px 20px;
-    text-indent: -9999px;
 }
 
 .top-header .slogon {
@@ -35,7 +34,6 @@ html, body {
     height: 26px;
     background: url("../img/top-right-icon.png") center center no-repeat;
     background-size: 26px 20px;
-    text-indent: 9999px;
 }
 
 #swiper-nav .swiper-slide {
