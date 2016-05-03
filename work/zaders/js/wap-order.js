@@ -15,7 +15,14 @@ $(function () {
         max: nextYear,
         disable: [1, 7, [2016, 6, 4]], //数组内数字指的周几
         closeOnSelect: false,
-        closeOnClear: false
+        closeOnClear: false,
+        onRender: function () {
+            if(pickadateApi){
+                $(".picker__year").html(pickadateApi.get("view").year + "年" + (pickadateApi.get("view").month + 1) + "月");
+            }else{
+                $(".picker__year").html((new Date().getFullYear()) + "年" + ((new Date()).getMonth() + 1) + "月");
+            }
+        }
     });
     var pickadateApi = initPickaDate.pickadate("picker");
     //api.set("view", new Date(_y, _m + i, _d));
@@ -31,11 +38,13 @@ $(function () {
 
     $("#pickaDate").on("swipeleft", function (e) {
         //console.log(pickadateApi.get("view").month);
-        $(".picker__nav--next").click();
+        e.preventDefault();
+        $(".picker__nav--next").trigger("click");
         //pickadateApi.set("view", pickadateApi.get("view").month)
         swiperApi.slideNext();
     }).on("swiperight", function (e) {
-        $(".picker__nav--prev").click();
+        e.preventDefault();
+        $(".picker__nav--prev").trigger("click");
         swiperApi.slidePrev();
     });
 

@@ -3,6 +3,8 @@ html, body {
     height: 100%;
     min-width: 320px;
     overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .top-header {
@@ -68,7 +70,7 @@ p {
 
 .section-list {
     margin-top: 20px;
-    padding: 15px 4px 0;
+    padding: 15px 10px 0;
     border-top: 1px solid #cccccc;
 }
 
@@ -105,11 +107,11 @@ p {
 }
 
 .content {
-    padding: 15px;
+    padding: 20px;
 }
 
 .footer {
-    padding: 6px 15px;
+    padding: 6px 20px;
     background-color: #CCCCCC;
 }
 
@@ -135,9 +137,9 @@ p {
     position: relative;
     display: table;
     width: 100%;
-    padding: 10px 5px;
-    margin-bottom: 10px;
-    border: 2px solid #000000;
+    padding: 15px 10px;
+    margin-bottom: 15px;
+    border: 1px solid #999;
     font-size: 1.5rem;
     color: #000;
 }
@@ -152,7 +154,7 @@ p {
 }
 
 .zaders-taoxi.active {
-    border-color: red;
+    border-color: #f62424;
 }
 .zaders-taoxi:first-of-type{
     margin-top: 10px;
@@ -166,14 +168,14 @@ p {
 
 .zaders-radio span {
     display: inline-block;
-    width: 46%;
-    padding: 7px;
-    border: 2px solid #999;
+    width: 48%;
+    padding: 15px;
+    border: 1px solid #999;
     font-size: 1.5rem;
 }
 
 .zaders-radio span:first-child{
-    margin-right: 8%;
+    margin-right: 4%;
 }
 
 .zaders-radio span.active {
@@ -189,6 +191,7 @@ p {
 
 .dangyue-more {
     margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .dangyue-more a {
@@ -205,7 +208,7 @@ p {
 
 .taoxi-zhaiyao {
     margin-top: 20px;
-    padding: 15px 4px 0;
+    padding: 15px 10px 0;
     border-top: 1px solid #ccc;
 }
 
@@ -230,7 +233,7 @@ p {
     z-index: 999;
 }
 
-/*ԤԼ*/
+/*Ô¤Ô¼*/
 .page-wap-yuyue .top-header,
 .page-wap-myorder .top-header{
     border-bottom: 1px solid #CCCCCC;
@@ -243,17 +246,18 @@ p {
     display: block;
     width: 100%;
     border: 2px solid #999999;
-    padding: 8px;
+    padding: 15px 10px;
     font-size: 1.5rem;
+    border-radius: 0;
 }
 .zaders-input.verify{
-    width: 46%;
+    width: 48%;
     float: left;
 }
 .form-group .verify-ok{
     position: absolute;
     right: 10px;
-    top: 10px;
+    top: 16px;
     width: 25px;
     height: 20px;
     background: url("../img/verify-ok.png") center center no-repeat;
@@ -263,30 +267,30 @@ p {
 .btn {
     display: block;
     width: 100%;
-    padding: 5px 5px;
+    padding: 10px 5px;
     background-color: #f62424;
     color: #ffffff;
     font-size: 1.5rem;
     border: 1px solid transparent;
     white-space: nowrap;
+    border-radius: 0;
 }
 
 button.btn.re-send {
-    margin: 3px 4% 0 0;
-    width: 26%;
+    margin: 4px 4% 0 0;
+    width: 28%;
     float: right;
     background: #000;
 }
 
 button.btn.verify {
     float: right;
-    margin-top: 3px;
+    margin-top: 4px;
     width: 16%;
 }
 
 .btn.login {
     background: #000;
-    padding: 10px;
     margin-top: 20px;
 }
 
@@ -336,8 +340,7 @@ button.btn.verify {
 }
 
 .page-wap-myorder .btn{
-    padding: 12px 0;
-    margin-top: 10px;
+    margin-top: 12px;
 }
 
 .text-red{
@@ -377,10 +380,14 @@ button.btn.verify {
     z-index: 999999;
     position: absolute;
     height: 12px;
-    left: 19px;
+    left: 20px;
     line-height: 1;
-    top: 16px;
+    top: 24px;
     padding-left: 16px;
     background: url("../img/edit-taoxi.png") left center no-repeat;
     background-size: contain;
+}
+
+.dangyue-taoxi{
+    text-align: left;
 }

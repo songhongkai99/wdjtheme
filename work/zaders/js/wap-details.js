@@ -5,7 +5,8 @@ $(function () {
         watchSlidesVisibility: true,
         slidesPerView: 5,
         onTap: function () {
-            swiperMain.slideTo(swiperNav.clickedIndex)
+            swiperMain.slideTo(swiperNav.clickedIndex);
+            swiperSecondary.slideTo(swiperNav.clickedIndex);
         },
         onInit: function(){
             $("#swiper-nav").removeClass("vis-hide");
@@ -19,8 +20,16 @@ $(function () {
         longSwipesRatio: 0.1, // 拖动比例触发切换 默认0.5
         resistance: true, //回弹 开始和结束
         onSlideChangeStart: function () {
-            updateNavPosition()
+            updateNavPosition();
         }
+    })
+
+    var swiperSecondary = new Swiper("#swiper-secondary", {
+        effect: 'fade',
+        fade: {
+            crossFade: true
+        },
+        onlyExternal: true
     })
 
     function updateNavPosition() {
@@ -35,7 +44,8 @@ $(function () {
                 swiperNav.slideTo(activeNav.index())
             }
         }
-        console.log("切换其他DOM元素")
+        //console.log("切换其他DOM元素")
+        swiperSecondary.slideTo(activeNav.index());
     }
 
     window.swiperMainApi = swiperMain; //export to window object
@@ -59,7 +69,9 @@ $(function () {
         $zhaiyaoType = $taoxiZhaiyao.find(".zhaiyao-type"), //类型
         $zhaiyaoRuceshuliang = $taoxiZhaiyao.find(".zhaiyao-ruceshuliang"), //入册数量
         $zhaiyaoDipian = $taoxiZhaiyao.find(".zhaiyao-dipian"), //底片
-        $zhaiyaoXiangce = $taoxiZhaiyao.find(".zhaiyao-xiangce"); //相册摘要
+        $zhaiyaoXiangce = $taoxiZhaiyao.find(".zhaiyao-xiangce"), //相册摘要
+        $zhaiyaoFuzhuang = $taoxiZhaiyao.find(".zhaiyao-fuzhuangdapei"), //服装搭配
+        $zhaiyaoBaobaoshuliang = $taoxiZhaiyao.find(".zhaiyao-baobaoshuliang"); //宝宝数量
 
     function updateTotalmoney() {
         var totalPrice = ( taoxiPaishe_Price + taoxiShengji_Price + fuzhuangDapei_Price ) * ( 1 + baobaoShuliang_Per );
@@ -109,9 +121,11 @@ $(function () {
                 break;
             case "fuzhuangdapei":
                 fuzhuangDapei_Price = $this.data("addprice");
+                $zhaiyaoFuzhuang.html($this.find(".title").html());
                 break;
             case "baobaoshuliang":
                 baobaoShuliang_Per = $this.data("addper");
+                $zhaiyaoBaobaoshuliang.html($this.find(".title").html());
                 break;
             default:
                 break;
