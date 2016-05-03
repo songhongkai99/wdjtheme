@@ -158,7 +158,6 @@ p {
 }
 .zaders-taoxi:first-of-type{
     margin-top: 10px;
-    font-size: 1.5rem;
 }
 
 .zaders-radio {
@@ -390,4 +389,13 @@ button.btn.verify {
 
 .dangyue-taoxi{
     text-align: left;
+}
+
+@media screen and (max-width: 375px) {
+    .zaders-taoxi{
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
 }
