@@ -188,4 +188,17 @@ $(function () {
             }, 10);
         }
     })();
+
+    $(".popup-notes").on("tap", function (e) {
+        e.preventDefault();
+        $(this).find(".popup-content").removeClass("hide");
+    })
+
+    $(".popup-content").on("tap", function (e) {
+        e.stopPropagation();
+    })
+    $(".popup-content .close").on("tap", function (e) {
+        e.stopPropagation();
+        $(this).closest(".popup-content").addClass("hide");
+    })
 })

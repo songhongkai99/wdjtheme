@@ -64,7 +64,7 @@ p {
     margin-bottom: 6px;
 }
 
-.link-red{
+.link-red {
     color: #f62424;
 }
 
@@ -82,10 +82,12 @@ p {
     background-position: center;
     text-align: center;
 }
-#swiper-main .swiper-slide{
+
+#swiper-main .swiper-slide {
     padding-top: 100%;
     height: auto;
 }
+
 #swiper-nav {
     background: #000;
 }
@@ -156,7 +158,8 @@ p {
 .zaders-taoxi.active {
     border-color: #f62424;
 }
-.zaders-taoxi:first-of-type{
+
+.zaders-taoxi:first-of-type {
     margin-top: 10px;
 }
 
@@ -173,7 +176,7 @@ p {
     font-size: 1.5rem;
 }
 
-.zaders-radio span:first-child{
+.zaders-radio span:first-child {
     margin-right: 4%;
 }
 
@@ -186,7 +189,6 @@ p {
     margin: 0 0 15px;
     position: relative;
 }
-
 
 .dangyue-more {
     margin-top: 15px;
@@ -201,7 +203,7 @@ p {
     margin: 0;
 }
 
-.taoxi-zhaiyao p{
+.taoxi-zhaiyao p {
     font-size: 1.5rem;
 }
 
@@ -211,20 +213,23 @@ p {
     border-top: 1px solid #ccc;
 }
 
-.total-money{
+.total-money {
     font-size: 2.5rem;
 }
-.total-money .text-heji{
+
+.total-money .text-heji {
     font-size: 1.5rem;
 }
 
 .section-list h3 {
     margin-bottom: 4px;
 }
-.footer-fixed-bottom{
+
+.footer-fixed-bottom {
     padding-bottom: 60px;
 }
-.footer-fixed-bottom .footer{
+
+.footer-fixed-bottom .footer {
     position: fixed;
     left: 0;
     bottom: 0;
@@ -234,13 +239,15 @@ p {
 
 /*Ã”Â¤Ã”Â¼*/
 .page-wap-yuyue .top-header,
-.page-wap-myorder .top-header{
+.page-wap-myorder .top-header {
     border-bottom: 1px solid #CCCCCC;
 }
+
 .picker__table thead {
     color: #000;
     border-bottom: 1px solid #000000;
 }
+
 .zaders-input {
     display: block;
     width: 100%;
@@ -249,11 +256,13 @@ p {
     font-size: 1.5rem;
     border-radius: 0;
 }
-.zaders-input.verify{
+
+.zaders-input.verify {
     width: 48%;
     float: left;
 }
-.form-group .verify-ok{
+
+.form-group .verify-ok {
     position: absolute;
     right: 10px;
     top: 15px;
@@ -311,7 +320,7 @@ button.btn.verify {
     color: #000;
 }
 
-.order-note{
+.order-note {
     padding: 15px 0 0;
     margin-bottom: 0;
 }
@@ -323,33 +332,38 @@ button.btn.verify {
 .btn.yuyuechenggong {
     background: #33cc00;
 }
-.btn.gaiqi{
+
+.btn.gaiqi {
     background-color: #ffcc33;
 }
-.btn.quxiao{
+
+.btn.quxiao {
     background-color: #999999;
 }
-.btn.xiazai.wancheng{
+
+.btn.xiazai.wancheng {
     background-color: #000000;
 }
-.btn.xiazai.ing{
+
+.btn.xiazai.ing {
     background-color: #ffffff;
     color: #999999;
     border: 2px solid #999999;
 }
 
-.page-wap-myorder .btn{
+.page-wap-myorder .btn {
     margin-top: 12px;
 }
 
-.text-red{
+.text-red {
     color: #f62424;
 }
 
-.page-wap-myorder .zaders-input{
+.page-wap-myorder .zaders-input {
     margin-top: 25px;
 }
-.page-wap-myorder .zaders-input.error{
+
+.page-wap-myorder .zaders-input.error {
     border-color: #f62424;
 }
 
@@ -357,8 +371,11 @@ button.btn.verify {
     background: #ccc;
     margin-top: 20px;
 }
+.btn.baocun.active{
+    background-color: #000000;
+}
 
-.check-target{
+.check-target {
     display: inline-block;
     width: 18px;
     margin-right: 5px;
@@ -367,15 +384,17 @@ button.btn.verify {
     background-size: 18px 16px;
     vertical-align: -2px;
 }
-.check-target.checkno{
+
+.check-target.checkno {
     background-image: url(../img/checkno.png);
     background-size: 14px;
 }
 
-#pickaDate{
+#pickaDate {
     position: relative;
 }
-.edit-taoxi{
+
+.edit-taoxi {
     z-index: 999999;
     position: absolute;
     height: 12px;
@@ -387,12 +406,12 @@ button.btn.verify {
     background-size: contain;
 }
 
-.dangyue-taoxi{
+.dangyue-taoxi {
     text-align: left;
 }
 
 @media screen and (max-width: 375px) {
-    .zaders-taoxi{
+    .zaders-taoxi {
         font-size: 1.4rem;
     }
 }
@@ -410,4 +429,49 @@ button.btn.verify {
 
 .page-wap-yuyue .form-group {
     margin: 0 10px 15px;
+}
+
+.popup-content {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border: 15px solid rgba(0, 0, 0, .3);
+    background-color: #fff;
+    z-index: 999999;
+    padding: 60px 20px 20px;
+    overflow-x: auto;
+}
+
+.popup-content .close {
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    font-size: 40px;
+    color: #ccc;
+    line-height: 1;
+    font-weight: lighter;
+    transform: scaleX(1.4);
+}
+
+.popup-content .title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.picker, .picker__holder {
+    position: relative;
+}
+
+.dateSelectInput, .picker__footer, .picker__nav--next, .picker__nav--prev {
+    display: none;
+}
+
+.page-wap-yuyue .picker__holder {
+    border: none;
+}
+
+.page-wap-yuyue .swiper-container {
+    height: 40px;
 }

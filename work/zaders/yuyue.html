@@ -21,24 +21,6 @@
     <link rel="stylesheet" type="text/css" href="plugins/pickadate/classic.date.css">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
 
-    <style>
-        .picker, .picker__holder {
-            position: relative;
-        }
-
-        .dateSelectInput, .picker__footer, .picker__nav--next, .picker__nav--prev {
-            display: none;
-        }
-
-        .picker__holder {
-            border: none;
-        }
-
-        .swiper-container {
-            height: 40px;
-        }
-
-    </style>
 </head>
 <body class="page-wap-yuyue">
 
@@ -67,12 +49,12 @@
             <div class="swiper-slide"></div>
             <div class="swiper-slide"></div>
             <div class="swiper-slide"></div>
+            <!--<div class="swiper-slide"></div>
             <div class="swiper-slide"></div>
             <div class="swiper-slide"></div>
             <div class="swiper-slide"></div>
             <div class="swiper-slide"></div>
-            <div class="swiper-slide"></div>
-            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>-->
         </div>
         <div class="swiper-pagination"></div>
     </div>
@@ -81,17 +63,17 @@
         <div class="row">
             <div class="col-xs-12 form-section">
                 <div class="zaders-radio form-group">
-                    <span class="active" data-for="1">上午 9:30</span>
-                    <span data-for="2">下午 14:30</span>
+                    <span class="active s-time" data-for="1">上午 9:30</span>
+                    <span class="s-time" data-for="2">下午 14:30</span>
                     <input type="radio" name="order-time" value="1" checked hidden>
                     <input type="radio" name="order-time" value="2" hidden>
                 </div>
                 <div class="form-group input-icon">
-                    <input type="number" class="zaders-input" placeholder="请输入您的手机">
+                    <input type="number" maxlength="11" class="zaders-input" id="zMobile" placeholder="请输入您的手机" required>
                     <span class="verify-ok"></span>
                 </div>
                 <div class="form-group clear-float">
-                    <input type="number" class="zaders-input verify" placeholder="验证码">
+                    <input type="number" class="zaders-input verify" placeholder="验证码" required>
                     <button class="btn verify">验证</button>
                     <button class="btn re-send">重新发送</button>
                 </div>
@@ -116,9 +98,9 @@
                 <p class="zhaiyao-baobaoshuliang">一位宝宝拍摄</p>
 
                 <h3>拍摄时间</h3>
-                <p>2016年4月22日 上午9:30</p>
+                <p class="zhaiyao-time">请选择预约时间</p>
                 <h3>预约手机</h3>
-                <p>13910184102</p>
+                <p class="zhaiyao-mobile">请输入您的预约手机号</p>
             </div>
 
         </div>

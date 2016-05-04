@@ -3,7 +3,7 @@ $(function () {
         _y = nowDate.getFullYear(),
         _m = nowDate.getMonth(),
         _d = nowDate.getDate();
-    var nextYear = new Date(_y + 1, _m, _d),
+    var nextYear = new Date(_y, _m + 6, _d),
         new_y = nextYear.getFullYear(),
         new_m = nextYear.getMonth() + 1,
         new_d = nextYear.getDate();
@@ -13,15 +13,20 @@ $(function () {
     var initPickaDate = $dateS.pickadate({
         min: nowDate,
         max: nextYear,
-        disable: [1, 7, [2016, 6, 4]], //数组内数字指的周几
+        disable: [1, 7], //数组内数字指的周几 也可以是具体日期[2016, 6, 4]
         closeOnSelect: false,
         closeOnClear: false,
         onRender: function () {
             if(pickadateApi){
+                var apiGet = pickadateApi.get("select");
                 $(".picker__year").html(pickadateApi.get("view").year + "年" + (pickadateApi.get("view").month + 1) + "月");
+                if (apiGet){
+                    $(".zhaiyao-time").html(apiGet.year + "年" + (apiGet.month + 1) + "月" + apiGet.date + "日 " + $(".s-time.active").html());
+                }
             }else{
                 $(".picker__year").html((new Date().getFullYear()) + "年" + ((new Date()).getMonth() + 1) + "月");
             }
+            //console.log(pickadateApi);
         }
     });
     var pickadateApi = initPickaDate.pickadate("picker");
@@ -54,5 +59,17 @@ $(function () {
             return $(this).val() == $(".zaders-radio span.active").data("for");
         }).prop("checked", true);
     });
+
+    $(".s-time").on("tap", function (e) {
+        var apiGet = pickaDateApi.get("select");
+        if (apiGet) {
+            $(".zhaiyao-time").html(apiGet.year + "年" + (apiGet.month + 1) + "月" + apiGet.date + "日 " + $(this).html());
+        }
+    })
+
+    $("#zMobile").on("input", function (e) {
+        //console.log(e);
+        $.trim($(this).val()) ? $(".zhaiyao-mobile").html($(this).val()) : $(".zhaiyao-mobile").html("请输入您的预约手机号");
+    })
 
 })
