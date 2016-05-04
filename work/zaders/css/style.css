@@ -130,7 +130,7 @@ p {
 }
 
 .page-wap-details .content {
-    padding: 15px;
+    padding: 20px;
 }
 
 .zaders-taoxi {
@@ -183,7 +183,7 @@ p {
 }
 
 .form-group {
-    margin: 0 0 10px;
+    margin: 0 0 15px;
     position: relative;
 }
 
@@ -198,7 +198,7 @@ p {
 }
 
 .row.section-list-row {
-    margin: 0 -4px;
+    margin: 0;
 }
 
 .taoxi-zhaiyao p{
@@ -232,7 +232,7 @@ p {
     z-index: 999;
 }
 
-/*Ô¤Ô¼*/
+/*Ã”Â¤Ã”Â¼*/
 .page-wap-yuyue .top-header,
 .page-wap-myorder .top-header{
     border-bottom: 1px solid #CCCCCC;
@@ -244,7 +244,7 @@ p {
 .zaders-input {
     display: block;
     width: 100%;
-    border: 2px solid #999999;
+    border: 1px solid #999999;
     padding: 15px 10px;
     font-size: 1.5rem;
     border-radius: 0;
@@ -256,7 +256,7 @@ p {
 .form-group .verify-ok{
     position: absolute;
     right: 10px;
-    top: 16px;
+    top: 15px;
     width: 25px;
     height: 20px;
     background: url("../img/verify-ok.png") center center no-repeat;
@@ -266,7 +266,7 @@ p {
 .btn {
     display: block;
     width: 100%;
-    padding: 10px 5px;
+    padding: 10px 0;
     background-color: #f62424;
     color: #ffffff;
     font-size: 1.5rem;
@@ -290,7 +290,7 @@ button.btn.verify {
 
 .btn.login {
     background: #000;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .order-header {
@@ -398,4 +398,16 @@ button.btn.verify {
 }
 
 @media screen and (max-width: 320px) {
+}
+
+.page-wap-login .form-group {
+    margin: 0 10px 15px;
+}
+
+#swiper-secondary {
+    padding: 0 10px;
+}
+
+.page-wap-yuyue .form-group {
+    margin: 0 10px 15px;
 }
