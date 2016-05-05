@@ -3,16 +3,16 @@ $(function () {
         _y = nowDate.getFullYear(),
         _m = nowDate.getMonth(),
         _d = nowDate.getDate();
-    var nextYear = new Date(_y, _m + 6, _d),
-        new_y = nextYear.getFullYear(),
-        new_m = nextYear.getMonth() + 1,
-        new_d = nextYear.getDate();
+    var maxDate = new Date(_y, _m + 6, _d),
+        new_y = maxDate.getFullYear(),
+        new_m = maxDate.getMonth() + 1,
+        new_d = maxDate.getDate();
     var $dateS = $(".dateSelectInput");
     //console.log(new_y + '-' + new_m + '-' + new_d)
 
     var initPickaDate = $dateS.pickadate({
         min: nowDate,
-        max: nextYear,
+        max: maxDate,
         disable: [1, 7], //数组内数字指的周几 也可以是具体日期[2016, 6, 4]
         closeOnSelect: false,
         closeOnClear: false,
@@ -38,17 +38,29 @@ $(function () {
     window.swiperApi = new Swiper('.swiper-container', {
         pagination: '.swiper-pagination',
         //paginationClickable: false,
-        onlyExternal: true
+        onlyExternal: false,
+        prevButton: '.swiper-button-prev',
+        nextButton: '.swiper-button-next',
+        onSlideChangeStart: function () {
+            updatePicka();
+        }
     });
+
+    function updatePicka() {
+        //console.log(swiperApi,_m); //swiperApi.activeIndex
+        pickaDateApi.set("view", new Date(_y, _m + swiperApi.activeIndex, _d));
+    }
 
     $("#pickaDate").on("swipeleft", function (e) {
         //console.log(pickadateApi.get("view").month);
         e.preventDefault();
+        e.stopPropagation();
         $(".picker__nav--next").trigger("click");
         //pickadateApi.set("view", pickadateApi.get("view").month)
         swiperApi.slideNext();
     }).on("swiperight", function (e) {
         e.preventDefault();
+        e.stopPropagation();
         $(".picker__nav--prev").trigger("click");
         swiperApi.slidePrev();
     });
