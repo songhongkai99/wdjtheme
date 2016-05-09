@@ -38,3 +38,21 @@ console.log("Hello Git"); //init
     }
 })(jQuery || window.$);
 
+
+//倒计时片段
+(function ($) {
+    var inter = null;
+    $(".btn.re-send").on("tap", function () {
+        if (inter) return false;
+        var $this = $(this), timer = 5;
+        $this.prop("disabled", true).html(timer + "s");
+        inter = setInterval(function () {
+            $this.html(--timer + "s");
+            if (timer == 0) {
+                clearInterval(inter);
+                inter = null;
+                $this.prop("disabled", false).html("重新发送");
+            }
+        }, 1000);
+    })
+})(jQuery || windows.$)

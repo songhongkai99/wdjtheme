@@ -79,27 +79,26 @@ $(function () {
         return totalPrice;
     }
 
-    function updateSummary() {
+    //预留函数 方便以后扩展
+    /*function updateSummary() {
 
-    }
+    }*/
 
     function updatePriceDiff($this, identity) {
-        if (identity != "paishe") {
-            $this.siblings(".zaders-taoxi").find(".price").removeClass("hide").end().end().find(".price").addClass("hide");
-            var _base = $this.data("addprice") == 0 ? 0 : $this.data("addprice") || $this.data("addper");
-            $.each($this.siblings(".zaders-taoxi"), function (i, ele) {
-                var this_c = $(ele).data("addprice") == 0 ? 0 : $(ele).data("addprice") || $(ele).data("addper");
-                var this_m = formatMoney(Math.abs(this_c - _base), 0);
-                if (identity == "baobaoshuliang") {
-                    this_m = this_m * 100 + "%";
-                }
-                if (this_c - _base > 0) {
-                    $(ele).find(".price").html("+RMB " + this_m);
-                } else {
-                    $(ele).find(".price").html("-RMB " + this_m);
-                }
-            })
-        }
+        $this.siblings(".zaders-taoxi").find(".price").removeClass("hide").end().end().find(".price").addClass("hide");
+        var _base = $this.data("addprice") == 0 ? 0 : $this.data("addprice") || $this.data("addper") || $this.data("price");
+        $.each($this.siblings(".zaders-taoxi"), function (i, ele) {
+            var this_c = $(ele).data("addprice") == 0 ? 0 : $(ele).data("addprice") || $(ele).data("addper") || $(ele).data("price");
+            var this_m = formatMoney(Math.abs(this_c - _base), 0);
+            if (identity == "baobaoshuliang") {
+                this_m = this_m * 100 + "%";
+            }
+            if (this_c - _base > 0) {
+                $(ele).find(".price").html("+RMB " + this_m);
+            } else {
+                $(ele).find(".price").html("-RMB " + this_m);
+            }
+        })
     }
 
     //价格初始化
@@ -131,7 +130,7 @@ $(function () {
                 break;
         }
         updateTotalmoney();
-        updateSummary();
+        //updateSummary();
     })
 
     /*
@@ -165,14 +164,14 @@ $(function () {
     ;(function () {
         var timer; //节流阀 几个功能就需要几个节流阀 互不干扰
 
-        $("body").on("scroll", animateForDii);
-        $("body").triggerHandler("scroll"); //控制在当前位置刷新触发
+        $(".scroll-container").on("scroll", animateForDii);
+        $(".scroll-container").triggerHandler("scroll"); //控制在当前位置刷新触发
 
         /*core function*/
         function doScroll($target, offset, callback, offEv) {
-            var docScroll = $(document).scrollTop(),
+            var docScroll = $(".scroll-container").scrollTop(),
                 winHeight = $(window).height();
-            if (docScroll + winHeight - $target.offset().top - $target.height() > offset) {
+            if (docScroll - $target.offset().top - $target.height() > offset) {
                 callback && callback();
             }else{
                 $("body").removeClass("footer-fixed-bottom");
@@ -185,7 +184,7 @@ $(function () {
                 doScroll($(".taoxi-paishe"), 0, function () {
                     $("body").addClass("footer-fixed-bottom");
                 }, animateForDii);
-            }, 10);
+            }, 40);
         }
     })();
 

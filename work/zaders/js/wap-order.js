@@ -84,4 +84,19 @@ $(function () {
         $.trim($(this).val()) ? $(".zhaiyao-mobile").html($(this).val()) : $(".zhaiyao-mobile").html("请输入您的预约手机号");
     })
 
+    var inter = null;
+    $(".btn.re-send").on("tap", function () {
+        if(inter) return false;
+        var $this = $(this), timer = 5;
+        $this.prop("disabled", true).html(timer+"s");
+        inter = setInterval(function () {
+            $this.html(--timer + "s");
+            if(timer == 0){
+                clearInterval(inter);
+                inter = null;
+                $this.prop("disabled", false).html("重新发送");
+            }
+        }, 1000);
+    })
+
 })
