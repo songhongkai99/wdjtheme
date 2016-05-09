@@ -87,7 +87,7 @@ $(function () {
     var inter = null;
     $(".btn.re-send").on("tap", function () {
         if(inter) return false;
-        var $this = $(this), timer = 5;
+        var $this = $(this), timer = 5; //自定义时间多少秒
         $this.prop("disabled", true).html(timer+"s");
         inter = setInterval(function () {
             $this.html(--timer + "s");

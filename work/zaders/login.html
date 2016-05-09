@@ -73,5 +73,23 @@
 <script src="plugins/swiper/swiper.jquery.min.js" type="text/javascript"></script>
 <script src="plugins/pickadate/picker.js" type="text/javascript" async></script>
 <script src="plugins/pickadate/picker.date.js" type="text/javascript" async></script>
+<script>
+    $(function () {
+        var inter = null;
+        $(".btn.re-send").on("tap", function () {
+            if (inter) return false;
+            var $this = $(this), timer = 5; //自定义时间多少秒
+            $this.prop("disabled", true).html(timer + "s");
+            inter = setInterval(function () {
+                $this.html(--timer + "s");
+                if (timer == 0) {
+                    clearInterval(inter);
+                    inter = null;
+                    $this.prop("disabled", false).html("重新发送");
+                }
+            }, 1000);
+        })
+    })
+</script>
 </body>
 </html>
