@@ -90,13 +90,15 @@ $(function () {
         $.each($this.siblings(".zaders-taoxi"), function (i, ele) {
             var this_c = $(ele).data("addprice") == 0 ? 0 : $(ele).data("addprice") || $(ele).data("addper") || $(ele).data("price");
             var this_m = formatMoney(Math.abs(this_c - _base), 0);
-            if (identity == "baobaoshuliang") {
-                this_m = this_m * 100 + "%";
-            }
+            var innerHtml = "";
             if (this_c - _base > 0) {
-                $(ele).find(".price").html("+RMB " + this_m);
+                innerHtml = "+RMB ";
+                identity == "baobaoshuliang" && (this_m = this_m * 100 + "%", innerHtml = "+");
+                $(ele).find(".price").html(innerHtml + this_m);
             } else {
-                $(ele).find(".price").html("-RMB " + this_m);
+                innerHtml = "-RMB ";
+                identity == "baobaoshuliang" && (this_m = this_m * 100 + "%", innerHtml = "-");
+                $(ele).find(".price").html(innerHtml + this_m);
             }
         })
     }
@@ -164,8 +166,7 @@ $(function () {
     ;(function () {
         var timer; //节流阀 几个功能就需要几个节流阀 互不干扰
 
-        $(".scroll-container").on("scroll", animateForDii);
-        $(".scroll-container").triggerHandler("scroll"); //控制在当前位置刷新触发
+        $(".scroll-container").on("scroll", animateForDii).triggerHandler("scroll"); //控制在当前位置刷新触发
 
         /*core function*/
         function doScroll($target, offset, callback, offEv) {
