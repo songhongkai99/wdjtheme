@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--<link rel="stylesheet" href="./col/col.css">-->
+    <style>
+        *{
+            box-sizing: border-box;
+            *behavior: url(/wdjtheme/test/css/boxsizing.htc);
+        }
+        .container{
+            width: 1200px;
+            margin: 0 auto;
+        }
+        .col-xs-6{
+            width: 50%;
+            float: left;
+            position: relative;
+            min-height: 1px;
+            background-color: #cccccc;
+        }
+        .abc{
+            padding-right: 100px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-6 abc">1</div>
+        <div class="col-xs-6">2</div>
+    </div>
+</div>
+
+</body>
+</html>

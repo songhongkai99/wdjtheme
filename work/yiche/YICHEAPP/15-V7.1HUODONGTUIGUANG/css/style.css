@@ -60,5 +60,6 @@ body.page-weiche {
 .page-weiche .title-linethrough span {
   background-color: #83d1ff;
 }
-
-/*# sourceMappingURL=style.css.map */
+.page-kuantu .btn-link {
+  bottom: 1%;
+}

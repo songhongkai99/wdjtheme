@@ -29,7 +29,7 @@
       "details": {
         "desc": "商标综合服务",
         "initiator": "",
-        "online": "",
+        "online": "http://www.biaozhanggui.com/",
         "bugs": [
           {
             "title": "bootstrap IE8闪屏",
@@ -141,7 +141,7 @@
       "details": {
         "desc": "开源OJS开发科技期刊网",
         "initiator": "科学出版社",
-        "online": "http://www.sciencemeta.com/",
+        "online": "http://www.chinasciencejournal.com/",
         "bugs": [
         ]
       }

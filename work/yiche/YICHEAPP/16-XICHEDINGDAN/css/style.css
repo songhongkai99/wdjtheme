@@ -71,3 +71,9 @@ body {
 .washing-order .washing-order-footer .btn-reget.active {
   background-color: #ff9900;
 }
+.page-washingcar-order .footer {
+  /*padding: 10px 0;*/
+  color: #B7B7B7;
+  text-align: center;
+  /*border-top: 1px solid #ececec;*/
+}
