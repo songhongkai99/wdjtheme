@@ -66,23 +66,27 @@ $(function () {
     //摘要变量
     var $zhaiyaoTaoxi = $taoxiZhaiyao.find(".zhaiyao-taoxi"), //套系摘要
         $zhaiyaoTaoxiShengji = $taoxiZhaiyao.find(".zhaiyao-taoxishengji"), //升级摘要
-        $zhaiyaoType = $taoxiZhaiyao.find(".zhaiyao-type"), //类型
-        $zhaiyaoRuceshuliang = $taoxiZhaiyao.find(".zhaiyao-ruceshuliang"), //入册数量
-        $zhaiyaoDipian = $taoxiZhaiyao.find(".zhaiyao-dipian"), //底片
-        $zhaiyaoXiangce = $taoxiZhaiyao.find(".zhaiyao-xiangce"), //相册摘要
+        $zhaiyaoTaoxidesc = $taoxiZhaiyao.find(".zhaiyao-taoxidesc"), //套系说明
+        //$zhaiyaoType = $taoxiZhaiyao.find(".zhaiyao-type"), //类型
+        //$zhaiyaoRuceshuliang = $taoxiZhaiyao.find(".zhaiyao-ruceshuliang"), //入册数量
+        //$zhaiyaoDipian = $taoxiZhaiyao.find(".zhaiyao-dipian"), //底片
+        //$zhaiyaoXiangce = $taoxiZhaiyao.find(".zhaiyao-xiangce"), //相册摘要
         $zhaiyaoFuzhuang = $taoxiZhaiyao.find(".zhaiyao-fuzhuangdapei"), //服装搭配
         $zhaiyaoBaobaoshuliang = $taoxiZhaiyao.find(".zhaiyao-baobaoshuliang"); //宝宝数量
 
     function updateTotalmoney() {
-        var totalPrice = ( taoxiPaishe_Price + taoxiShengji_Price + fuzhuangDapei_Price ) * ( 1 + baobaoShuliang_Per );
+        var totalPrice = ( taoxiPaishe_Price + taoxiShengji_Price + fuzhuangDapei_Price ) * ( 1 + (+baobaoShuliang_Per) );
         $totalPrice.html(formatMoney(totalPrice, 0));
         return totalPrice;
     }
 
-    //预留函数 方便以后扩展
-    /*function updateSummary() {
-
-    }*/
+    function updateSummary(){
+        if($taoxiShengji.find(".active").is(".basic")){
+            $zhaiyaoTaoxidesc.html($taoxiPaishe.find(".active").find(".taoxidesc.basic").html());
+        }else{
+            $zhaiyaoTaoxidesc.html($taoxiPaishe.find(".active").find(".taoxidesc.plus").html());
+        }
+    }
 
     function updatePriceDiff($this, identity) {
         $this.siblings(".zaders-taoxi").find(".price").removeClass("hide").end().end().find(".price").addClass("hide");
@@ -103,9 +107,6 @@ $(function () {
         })
     }
 
-    //价格初始化
-    updateTotalmoney();
-
     $body.on("tap", ".zaders-taoxi", function (e) {
         var $this = $(this);
         var identity = $this.closest(".section-list").data("identity");
@@ -115,10 +116,12 @@ $(function () {
             case "paishe":
                 taoxiPaishe_Price = $this.data("price");
                 $zhaiyaoTaoxi.html($this.find(".title").html());
+                updateSummary();
                 break;
             case "shengji":
                 taoxiShengji_Price = $this.data("addprice");
                 $zhaiyaoTaoxiShengji.html($this.find(".title").html());
+                updateSummary();
                 break;
             case "fuzhuangdapei":
                 fuzhuangDapei_Price = $this.data("addprice");
@@ -132,8 +135,12 @@ $(function () {
                 break;
         }
         updateTotalmoney();
-        //updateSummary();
-    })
+    });
+
+    //初始化摘要
+    $(".zaders-taoxi.active").trigger("tap");
+    //价格初始化
+    updateTotalmoney();
 
     /*
      * formatMoney(s,type)
