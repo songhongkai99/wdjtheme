@@ -105,15 +105,20 @@ $(function () {
                 $(ele).find(".price").html(innerHtml + this_m);
             }
         })
+        if(identity == "paishe"){
+            updatePriceDiff($taoxiShengji.find(".zaders-taoxi.active"), "shengji");
+        }
     }
 
     $body.on("tap", ".zaders-taoxi", function (e) {
         var $this = $(this);
         var identity = $this.closest(".section-list").data("identity");
         $this.siblings(".active").removeClass("active").end().addClass("active");
-        updatePriceDiff($this, identity); //更新价格差异
         switch (identity) {
             case "paishe":
+                $taoxiShengji.find(".plus").data("addprice", $this.data("plus"));
+                !!taoxiShengji_Price && (taoxiShengji_Price = $this.data("plus"));
+                //taoxiShengji_Price = $this.data("plus");
                 taoxiPaishe_Price = $this.data("price");
                 $zhaiyaoTaoxi.html($this.find(".title").html());
                 updateSummary();
@@ -134,7 +139,8 @@ $(function () {
             default:
                 break;
         }
-        updateTotalmoney();
+        updatePriceDiff($this, identity); //更新价格差异
+        updateTotalmoney(); //更新总价格
     });
 
     //初始化摘要
