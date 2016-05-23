@@ -21,6 +21,11 @@
     <link rel="stylesheet" type="text/css" href="plugins/pickadate/classic.date.css">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
 
+    <script>
+        /*初始化禁用的日期*/
+        var disabled_date = [1, 7, [2016,6,6], [2016,9,6]] ; //数组内数字指的周几 也可以是具体日期[2016, 6, 4]为2016年7月4号 月份减1
+    </script>
+
 </head>
 <body class="page-wap-yuyue">
 
@@ -32,7 +37,25 @@
     </div>
 </header>
 
-<form action="login.html">
+<form action="login.html" method="get" id="form">
+    <div class="hide">
+        <!--套系选择-->
+        <input type="radio" name="taoxi" value="1">
+        <input type="radio" name="taoxi" value="2">
+        <input type="radio" name="taoxi" value="3">
+        <input type="radio" name="taoxi" value="4">
+        <input type="radio" name="taoxi" value="5">
+        <!--升级-->
+        <input type="radio" name="shengji" value="0">
+        <input type="radio" name="shengji" value="1">
+        <!--服装搭配-->
+        <input type="radio" name="fuzhuang" value="0">
+        <input type="radio" name="fuzhuang" value="1">
+        <!--宝宝数量-->
+        <input type="radio" name="baobao" value="0">
+        <input type="radio" name="baobao" value="1">
+        <input type="radio" name="baobao" value="2">
+    </div>
     <!--pickadate-->
     <div id="pickaDate">
         <a href="index.html" class="text-red edit-taoxi">修改套系</a>
@@ -65,17 +88,17 @@
         <div class="row">
             <div class="col-xs-12 form-section">
                 <div class="zaders-radio form-group">
-                    <span class="active s-time" data-for="1">上午 9:30</span>
-                    <span class="s-time" data-for="2">下午 14:30</span>
-                    <input type="radio" name="order-time" value="1" checked hidden>
+                    <span class="active s-time disabled" data-for="1">上午 9:30</span>
+                    <span class="s-time disabled" data-for="2">下午 14:30</span>
+                    <input type="radio" name="order-time" value="1" hidden>
                     <input type="radio" name="order-time" value="2" hidden>
                 </div>
                 <div class="form-group input-icon">
-                    <input type="number" maxlength="11" class="zaders-input" id="zMobile" placeholder="请输入您的手机" required>
+                    <input type="tel" maxlength="11" class="zaders-input" name="zmobile" id="zMobile" placeholder="请输入您的手机" required>
                     <span class="verify-ok"></span>
                 </div>
                 <div class="form-group clear-float">
-                    <input type="number" class="zaders-input verify" placeholder="验证码" required>
+                    <input type="text" class="zaders-input verify" name="verify" placeholder="验证码" required>
                     <button class="btn verify">验证</button>
                     <button class="btn re-send">重新发送</button>
                 </div>

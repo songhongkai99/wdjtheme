@@ -110,12 +110,15 @@ $(function () {
         }
     }
 
+    var $form = $("#form");
+
     $body.on("tap", ".zaders-taoxi", function (e) {
         var $this = $(this);
         var identity = $this.closest(".section-list").data("identity");
         $this.siblings(".active").removeClass("active").end().addClass("active");
         switch (identity) {
             case "paishe":
+                $form.find("input[name=taoxi]").eq($(".zaders-taoxi", $this.closest(".section-list")).index($this)).prop("checked", true);
                 $taoxiShengji.find(".plus").data("addprice", $this.data("plus"));
                 !!taoxiShengji_Price && (taoxiShengji_Price = $this.data("plus"));
                 //taoxiShengji_Price = $this.data("plus");
@@ -124,15 +127,18 @@ $(function () {
                 updateSummary();
                 break;
             case "shengji":
+                $form.find("input[name=shengji]").eq($(".zaders-taoxi", $this.closest(".section-list")).index($this)).prop("checked", true);
                 taoxiShengji_Price = $this.data("addprice");
                 $zhaiyaoTaoxiShengji.html($this.find(".title").html());
                 updateSummary();
                 break;
             case "fuzhuangdapei":
+                $form.find("input[name=fuzhuang]").eq($(".zaders-taoxi", $this.closest(".section-list")).index($this)).prop("checked", true);
                 fuzhuangDapei_Price = $this.data("addprice");
                 $zhaiyaoFuzhuang.html($this.find(".title").html());
                 break;
             case "baobaoshuliang":
+                $form.find("input[name=baobao]").eq($(".zaders-taoxi", $this.closest(".section-list")).index($this)).prop("checked", true);
                 baobaoShuliang_Per = $this.data("addper");
                 $zhaiyaoBaobaoshuliang.html($this.find(".title").html());
                 break;
@@ -141,6 +147,7 @@ $(function () {
         }
         updatePriceDiff($this, identity); //更新价格差异
         updateTotalmoney(); //更新总价格
+        //console.log($form.serialize());
     });
 
     //初始化摘要
@@ -213,5 +220,9 @@ $(function () {
     $(".popup-content .close").on("tap", function (e) {
         e.stopPropagation();
         $(this).closest(".popup-content").addClass("hide");
+    })
+    $("#btn-ok").on("tap", function (e) {
+        e.preventDefault();
+        $form.submit();
     })
 })

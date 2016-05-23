@@ -56,3 +56,28 @@ console.log("Hello Git"); //init
         }, 1000);
     })
 })(jQuery || windows.$)
+
+//取url参数
+function getURLParameter(param, url) {
+    var params = (url.substr(url.indexOf("?") + 1)).split("&");
+    if (params != null) {
+        for (var i = 0; i < params.length; i++) {
+//iPanel.debug("params=="+params[i]);
+            var strs = params[i].split("=");
+//iPanel.debug("strs=="+strs);
+            if (strs[0] == param) {
+//iPanel.debug("strs[1]=="+strs[1]);
+                return strs[1];
+            }
+        }
+    }
+    return "";
+}
+
+function getUrlParam(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null)
+        return decodeURIComponent(r[2]);
+    return null;
+}

@@ -185,6 +185,10 @@ p {
     border: 1px solid #999;
     font-size: 1.5rem;
 }
+.zaders-radio span.disabled{
+    color: #eee !important;
+    border-color: #eee !important;
+}
 
 .zaders-radio span:first-child {
     margin-right: 4%;

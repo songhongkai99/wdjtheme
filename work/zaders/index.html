@@ -330,9 +330,30 @@
         <div class="col-xs-8 total-money"><span class="text-heji">合计:</span> RMB
             <span class="totalPrice"></span>
         </div>
-        <div class="col-xs-4"><a href="yuyue.html" class="btn-ok">确定</a></div>
+        <div class="col-xs-4"><a href="javascript:;" class="btn-ok" id="btn-ok">确定</a></div>
     </div>
 </footer>
+
+<div class="hide">
+    <form action="yuyue.html" method="get" id="form">
+        <!--套系选择-->
+        <input type="radio" name="taoxi" value="1" checked>
+        <input type="radio" name="taoxi" value="2">
+        <input type="radio" name="taoxi" value="3">
+        <input type="radio" name="taoxi" value="4">
+        <input type="radio" name="taoxi" value="5">
+        <!--升级-->
+        <input type="radio" name="shengji" value="0" checked>
+        <input type="radio" name="shengji" value="1">
+        <!--服装搭配-->
+        <input type="radio" name="fuzhuang" value="0" checked>
+        <input type="radio" name="fuzhuang" value="1">
+        <!--宝宝数量-->
+        <input type="radio" name="baobao" value="0" checked>
+        <input type="radio" name="baobao" value="1">
+        <input type="radio" name="baobao" value="2">
+    </form>
+</div>
 
 
 <!--测试代码-->
