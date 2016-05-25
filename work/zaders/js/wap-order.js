@@ -90,7 +90,7 @@ $(function () {
                         $(".zaders-radio > span:eq(1)").toggleClass("disabled", !data.pm);
                     }
                 })
-            }, 0);
+            }, 600);
         }
     });
 
