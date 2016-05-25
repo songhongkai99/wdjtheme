@@ -55,11 +55,13 @@
         <input type="radio" name="baobao" value="0">
         <input type="radio" name="baobao" value="1">
         <input type="radio" name="baobao" value="2">
+        <!--总价格-->
+        <input type="text" name="price" value="0">
     </div>
     <!--pickadate-->
     <div id="pickaDate">
         <a href="index.html" class="text-red edit-taoxi">修改套系</a>
-        <input type="date" class="dateSelectInput" name="datepick">
+        <input type="date" class="dateSelectInput" name="datepick" data-validate="required:请选择预约日期">
     </div>
 
     <!-- Swiper -->
@@ -88,19 +90,19 @@
         <div class="row">
             <div class="col-xs-12 form-section">
                 <div class="zaders-radio form-group">
-                    <span class="active s-time disabled" data-for="1">上午 9:30</span>
+                    <span class="s-time disabled" data-for="1">上午 9:30</span>
                     <span class="s-time disabled" data-for="2">下午 14:30</span>
-                    <input type="radio" name="order-time" value="1" hidden>
-                    <input type="radio" name="order-time" value="2" hidden>
+                    <input type="radio" name="order-time" value="1" hidden data-validate="radio:请选择预约时间">
+                    <input type="radio" name="order-time" value="2" hidden data-validate="radio:请选择预约时间">
                 </div>
                 <div class="form-group input-icon">
-                    <input type="tel" maxlength="11" class="zaders-input" name="zmobile" id="zMobile" placeholder="请输入您的手机" required>
+                    <input type="tel" maxlength="11" class="zaders-input" name="zmobile" id="zMobile" placeholder="请输入您的手机" data-validate="required:请输入手机号,mobile:手机格式错误">
                     <span class="verify-ok"></span>
                 </div>
                 <div class="form-group clear-float">
-                    <input type="text" class="zaders-input verify" name="verify" placeholder="验证码" required>
-                    <button class="btn verify">验证</button>
-                    <button class="btn re-send">重新发送</button>
+                    <input type="text" class="zaders-input verify" name="verify" placeholder="验证码" data-validate="required:请输入验证码">
+                    <button class="btn verify" type="button">验证</button>
+                    <button class="btn re-send" type="button">点击发送</button>
                 </div>
             </div>
             <div class="col-xs-12 taoxi-zhaiyao">
@@ -134,9 +136,9 @@
     <footer class="container-fluid footer">
         <div class="row">
             <div class="col-xs-8 total-money"><span class="text-heji">合计:</span> RMB
-                <span class="totalPrice">4,000</span>
+                <span class="totalPrice"></span>
             </div>
-            <div class="col-xs-4"><button class="btn-ok">确定</button></div>
+            <div class="col-xs-4"><button class="btn-ok" type="submit">确定</button></div>
         </div>
     </footer>
 
@@ -152,6 +154,7 @@
 <script src="plugins/swiper/swiper.jquery.min.js" type="text/javascript"></script>
 <script src="plugins/pickadate/picker.js" type="text/javascript"></script>
 <script src="plugins/pickadate/picker.date.js" type="text/javascript"></script>
+<script src="./js/common.js" type="text/javascript"></script>
 <script src="./js/wap-order.js" type="text/javascript"></script>
 </body>
 </html>

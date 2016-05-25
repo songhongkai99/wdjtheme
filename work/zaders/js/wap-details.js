@@ -52,6 +52,7 @@ $(function () {
 
     //价格计算逻辑
     var $body = $("body"), //文档
+        $form = $("#form"), //隐藏表单
         $taoxiPaishe = $(".taoxi-paishe"), //套系拍摄选择
         taoxiPaishe_Price = $taoxiPaishe.find(".active").data("price"),
         $taoxiShengji = $(".taoxi-shengji"), //套系升级选择
@@ -77,6 +78,7 @@ $(function () {
     function updateTotalmoney() {
         var totalPrice = ( taoxiPaishe_Price + taoxiShengji_Price + fuzhuangDapei_Price ) * ( 1 + (+baobaoShuliang_Per) );
         $totalPrice.html(formatMoney(totalPrice, 0));
+        $form.find("input[name=price]").val(totalPrice);
         return totalPrice;
     }
 
@@ -109,8 +111,6 @@ $(function () {
             updatePriceDiff($taoxiShengji.find(".zaders-taoxi.active"), "shengji");
         }
     }
-
-    var $form = $("#form");
 
     $body.on("tap", ".zaders-taoxi", function (e) {
         var $this = $(this);
@@ -154,34 +154,6 @@ $(function () {
     $(".zaders-taoxi.active").trigger("tap");
     //价格初始化
     updateTotalmoney();
-
-    /*
-     * formatMoney(s,type)
-     * 功能：金额按千位逗号分割
-     * 参数：s，需要格式化的金额数值.
-     * 参数：type,判断格式化后的金额是否需要小数位.
-     * 返回：返回格式化后的数值字符串.
-     */
-    function formatMoney(s, type) {
-        if (/[^0-9\.]/.test(s))
-            return "0";
-        if (s == null || s == "")
-            return "0";
-        s = s.toString().replace(/^(\d*)$/, "$1.");
-        s = (s + "00").replace(/(\d*\.\d\d)\d*/, "$1");
-        s = s.replace(".", ",");
-        var re = /(\d)(\d{3},)/;
-        while (re.test(s))
-            s = s.replace(re, "$1,$2");
-        s = s.replace(/,(\d\d)$/, ".$1");
-        if (type == 0) {// 不带小数位(默认是有小数位)
-            var a = s.split(".");
-            if (a[1] == "00") {
-                s = a[0];
-            }
-        }
-        return s;
-    }
 
     ;(function () {
         var timer; //节流阀 几个功能就需要几个节流阀 互不干扰
