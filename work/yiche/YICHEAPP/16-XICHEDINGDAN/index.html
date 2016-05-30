@@ -99,5 +99,17 @@
 <!--<a id="refresh" style="display: block; text-align: center; color: green; position: fixed; bottom: 0; z-index: 9999999;"
    href="javascript:location=(location.protocol+'//'+location.host+location.pathname+'?nocache='+(new Date().getTime()));">刷新</a>-->
 
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function () {
+        var domFooter = document.querySelector(".footer");
+        if(domFooter.offsetHeight + domFooter.offsetTop < screen.height){
+            domFooter.style.position = "fixed";
+            domFooter.style.bottom = 0;
+            domFooter.style.left = 0;
+            domFooter.style.width = "100%";
+        }
+    }, false);
+</script>
+
 </body>
 </html>
