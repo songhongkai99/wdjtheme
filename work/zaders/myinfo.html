@@ -20,6 +20,19 @@
     <link rel="stylesheet" type="text/css" href="plugins/pickadate/classic.css">
     <link rel="stylesheet" type="text/css" href="plugins/pickadate/classic.date.css">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <!--初始化本页input样式-->
+    <style>
+        select,
+        input[type=date],
+        input[type=number]{
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -webkit-appearance: textfield;
+            display: block;
+            width: 100%;
+            height: 52px;
+        }
+    </style>
 </head>
 <body class="page-wap-myorder">
 
@@ -83,7 +96,10 @@
                         <div class="col-xs-8 text-right text-red hide">
 
                         </div>
-                        <input type="text" class="zaders-input" data-validate="required:请输入宝宝性别">
+                        <select class="zaders-input" data-validate="required:请输入宝宝性别">
+                            <option value="男" selected>男</option>
+                            <option value="女">女</option>
+                        </select>
                     </div>
                 </div>
                 <div class="form-group">
