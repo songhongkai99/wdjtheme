@@ -1,8 +1,8 @@
 $(function () {
 
     var swiperNav = new Swiper('#swiper-nav', {
-        watchSlidesProgress: true,
-        watchSlidesVisibility: true,
+        //watchSlidesProgress: true,
+        //watchSlidesVisibility: true,
         slidesPerView: 5,
         onTap: function () {
             swiperMain.slideTo(swiperNav.clickedIndex);
@@ -35,7 +35,8 @@ $(function () {
     function updateNavPosition() {
         $('#swiper-nav .active-nav').removeClass('active-nav')
         var activeNav = $('#swiper-nav .swiper-slide').eq(swiperMain.activeIndex).addClass('active-nav');
-        if (!activeNav.hasClass('swiper-slide-visible')) {
+        swiperNav.slideTo(activeNav.index());
+        /*if (!activeNav.hasClass('swiper-slide-visible')) {
             if (activeNav.index() > swiperNav.activeIndex) {
                 var thumbsPerNav = Math.floor(swiperNav.width / activeNav.width()) - 1
                 swiperNav.slideTo(activeNav.index() - thumbsPerNav)
@@ -43,7 +44,7 @@ $(function () {
             else {
                 swiperNav.slideTo(activeNav.index())
             }
-        }
+        }*/
         //console.log("切换其他DOM元素")
         swiperSecondary.slideTo(activeNav.index());
     }
