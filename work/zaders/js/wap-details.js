@@ -182,18 +182,21 @@ $(function () {
         }
     })();
 
-    $(".popup-notes").on("tap", function (e) {
+    /*弹出说明层*/
+    $(".popup-notes").on("click", function (e) {
         e.preventDefault();
-        $(this).find(".popup-content").removeClass("hide");
+        $("#" + $(this).data("open")).removeClass("hide");
     })
 
-    $(".popup-content").on("tap", function (e) {
+    $(".popup-content").on("click scroll", function (e) {
         e.stopPropagation();
     })
-    $(".popup-content .close").on("tap", function (e) {
+    $(".popup-content .close").on("click", function (e) {
+        e.preventDefault();
         e.stopPropagation();
         $(this).closest(".popup-content").addClass("hide");
     })
+
     $("#btn-ok").on("tap", function (e) {
         e.preventDefault();
         $form.submit();

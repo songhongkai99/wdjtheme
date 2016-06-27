@@ -217,7 +217,8 @@ p {
     margin: 0;
 }
 
-.taoxi-zhaiyao p {
+.taoxi-zhaiyao p,
+.popup-content p{
     font-size: 1.5rem;
 }
 

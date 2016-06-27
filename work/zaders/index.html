@@ -167,12 +167,8 @@
         <div class="row section-list-row">
             <div class="col-xs-12 section-list taoxi-paishe" data-identity="paishe">
                 <h3>拍摄套系</h3>
-                <a href="javascript:;" class="text-underline popup-notes">关于全部套系说明
-                    <div class="popup-content hide">
-                        <span class="close">X</span>
-                        <h2 class="title">关于全部套系说明</h2>
-                        <p>内容区域, 从后台读取...</p>
-                    </div>
+                <a href="javascript:;" class="text-underline popup-notes" data-open="pop-paishe">关于全部套系说明
+
                 </a>
                 <!--通过active class默认选择套系 自动计算总价-->
                 <div class="zaders-taoxi taoxi-1 active default" data-price="2500" data-plus="700">
@@ -259,12 +255,7 @@
 
             <div class="col-xs-12 section-list taoxi-shengji" data-identity="shengji">
                 <h3>套系版本</h3>
-                <a href="javascript:;" class="text-underline popup-notes">关于套系升级说明
-                    <div class="popup-content hide">
-                        <span class="close">X</span>
-                        <h2 class="title">关于套系升级说明</h2>
-                        <p>内容区域, 从后台读取...</p>
-                    </div>
+                <a href="javascript:;" class="text-underline popup-notes" data-open="pop-shengji">关于套系升级说明
                 </a>
                 <div class="zaders-taoxi basic active default" data-addPrice="0">
                     <span class="title">基础套系</span>
@@ -278,12 +269,8 @@
 
             <div class="col-xs-12 section-list fuzhuangdapei" data-identity="fuzhuangdapei">
                 <h3>服装服饰搭配服务</h3>
-                <a href="javascript:;" class="text-underline popup-notes">关于服装服饰搭配服务说明
-                    <div class="popup-content hide">
-                        <span class="close">X</span>
-                        <h2 class="title">关于服装服饰搭配服务说明</h2>
-                        <p>内容区域, 从后台读取...</p>
-                    </div>
+                <a href="javascript:;" class="text-underline popup-notes" data-open="pop-zhuanchejiesong">关于服装服饰搭配服务说明
+
                 </a>
                 <div class="zaders-taoxi active default" data-addPrice="0">
                     <span class="title">自备服装服饰</span>
@@ -297,12 +284,8 @@
 
             <div class="col-xs-12 section-list baobaoshuliang" data-identity="baobaoshuliang">
                 <h3>一位或两位宝宝拍摄</h3>
-                <a href="javascript:;" class="text-underline popup-notes">关于两位宝宝共同拍摄说明
-                    <div class="popup-content hide">
-                        <span class="close">X</span>
-                        <h2 class="title">关于两位宝宝共同拍摄说明</h2>
-                        <p>内容区域, 从后台读取...</p>
-                    </div>
+                <a href="javascript:;" class="text-underline popup-notes" data-open="pop-baobaoshuliang">关于两位宝宝共同拍摄说明
+
                 </a>
                 <div class="zaders-taoxi active default" data-addPer="0.0">
                     <span class="title">一位宝宝拍摄</span>
@@ -364,6 +347,48 @@
         <input type="text" name="price" value="0">
     </form>
 </div>
+
+<!--弹出层置于底部-->
+<div class="popup-content hide" id="pop-paishe">
+    <span class="close">X</span>
+    <h2 class="title">关于全部套系说明</h2>
+    <p>ZamiSubject当月主题基础套系：当月主题1组（好玩的当月主题由赞美独家定制，每月都有为宝宝全新打造的创意主题。）+特色大头1组+亲子创作1组</p>
+    <p></p>
+    <p>ZamiClassic经典光影套系：经典光影1组（走心的经典光影简而不减，用光影记录宝宝一眸一瞥，生动万千。）+特色大头1组+亲子创作1组</p>
+    <p></p>
+    <p>ZamiStyle时尚变装套系：时尚变装1组（好看的时尚变装时髦摩登，宝宝化身封面大片主角，气场十足。）+特色大头1组+亲子创作1组</p>
+    <p></p>
+    <p>ZamiYourself创意定制套系：一对一定制造型，独家创意定制拍摄5组（全天拍摄），三人全程专属陪护服务。赞美为宝宝私人量身定制（服装，造型，场景及拍摄方式）</p>
+    <p></p>
+    <p>ZamiOne周岁生日派对主题创作：一周岁生日派对主题（为周岁生日的宝宝们推出的生日经典主题创作。）+特色大头1组+时尚变装1组</p>
+    <p></p>
+    <p>ZamiSale指定特价套系：（无全底体验套系）特色大头+经典光影+当月主题（任选2组或3组）</p>
+</div>
+<div class="popup-content hide" id="pop-shengji">
+    <span class="close">X</span>
+    <h2 class="title">套系版本</h2>
+    <p>基础套系为3组拍摄，精修24张并入册，约300张底片， 8*12荷兰进口奢华仿皮环保相册（20页/本）</p>
+    <p></p>
+    <p>升级至Plus版为4组拍摄，精修32张并入册，约400张底片，10*10意大利进口人造软皮环保相册（30页/本）</p>
+    <p>*ZamiYourself创意定制套系：明星造型师一对一定制造型、独家创意定制拍摄5组（全天拍摄）+情景定制视频花絮音乐MV</p>
+    <p></p>
+    <p>*ZamiSale指定特价套系基础版为2组拍摄16张精修，Plus版为3组拍摄24张精修</p>
+</div>
+<div class="popup-content hide" id="pop-baobaoshuliang">
+    <span class="close">X</span>
+    <h2 class="title">关于两位宝宝共同拍摄说明</h2>
+    <p>同一家庭宝宝+1，原有套系基础上价格加收30%，拍摄加1组，其他不变</p>
+    <p></p>
+    <p>不同家庭宝宝+1，原有套系基础上价格加收60%，拍摄加1组,精修加10张，同套系相册加1本。</p>
+    <p></p>
+    <p>为保证最佳拍摄效果，建议2位宝宝同时入镜拍摄最多不超过2组。</p>
+</div>
+<div class="popup-content hide" id="pop-zhuanchejiesong">
+    <span class="close">X</span>
+    <h2 class="title">关于赞美专车接送服务说明</h2>
+    <p>宽敞舒适的7座GL8会在拍摄当天准时到达您家门口，或在拍摄完毕后护送您和宝宝平安到家。安全座椅，宝宝玩具，贴心服务，全程陪伴。此服务可单程，往返分别购买，费用以导航出租计价为准（25元起）。</p>
+</div>
+<!--/弹出层置于底部-->
 
 
 <!--测试代码-->
