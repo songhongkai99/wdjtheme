@@ -13,9 +13,7 @@ var hkcustom = {
     checkSpecificKey: function (keyCode) { //禁止输入特殊字符
         var specialKey = "_|{}\/\\<>()^*\'\"+,";
         var realkey = String.fromCharCode(keyCode);
-        var flg = false;
-        flg = (specialKey.indexOf(realkey) >= 0);
-        if (flg) {
+        if (specialKey.indexOf(realkey) >= 0) {
             console.log('select2插件禁止输入特殊字符: ' + realkey);
             return false;
         } else {
