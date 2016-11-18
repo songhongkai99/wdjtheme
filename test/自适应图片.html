@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>图片自适应测试</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            font-size: 14px;
+        }
+        .flu-box{
+            position: relative;
+            float: left;
+            width: 45%;
+            margin: 2.5%;
+            font-size: 0;
+            overflow: hidden;
+            background-color: #F7F7F7;
+        }
+        .flu-box:before{
+            content: '';
+            display: block;
+            width: 100%;
+            padding-top: 66.6666%; /*3:2图片比例*/
+        }
+        .flu-box > img{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="flu-box-container">
+    <div class="flu-box">
+        <img src="http://placehold.it/300x210" alt="">
+    </div>
+
+    <div class="flu-box">
+        <img src="http://placehold.it/400x310" alt="">
+    </div>
+
+    <div class="flu-box">
+        <img src="http://placehold.it/500x210" alt="">
+    </div>
+
+    <div class="flu-box">
+        <img src="http://placehold.it/600x610" alt="">
+    </div>
+</div>
+
+</body>
+</html>
