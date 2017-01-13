@@ -84,3 +84,24 @@ function getUrlParam(name) {
 
 //placeholder hacker
 
+
+//IIFE效率高 避免全局查找
+console.time()
+var s = 0;
+for (var i = 0; i < 1000000; i++) {
+    s += i;
+}
+
+console.log(s);
+console.timeEnd();
+
+console.time();
+(function x() {
+    var s = 0;
+    for (var i = 0; i < 1000000; i++) {
+        s += i;
+    }
+    ;
+    console.log(s);
+})();
+console.timeEnd();

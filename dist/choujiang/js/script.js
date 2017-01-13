@@ -14,11 +14,17 @@ function beginRndNum(trigger) {
         running = false;
         clearTimeout(g_Timer);
         $(trigger).val("开始");
-        $('#ResultNum').css('color', 'red');
+        $('#ResultNum').css({
+            color: "red",
+            "background": "#ffc904"
+        });
     }
     else {
         running = true;
-        $('#ResultNum').css('color', 'black');
+        $('#ResultNum').css({
+            color: "black",
+            "background": "transparent"
+        });
         $(trigger).val("停止");
         beginTimer();
     }

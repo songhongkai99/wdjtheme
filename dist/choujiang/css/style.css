@@ -1,0 +1,48 @@
+html {
+    width: 100%;
+    height: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../img/bg.jpg") center center no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+}
+#Result {
+    border: 3px solid #40AA53;
+    text-align: center;
+    width: 80%;
+    padding: 50px 0;
+    background: rgba(255,255,255,.6);
+}
+#ResultNum {
+    font-size: 60pt;
+    font-weight: bold;
+    text-shadow: #feff35;
+    font-family: Verdana
+}
+#Button {
+    margin: 50px auto 0;
+    width: 80%;
+    display: block;
+}
+#Button input {
+    font-size: 40px;
+    padding: 0 50px;
+}
+#btn {
+    background-color: #40AA53;
+    border: 1px solid #40AA53;
+    width: 100%;
+    height: 50px;
+    line-height: 40px;
+    margin: 0em auto;
+    font-size: 1em;
+    border-radius: 2.5px;
+    -moz-border-radius: 2.5px;
+    -webkit-border-radius: 2.5px;
+    color: #FFF;
+}
