@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Promise tests</title>
+</head>
+<body>
+
+查询CR数据: <input type="text" id="crInput" placeholder="输入卡牌">
+<div id="info">
+
+</div>
+<!--scripts-->
+
+<script>
+    (function () {
+        let input = document.getElementById("crInput"),
+            info = document.getElementById("info");
+        input.addEventListener("input", function (e) {
+            var v = e.target.value;
+            var html = '';
+            info.innerHTML = '正在查询';
+            AJAX('https://raw.githubusercontent.com/songhongkai99/clashRoyale/master/data.json', function (json) {
+                json = JSON.parse(json);
+                console.dir(json);
+                for(let data of Object.keys(json)){
+                    if(data == v){
+                        for(let [key,value] of Object.entries(json[data])){
+                            html += key+": "+value+"<br>";
+                        }
+                        info.innerHTML = html;
+                        return;
+                    } else {
+                        info.innerHTML = '未找到相应数据';
+                    }
+                }
+            });
+        });
+
+
+        /**
+         * AJAX调用
+         * @param type 可选值post,get(默认)
+         * @param callback
+         * @param url
+         */
+        function AJAX(url, callback, type = 'get') {
+            var XHR = null;
+            if (window.XMLHttpRequest) {
+                // 非IE内核
+                XHR = new XMLHttpRequest();
+            } else if (window.ActiveXObject) {
+                // IE内核,这里早期IE的版本写法不同,具体可以查询下
+                XHR = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+
+            if (XHR) {
+                XHR.open(type, url);
+
+                XHR.onreadystatechange = function () {
+                    // readyState值说明
+                    // 0,初始化,XHR对象已经创建,还未执行open
+                    // 1,载入,已经调用open方法,但是还没发送请求
+                    // 2,载入完成,请求已经发送完成
+                    // 3,交互,可以接收到部分数据
+
+                    // status值说明
+                    // 200:成功
+                    // 404:没有发现文件、查询或URl
+                    // 500:服务器产生内部错误
+                    if (XHR.readyState == 4 && XHR.status == 200) {
+                        // 这里可以对返回的内容做处理
+                        // 一般会返回JSON或XML数据格式
+                        //console.log(XHR.responseText);
+                        callback(XHR.responseText);
+                        // 主动释放,JS本身也会回收的
+                        XHR = null;
+                    }
+                };
+
+                XHR.send();
+            }
+        }
+
+    })()
+</script>
+
+</body>
+</html>
