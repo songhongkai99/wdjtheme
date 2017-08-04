@@ -38,3 +38,10 @@ console.log("Hello Git"); //init
     }
 })(jQuery || window.$);
 
+//ios失去焦点键盘收回
+$(document).on('touchstart', function (e) {
+    if (!$(e.target).is('#cyjj') && $('#cyjj').is(':focus')) {
+        document.activeElement.blur();
+    }
+});
+

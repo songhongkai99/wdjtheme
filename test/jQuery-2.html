@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Callbacks funcs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    
+</head>
+<body>
+<div class="abc">
+    <ul id="parent">
+        <li><a href="###">1</a></li>
+        <li><a href="###">2</a></li>
+        <li><a href="###">3</a></li>
+        <li><a href="###">4</a></li>
+    </ul>
+</div>
+
+
+<!--scripts-->
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+    var base = function (a, b) {
+        this.a = a;
+        this.b = b;
+    }
+
+    base.prototype.sub = function () {
+        this.a = 5;
+    }
+
+    function child(a, b, c) {
+        base.call(this, a, b);
+        this.c = c;
+    }
+
+    child.prototype = new base();
+
+    child.prototype.show = function () {
+        alert(this.a);
+        return function () {
+            return this.a + this.b + this.c;
+        };
+    }
+
+    var result = new child(1, 2, 3);
+    result.sub();
+    alert(result.show()());
+
+
+    //字符串中最多的字符
+    var str = 'aaabwaitehifhiehmsfjioekerjeooooqppppllllle';
+
+    var json = {};
+    for (var i = 0; i < str.length; i++) {
+        var Res = str.charAt(i);
+        if (json[Res]) {
+            json[Res]++;
+        }
+        else {
+            json[Res] = 1;
+        }
+    }
+    var iMix = 0;
+    var iIndex = '';
+    for (var i in json) {
+        if (json[i] > iMix) {
+            iMix = json[i]
+            iIndex = i;
+        }
+    }
+
+    //argument
+    function bb(x, y, a) {
+        arguments[2] = 10;
+        alert(a);
+    }
+    bb(1, 2, 3);
+
+
+    //
+    var aa = 'zns';
+    (function () {
+        alert(aa);
+        var aa = 'zhinengshe';
+        alert(aa);
+    })();
+    alert(aa);
+
+    //
+
+    var buts = document.getElementById('parent');
+    alert(buts.children.length)
+    for (var i = 0; i < buts.children.length; i++) {
+        buts.children[i].onclick = function () {
+            alert(i);
+        };
+    }
+
+    /*(function (i) {
+     return function () {
+     alert(i);
+     }
+     })(i);*/
+
+
+    //绝对位置
+    function getPos(obj) {
+        var l = 0;
+        var t = 0;
+        while(obj)
+        {
+            l += obj.offsetLeft;
+            t += obj.offsetTop;
+            Obj = obj.offsetParent;
+        }
+        return {
+            top: t,
+            left: l
+        };
+    }
+
+
+    //随即函数
+    function random(min, max) {
+        return Math.round(Math.random() * (max - min) + min);
+    }
+
+    //
+    (function () {
+        function show(a) {
+            alert(a);
+            var s = a();
+            return function () {
+                alert(s);
+            }
+        }
+
+        function a() {
+            alert('a')
+        }
+
+        alert(show(a)());
+    })();
+
+
+    //
+    (function () {
+        function a() {
+            this.a = 1;
+            function b() {
+                this.a += 1;
+            }
+
+            b.call(this);
+        }
+
+        a()
+
+    })();
+
+    //
+    function say667()
+    {
+        // Local variable that ends up within closure
+        var num = 666;
+        var sayAlert = function () {
+            alert(num); //num++
+        }
+        num++;
+        return sayAlert;
+    }
+
+    var sayAlert = say667();
+    sayAlert()
+
+
+</script>
+</body>
+</html>
